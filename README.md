@@ -32,3 +32,11 @@ user: admin
 password: password
 ```
 
+## Saving Drupal Config
+When a change to drupal site configuration should be commited to the repository run this command:
+```
+docker-compose run --rm drupal drush config:export --destination /drupal-config
+```
+Then commit the files generated in `drupal/config/`.
+
+
