@@ -1,0 +1,42 @@
+version: '3.1'
+
+services:
+  database:
+    image: mariadb
+    volumes:
+      - database:/var/lib/mysql
+      - ./drupal/starter_drupal.sql:/docker-entrypoint-initdb.d/starter_drupal.sql
+    environment:
+      - MARIADB_ROOT_PASSWORD=password
+      - MARIADB_USER=user
+      - MARIADB_PASSWORD=password
+      - MARIADB_DATABASE=drupal
+
+  drupal:
+    build: drupal/.
+    depends_on:
+      - database
+    ports:
+      - 3333:80
+    environment:
+      - MARIADB_USER=user
+      - MARIADB_PASSWORD=password
+      - MARIADB_DATABASE=drupal
+      - DATABASE_HOST=database
+    volumes:
+      - ./drupal/config:/drupal-config #can copy this folder into the init container
+        #above is drush config:export --destination /drupal-config 
+        #import command would be `drush config:import --source /drupal-config`
+      - ./drupal/sites:/var/www/html/sites
+    restart: always
+
+  #web: 
+    #build: eleventy/.
+    #ports: 
+    #- "8888:8080"
+    #volumes:
+      #- ./eleventy/.:/app
+    #command: npm run start
+
+volumes:
+  database:
