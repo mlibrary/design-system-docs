@@ -249,7 +249,7 @@ $databases = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'sCHt-E_ZYqWRbc3JpisWqrc1K2d2KRL0EPlOZ3TWBLtXR0lVZO5_SzKyyC2Fef_hjvTSA7Tj1A';
+$settings['hash_salt'] = $_ENV["HASH_SALT"];
 
 /**
  * Deployment identifier.
@@ -775,16 +775,6 @@ $databases['default']['default'] = array (
   'password' => $_ENV["MARIADB_PASSWORD"],
   'prefix' => '',
   'host' => $_ENV["DATABASE_HOST"],
-  'port' => '3306',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);
-$databases['default']['default'] = array (
-  'database' => 'drupal',
-  'username' => 'user',
-  'password' => 'password',
-  'prefix' => '',
-  'host' => 'database',
   'port' => '3306',
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',

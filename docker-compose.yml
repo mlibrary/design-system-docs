@@ -19,6 +19,7 @@ services:
     ports:
       - 3333:80
     environment:
+      - HASH_SALT=hash_salt
       - MARIADB_USER=user
       - MARIADB_PASSWORD=password
       - MARIADB_DATABASE=drupal
