@@ -3,8 +3,8 @@
 ## Developer Set-up
 Clone the repo and cd into the repo directory
 ```
-git clone git@github.com:mlibrary/drupal-eleventy-demo.git
-cd drupal-eleventy-demo
+git clone git@github.com:mlibrary/design-system-docs.git
+cd design-system-docs
 ```
 
 Make everything in the drupal directory writeable by `www-data` aka uid 33. 
