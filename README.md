@@ -26,9 +26,6 @@ Apply the configuration
 docker-compose run --rm drupal drush config:import --source /drupal-config
 ```
 
-```
-docker-compose up -d
-```
 For drupal, in a browser go to `localhost:3333`
 ```
 user: admin
