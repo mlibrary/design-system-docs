@@ -1,0 +1,53 @@
+name: Build drupal image on push to main
+
+on:
+  push:
+    branches: [ main ]
+
+env:
+  IMAGE_NAME: design-system-cms
+
+jobs:
+  #changes:
+    #runs-on: ubuntu-latest
+    #outputs:
+      #drupal: ${{ steps.filter.outputs.drupal }}
+    #steps:
+    #- uses: dorny/paths-filter@v2
+      #id: filter
+      #with:
+        #filters: |
+          #drupal:
+            #- 'drupal/**'
+
+  build-drupal:
+    #needs: changes
+    #if: ${{ needs.changes.outputs.drupal == 'true' }}
+    environment: cms
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Log into Github Container Registry
+      uses: docker/login-action@v1
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+    - name: Build and Push
+      uses: docker/build-push-action@v2
+      with:
+        context: .
+        push: true
+        tags: | 
+           ghcr.io/mlibrary/${{ secrets.IMAGE_NAME }}:latest
+           ghcr.io/mlibrary/${{ secrets.IMAGE_NAME }}:${{ github.sha }}
+    #- name: Deploy to kubernetes
+      #uses: mlibrary/deploy-to-kubernetes@v1
+      #with:
+        #github_username: ${{ github.actor }}
+        #github_token: ${{ secrets.GITHUB_TOKEN }}
+        #image: mlibrary/${{ secrets.IMAGE_NAME }}:${{ github.sha }}
+        #cluster_ca: ${{ secrets.HATCHER_CLUSTER_CA }}
+        #cluster_server: https://hatcher.kubernetes.lib.umich.edu
+        #namespace_token: ${{ secrets.HATCHER_TOKEN }}
+        #namespace: ${{ secrets.NAMESPACE }}
