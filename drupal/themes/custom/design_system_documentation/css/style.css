@@ -1,0 +1,32 @@
+div.node__content {
+  font-size: 1rem;
+}
+
+blockquote {
+  margin: 1rem;
+  padding: 1rem;
+  border: solid 1px #E5E9ED;
+  border-radius: 4px;
+  font-family: monospace;
+  background: #000000;
+  color: white;
+  position: relative;
+}
+
+blockquote a {
+  color: rgb(167, 146, 90);
+}
+
+blockquote:before {
+  content: "Code";
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-transform: uppercase;
+  background: #687781;
+  padding: 2px 0;
+  font-size: .9rem;
+  text-indent: 15px;
+}
