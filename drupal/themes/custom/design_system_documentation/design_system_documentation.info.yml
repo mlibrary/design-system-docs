@@ -18,5 +18,5 @@ regions:
   sidebar_first: 'First sidebar'
 regions_hidden:
   - sidebar_first
-# ckeditor_stylesheets:
-#   - design_system_documentation/global-styling
+ckeditor_stylesheets:
+  - css/style.css
