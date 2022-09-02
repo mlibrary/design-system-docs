@@ -29,7 +29,8 @@ pre.code:before {
 
 /* FROM umlib */
 p.umich-lib-callout,
-p.umich-lib-alert {
+p.umich-lib-alert,
+p.umich-lib-print {
   margin: 16px 0;
   padding: 16px;
   border: solid 1px #E5E9ED;
@@ -38,6 +39,10 @@ p.umich-lib-alert {
 
 p.umich-lib-callout {
   border-left: solid 4px #1D7491;
+}
+
+p.umich-lib-print {
+  border-left: solid 4px #20A848;
 }
 
 p.umich-lib-alert {
