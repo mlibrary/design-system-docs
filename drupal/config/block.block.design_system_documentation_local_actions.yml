@@ -1,13 +1,13 @@
-uuid: 07abcfa3-e33a-470c-a712-6eb2327899d6
+uuid: 479af425-3fd0-4084-9081-06a25550d0de
 langcode: en
 status: true
 dependencies:
   theme:
-    - seven
+    - design_system_documentation
 _core:
   default_config_hash: gv5JXTvQXjlMY6PXrfxzcLMjMg4074WiEQCy7ZSMvK4
-id: seven_local_actions
-theme: seven
+id: design_system_documentation_local_actions
+theme: design_system_documentation
 region: content
 weight: -4
 provider: null

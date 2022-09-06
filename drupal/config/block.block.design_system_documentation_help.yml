@@ -1,16 +1,16 @@
-uuid: 9cda2f2a-81da-455c-af01-6f4c1fd353d4
+uuid: 5429a234-eb1e-4672-a1bb-f8f64a269e2c
 langcode: en
 status: true
 dependencies:
   module:
     - help
   theme:
-    - bartik
+    - design_system_documentation
 _core:
   default_config_hash: bYvyEzJ7UcmjXZAYLxb4Qb_J77K9bPbk4ealdap31FY
-id: bartik_help
-theme: bartik
-region: header
+id: design_system_documentation_help
+theme: design_system_documentation
+region: help
 weight: 0
 provider: null
 plugin: help_block
