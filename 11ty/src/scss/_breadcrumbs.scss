@@ -1,0 +1,60 @@
+// --------------------------------------------------
+//
+// # Breadcrumbs
+//   @link https://codepen.io/team/umlibrary-designsystem/pen/qBVLPYJ/7d4cc0d0725ae889258bafaf831c920e
+//
+// --------------------------------------------------
+
+.breadcrumbs ol {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumbs li:first-child a {
+  padding-left: 0;
+}
+
+.breadcrumbs a {
+  display: inline;
+  padding: var(--space-medium) var(--space-small);
+}
+
+.breadcrumbs li {
+  font-size: 0;
+}
+
+.breadcrumbs a {
+  font-size: 1rem;
+}
+
+.breadcrumbs a[aria-current='page'] {
+  color: var(--color-neutral-400);
+  text-decoration: none;
+}
+
+.breadcrumbs a[aria-current='page']:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.breadcrumbs li:not(:first-child):before {
+  content: '\2215';
+  font-size: 1rem;
+}
+
+.breadcrumbs li {
+  text-transform: capitalize;
+}
+
+.breadcrumbs li:not(:first-child):before {
+  content: '\203A' !important;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .breadcrumbs li:not(:last-child) {
+  display: none;
+  }
+}

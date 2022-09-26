@@ -1,0 +1,93 @@
+// --------------------------------------------------
+//
+// # Site footer
+//   Styles for the U-M Library Design System footer. 
+// 
+// --------------------------------------------------
+
+.footer {
+  background: var(--color-blue-400);
+}
+.footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer ul a {
+  display: inline-block;
+  padding: var(--space-x-small) 0;
+}
+
+.footer ul a span:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.footer a {
+  color: white;
+}
+
+.footer a > svg {
+  margin-right: 0.5em;
+}
+
+.footer__content {
+  color: var(--color-blue-100);
+  padding: var(--space-xxx-large) 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 350px);
+  gap: var(--space-xx-large);
+}
+
+.footer__content .first-column ul li a {
+  text-decoration: none;
+  display: flex;
+  align-items: baseline;
+}
+
+.footer__content ul li a {
+  text-decoration: none;
+}
+
+.footer__content h2 {
+  color: var(--color-blue-200);
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  margin-bottom: var(--space-medium);
+}
+.footer__policies {
+  border-left: solid 1px var(--color-blue-300);
+  padding-left: 2em;
+}
+
+@media screen and (max-width: 1200px) {
+  .footer__policies {
+    border-left: none;
+    padding-left: 0;
+  }
+}
+
+.footer__disclaimer {
+  background: var(--color-blue-500);
+  color: var(--color-blue-200);
+  padding: var(--space-medium) 0;
+}
+
+.footer__disclaimer a {
+  color: var(--color-blue-200);
+}
+
+.footer__disclaimer p {
+  margin: 0;
+}
+
+@media screen and (min-width: 820px) {
+  .footer__disclaimer p {
+    display: inline-block;
+  }
+  .footer__disclaimer p + p {
+    margin-left: var(--space-x-large);
+  }
+}

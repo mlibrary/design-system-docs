@@ -1,0 +1,19 @@
+---
+layout: base.njk
+---
+
+{% include "partials/breadcrumbs.njk" %}
+<div class="flex-layout">
+  <div class="main-content">
+    {{ content | safe }}
+    {% set childPages = collections.all | eleventyNavigation(eleventyNavigation.key) %}
+    <div class="card">
+      {%- for entry in childPages %}
+        <section>
+          <h2>
+            <a href="{{ entry.url }}">{{ entry.title }}</a>
+          {%- endfor %}
+        </section>
+      </div>
+    </div>
+  </div>

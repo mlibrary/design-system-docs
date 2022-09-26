@@ -1,0 +1,34 @@
+{
+  "name": "design-system-docs-11ty",
+  "version": "1.0.0",
+  "description": "Starter template for creating an 11ty (eleventy) project with the U-M Library Design System",
+  "main": "index.html",
+  "scripts": {
+    "watch:sass": "sass --no-source-map --watch src/scss:src/css",
+    "build:sass": "sass --no-source-map src/scss:public/css",
+    "watch:eleventy": "npx eleventy --serve",
+    "build:eleventy": "npx eleventy",
+    "start": "npm-run-all build:sass --parallel watch:eleventy watch:sass ",
+    "build": "npm-run-all build:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mlibrary/design-system-11ty-starter.git"
+  },
+  "keywords": [],
+  "author": "UM Library Design System",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mlibrary/design-system-11ty-starter/issues"
+  },
+  "homepage": "https://github.com/mlibrary/design-system-11ty-starter#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2",
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.54.6"
+  },
+  "dependencies": {
+    "@11ty/eleventy-fetch": "^3.0.0"
+  }
+}

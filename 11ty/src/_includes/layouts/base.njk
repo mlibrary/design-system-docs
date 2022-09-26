@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="{{ meta.language }}">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>
+      {{ title }} | {{ meta.siteName }}
+    </title>
+    <link rel="icon" href="{{ '/img/favicon.ico' | url }}"/>
+    <link rel="stylesheet" href="{{ '/css/style.css' | url }}"/>
+    <link href="https://unpkg.com/@umich-lib/web@1/umich-lib.css" rel="stylesheet"/>
+    <script type="module" src="https://unpkg.com/@umich-lib/web@1/dist/umich-lib/umich-lib.esm.js"></script>
+    <script nomodule src="https://unpkg.com/@umich-lib/web@1/dist/umich-lib/umich-lib.js"></script>
+  </head>
+  <body>
+    <section aria-label="Skip links" class="[ skip-links ]">
+      <div class="[ viewport-container ]">
+        <ul>
+          <li><a href="#main">Skip to main content</a></li>
+          <li><a href="#footer">Skip to footer content</a></li>
+        </ul>
+      </div>
+    </section>
+    <div class="headers">
+      <m-universal-header></m-universal-header>
+      <m-website-header name=" {{ meta.productName }}"></m-website-header>
+      {% include "partials/primary-nav.njk" %}
+    </div>
+    <main class="viewport-container layout" id="main">
+      {{ content | safe }}
+    </main>
+    <footer class="footer" id="footer">
+      <div class="viewport-container">
+        <div class="footer__content">
+          <section class="first-column">
+            <h2>University of Michigan Library</h2>
+            <ul>
+              <li><a href="https://lib.umich.edu/"><svg width="16px" height="16px" viewbox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" role="img"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5
+                2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg><span>913 S. University Avenue<br>Ann Arbor, MI 48109-1190</span></a></li>
+            </ul>
+          </section>
+          <section>
+            <h2>About the Design System</h2>
+            <ul>
+              <li><a href="/about">About</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Accessibility</a></li>
+            </ul>
+          </section>
+          <section>
+            <h2>Getting Started</h2>
+            <ul>
+              <li><a href="#">Quick Start</a></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+      <div class="footer__disclaimer">
+        <div class="viewport-container">
+          <p>© {% year %}, Regents of the University of Michigan</p>
+          <p>
+            Built with the
+            <a href="https://design-system.lib.umich.edu/">U-M Library Design System</a>
+          </p>
+          <p>
+            <a href="#">What's New</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

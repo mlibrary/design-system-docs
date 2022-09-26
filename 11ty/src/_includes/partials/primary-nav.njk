@@ -1,0 +1,11 @@
+<nav aria-label="Primary" class="primary-nav viewport-container">
+  <ul>
+    {% for entry in collections.landingPage %}
+      <li>
+        <a {% if page.url == entry.url %} aria-current="page" class="active" {% endif %} href="{{ entry.url }}">
+          {{ entry.data.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

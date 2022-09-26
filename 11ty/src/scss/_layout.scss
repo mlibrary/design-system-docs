@@ -1,0 +1,32 @@
+// --------------------------------------------------
+//
+// # Site Layoyt
+//   Flex for pages
+//
+// --------------------------------------------------
+
+
+.layout {
+  margin: 2rem auto;
+}
+
+.flex-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: start;
+  align-items: stretch;
+  padding-top: 2rem;
+}
+
+.flex-layout > :first-child {
+  flex-grow: 1;
+  flex-basis: 12rem;
+}
+
+.flex-layout > :last-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-inline-size: 50%;
+}
+  
