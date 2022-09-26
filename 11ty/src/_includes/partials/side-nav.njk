@@ -1,0 +1,10 @@
+{% set sideNavPages = collections.all | eleventyNavigation(eleventyNavigation.parent) %}
+<nav aria-label="Site navigation" class="left-side-nav">
+  <ul>
+    {%- for entry in sideNavPages %}
+      <li {% if entry.url == page.url %} class="active-side-nav-page" {% endif %}>
+        <a href="{{ entry.url }}">{{ entry.title }}</a>
+      </li>
+    {%- endfor %}
+  </ul>
+</nav>

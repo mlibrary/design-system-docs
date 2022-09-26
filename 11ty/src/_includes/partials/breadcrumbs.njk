@@ -1,0 +1,10 @@
+{% set navPages = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key, { includeSelf: true }) %}
+<nav aria-label="breadcrumbs" class="breadcrumbs">
+  <ol>
+    {% for entry in navPages %}
+      <li>
+        <a {% if entry.url == page.url %} class="active-page" aria-current="page" {% endif %} href="{{ entry.url }}">{{ entry.title }}</a>
+      </li>
+    {% endfor %}
+  </ol>
+</nav>

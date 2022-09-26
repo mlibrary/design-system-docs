@@ -1,0 +1,12 @@
+{
+  "siteName": "U-M Library Design System",
+  "productName": "Design System",
+  "url": "https://design-system.lib.umich.edu/",
+  "siteDescription": "The central place for brand, visual elements, reusable designs, and content guidelines, all with detailed documentation.",
+  "language": "en",
+  "author": {
+    "name": "U-M Library Design System",
+    "url": "https://design-system.lib.umich.edu/",
+    "email": "library-design-system-team@umich.edu"
+  }
+}
