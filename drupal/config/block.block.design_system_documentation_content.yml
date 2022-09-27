@@ -1,15 +1,15 @@
-uuid: a9d69436-2b04-43a4-beba-af831137bdec
+uuid: 5ede3c95-fd0b-442b-aa8b-56f3a7f6ed6b
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - seven
+    - design_system_documentation
 _core:
   default_config_hash: 6_eJxtyfANKFE_nfriHKgrARRIPHH88sI6jvQ4EHbBc
-id: seven_content
-theme: seven
+id: design_system_documentation_content
+theme: design_system_documentation
 region: content
 weight: -3
 provider: null
