@@ -9,13 +9,13 @@
     </title>
     <link rel="icon" href="{{ '/img/favicon.ico' | url }}"/>
     <link rel="stylesheet" href="{{ '/css/style.css' | url }}"/>
-    <link href="https://unpkg.com/@umich-lib/web@1/umich-lib.css" rel="stylesheet"/>
-    <script type="module" src="https://unpkg.com/@umich-lib/web@1/dist/umich-lib/umich-lib.esm.js"></script>
-    <script nomodule src="https://unpkg.com/@umich-lib/web@1/dist/umich-lib/umich-lib.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@umich-lib/web@1.3.0/umich-lib.css" rel="stylesheet"/>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@umich-lib/web@1.3.0/dist/umich-lib/umich-lib.esm.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
-    <section aria-label="Skip links" class="[ skip-links ]">
-      <div class="[ viewport-container ]">
+    <section aria-label="Skip links" class="skip-links">
+      <div class="viewport-container">
         <ul>
           <li><a href="#main">Skip to main content</a></li>
           <li><a href="#footer">Skip to footer content</a></li>
@@ -27,9 +27,10 @@
       <m-website-header name=" {{ meta.productName }}"></m-website-header>
       {% include "partials/primary-nav.njk" %}
     </div>
-    <main class="viewport-container layout" id="main">
+    <main class="layout" id="main">
       {{ content | safe }}
     </main>
+    {% include "partials/callout.njk" %}
     <footer class="footer" id="footer">
       <div class="viewport-container">
         <div class="footer__content">

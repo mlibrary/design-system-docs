@@ -1,6 +1,7 @@
 ---
 title: Brand
 description: Optional for SEO and page summary.
+summary: Temporary title for brand.
 layout: page.njk
 eleventyNavigation:
   key: brand

@@ -1,0 +1,45 @@
+.ovals {
+  position: absolute;
+  top: 3rem;
+  left: -1rem;
+  z-index: -1;
+}
+
+.card-container {
+  position: relative;
+  padding: 4rem 0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 500px));
+  grid-gap: 3rem;
+  justify-content: space-around;
+  margin: 1rem 4rem;
+
+  a {
+    text-decoration: none;
+    transition: all ease-in 0.3s;
+    display: inherit;
+    border-radius: 6px;
+  }
+
+  a:hover {
+    box-shadow: -8px 8px 0 0 var(--color-blue-500);
+    transform: translate(8px, -8px);
+  }
+}
+
+.card {
+  background-color: var(--color-blue-100);
+  padding: 1rem 1.5rem; 
+  border-radius: 6px;
+
+  h2 {
+    text-decoration: var(--color-teal-400) underline;
+  }
+
+  h2, p {
+    color: var(--color-neutral-400);
+  }
+}

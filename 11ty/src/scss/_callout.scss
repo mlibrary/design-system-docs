@@ -1,0 +1,56 @@
+.callout {
+  background-color: var(--color-blue-100);
+  border-top: 16px solid var(--color-teal-500);
+  padding-top: 1rem;
+  position: relative;
+}
+
+#callout-box-svg {
+  width: 145px;
+  height: 145px;
+  position: absolute;
+  top: -65px;
+  left: 85vw;
+  transform: rotate(20deg);
+}
+
+.callout-container {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 400px));
+  justify-content: center;
+  gap: 1rem 2rem;
+  
+  a {
+    text-decoration: none;
+    color: var(--color-neutral-400);
+  }
+}
+
+.callout-card {
+ display: flex;
+ padding: .5rem;
+ align-items: flex-start;
+ height: 100%;
+}
+
+.card-icon {
+  border-radius: 100%;
+  font-size: 2rem;
+  padding: 1rem;
+  margin-right: .75rem;
+  color: white;
+
+  &.description-icon {
+    background-color: var(--color-indigo-400);
+  }
+  &.code-icon {
+    background-color: var(--color-teal-400);
+  }
+  &.design-services-icon {
+    background-color: var(--color-pink-400);
+  }
+  &.palette-icon {
+    background-color: var(--color-orange-400);
+  }
+}

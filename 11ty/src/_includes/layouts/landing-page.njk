@@ -2,18 +2,35 @@
 layout: base.njk
 ---
 
-{% include "partials/breadcrumbs.njk" %}
 <div class="flex-layout">
   <div class="main-content">
-    {{ content | safe }}
+    <div class="banner">
+      <div class="viewport-container">
+        <div class="banner-text">
+          {% include "partials/breadcrumbs.njk" %}
+          {{ content | safe }}
+        </div>
+      </div>
+    </div>
     {% set childPages = collections.all | eleventyNavigation(eleventyNavigation.key) %}
-    <div class="card">
-      {%- for entry in childPages %}
-        <section>
-          <h2>
-            <a href="{{ entry.url }}">{{ entry.title }}</a>
-          {%- endfor %}
-        </section>
+    <div class="card-container">
+      <svg class="ovals" width="180" height="49" fill="none" xmlns="http://www.w3.org/2000/svg"><circle r="3" transform="scale(1 -1) rotate(-72 69.211 -101.325)" fill="#FFB899"/><circle r="3" transform="scale(-1 1) rotate(36 -68.543 -189.014)" fill="#FFB899"/><circle r="3" transform="scale(-1 1) rotate(-36 -45.646 162.427)" fill="#FFB899"/><circle r="3" transform="scale(1 -1) rotate(72 44.98 55.844)" fill="#FFB899"/><circle r="3" transform="matrix(1 0 0 -1 64.19 4.19)" fill="#FFB899"/><circle r="3" transform="scale(1 -1) rotate(-72 19.211 -32.507)" fill="#FFB899"/><circle r="3" transform="scale(-1 1) rotate(36 -18.544 -35.13)" fill="#FFB899"/><circle r="3" transform="scale(-1 1) rotate(-36 4.353 8.544)" fill="#FFB899"/><circle r="3" transform="scale(1 -1) rotate(72 88.743 87.136)" fill="#FFB899"/><circle r="3" transform="matrix(1 0 0 -1 124.19 24.19)" fill="#FFB899"/><circle r="3" transform="scale(1 -1) rotate(-72 35.447 -83.798)" fill="#FFB899"/><circle r="3" transform="scale(-1 1) rotate(36 -79.32 -117.46)" fill="#FFB899"/><circle r="3" transform="scale(-1 1) rotate(-36 5.13 110.874)" fill="#FFB899"/><circle r="3" transform="scale(1 -1) rotate(72 38.743 18.316)" fill="#FFB899"/><circle r="3" transform="matrix(1 0 0 -1 24.19 24.19)" fill="#FFB899"/><circle r="3" transform="scale(1 -1) rotate(-72 -14.552 -14.979)" fill="#FFB899"/><circle r="3" transform="scale(-1 1) rotate(36 -140.097 -199.79)" fill="#FFB899"/><circle r="3" transform="scale(1 -1) rotate(-72 51.401 -135.294)" fill="#FFB899"/><circle r="3" transform="scale(1 -1) rotate(72 99.025 100.694)" fill="#FFB899"/><circle r="3" transform="scale(-1 1) rotate(36 -89.175 -250.362)" fill="#FFB899"/><circle r="3" transform="scale(-1 1) rotate(-36 5.907 213.204)" fill="#FFB899"/><circle r="3" transform="scale(1 -1) rotate(72 82.507 49.608)" fill="#FFB899"/><circle r="3" transform="matrix(1 0 0 -1 84.19 44.19)" fill="#FFB899"/><circle r="3" transform="scale(1 -1) rotate(-72 1.684 -66.27)" fill="#FFB899"/><circle r="3" transform="scale(-1 1) rotate(36 -90.097 -45.907)" fill="#FFB899"/><circle r="3" transform="scale(-1 1) rotate(-36 55.907 59.32)" fill="#FFB899"/><circle r="3" transform="scale(1 -1) rotate(72 32.507 -19.211)" fill="#FFB899"/>
+        <div class="viewport-container">
+          <div class="cards">
+            {%- for entry in childPages %}
+              <a href="{{ entry.url }}">
+                <section class="card">
+                  <h2>
+                    {{ entry.title }}
+                  </h2>
+                  <p>
+                    {{ entry.summary }}
+                  </p>
+                {%- endfor %}
+              </section>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>

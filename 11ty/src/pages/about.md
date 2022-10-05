@@ -1,6 +1,7 @@
 ---
 title: About
 description: Optional for SEO and page summary.
+summary: Our team, what’s new, and information about some of the technical bits.
 layout: landing-page.njk
 tags: landingPage
 eleventyNavigation:
@@ -10,3 +11,5 @@ eleventyNavigation:
 ---
 
 # {{ title }}
+
+Landing page summary.

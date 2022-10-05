@@ -1,0 +1,25 @@
+.banner {
+  background-color: var(--color-teal-100);
+}
+
+.banner-container {
+  display: flex;
+} 
+
+.banner-text, .banner-image {
+  width: 50%;
+}
+
+.banner-image {
+  background-image:  url("/img/library.jpeg");
+}
+
+.banner-text {
+  padding: 2.5rem 0;
+  h1 {
+   padding-top: 2rem;
+  }
+  p {
+    max-width: 50ch;
+  }
+}
