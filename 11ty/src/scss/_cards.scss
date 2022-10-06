@@ -1,3 +1,11 @@
+// --------------------------------------------------
+//
+// # Cards
+//   Card components for home and landing pages
+//
+// --------------------------------------------------
+
+
 .ovals {
   position: absolute;
   top: 3rem;
@@ -12,21 +20,20 @@
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 500px));
-  grid-gap: 3rem;
-  justify-content: space-around;
-  margin: 1rem 4rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 430px));
+  justify-content: center;
+  gap: 1rem 2rem;
 
   a {
     text-decoration: none;
-    transition: all ease-in 0.3s;
+    transition: all ease-in 0.5s;
     display: inherit;
     border-radius: 6px;
   }
 
   a:hover {
-    box-shadow: -8px 8px 0 0 var(--color-blue-500);
-    transform: translate(8px, -8px);
+    box-shadow: -8px 8px 0 0 var(--color-orange-500);
+    transform: translate(6px, -6px);
   }
 }
 
@@ -34,10 +41,13 @@
   background-color: var(--color-blue-100);
   padding: 1rem 1.5rem; 
   border-radius: 6px;
+  border: solid 1px var(--color-blue-200);
 
   h2 {
     text-decoration: var(--color-teal-400) underline;
+    text-underline-offset: .35rem;
     text-transform: capitalize;
+    font-weight: 600;
   }
 
   h2, p {

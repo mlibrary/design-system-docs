@@ -1,3 +1,11 @@
+// --------------------------------------------------
+//
+// # Banner
+//   Banners for home and landing page
+//   Background color, heading, text, and image (if applicable)
+//
+// --------------------------------------------------
+
 .banner {
   background-color: var(--color-teal-100);
 }
@@ -16,6 +24,10 @@
   rgba(8,83,156, 0.5)), url("/img/library.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
+
+  @media  screen and (max-width: 560px) {
+    display: none;
+  }
 }
 
 .banner-text {
@@ -27,7 +39,6 @@
 
   h1 {
    max-width: 12ch;
-   font-weight: 400;
   }
   p {
     max-width: 50ch;

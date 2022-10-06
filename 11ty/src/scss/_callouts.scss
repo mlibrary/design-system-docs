@@ -1,17 +1,31 @@
+// --------------------------------------------------
+//
+// # Callout
+//   Callout for home and landing page
+//
+// --------------------------------------------------
+
+
 .callout {
   background-color: var(--color-blue-100);
   border-top: 16px solid var(--color-teal-500);
   padding-top: 1rem;
   position: relative;
+  margin-top: 4rem;
 }
 
 #callout-box-svg {
-  width: 145px;
-  height: 145px;
+  width: 135px;
+  height: 135px;
   position: absolute;
   top: -65px;
   left: 85vw;
-  transform: rotate(20deg);
+  transform: rotate(30deg);
+  transition: transform 2s;
+}
+
+#callout-box-svg:hover {
+  transform: rotate(45deg);
 }
 
 .callout-container {
@@ -46,7 +60,7 @@
  }
 }
 
-.card-icon {
+.callout-card-icon {
   border-radius: 100%;
   font-size: 2rem;
   padding: 1rem;
