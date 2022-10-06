@@ -1,0 +1,23 @@
+.page-pagination {
+  display: flex;
+  align-items: baseline;
+
+  .line {
+    border: solid 1px var(--color-neutral-100);
+    width: 100%;
+  }
+}
+
+.pagination-text {
+  margin-left: 1rem;
+  font-weight: bold;
+  h2 {
+    color: var(--color-teal-500);
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+  }
+  a {
+    color: var(--color-neutral-400);
+    font-size: 1.125rem;
+  }
+}

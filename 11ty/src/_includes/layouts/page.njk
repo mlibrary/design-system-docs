@@ -9,7 +9,18 @@ layout: base.njk
       {% include "partials/side-nav.njk" %}
     </aside>
     <div class="main-content">
-      {{ content | safe }}
+      <div class="prose">
+        {{ content | safe }}
+      </div>
+      <div class="page-pagination">
+        <div class="line"></div>
+        <nav aria-label="pagination" class="pagination-text">
+          <h2>Next
+            <span class="visually-hidden">page</span>
+          </h2>
+          <a href="">// Link for next page in side navigation //</a>
+        </nav>
+      </div>
     </div>
   </div>
 </div>

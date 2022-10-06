@@ -31,6 +31,10 @@
   margin-right: 0.5em;
 }
 
+.address {
+  max-width: 22ch;
+}
+
 .footer__content {
   color: var(--color-blue-100);
   padding: var(--space-xxx-large) 0;
