@@ -7,3 +7,9 @@ definitions:
     weight: 0
     expanded: false
     enabled: true
+  standard__front_page:
+    weight: -50
+    menu_name: main
+    parent: ''
+    expanded: false
+    enabled: true

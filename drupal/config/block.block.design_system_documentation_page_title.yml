@@ -1,13 +1,13 @@
-uuid: d85f0829-390a-4f56-a835-4c01ba78f80f
+uuid: e52403fa-79ac-41b3-bad2-6871d271dcb1
 langcode: en
 status: true
 dependencies:
   theme:
-    - bartik
+    - design_system_documentation
 _core:
   default_config_hash: P-2PK2v3yJQRI4Mg1RqKQ0Ki0wP_UUErIvahd_MtMVc
-id: bartik_page_title
-theme: bartik
+id: design_system_documentation_page_title
+theme: design_system_documentation
 region: header
 weight: -30
 provider: null

@@ -29,6 +29,7 @@ services:
         #above is drush config:export --destination /drupal-config 
         #import command would be `drush config:import --source /drupal-config`
       - ./drupal/sites:/var/www/html/sites
+      - ./drupal/themes:/var/www/html/themes
     restart: always
 
   #web: 

@@ -52,6 +52,7 @@ module:
   views: 10
   standard: 1000
 theme:
-  bartik: 0
   seven: 0
+  design_system_documentation: 0
+  bartik: 0
 profile: standard
