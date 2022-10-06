@@ -27,18 +27,30 @@
   }
 }
 
+.callout-container-text {
+  padding: 1em 0 2rem;
+  p {
+    max-width: 60ch;
+    margin: 0;
+  }
+}
+
 .callout-card {
  display: flex;
  padding: .5rem;
  align-items: flex-start;
  height: 100%;
+
+  p {
+  margin: 0.5rem 0;
+ }
 }
 
 .card-icon {
   border-radius: 100%;
   font-size: 2rem;
   padding: 1rem;
-  margin-right: .75rem;
+  margin-right: 1rem;
   color: white;
 
   &.description-icon {
