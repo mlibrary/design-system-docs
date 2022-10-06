@@ -39,30 +39,35 @@
 }
 
 // Side page navigation
-.left-side-nav ul {
+.side-nav ul {
   list-style: none;
   padding-left: 0;
   margin-top: 0;
  }
  
- .left-side-nav li {
+ .side-nav li {
    text-transform: capitalize;
    display: block;
  }
  
- .left-side-nav li a {
+ .side-nav li a {
    color: var(--color-neutral-400);
    text-decoration: none;
    display: block;
-   padding: .5rem 0;
+   padding: 1rem 0 1rem 1rem;
  
    &:hover {
      text-decoration: underline;
      text-decoration-thickness: 0.125rem;
    }
  }
+
+ .side-nav li:not(:last-child){
+  border-bottom: solid 1px var(--color-neutral-100);
+}
  
- .left-side-nav li.active-side-nav-page a {
+ .side-nav li.active-side-nav-page a {
    color: var(--color-teal-400);
    font-weight: var(--bold);
+   border-left: solid 4px var(--color-teal-400);
  }

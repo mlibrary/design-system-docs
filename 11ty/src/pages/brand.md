@@ -7,6 +7,7 @@ eleventyNavigation:
   key: brand
   parent: foundations
   order: 2
+  summary: Temporary title for brand.
 ---
 
 _Note: Testing Drupal API for a page_

@@ -4,12 +4,12 @@ layout: base.njk
 
 <div class="viewport-container">
   {% include "partials/breadcrumbs.njk" %}
-</div>
-<div class="flex-layout viewport-container">
-  <aside>
-    {% include "partials/side-nav.njk" %}
-  </aside>
-  <div class="main-content">
-    {{ content | safe }}
+  <div class="flex-layout container">
+    <aside>
+      {% include "partials/side-nav.njk" %}
+    </aside>
+    <div class="main-content">
+      {{ content | safe }}
+    </div>
   </div>
 </div>
