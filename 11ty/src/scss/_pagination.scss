@@ -4,13 +4,14 @@
 
   .line {
     border: solid 1px var(--color-neutral-100);
-    width: 100%;
+    width: 80%;
   }
 }
 
 .pagination-text {
   margin-left: 1rem;
   font-weight: bold;
+  max-width: 22ch;
   h2 {
     color: var(--color-teal-500);
     font-size: 1.25rem;

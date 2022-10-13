@@ -12,28 +12,7 @@ layout: base.njk
       <div class="prose">
         {{ content | safe }}
       </div>
-
-  <!-- Using Pagination navigation. Showing the full list to show what the collection is pulling in, then next -->
-      {% set pageEntry = collections.all | eleventyNavigation(eleventyNavigation.parent) %}
-          <h2 id="my-pagination">This is what comes from using Pagination for pages (pagination.pages)</h2>
-        <ol>
-        {%- for pageEntry in pagination.pages %}
-              <li><a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>{{ pageEntry.title}} Index:{{ loop.index }}</a></li>
-            {%- endfor %}
-            </ol>
-           <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next{{ pageEntry.title }}</a>{% else %}Next{% endif %}</li>
-
-  <!-- Using the Next Collection items universal filter -->
-    {% set nextPage = collections.pages | getNextCollectionItem(page) %}
-      <div class="page-pagination">
-        <div class="line"></div>
-        <nav aria-label="pagination" class="pagination-text">
-          <h2>Next
-            <span class="visually-hidden">page</span>
-          </h2>
-          {% if nextPage %}<a href="{{ nextPage.url }}">{{ nextPage.data.title }}</a>{% endif %}
-        </nav>
-      </div>
+    {% include "partials/page-pagination.njk" %}
     </div>
   </div>
 </div>
