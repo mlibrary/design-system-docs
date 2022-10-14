@@ -96,8 +96,6 @@
 .umich-lib-callout,
 .umich-lib-print, 
 .umich-lib-alert {
-  display: flex;
-  align-items: center;
   margin: 1rem 0;
   padding: 1rem;
   border: solid 1px #E5E9ED;
@@ -108,6 +106,7 @@
   border-left: solid 4px var(--color-teal-400);
   &::before {
     font-family: "Material Icons";
+    transform: rotate(20deg);
     content: '\e88e';
     color: var(--color-teal-400);
     font-size: 1.5rem;
