@@ -1,20 +1,16 @@
 {% set parentNav = collections.all | eleventyNavigation(eleventyNavigation.parent) %}
-
 {% set nextItem = null %}
-  {% for item in parentNav %}
-    {% if item.key == eleventyNavigation.key %}
-      {% set nextItem = parentNav[loop.index0 + 1] %}
-    {% endif %}
-  {% endfor %}
-
+{% for item in parentNav %}
+  {% if item.key == eleventyNavigation.key %}
+    {% set nextItem = parentNav[loop.index0 + 1] %}
+  {% endif %}
+{% endfor %}
 <div class="page-pagination">
-   {% if nextItem %}
-   <div class="line"></div>
-     <nav aria-label="pagination" class="pagination-text">
-        <h2>Next
-          <span class="visually-hidden">page</span>
-        </h2>
-          <a href="{{ nextItem.url }}">{{ nextItem.title }}</a>
-      </nav>
+  {% if nextItem %}
+    <div class="line"></div>
+    <nav aria-label="pagination" class="pagination-text">
+      <h2>Next</h2>
+      <a href="{{ nextItem.url }}">{{ nextItem.title }}</a>
+    </nav>
   {% endif %}
 </div>
