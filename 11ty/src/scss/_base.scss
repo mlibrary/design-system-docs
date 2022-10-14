@@ -4,8 +4,8 @@
 //
 // ## Table of Contents
 //   1. Typography
-//
-//
+//   2. Global elements
+//     2.1 Details
 // --------------------------------------------------
 
 // ********************** //
@@ -21,4 +21,30 @@ h1 {
 
 .prose {
   max-width: 60ch;
+}
+
+// *************************** //
+// *** 2. GLOBAL ELEMENTS *** //
+// ************************* //
+
+
+// 2.1 Details
+
+details {
+  border: solid 1px var(--color-neutral-100);
+  width: 620px;
+  p {
+    font-size: 1rem;
+    margin: 1rem;
+  }
+} 
+
+summary {
+  border-left: solid 4px var(--color-teal-400);
+  padding: 1rem;
+  list-style: none;
+  cursor: pointer;
+  font-weight: var(--bold);
+  color: var(--color-neutral-400);
+  font-size: 1.25rem;
 }
