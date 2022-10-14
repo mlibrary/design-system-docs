@@ -68,7 +68,7 @@ select {
   font: inherit;
 }
 
-/* Remove all animations and transitions for people that prefer not to see them */
+/* Remove all animations and transitions */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

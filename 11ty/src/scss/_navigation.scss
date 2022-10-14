@@ -1,24 +1,34 @@
+@use 'media';
 // --------------------------------------------------
 //
-// # Navigation: Side and Primary
+// # Navigation
 //
+// ## Table of Contents
+//   1. Primary navigation
+//   2. Side navigation
 // --------------------------------------------------
 
-// Primary navigation
+// ****************************** //
+// *** 1. Primary navigation *** //
+// **************************** //
+
 .primary-nav ul {
   list-style: none;
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
   display: flex;
-
-
+  
   li {
     display: inline;
     margin-right: 1.5rem;
     font-size: 1.175rem;
     height: 100%;
     padding-top: .5rem;
+  
+  @include media.breakpoint('sm', 'max-width') {
+    margin-right: .25rem;
+   }
   }
 }
 
@@ -36,9 +46,16 @@
   &.active {
     border-color: #1D7491;
 }
+  @include media.breakpoint('sm', 'max-width') {
+   font-size: 1rem;
+  }
 }
 
-// Side page navigation
+
+// *************************** //
+// *** 2. Side navigation *** //
+// ************************* //
+
 .side-nav ul {
   list-style: none;
   padding-left: 0;

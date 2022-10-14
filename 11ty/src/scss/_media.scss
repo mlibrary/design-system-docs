@@ -1,0 +1,56 @@
+@use 'sass:map';
+
+// --------------------------------------------------
+//
+// # Media Queries
+// 
+// ## Examples
+//   Import the file using `@use 'media';`.
+//   ### Includes
+//     #### Breakpoints
+//       `@include media.breakpoint() { ... }` translates to `@media (min-width: 64rem) { ... }`
+//       `@include media.breakpoint('md') { ... }` translates to `@media (min-width: 52rem) { ... }`
+//       `@include media.breakpoint('sm', 'max-width') { ... }` translates to `@media (max-width: 40rem) { ... }`
+//     #### Devices
+//       `@include media.device() { ... }` translates to `@media (hover: hover) and (pointer: fine) { ... }`
+//       `@include media.device('touchscreen') { ... }` translates to `@media (hover: none) and (pointer: coarse) { ... }`
+//     #### Reduced Motion
+//       `@include media.reduced-motion { ... }` translates to `@media (prefers-reduced-motion: reduce) { ... }`
+//
+// ## Table of Contents
+//   1. Variables
+//     1.1 Breakpoints
+//   2. Mixins
+//     2.1 Breakpoints
+//
+// --------------------------------------------------
+
+
+// ******************** //
+// *** 1. VARIABLES *** //
+// ******************** //
+
+// *                 * //
+// * 1.1 BREAKPOINTS * //
+// *                 * //
+$breakpoints: (
+  'xs': 30rem,
+  'sm': 40rem,
+  'md': 52rem,
+  'lg': 64rem,
+  'xl': 80rem
+);
+
+
+// ***************** //
+// *** 2. MIXINS *** //
+// ***************** //
+
+// *                 * //
+// * 2.1 BREAKPOINTS * //
+// *                 * //
+@mixin breakpoint($breakpoint: 'lg', $type: 'min-width') {
+  @media (#{$type}: map.get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}

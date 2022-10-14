@@ -2,19 +2,21 @@
 //
 // # Base Global Styles
 //
+// ## Table of Contents
+//   1. Typography
+//
+//
 // --------------------------------------------------
 
+// ********************** //
+// *** 1. TYPOGRAPHY *** //
+// ******************** //
 h1 {
   font-weight: 400;
 }
 
 .headers {
   border-bottom: solid 2px var(--color-neutral-100);
-}
-
-.container {
-  margin-top: 4rem;
-  margin-bottom: 3rem;
 }
 
 .prose {
