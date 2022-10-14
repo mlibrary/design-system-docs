@@ -1,0 +1,12 @@
+{
+  "info": {
+  "active": false,
+  "icon":  "info",
+  "message": "The site is currently in development."
+  },
+  "warning": {
+    "active": true,
+    "icon": "warning",
+    "message": "The site is currently experiencing issues."
+    }
+}

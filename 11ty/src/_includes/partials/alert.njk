@@ -1,0 +1,15 @@
+{% if alert.info.active == true %}
+  <section class="alert--info">
+    <div class="alert__container viewport-container">
+      <span class='material-icons'>{{ alert.info.icon }}</span>
+      <p>{{ alert.info.message }}</p>
+    </div>
+  </section>
+{% elif alert.warning.active == true %}
+  <section class="alert--warning">
+    <div class="alert__container viewport-container">
+      <span class='material-icons'>{{ alert.warning.icon }}</span>
+      <p>{{ alert.warning.message }}</p>
+    </div>
+  </section>
+{% endif %}
