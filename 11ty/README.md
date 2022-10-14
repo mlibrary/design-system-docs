@@ -6,10 +6,16 @@ Install 11ty and dependencies
 npm install
 ```
 
-Start development server and watch Sass (.scss) files
+Start development server and watch Sass (.scss) files (in parallel).
 
 ```
 npm start
+```
+
+Important: The DRUPAL_AUTH is currently required to fetch some of the Drupal JSON. (October 2022). Enter the correct password for `$password`.
+
+```
+DRUPAL_AUTH=admin:$password npm start
 ```
 
 View in browser
@@ -29,19 +35,23 @@ http://localhost:8080
 
 ---
 
-## Building Your Site
+## Developing the Site
 
 This is some very basic information. Please read the official [11ty documentation](https://www.11ty.dev/docs/) for an in-depth guide to building with 11ty.
 
 ### Edit site metadata
 
-Edit your site metadata (site name, author, contact, url, etc..)
+Edit site metadata (site name, product name, description, author, contact, url, etc..)
 
 ```
 src/_data/meta.json
 ```
 
+This can be used in the markdown and Nunjucks files.
+
 ### Layouts
+
+Layouts use the Nunjucks templating language.
 
 Page layouts are located the the `layouts` folder.
 
@@ -49,31 +59,43 @@ Page layouts are located the the `layouts` folder.
 src/_includes/layouts
 ```
 
-Layouts use the Nunjucks templating language.
+Partials use the Nunucks `{% include %}` and are located in the `partials` folder.
+
+```
+src/_includes/partials
+```
+
 There is a `base.njk` file for the HTML boilerplate.
 Additional layouts build off of that boilerplate.
 
-### Create pages/ page content
+## Create pages/ page content
 
-Page content is created with Markdown (.md).
+### Index.md and 404.md
+
+Static page content is created with markdown (.md).
+Use YAML front matter to add data to your content. Locally assigned front matter values override things further up the chain.
+
+### Drupal content
+
+Pages are generated from the Drupal content coming from the Drupal JSON:API using the [11ty pagination feature](https://www.11ty.dev/docs/pagination/).
 
 ```
-src/pages
+src/_data/drupal.js
 ```
 
-Create your content in a markdown file. Use YAML front matter to add data to your content. Locally assigned front matter values override things further up the chain.
+There are two Nunuck files- one to generate a page (`page-generator.njk`) and one to generate landing pages (`landing_page-generator.njk`).
 
-### Styles
+## Styles
 
 Edit the styles in the `src/scss` folder. 11ty is watching that folder and building the Sass files into `src/css`. 11ty then passes through the CSS to the `public` folder.
 
-### Images
+## Images
 
 Add images to the `src/img` folder. 11ty is watching that folder and passing through the files to the `public` folder.
 
-### 11ty Features
+## 11ty Features
 
-#### **Plugins**
+### **Plugins**
 
 This site uses the [11ty Navigation Plugin](https://www.11ty.dev/docs/plugins/navigation/).
 This plugin supports infinite-depth hierarchical navigation and breadcrumbs.
@@ -96,3 +118,8 @@ _Important distinction_: tags have a singular purpose in Eleventy... to construc
 ## Resources
 
 Please visit the official [11ty](https://www.11ty.dev/docs/) docs.
+
+These were helpful for data configuration:
+
+- [Generate 11ty pages from external data](https://egghead.io/lessons/11ty-generate-eleventy-11ty-pages-from-external-data)
+- [Using 11ty JavaScript Data files to mix Markdown and CMS content...](https://bryanlrobinson.com/blog/using-11ty-javascript-data-files-to-mix-markdown-and-cms-content-into-one-collection/)
