@@ -106,11 +106,11 @@
   border-left: solid 4px var(--color-teal-400);
   &::before {
     font-family: "Material Icons";
-    transform: rotate(20deg);
     content: '\e88e';
     color: var(--color-teal-400);
     font-size: 1.5rem;
-    padding-right: 1.125rem;
+    padding-right: 0.25rem;
+    vertical-align: sub;
     }
 }
 
@@ -118,9 +118,11 @@
   border-left: solid 4px var(--color-green-400);
   &::before {
     font-family: "Material Icons";
-    content: 'e8ad';
+    content: '\e8ad';
     color: var(--color-green-400);
-    padding-right: 1.125rem;
+    font-size: 1.5rem;
+    padding-right: 0.25rem;
+    vertical-align: sub;
     }
 }
 
@@ -130,6 +132,8 @@
     font-family: "Material Icons";
     color: var(--color-maize-400);
     content: '\e002';
-    padding-right: 1.125rem;
+    font-size: 1.5rem;
+    padding-right: 0.25rem;
+    vertical-align: sub;
     }
 }
