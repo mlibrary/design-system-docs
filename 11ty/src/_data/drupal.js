@@ -15,8 +15,13 @@ function slugify(string) {
     .replace(/-+$/, '') // Trim - from end of text
 }
 
+let retval = {};
 module.exports = async function () {
   // 
+
+  if ( retval.pageData ) {
+    return retval;
+  }
 
   if ( ! process.env.DRUPAL_AUTH ) {
     console.error("⚠ DRUPAL_AUTH needs to be set in ENV: DRUPAL_AUTH=admin:$password npm start");
@@ -107,7 +112,9 @@ module.exports = async function () {
     console.log("-- nodeLinkIndex", nodeLinkIndex);
   }
 
-  let retval = { page: [], landing_page: [] };
+  // let retval = { page: [], landing_page: [] };
+  retval.page = [];
+  retval.landing_page = [];
 
   let pageData = {};
   [ drupalPagesData, drupalLandingPagesData ].forEach((data) => {
@@ -180,5 +187,6 @@ module.exports = async function () {
     console.log("-- # pagesData", Object.keys(retval));
   }
 
+  retval.pageData = pageData;
   return retval;
 };
