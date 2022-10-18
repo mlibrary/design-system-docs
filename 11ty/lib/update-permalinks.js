@@ -36,10 +36,10 @@ module.exports = function (eleventyConfig, config = {}) {
       } else if (href == '#') {
         // set up an anchor link to the link text
         new_href = '';
-        new_anchor = `${idify(link.textContent)}`;
+        new_anchor = `#${idify(link.textContent)}`;
       } else if (href.indexOf('#') == 0) {
         new_href = '';
-        new_anchor = `${idify(href.substring(1))}`;
+        new_anchor = `#${idify(href.substring(1))}`;
       } else {
         return;
       }
