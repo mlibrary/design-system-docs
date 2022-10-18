@@ -14,7 +14,7 @@ eleventyComputed:
     key: "{{ node.eleventyNavigation.key }}"
     summary: "{{ node.summary }}"
     parent: "{{ node.eleventyNavigation.parent }}"
-    order: "{{ node.eleventyNavigation.order }}"
+    order: {{ node.eleventyNavigation.order }}
 ---
 
 <h1>{{ node.title }}</h1>

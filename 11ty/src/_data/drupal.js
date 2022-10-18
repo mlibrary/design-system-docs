@@ -29,7 +29,15 @@ module.exports = async function () {
     method: 'GET',
   });
 
-  let menuData = {}; let menuDataIndex = {};
+  let menuData = {}; let menuDataGuidMap = {}; let menuDataIndex = [];
+  menuDataGuidMap['standard.front_page'] = 'standard.front_page';
+  menuDataIndex.push('standard.front_page');
+  menuData['standard.front_page'] = {
+    slug: null,
+    link: 'standard.front_page',
+    title: 'home'
+  };
+
   drupalMenuData.data.forEach((datum) => {
     if (datum.attributes.enabled == false) { return; }
     if (datum.attributes.menu_name != 'main') { return; }
@@ -39,32 +47,39 @@ module.exports = async function () {
     menuItem.title = datum.attributes.title;
     menuItem.slug = slugify(menuItem.title);
     menuItem.weight = datum.attributes.weight;
-    menuItem.parentId = null;
+    menuItem.parentGuidId = null;
     if (datum.attributes.parent && datum.attributes.parent.indexOf('menu_link_content') > -1) {
-      menuItem.parentId = (datum.attributes.parent.split(":"))[1];
+      menuItem.parentGuidId = (datum.attributes.parent.split(":"))[1];
+    } else {
+      menuItem.parentGuidId = datum.attributes.parent;
     }
 
     // convert the link into /node/1 to seed link modifications
-    menuItem.link = menuItem.id = datum.attributes.link.uri.replace('entity:', '/');
+    menuItem.link = datum.attributes.link.uri.replace('entity:', '/');
 
-    menuDataIndex[menuItem.guid] = menuItem.id;
+    menuDataGuidMap[menuItem.guid] = menuItem.link;
     menuData[menuItem.link] = menuItem;
+    menuDataIndex.push(menuItem.link);
   })
 
-  // now fix the menuItem.parent keys
-  Object.keys(menuData).forEach((key) => {
-    let value = menuData[key];
-    let parent = menuData[menuDataIndex[value.parentId]];
-    let tmp = [ value.slug ];
-    if (parent) {
-      value.parent = parent.id;
-      tmp.unshift(parent.slug);
+  // // now fix the menuItem.parent keys
+  menuDataIndex.forEach((key) => {
+    let menuItem = menuData[key];
+    let parent = menuData[menuDataGuidMap[menuItem.parentGuidId]];
+    let tmp = [ menuItem.slug ];
+    if ( parent ) {
+      menuItem.parent = parent.link;
+      if ( parent.slug ) {
+        tmp.unshift(parent.slug);
+      }
     }
-    value.permalink = tmp.join('/');
+    menuItem.permalink = tmp.join('/');
   })
 
   if ( process.env.DEBUG ) {
     console.log("-- menuData", menuData);
+    console.log("-- menuDataIndex", menuDataIndex);
+    console.log("-- menuDataGuidMap", menuDataGuidMap);
   }
 
   let drupalPagesData = await EleventyFetch("https://design-system-cms.kubernetes.lib.umich.edu/jsonapi/node/page/", {
@@ -79,32 +94,32 @@ module.exports = async function () {
     method: 'GET',
   });
 
-  let slugData = {};
+  let nodeLinkIndex = {};
   [drupalPagesData, drupalLandingPagesData].forEach((data) => {
     data.data.forEach((datum) => {
       let id = `/node/${datum.attributes.drupal_internal__nid}`;
       datum.link = id;
-      slugData[id] = slugify(datum.attributes.title);
+      nodeLinkIndex[id] = slugify(datum.attributes.title);
     });
   })
 
   if (process.env.DEBUG) {
-    console.log("-- slugData", slugData);
+    console.log("-- nodeLinkIndex", nodeLinkIndex);
   }
 
-  // let pagesData = [];
   let retval = { page: [], landing_page: [] };
 
+  let pageData = {};
   [ drupalPagesData, drupalLandingPagesData ].forEach((data) => {
     data.data.forEach((datum) => {
       let pageItem = {};
       pageItem.guid = datum.id;
-      pageItem.id = pageItem.link = datum.link;
-      let menuItem = menuData[pageItem.id];
+      pageItem.link = datum.link;
+      let menuItem = menuData[pageItem.link];
       if (menuItem === undefined) { return; }
 
       pageItem.title = datum.attributes.title;
-      pageItem.slug = slugData[pageItem.id];
+      pageItem.slug = nodeLinkIndex[pageItem.id];
       pageItem.created = datum.attributes.created;
       pageItem.changed = datum.attributes.changed;
       if ( datum.attributes.body == null ) {
@@ -120,61 +135,50 @@ module.exports = async function () {
 
       // navigation data
       pageItem.permalink = menuItem.permalink;
-      let parentId = menuItem.parentId;
+      let parentLink = menuItem.parent;
       let parentTitle = 'home';
-      if ( parentId ) {
-        let parentItem = menuData[menuDataIndex[parentId]];
+      if (parentLink ) {
+        let parentItem = menuData[parentLink];
         parentTitle = parentItem.title;
       }
 
       pageItem.eleventyNavigation = {};
       pageItem.eleventyNavigation.key = pageItem.title;
+      pageItem.eleventyNavigation.order = menuItem.weight;
       if (parentTitle) {
         pageItem.eleventyNavigation.parent = parentTitle;
       }
 
-      console.log("-- navigation", parentTitle, "->", pageItem.eleventyNavigation.key);
+      if (process.env.DEBUG) {
+        console.log("-- navigation", parentTitle, "->", pageItem.eleventyNavigation.key, pageItem.eleventyNavigation.order);
+      }
 
-      // pagesData.push(pageItem);
-      retval[pageItem.tags].push(pageItem);
+      // retval[pageItem.tags].push(pageItem);
+      pageData[pageItem.link] = pageItem;
     })
   })
 
+  let menuStack = [ 'standard.front_page' ];
+  while ( menuStack.length ) {
+    let parentLink = menuStack.shift();
+    let childMenuItems = menuDataIndex.filter((link) => {
+      return (menuData[link].parent == parentLink );
+    })
+    childMenuItems.sort((a, b) => { return menuData[a].weight - menuData[b].weight });
+    childMenuItems.forEach((link) => {
+      let pageItem = pageData[link];
+      retval[pageItem.tags].push(pageItem);
 
-  // pagesData.forEach((pageItem) => {
+      // ... as long as we do not have sub-pages
+      if ( pageItem.tags == 'landing_page' ) {
+        menuStack.push(link);
+      }
+    })
+  }
 
-  //   retval[pageItem.tags].push(pageItem);
-
-  //   let parentSlug = null;
-  //   let menuItem = menuData[pageItem.id];
-  //   let parentId = menuItem.parentId;
-  //   if (parentId) {
-  //     let parentItem = menuData[menuDataIndex[parentId]];
-  //     if (parentItem === undefined) {
-  //       console.log("-- WTF", parentId, menuItem.id, menuItem.permalink);
-  //       return;
-  //     }
-  //     parentSlug = parentItem.title;
-  //     //  else {
-  //     //   pageItem.slug = parentSlug + '/' + pageItem.slug;
-  //     // }
-  //   } else {
-  //     parentSlug = 'home';
-  //   }
-
-  //   pageItem.eleventyNavigation = {};
-  //   pageItem.eleventyNavigation.key = pageItem.title;
-  //   if (parentSlug) {
-  //     pageItem.eleventyNavigation.parent = parentSlug;
-  //   }
-  //   console.log("-- ", pageItem.id, pageItem.slug, menuItem.parent, parentSlug);
-  //   pageItem.eleventyNavigation.order = menuItem.weight;
-  //   // pageItem.permalink = pageItem.slug;
-  // })
-
-
-  console.log("-- # pagesData", Object.keys(retval));
+  if (process.env.DEBUG) {
+    console.log("-- # pagesData", Object.keys(retval));
+  }
 
   return retval;
-  // return pagesData;
 };
