@@ -5,7 +5,9 @@
 // ## Table of Contents
 //   1. Typography
 //   2. Global elements
-//     2.1 Details
+//     2.1 Details <details>
+//     2.2 Code blocks <pre class="code">
+//     2.3 Blockquotes <blockquote>
 // --------------------------------------------------
 
 // ********************** //
@@ -47,4 +49,26 @@ summary {
   font-weight: var(--bold);
   color: var(--color-neutral-400);
   font-size: 1.25rem;
+}
+
+
+// 2.2 Code block
+
+pre.code {
+  position: relative;
+  background-color: var(--color-blue-100);
+  color: var(--color-blue-400);
+  padding: 2rem;
+  font-family: Consolas,Monaco,Courier New,Courier,monospace;
+  border-radius: var(--radius-default);
+}
+
+// 2.3 Blockquote
+
+blockquote {
+  padding: .25rem 1rem;
+  border-left: solid 4px var(--color-indigo-300);
+  color: var(--color-neutral-300);
+  font-weight: var(--semibold);
+  font-size: 1rem;
 }
