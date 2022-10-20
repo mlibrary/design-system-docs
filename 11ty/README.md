@@ -41,13 +41,12 @@ This is some very basic information. Please read the official [11ty documentatio
 
 ### Edit site metadata
 
-Edit site metadata (site name, product name, description, author, contact, url, etc..)
 
 ```
 src/_data/meta.json
 ```
 
-This can be used in the markdown and Nunjucks files.
+This data can be used in the markdown and Nunjucks files. The following properties are supported:
 
 <table>
     <thead>
@@ -59,33 +58,30 @@ This can be used in the markdown and Nunjucks files.
     <tbody>
         <tr>
             <td><code>siteName</code></td>
-            <td>your full name</td>
+            <td>The full name of the website.</td>
         </tr>
         <tr>
             <td><code>productName</code></td>
-            <td>your job description</td>
+            <td>Shortened name to describe the Design System.</td>
         </tr>
         <tr>
             <td><code>url</code></td>
-            <td>your town/state</td>
+            <td>Site url</td>
         </tr>
         <tr>
             <td><code>siteDescription</code></td>
-            <td>the file name of your profile photo. Must be located in <code>src/assets/images/</code></td>
+            <td>Description of the site used for SEO.</td>
         </tr>
          <tr>
             <td><code>language</code></td>
-            <td>your town/state</td>
-        </tr>
-         <tr>
-            <td><code>language</code></td>
-            <td>your town/state</td>
+            <td>Language set in the <code>html</code> for the site.</td>
         </tr>
          <tr>
             <td><code>author</code></td>
-            <td>Information for authoe <code>name</code>, <code>url</code>, and <code>email</code>.</td>
+            <td>Creator of the site. An object with author's <code>name</code>, <code>url</code>, and <code>email</code>.</td>
         </tr>
     </tbody>
+</table>
 
 ### Layouts
 
@@ -96,15 +92,22 @@ Page layouts are located the the `layouts` folder.
 ```
 src/_includes/layouts
 ```
+There is a `base.njk` file for the HTML boilerplate.
+Additional layouts build off of that boilerplate.
+
+```
+/layouts
+  base.njk
+  home.njk
+  landing-page.njk
+  page.njk
+```
 
 Partials use the Nunjucks `{% include %}` and are located in the `partials` folder.
 
 ```
 src/_includes/partials
 ```
-
-There is a `base.njk` file for the HTML boilerplate.
-Additional layouts build off of that boilerplate.
 
 ## Create pages/ page content
 
@@ -121,7 +124,9 @@ Pages are generated from the Drupal content coming from the Drupal JSON:API usin
 src/_data/drupal.js
 ```
 
-There are two Nunuck files- one to generate a page (`page-generator.njk`) and one to generate landing pages (`landing_page-generator.njk`).
+#### Pagination files to create landing page and page
+
+There are two Nunjuck files- one to generate a page (`page-generator.njk`) and one to generate landing pages (`landing_page-generator.njk`).
 
 ## Styles
 
