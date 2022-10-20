@@ -64,6 +64,14 @@ pre.code {
   border-radius: var(--radius-default);
 }
 
+code {
+  background-color: var(--color-blue-100);
+  color: var(--color-blue-400);
+  padding: .25rem;
+  font-family: Consolas,Monaco,Courier New,Courier,monospace;
+  border-radius: var(--radius-default);
+}
+
 // 2.3 Blockquote
 
 blockquote {
