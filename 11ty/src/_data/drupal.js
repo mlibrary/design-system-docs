@@ -28,7 +28,7 @@ module.exports = async function () {
     process.exit(1);
   }
   
-  let drupalMenuData = await EleventyFetch(`${process.env.DRUPAL_HOST}/jsonapi/menu_link_content/menu_link_content`, {
+  let drupalMenuData = await EleventyFetch(`${process.env.DRUPAL_URL}/jsonapi/menu_link_content/menu_link_content`, {
     duration: "1d", // 1 day
     type: "json",
     method: 'GET',
@@ -92,13 +92,13 @@ module.exports = async function () {
     console.log("-- menuDataGuidMap", menuDataGuidMap);
   }
 
-  let drupalPagesData = await EleventyFetch(`${process.env.DRUPAL_HOST}/jsonapi/node/page/`, {
+  let drupalPagesData = await EleventyFetch(`${process.env.DRUPAL_URL}/jsonapi/node/page/`, {
     duration: "1d", // 1 day
     type: "json",
     method: 'GET',
   });
 
-  let drupalLandingPagesData = await EleventyFetch(`${process.env.DRUPAL_HOST}/jsonapi/node/landing_page/`, {
+  let drupalLandingPagesData = await EleventyFetch(`${process.env.DRUPAL_URL}/jsonapi/node/landing_page/`, {
     duration: "1d", // 1 day
     type: "json",
     method: 'GET',
