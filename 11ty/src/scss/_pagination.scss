@@ -4,15 +4,27 @@
 // 
 // --------------------------------------------------
 
-
-
 .page-pagination {
   display: flex;
   align-items: baseline;
+  padding-top: 1rem;
 
   .line {
     border: solid 1px var(--color-neutral-100);
     width: 80%;
+  }
+
+  .back-to-top {
+    text-decoration: none;
+    font-weight: var(--semibold);
+    width: 15ch;
+  }
+
+  .back-to-top::before {
+    font-family: 'Material Icons';
+    content: '\e5d8';
+    padding-right: .25rem;
+    vertical-align: bottom;
   }
 }
 

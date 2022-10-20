@@ -56,6 +56,12 @@
 // *** 2. Side navigation *** //
 // ************************* //
 
+
+.side-nav {
+  position: sticky;
+  top: 1.5rem;
+}
+
 .side-nav ul {
   list-style: none;
   padding-left: 0;

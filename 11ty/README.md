@@ -12,7 +12,7 @@ Start development server and watch Sass (.scss) files (in parallel).
 npm start
 ```
 
-Important: The DRUPAL_AUTH is currently required to fetch some of the Drupal JSON. (October 2022). Enter the correct password for `$password`.
+**Important:** The DRUPAL_AUTH is currently required to fetch some of the Drupal JSON. (October 2022). Enter the correct password for `$password`.
 
 ```
 DRUPAL_AUTH=admin:$password npm start
@@ -59,7 +59,7 @@ Page layouts are located the the `layouts` folder.
 src/_includes/layouts
 ```
 
-Partials use the Nunucks `{% include %}` and are located in the `partials` folder.
+Partials use the Nunjucks `{% include %}` and are located in the `partials` folder.
 
 ```
 src/_includes/partials
