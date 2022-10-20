@@ -29,6 +29,7 @@
     "sass": "^1.54.6"
   },
   "dependencies": {
-    "@11ty/eleventy-fetch": "^3.0.0"
+    "@11ty/eleventy-fetch": "^3.0.0",
+    "jsdom": "^20.0.1"
   }
 }

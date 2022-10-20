@@ -15,7 +15,7 @@
 }
 .footer ul a {
   display: inline-block;
-  padding: var(--space-x-small) 0;
+  padding: var(--space-xx-small) 0;
 }
 
 .footer ul a span:hover {
@@ -29,6 +29,10 @@
 
 .footer a > svg {
   margin-right: 0.5em;
+}
+
+.address {
+  max-width: 22ch;
 }
 
 .footer__content {

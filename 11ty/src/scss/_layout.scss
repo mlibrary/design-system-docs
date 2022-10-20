@@ -1,14 +1,45 @@
 // --------------------------------------------------
 //
-// # Site Layoyt
-//   Flex for pages
+// # Layout
+//   Common building blocks for the site.
+//
+// ## Table of Contents
+//   1. Viewport Container
+//   2. Layout
+//   3. Flex
 //
 // --------------------------------------------------
 
+// ************************ //
+// *** 1. CONTAINERS ***** //
+// ***********************//
+
+.container {
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+}
+
+.viewport-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1280px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+}
+
+
+// ****************** //
+// *** 2. LAYOUT *** //
+// **************** //
 
 .layout {
-  margin: 2rem auto;
+  margin: 0 auto;
 }
+
+// **************** //
+// *** 3. FLEX *** //
+// ***************//
 
 .flex-layout {
   display: flex;
@@ -16,7 +47,6 @@
   gap: 3rem;
   justify-content: start;
   align-items: stretch;
-  padding-top: 2rem;
 }
 
 .flex-layout > :first-child {

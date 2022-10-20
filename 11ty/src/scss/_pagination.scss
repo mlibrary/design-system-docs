@@ -1,0 +1,44 @@
+// --------------------------------------------------
+//
+// # Page pagination
+// 
+// --------------------------------------------------
+
+.page-pagination {
+  display: flex;
+  align-items: baseline;
+  padding-top: 1rem;
+
+  .line {
+    border: solid 1px var(--color-neutral-100);
+    width: 80%;
+  }
+
+  .back-to-top {
+    text-decoration: none;
+    font-weight: var(--semibold);
+    width: 15ch;
+  }
+
+  .back-to-top::before {
+    font-family: 'Material Icons';
+    content: '\e5d8';
+    padding-right: .25rem;
+    vertical-align: bottom;
+  }
+}
+
+.pagination-text {
+  margin-left: 1rem;
+  font-weight: bold;
+  max-width: 22ch;
+  h2 {
+    color: var(--color-teal-500);
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+  }
+  a {
+    color: var(--color-neutral-400);
+    font-size: 1.125rem;
+  }
+}

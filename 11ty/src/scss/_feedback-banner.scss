@@ -1,0 +1,26 @@
+// --------------------------------------------------
+//
+// # Feedback banner
+//   Full width banner containing text and/or links to feedback form
+//
+// --------------------------------------------------
+
+.feedback-banner {
+  background-color: var(--color-indigo-100);
+  padding: 1em 0;
+  
+  a {
+    font-weight: bold;
+  }
+}
+
+.feedback-banner-container {
+  display: flex;
+  align-items: center;
+}
+
+.feedback-icon {
+  border-radius: 100%;
+  margin-right: 1rem;
+  color: var(--color-teal-400);
+}

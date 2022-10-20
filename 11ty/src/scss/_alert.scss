@@ -1,0 +1,26 @@
+// --------------------------------------------------
+//
+// # Alert
+//   Banners are used to grab the attention of the user to display important information. 
+//   They are displayed just after the website-header, and take the full width of the website. 
+//   Two types: informational and warning
+//
+// --------------------------------------------------
+
+.alert--info {
+  background-color: var(--color-teal-200);
+  color: var(--color-neutral-400);
+}
+
+.alert--warning {
+  background-color: var(--color-orange-200);
+  color: var(--color-neutral-400);
+}
+
+.alert__container {
+  display: flex;
+  align-items: center;
+  p {
+    padding-left: .25rem;
+  }
+}

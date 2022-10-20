@@ -1,9 +1,21 @@
+const { JSDOM } = require('jsdom');
+const path = require('path');
 const pluginNavigation = require("@11ty/eleventy-navigation");
+const updatePermalinks = require('./lib/update-permalinks');
+const updateMarkup = require('./lib/update-markup');
 
 module.exports = function(eleventyConfig) {
 
   // Add the plugins used
   eleventyConfig.addPlugin(pluginNavigation);
+
+  // eleventyConfig.addPlugin(updateMarkup);
+
+  eleventyConfig.addPlugin(updatePermalinks, {
+    src: path.resolve('./src/_data/drupal.js')
+  });
+
+  eleventyConfig.addPlugin(updateMarkup);
 
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 

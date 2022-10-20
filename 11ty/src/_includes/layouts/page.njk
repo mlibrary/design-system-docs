@@ -2,12 +2,18 @@
 layout: base.njk
 ---
 
-{% include "partials/breadcrumbs.njk" %}
-<div class="flex-layout">
-  <aside>
-    {% include "partials/side-nav.njk" %}
-  </aside>
-  <div class="main-content">
-    {{ content | safe }}
+<div class="viewport-container">
+  {% include "partials/breadcrumbs.njk" %}
+  <div class="flex-layout container">
+    <aside>
+      {% include "partials/side-nav.njk" %}
+    </aside>
+    <div class="main-content">
+      <div class="prose">
+        {{ content | safe }}
+      </div>
+    {% include "partials/page-pagination.njk" %}
+    </div>
   </div>
 </div>
+{% include "partials/feedback-banner.njk" %}
