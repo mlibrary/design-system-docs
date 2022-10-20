@@ -49,6 +49,44 @@ src/_data/meta.json
 
 This can be used in the markdown and Nunjucks files.
 
+<table>
+    <thead>
+        <tr>
+            <th>Key</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>siteName</code></td>
+            <td>your full name</td>
+        </tr>
+        <tr>
+            <td><code>productName</code></td>
+            <td>your job description</td>
+        </tr>
+        <tr>
+            <td><code>url</code></td>
+            <td>your town/state</td>
+        </tr>
+        <tr>
+            <td><code>siteDescription</code></td>
+            <td>the file name of your profile photo. Must be located in <code>src/assets/images/</code></td>
+        </tr>
+         <tr>
+            <td><code>language</code></td>
+            <td>your town/state</td>
+        </tr>
+         <tr>
+            <td><code>language</code></td>
+            <td>your town/state</td>
+        </tr>
+         <tr>
+            <td><code>author</code></td>
+            <td>Information for authoe <code>name</code>, <code>url</code>, and <code>email</code>.</td>
+        </tr>
+    </tbody>
+
 ### Layouts
 
 Layouts use the Nunjucks templating language.
