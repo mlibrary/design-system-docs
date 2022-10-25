@@ -52,6 +52,16 @@ jobs:
         node-version: 18.x
     - run: npm install
       working-directory: ./11ty
+    - name: Cachine 11ty
+      id: eleventy-cache-build
+      uses: actions/cache@v2
+      with:
+        path: |
+          public
+          .cache
+        key: ${{ runner.os }}-eleventy-build-${{ github.run_id }}
+        restore-keys: |
+          ${{ runner.os }}-eleventy-build-
     - run: npm run build
       working-directory: ./11ty
     - name: Deploy to netlify
