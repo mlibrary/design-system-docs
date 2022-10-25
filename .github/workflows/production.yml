@@ -36,7 +36,7 @@ jobs:
           fetch-depth: 0
       # Get tag from action input
       - name: Check that the tag exists
-        if: ${{ github.event_name == 'workflow_dispatch' && github.events.inputs.tag }}
+        if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.tag != '' }}
         id: tag_check
         run: |
           if git rev-parse 'refs/tags/${{ github.event.inputs.tag }}' &> /dev/null; then
@@ -50,7 +50,7 @@ jobs:
           fi
       # Checkout tag from repo
       - name: Checkout correct repository
-        if: ${{ github.event_name == 'workflow_dispatch'  && github.events.inputs.tag }}
+        if: ${{ github.event_name == 'workflow_dispatch'  && github.event.inputs.tag != '' }}
         uses: actions/checkout@v2
         with:
           ref: ${{ github.event.inputs.tag }}
@@ -61,9 +61,12 @@ jobs:
           node-version: 18.x
       # Run npm install and build on our code
       - run: npm install
+        working-directory: ./11ty
       - run: npm run build
-      # Deploy to Netlify using our production secrets
+        working-directory: ./11ty
+       Deploy to Netlify using our production secrets
       - name: Deploy to netlify
+        working-directory: ./11ty
         run: npx netlify-cli deploy --dir=public --prod
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
