@@ -1,27 +1,32 @@
 ## Development Quick Start
 
+Build Docker the docker image for web
+```
+docker-compose build web
+```
+
+Copy the `.env-example` to `.env`
+
+Update `.env` to have real values. 
+
+**Important:** The DRUPAL_AUTH is currently required to fetch some of the Drupal JSON. (October 2022). Enter the correct password for `$password`.
+
 Install 11ty and dependencies
 
 ```
-npm install
+docker-compose run --rm web npm install
 ```
 
 Start development server and watch Sass (.scss) files (in parallel).
 
 ```
-npm start
-```
-
-**Important:** The DRUPAL_AUTH is currently required to fetch some of the Drupal JSON. (October 2022). Enter the correct password for `$password`.
-
-```
-DRUPAL_AUTH=admin:$password npm start
+docker-compose run --rm web npm start
 ```
 
 View in browser
 
 ```
-http://localhost:8080
+http://localhost:8888
 ```
 
 ## Dev Scripts

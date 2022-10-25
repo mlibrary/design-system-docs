@@ -1,53 +1,67 @@
-name: Build drupal image on push to main
+name: Build and deploy drupal image 
 
 on:
-  push:
-    branches: [ main ]
-
-env:
-  IMAGE_NAME: design-system-cms
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: tag
+        required: true
 
 jobs:
-  #changes:
-    #runs-on: ubuntu-latest
-    #outputs:
-      #drupal: ${{ steps.filter.outputs.drupal }}
-    #steps:
-    #- uses: dorny/paths-filter@v2
-      #id: filter
-      #with:
-        #filters: |
-          #drupal:
-            #- 'drupal/**'
-
   build-drupal:
-    #needs: changes
-    #if: ${{ needs.changes.outputs.drupal == 'true' }}
     environment: cms
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - name: Clone latest repository
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: Check that the tag exists in repo
+      id: tag_check
+      run: |
+        if git rev-parse 'refs/tags/${{ github.event.inputs.tag }}' &> /dev/null; then
+          echo '::set-output name=tag::${{ github.event.inputs.tag }}'
+        elif git rev-parse '${{ github.event.inputs.tag }}' &> /dev/null; then
+          echo "::set-output name=tag::`git rev-parse '${{ github.event.inputs.tag }}'`"
+        else
+          echo "Couldn't figure out tag from input: ${{ github.event.inputs.tag }}"
+          echo "Aborting deployment."
+          false
+        fi
     - name: Log into Github Container Registry
       uses: docker/login-action@v1
       with:
         registry: ghcr.io
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
-    - name: Build and Push
+    - name: Check that the tag exists in container registry
+      id: image_check
+      run: |
+        if docker manifest inspect ghcr.io/mlibrary/${{ secrets.IMAGE_NAME }}:${{ steps.tag_check.outputs.tag }} > /dev/null; then
+          echo '::set-output name=image_exists::true'
+          echo "image exists!"
+        else
+          echo "image doesn't exist; Starting to Build and push image"
+        fi
+    - name: Checkout Correct repository
+      if: ${{ steps.image_check.outputs.image_exists != 'true' }}
+      uses: actions/checkout@v2
+      with:
+        ref: ${{ github.event.inputs.tag }}
+    - name: Build and Push Image
       uses: docker/build-push-action@v2
+      if: ${{ steps.image_check.outputs.image_exists != 'true' }}
       with:
         context: drupal/.
         push: true
         tags: | 
-           ghcr.io/mlibrary/${{ secrets.IMAGE_NAME }}:latest
-           ghcr.io/mlibrary/${{ secrets.IMAGE_NAME }}:${{ github.sha }}
-    #- name: Deploy to kubernetes
-      #uses: mlibrary/deploy-to-kubernetes@v1
-      #with:
-        #github_username: ${{ github.actor }}
-        #github_token: ${{ secrets.GITHUB_TOKEN }}
-        #image: mlibrary/${{ secrets.IMAGE_NAME }}:${{ github.sha }}
-        #cluster_ca: ${{ secrets.HATCHER_CLUSTER_CA }}
-        #cluster_server: https://hatcher.kubernetes.lib.umich.edu
-        #namespace_token: ${{ secrets.HATCHER_TOKEN }}
-        #namespace: ${{ secrets.NAMESPACE }}
+           ghcr.io/mlibrary/${{ secrets.IMAGE_NAME }}:${{steps.tag_check.outputs.tag}}
+    - name: Deploy to kubernetes
+      uses: mlibrary/deploy-to-kubernetes@v3
+      with:
+        registry_token: ${{ secrets.GITHUB_TOKEN }}
+        image: ghcr.io/mlibrary/${{ secrets.IMAGE_NAME }}:${{steps.tag_check.outputs.tag}}
+        cluster_ca: ${{ secrets.HATCHER_CLUSTER_CA }}
+        cluster_server: https://hatcher.kubernetes.lib.umich.edu
+        namespace_token: ${{ secrets.HATCHER_TOKEN }}
+        namespace: ${{ secrets.NAMESPACE }}
