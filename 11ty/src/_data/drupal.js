@@ -34,7 +34,7 @@ module.exports = async function () {
     method: 'GET',
     fetchOptions: {
       headers: {
-        "Authorization": "Basic" + Buffer.from(process.env.DRUPAL_AUTH).toString('base64')
+        "Authorization": "Basic " + Buffer.from(process.env.DRUPAL_AUTH).toString('base64')
       }
     }
   });
