@@ -8,6 +8,7 @@
   display: flex;
   align-items: baseline;
   padding-top: 1rem;
+  max-width: 80ch;
 
   .line {
     border: solid 1px var(--color-neutral-100);

@@ -18,6 +18,7 @@
   margin-top: 0;
   margin-bottom: 0;
   display: flex;
+  flex-flow: row wrap;
   
   li {
     display: inline;
@@ -27,7 +28,7 @@
     padding-top: .5rem;
   
   @include media.breakpoint('sm', 'max-width') {
-    margin-right: .25rem;
+    margin-right: .5rem;
    }
   }
 }
