@@ -16,11 +16,15 @@
 .footer ul a {
   display: inline-block;
   padding: var(--space-xx-small) 0;
+  &:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;    
+  }
 }
 
 .footer ul a span:hover {
   text-decoration: underline;
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: 1px;
 }
 
 .footer a {

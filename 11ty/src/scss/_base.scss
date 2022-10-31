@@ -8,6 +8,7 @@
 //     2.1 Details <details>
 //     2.2 Code blocks <pre class="code">
 //     2.3 Blockquotes <blockquote>
+//     2.4 Images
 // --------------------------------------------------
 
 // ********************** //
@@ -62,6 +63,9 @@ pre.code {
   padding: 2rem;
   font-family: Consolas,Monaco,Courier New,Courier,monospace;
   border-radius: var(--radius-default);
+  word-wrap: break-word; 
+  width: 100ch;
+  font-size:14px;
 }
 
 code {
@@ -80,4 +84,19 @@ blockquote {
   color: var(--color-neutral-300);
   font-weight: var(--semibold);
   font-size: 1rem;
+}
+
+// Images
+
+.prose p:has(img)  {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.prose img {
+  width: revert;
+  max-width: 50%;
 }
