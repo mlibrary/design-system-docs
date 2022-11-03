@@ -53,10 +53,10 @@
     </section>
     <div class="headers">
       <m-universal-header></m-universal-header>
+      {% include "partials/alert.njk" %}
       <m-website-header name=" {{ meta.productName }}"></m-website-header>
       {% include "partials/primary-nav.njk" %}
     </div>
-    {% include "partials/alert.njk" %}
     <main class="layout" id="main">
       {{ content | safe }}
     </main>
