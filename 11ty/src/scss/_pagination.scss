@@ -12,7 +12,7 @@
 
   .line {
     border: solid 1px var(--color-neutral-100);
-    width: 80%;
+    width: 50%;
   }
 
   .back-to-top {
@@ -32,10 +32,10 @@
 .pagination-text {
   margin-left: 1rem;
   font-weight: bold;
-  max-width: 22ch;
+  max-width: 65ch;
   h2 {
     color: var(--color-teal-500);
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     margin-bottom: .5rem;
   }
   a {
