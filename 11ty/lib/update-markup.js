@@ -1,41 +1,19 @@
 const { JSDOM } = require('jsdom');
+const transforms = [];
+transforms.push(require('./transforms/backticks'));
+transforms.push(require('./transforms/codepen'));
+transforms.push(require('./transforms/docs-color-block'));
+
+console.log("-- transforms", transforms);
 
 module.exports = function (eleventyConfig, config = {}) {
 
   const _replaceMarkup = function (node) {
     node.childNodes.forEach((el) => {
-      if (el.nodeType == 3) {
-        let value = el.nodeValue;
-        value = value.trim();
-        if (value.indexOf('`') > -1) {
-          let oldValue = value;
-          value = value.replace(/`([^`]+)`/g, "<code>$1</code>");
-          el.parentElement.innerHTML = value;
-          if (process.env.DEBUG) {
-            console.log("-- backticks", oldValue, "->", value);
-          }
-        } else if ( value.indexOf('https://codepen.io') == 0 ) {
-          if (process.env.DEBUG) {
-            console.log("-- codepen", value);
-          }
-          let parentEl = el.parentElement;
-          // we're only replacing 
-          if ( parentEl.tagName != 'P' ) { return ; }
-          let codepenId = (value.trim().split('/pen/')).pop();
-          if ( ! codepenId ) { return; }
-
-          new_value = `<span>See <a href="${value}">
-  example pen</a> by U-M Library Design System (<a href="https://codepen.io/team/umlibrary-designsystem">@umlibrary-designsystem</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>`;
-          
-          parentEl.setAttribute('class', 'codepen');
-          parentEl.dataset.height = '300';
-          parentEl.dataset.defaultTab = 'html,result';
-          parentEl.dataset.slugHash = codepenId;
-          parentEl.dataset.user = 'umlibrary-designsystem';
-          parentEl.innerHTML = new_value;
-        }
-      } else {
+      transforms.forEach((fn) => {
+        fn(el);
+      })
+      if ( el.nodeType != 3 ) {
         _replaceMarkup(el);
       }
     })
