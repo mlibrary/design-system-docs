@@ -1,20 +1,19 @@
 const { JSDOM } = require('jsdom');
+const transforms = [];
+transforms.push(require('./transforms/backticks'));
+transforms.push(require('./transforms/codepen'));
+transforms.push(require('./transforms/docs-color-block'));
+
+console.log("-- transforms", transforms);
 
 module.exports = function (eleventyConfig, config = {}) {
 
   const _replaceMarkup = function (node) {
     node.childNodes.forEach((el) => {
-      if (el.nodeType == 3) {
-        let value = el.nodeValue;
-        if (value.trim() && value.indexOf('`') > -1) {
-          let oldValue = value;
-          value = value.replace(/`([^`]+)`/g, "<code>$1</code>");
-          el.parentElement.innerHTML = value;
-          if (process.env.DEBUG) {
-            console.log("-- backticks", oldValue, "->", value);
-          }
-        }
-      } else {
+      transforms.forEach((fn) => {
+        fn(el);
+      })
+      if ( el.nodeType != 3 ) {
         _replaceMarkup(el);
       }
     })
@@ -30,6 +29,14 @@ module.exports = function (eleventyConfig, config = {}) {
     if (!mainEl) { return rawContent; }
 
     _replaceMarkup(mainEl);
+
+    if ( mainEl.querySelector('p.codepen[data-slug-hash]') ) {
+      // add the codepen embed script
+      let scriptEl = dom.window.document.createElement('script');
+      scriptEl.async = true;
+      scriptEl.setAttribute('src', 'https://cpwebassets.codepen.io/assets/embed/ei.js');
+      dom.window.document.body.appendChild(scriptEl);
+    }
 
     return dom.serialize();
   })
