@@ -1,0 +1,45 @@
+// --------------------------------------------------
+//
+// # Tables
+// 
+// --------------------------------------------------
+
+table {
+  width: 100% !important;
+  border: 0 !important; 
+  border-collapse: collapse !important;
+}
+
+thead {
+  border-color: transparent;
+}
+
+tr > * {
+  border-bottom: solid 1px var(--color-neutral-100);
+  padding: 1rem 0;
+  vertical-align: top;
+}
+
+tr > *:not(:last-child) {
+  padding-right: 2rem;
+}
+
+td, th {
+  padding: 1rem;
+  padding-left: 0;
+  vertical-align: top;
+}
+
+th {
+  text-align: left;
+  border-bottom: solid 2px var(--color-maize-400);
+  font-size: .875rem;
+  font-weight: 800;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+th:not([scope^='row']) {
+  border-bottom: solid var(--space-xxx-small) var(--color-maize-400);
+}
