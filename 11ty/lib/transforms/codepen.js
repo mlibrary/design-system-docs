@@ -12,11 +12,12 @@ module.exports = function (el) {
   on <a href="https://codepen.io">CodePen</a>.</span>`;
 
       parentEl.setAttribute('class', 'codepen');
-      parentEl.dataset.height = '300';
+      parentEl.dataset.height = '600';
       parentEl.dataset.defaultTab = 'html,result';
       parentEl.dataset.slugHash = codepenId;
       parentEl.dataset.user = 'umlibrary-designsystem';
-      parentEl.innerHTML = new_value;
-    }
+      parentEl.dataset.themeId = '43179';
+       parentEl.innerHTML = new_value;
+   }
   }
 }
