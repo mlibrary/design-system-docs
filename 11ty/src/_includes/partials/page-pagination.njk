@@ -5,8 +5,12 @@
     {% set nextItem = parentNav[loop.index0 + 1] %}
   {% endif %}
 {% endfor %}
+
+<div class="back-to-top">
+  <a href="#main" class="back-to-top-link">Back to top</a>
+</div>
+
 <div class="page-pagination">
-  <a href="#main" class="back-to-top">Back to top</a>
   {% if nextItem %}
     <div class="line"></div>
     <nav aria-label="pagination" class="pagination-text">

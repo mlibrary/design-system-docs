@@ -52,6 +52,10 @@
   gap: 3rem;
   justify-content: start;
   align-items: stretch;
+
+  @include media.breakpoint('sm', 'max-width') {
+    gap: 1rem;
+   }
 }
 
 .flex-layout > :first-child {

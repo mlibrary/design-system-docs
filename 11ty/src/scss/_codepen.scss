@@ -1,5 +1,18 @@
+@use 'media';
+
+// --------------------------------------------------
+//
+// # CodePen Embed
+//
+// --------------------------------------------------
+
+
 .cp_embed_wrapper {
   width: calc(min(1280px, 80vw) - 12rem);
+
+  @include media.breakpoint('xs', 'max-width') {
+    width: calc(min(1280px, 80vw));
+   }
 }
 
 .codepen {
