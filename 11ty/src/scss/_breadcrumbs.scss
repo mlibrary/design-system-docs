@@ -1,3 +1,5 @@
+@use 'media';
+
 // --------------------------------------------------
 //
 // # Breadcrumbs
@@ -11,11 +13,27 @@
 
 .breadcrumbs ol {
   display: flex;
+  flex-flow: row wrap;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+.breadcrumbs li:first-child {
+  padding-left: 0;
+
+  @include media.breakpoint('sm', 'max-width') {
+      display: none;
+    }
+}
+
+.breadcrumbs li:nth-child(2):before{
+
+  @include media.breakpoint('sm', 'max-width') {
+      display: none;
+    }
+  }
+  
 .breadcrumbs li:first-child a {
   padding-left: 0;
 }
@@ -56,11 +74,3 @@
   content: '\203A' !important;
   font-size: 1rem;
 }
-
-/*
-@media screen and (max-width: 768px) {
-  .breadcrumbs li:not(:last-child) {
-  display: none;
-  }
-}
-*/

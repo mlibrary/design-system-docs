@@ -1,31 +1,38 @@
 // --------------------------------------------------
 //
-// # Page pagination
+// # Page pagination and Back to Top
 // 
 // --------------------------------------------------
+
+.back-to-top {
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 3rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.back-to-top-link {
+  text-decoration: none;
+  font-weight: var(--semibold);
+}
+
+.back-to-top-link::before {
+  font-family: 'Material Icons';
+  content: '\e5d8';
+  padding-right: .25rem;
+  vertical-align: bottom;
+}
 
 .page-pagination {
   display: flex;
   align-items: baseline;
   padding-top: 1rem;
-  max-width: 80ch;
+  max-width: 90ch;
 
   .line {
     border: solid 1px var(--color-neutral-100);
-    width: 50%;
-  }
-
-  .back-to-top {
-    text-decoration: none;
-    font-weight: var(--semibold);
-    width: 15ch;
-  }
-
-  .back-to-top::before {
-    font-family: 'Material Icons';
-    content: '\e5d8';
-    padding-right: .25rem;
-    vertical-align: bottom;
+    width: 100%;
   }
 }
 

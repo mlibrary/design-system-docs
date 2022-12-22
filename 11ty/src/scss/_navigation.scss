@@ -20,6 +20,10 @@
   display: flex;
   flex-flow: row wrap;
   
+  @include media.breakpoint('sm', 'max-width') {
+    margin-bottom: 1rem;
+   }
+  
   li {
     display: inline;
     margin-right: 1.5rem;
@@ -28,7 +32,8 @@
     padding-top: .5rem;
   
   @include media.breakpoint('sm', 'max-width') {
-    margin-right: .5rem;
+    margin-right: 1rem;
+    padding-top: .25rem;
    }
   }
 }
@@ -49,6 +54,7 @@
 }
   @include media.breakpoint('sm', 'max-width') {
    font-size: 1rem;
+   padding:0;
   }
 }
 
@@ -61,6 +67,10 @@
 .side-nav {
   position: sticky;
   top: 1.5rem;
+
+  @include media.breakpoint('xs', 'max-width') {
+    display: none;
+   }
 }
 
 .side-nav ul {
