@@ -6,16 +6,11 @@
   {% endif %}
 {% endfor %}
 
-<div class="back-to-top">
-  <a href="#main" class="back-to-top-link">Back to top</a>
-</div>
-
-<div class="page-pagination">
+<nav class="page-pagination"  aria-label="pagination">
   {% if nextItem %}
     <div class="line"></div>
-    <nav aria-label="pagination" class="pagination-text">
-      <h2>Next</h2>
-      <a href="{{ nextItem.url }}">{{ nextItem.title }}</a>
-    </nav>
+     <div class="pagination-text next-page">
+      <a href="{{ nextItem.url }}" >{{ nextItem.title }}<span class="visually-hidden">next page</span></a>
+    </div>
   {% endif %}
-</div>
+</nav>

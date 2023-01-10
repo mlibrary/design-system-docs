@@ -19,12 +19,22 @@
   list-style: none;
 }
 
+.banner-text .breadcrumbs {
+  @include media.breakpoint('sm', 'max-width') {
+      display: none;
+    }
+}
+
 .breadcrumbs li:first-child {
   padding-left: 0;
 
   @include media.breakpoint('sm', 'max-width') {
       display: none;
     }
+}
+
+.breadcrumbs li:first-child::first-letter  {
+  text-transform: capitalize;
 }
 
 .breadcrumbs li:nth-child(2):before{
@@ -64,10 +74,6 @@
 .breadcrumbs li:not(:first-child):before {
   content: '\2215';
   font-size: 1rem;
-}
-
-.breadcrumbs li {
-  text-transform: capitalize;
 }
 
 .breadcrumbs li:not(:first-child):before {

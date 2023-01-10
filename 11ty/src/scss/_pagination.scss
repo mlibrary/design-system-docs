@@ -1,3 +1,5 @@
+@use 'media';
+
 // --------------------------------------------------
 //
 // # Page pagination and Back to Top
@@ -7,14 +9,15 @@
 .back-to-top {
   display: flex;
   justify-content: flex-start;
-  margin-right: 3rem;
-  margin-bottom: 1rem;
-  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  @include media.breakpoint('sm', 'max-width') {
+    display: none;
+  }
 }
 
 .back-to-top-link {
   text-decoration: none;
-  font-weight: var(--semibold);
 }
 
 .back-to-top-link::before {
@@ -26,27 +29,41 @@
 
 .page-pagination {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   padding-top: 1rem;
-  max-width: 90ch;
+  max-width: 80ch;
 
   .line {
-    border: solid 1px var(--color-neutral-100);
-    width: 100%;
+    border: solid .5px var(--color-neutral-100);
+    width: 55%;
+    margin: 0 1rem;
   }
 }
 
 .pagination-text {
-  margin-left: 1rem;
-  font-weight: bold;
   max-width: 65ch;
-  h2 {
-    color: var(--color-teal-500);
-    font-size: 1.125rem;
-    margin-bottom: .5rem;
-  }
   a {
     color: var(--color-neutral-400);
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
+}
+
+.previous-page::before {
+    font-family: "Material Icons";
+    content: '\e5c4';
+    color: var(--color-teal-400);
+    font-size: 1rem;
+    padding-right: 0.25rem;
+    vertical-align: sub; 
+    text-decoration: none;
+}
+
+.next-page::after {
+    font-family: "Material Icons";
+    content: '\e5c8';
+    color: var(--color-teal-400);
+    font-size: 1rem;
+    padding-left: 0.25rem;
+    vertical-align: sub;
+    text-decoration: none;
 }
