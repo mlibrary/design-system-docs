@@ -6,7 +6,6 @@
 // ## Table of Contents
 //   1. Callout
 //      1.1 base (quick resources)
-//      1.2. Callout - contact
 //   2. Umich content callouts
 //      2.1 Callout (info)
 //      2.2 Print
@@ -113,23 +112,6 @@
   }
 }
 
-// ************************ //
-// *** 1.2 Callout contact *** //
-// ********************** //
-
-.callout-contact {
-  background-color: var(--color-blue-100);
-  border-top: 6px solid var(--color-teal-500);
-  padding-top: 2rem;
-  margin-top: 1rem;
-}
-
-.callout-contact-container {
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-}
-
 // ********************************** //
 // *** 2. Umich content callouts *** //
 // ******************************** //
@@ -144,29 +126,32 @@
 }
 
 .umich-lib-callout {
+  padding: 1rem 1rem 1rem 1.5rem;
   border-left: solid 4px var(--color-teal-400);
 }
 
 .umich-lib-print {
   border-left: solid 4px var(--color-green-400);
+  display: flex;
   &::before {
     font-family: "Material Icons";
     content: '\e8ad';
     color: var(--color-green-400);
     font-size: 1.5rem;
-    padding-right: 0.25rem;
-    vertical-align: sub;
+    padding-right: 1rem;
+    display: block;
     }
 }
 
 .umich-lib-alert {
-  border-left: solid 4px var(--color-maize-400);
+  border-left: solid 4px var(--color-pink-400);
+  display: flex;
   &::before {
     font-family: "Material Icons";
-    color: var(--color-maize-400);
+    color: var(--color-pink-400);
     content: '\e002';
     font-size: 1.5rem;
-    padding-right: 0.25rem;
-    vertical-align: sub;
+    padding-right: 1rem;
+    display: block;
     }
 }
