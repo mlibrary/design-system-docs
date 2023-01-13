@@ -5,6 +5,19 @@
 //
 // --------------------------------------------------
 
+:root {
+  --shadow-color: 195deg 67% 34%; //hsl(195,67,34) //211,24,17
+  --shadow-elevation-low:
+  0px 0.3px 0.5px hsl(var(--shadow-color) / 0),
+  0px 1.1px 1.7px hsl(var(--shadow-color) / 0.31);
+--shadow-elevation-medium:
+  0px 0.3px 0.5px hsl(var(--shadow-color) / 0),
+  0px 5.5px 8.3px hsl(var(--shadow-color) / 0.64);
+--shadow-elevation-high:
+  0px 0.3px 0.5px hsl(var(--shadow-color) / 0),
+  0px 6.8px 10.2px hsl(var(--shadow-color) / 0.36),
+  0.2px 21.1px 31.7px hsl(var(--shadow-color) / 0.73);
+}
 
 .ovals {
   position: absolute;
@@ -15,7 +28,7 @@
 
 .card-container {
   position: relative;
-  padding: 4rem 0;
+  padding: 4rem 0 2rem;
 }
 
 .cards {
@@ -26,14 +39,13 @@
 
   a {
     text-decoration: none;
-    transition: all ease-in 0.5s;
+    transition: box-shadow  ease-in .3s;
     display: inherit;
     border-radius: 6px;
   }
 
   a:hover {
-    box-shadow: -8px 8px 0 0 var(--color-orange-500);
-    transform: translate(6px, -6px);
+    box-shadow: var(--shadow-elevation-medium); 
   }
 }
 
@@ -41,15 +53,17 @@
   background-color: var(--color-blue-100);
   padding: 1rem 1.5rem; 
   border-radius: 6px;
-  border: solid 1px var(--color-blue-200);
+  border: solid 1px var(--color-neutral-100);
 
   h2 {
-    text-decoration: var(--color-teal-400) underline;
-    text-underline-offset: .35rem;
     font-weight: 600;
   }
 
   h2, p {
     color: var(--color-neutral-400);
+  }
+
+  p {
+    margin-top: .5rem;
   }
 }
