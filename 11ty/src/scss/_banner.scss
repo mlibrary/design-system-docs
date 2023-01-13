@@ -22,7 +22,7 @@
 } 
 
 .banner-text, .banner-image {
-  width: 50%;
+  width: calc(50% - .5rem);
 }
 
 .banner-image {
@@ -50,6 +50,10 @@
   p {
     max-width: 50ch;
     font-size: 1.125rem;
+  }
+
+  @include media.breakpoint('sm', 'max-width') {
+    width: 100%;
   }
 }
 
