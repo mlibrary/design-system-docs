@@ -132,26 +132,26 @@
 
 .umich-lib-print {
   border-left: solid 4px var(--color-green-400);
-  display: flex;
   &::before {
     font-family: "Material Icons";
     content: '\e8ad';
     color: var(--color-green-400);
     font-size: 1.5rem;
     padding-right: 1rem;
-    display: block;
+    float:left;
+    height: 80px;
     }
 }
 
 .umich-lib-alert {
   border-left: solid 4px var(--color-pink-400);
-  display: flex;
   &::before {
     font-family: "Material Icons";
     color: var(--color-pink-400);
     content: '\e002';
     font-size: 1.5rem;
     padding-right: 1rem;
-    display: block;
+    float:left;
+    height: 80px;
     }
 }
