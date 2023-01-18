@@ -6,17 +6,12 @@
 // --------------------------------------------------
 
 :root {
-  --shadow-color: 195deg 67% 34%; //hsl(195,67,34) //211,24,17
-  --shadow-elevation-low:
-  0px 0.3px 0.5px hsl(var(--shadow-color) / 0),
-  0px 1.1px 1.7px hsl(var(--shadow-color) / 0.31);
---shadow-elevation-medium:
-  0px 0.3px 0.5px hsl(var(--shadow-color) / 0),
-  0px 5.5px 8.3px hsl(var(--shadow-color) / 0.64);
---shadow-elevation-high:
-  0px 0.3px 0.5px hsl(var(--shadow-color) / 0),
-  0px 6.8px 10.2px hsl(var(--shadow-color) / 0.36),
-  0.2px 21.1px 31.7px hsl(var(--shadow-color) / 0.73);
+  --shadow-color: 195deg 67% 34%;
+  --shadow-elevation-medium:
+    0px 0.7px 0.8px hsl(var(--shadow-color) / 0.48),
+    0px 2.3px 2.5px -0.9px hsl(var(--shadow-color) / 0.45),
+    0px 6.2px 6.6px -1.9px hsl(var(--shadow-color) / 0.42),
+    0px 15.6px 16.7px -2.8px hsl(var(--shadow-color) / 0.39);
 }
 
 .ovals {
@@ -33,13 +28,13 @@
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 430px));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 500px));
   justify-content: center;
   gap: 1rem 2rem;
 
   a {
     text-decoration: none;
-    transition: box-shadow  ease-in .3s;
+    transition: all ease-in .4s;
     display: inherit;
     border-radius: 6px;
   }
