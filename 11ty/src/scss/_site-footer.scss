@@ -9,12 +9,19 @@
 
 .footer {
   background: var(--color-blue-400);
+  color: white;
+
+  p {
+    padding-bottom: 1rem;
+  }
 }
+
 .footer ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
 .footer ul a {
   display: inline-block;
   padding: var(--space-xx-small) 0;
@@ -43,7 +50,7 @@
 
 .footer__content {
   color: var(--color-blue-100);
-  padding: var(--space-xxx-large) 0;
+  padding: var(--space-xxx-large) 0 var(--space-large) ;
   display: grid;
   grid-template-columns: repeat(auto-fill, 350px);
   gap: var(--space-xx-large);
