@@ -1,3 +1,5 @@
+@use 'media';
+
 // --------------------------------------------------
 //
 // # Cards
@@ -34,13 +36,17 @@
 
   a {
     text-decoration: none;
-    transition: all ease-in .4s;
+    transition: box-shadow ease-in .4s;
     display: inherit;
     border-radius: 6px;
   }
 
   a:hover {
     box-shadow: var(--shadow-elevation-medium); 
+
+    @include media.breakpoint('sm', 'max-width') {
+      box-shadow: none;
+   }
   }
 }
 

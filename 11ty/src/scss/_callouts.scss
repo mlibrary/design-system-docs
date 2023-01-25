@@ -80,15 +80,18 @@
 .callout-container a {
   border-radius: 4px;
   border-left: solid 4px transparent;
-  -webkit-transition: ease-out 0.8s;
-  -moz-transition: ease-out 0.8s;
-  transition: ease-out 0.8s;
+  transition: box-shadow ease-out 0.8s;
 }
 
 .callout-container a:hover {
   border-radius: 4px;
   border-left: solid 4px var(--color-teal-400);
   box-shadow: inset 500px 0 0 0 var(--color-neutral-100);
+
+  @include media.breakpoint('sm', 'max-width') {
+    box-shadow: none;
+    border-left: solid 4px transparent;
+ }
 }
 
 .callout-card-icon {
