@@ -110,9 +110,14 @@ blockquote {
   align-items: center;
 }
 
+.prose p:has(img + img) > img {
+  max-width: 50%;
+}
+
 .prose img {
   width: revert;
-  max-width: 50%;
+  max-width: 100%;
+  padding: 1rem 0;
 }
 
 // 2.5 Accessibility
