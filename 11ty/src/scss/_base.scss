@@ -9,6 +9,7 @@
 //     2.2 Code blocks <pre class="code">
 //     2.3 Blockquotes <blockquote>
 //     2.4 Images
+//     2.5 Accessibility
 // --------------------------------------------------
 
 // ********************** //
@@ -99,7 +100,7 @@ blockquote {
   font-size: 1rem;
 }
 
-// Images
+// 2.4 Images
 
 .prose p:has(img)  {
   display: flex;
@@ -109,7 +110,23 @@ blockquote {
   align-items: center;
 }
 
+.prose p:has(img + img) > img {
+  max-width: 50%;
+}
+
 .prose img {
   width: revert;
-  max-width: 50%;
+  max-width: 100%;
+  padding: 1rem 0;
+}
+
+// 2.5 Accessibility
+
+.opens-new-window::after {
+    font-family: "Material Icons";
+    content: '\e89e';
+    color: var(--color-teal-400);
+    font-size: 1.25rem;
+    padding-left: .25rem;
+    vertical-align: sub;
 }

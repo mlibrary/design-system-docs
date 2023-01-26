@@ -1,3 +1,5 @@
+@use 'media';
+
 // --------------------------------------------------
 //
 // # Cards
@@ -5,6 +7,14 @@
 //
 // --------------------------------------------------
 
+:root {
+  --shadow-color: 195deg 67% 34%;
+  --shadow-elevation-medium:
+    0px 0.7px 0.8px hsl(var(--shadow-color) / 0.48),
+    0px 2.3px 2.5px -0.9px hsl(var(--shadow-color) / 0.45),
+    0px 6.2px 6.6px -1.9px hsl(var(--shadow-color) / 0.42),
+    0px 15.6px 16.7px -2.8px hsl(var(--shadow-color) / 0.39);
+}
 
 .ovals {
   position: absolute;
@@ -15,25 +25,28 @@
 
 .card-container {
   position: relative;
-  padding: 4rem 0;
+  padding: 4rem 0 4rem;
 }
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 430px));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 500px));
   justify-content: center;
   gap: 1rem 2rem;
 
   a {
     text-decoration: none;
-    transition: all ease-in 0.5s;
+    transition: box-shadow ease-in .4s;
     display: inherit;
     border-radius: 6px;
   }
 
   a:hover {
-    box-shadow: -8px 8px 0 0 var(--color-orange-500);
-    transform: translate(6px, -6px);
+    box-shadow: var(--shadow-elevation-medium); 
+
+    @include media.breakpoint('sm', 'max-width') {
+      box-shadow: none;
+   }
   }
 }
 
@@ -41,15 +54,17 @@
   background-color: var(--color-blue-100);
   padding: 1rem 1.5rem; 
   border-radius: 6px;
-  border: solid 1px var(--color-blue-200);
+  border: solid 1px var(--color-neutral-100);
 
   h2 {
-    text-decoration: var(--color-teal-400) underline;
-    text-underline-offset: .35rem;
     font-weight: 600;
   }
 
   h2, p {
     color: var(--color-neutral-400);
+  }
+
+  p {
+    margin-top: .5rem;
   }
 }

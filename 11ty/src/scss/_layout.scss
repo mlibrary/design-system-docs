@@ -16,7 +16,7 @@
 // ***********************//
 
 .container {
-  margin-top: 4rem;
+  margin-top: 2.5rem;
   margin-bottom: 3rem;
 
   @include media.breakpoint('xs', 'max-width') {
@@ -68,4 +68,26 @@
   flex-grow: 999;
   min-inline-size: 50%;
 }
-  
+
+// 404 Page Layout with Image 
+
+.flex-static {
+  display: flex;
+  flex-wrap: wrap;
+
+  .main-content {
+    width: 50%;
+
+    @include media.breakpoint('sm', 'max-width') {
+      width: 100vw;
+      }
+  }
+}
+
+.image-404-page {
+  width: 50%;
+
+  @include media.breakpoint('sm', 'max-width') {
+   display: none;
+   }
+}

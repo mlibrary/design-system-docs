@@ -1,0 +1,15 @@
+---
+layout: base.njk
+---
+
+<div class="viewport-container">
+  <div class="flex-static container">
+    <div class="main-content">
+      <div class="prose">
+        {{ content | safe }}
+      </div>
+    </div>
+    <img class="image-404-page" src="https://assets.codepen.io/2087493/404.webp?width=1012&amp;height=779&amp;format=auto" alt="">
+  </div>
+</div>  
+{% include "partials/contact-us-banner.njk" %}

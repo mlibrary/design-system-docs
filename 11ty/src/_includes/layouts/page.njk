@@ -5,7 +5,7 @@ layout: base.njk
 <div class="viewport-container">
   {% include "partials/breadcrumbs.njk" %}
   <div class="flex-layout container">
-    <aside>
+    <aside class="page-aside">
       {% include "partials/side-nav.njk" %}
     </aside>
     <div class="main-content">
@@ -16,7 +16,7 @@ layout: base.njk
     </div>
   </div>
   <div class="back-to-top">
-    <a href="#main" class="back-to-top-link">Back to top</a>
+    <a href="#main" class="back-to-top-link hidden">Back to top</a>
   </div>
 </div>  
 {% include "partials/feedback-banner.njk" %}

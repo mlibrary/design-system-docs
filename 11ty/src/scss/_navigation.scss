@@ -132,14 +132,15 @@ content: "\e5cd";
 // *** 2. Side navigation *** //
 // ************************* //
 
+.page-aside {
+@include media.breakpoint('sm', 'max-width') {
+  display: none;
+ } 
+}
 
 .side-nav {
   position: sticky;
   top: 1.5rem;
-
-  @include media.breakpoint('xs', 'max-width') {
-    display: none;
-   }
 }
 
 .side-nav ul {

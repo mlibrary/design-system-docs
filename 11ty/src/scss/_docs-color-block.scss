@@ -1,3 +1,11 @@
+// --------------------------------------------------
+//
+// # docs-color-block
+//   The styling and layout for the Color page color block
+//
+// --------------------------------------------------
+
+
 .color-palettes {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));

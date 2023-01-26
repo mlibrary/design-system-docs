@@ -9,12 +9,15 @@
 
 .footer {
   background: var(--color-blue-400);
+  color: white;
 }
+
 .footer ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
 .footer ul a {
   display: inline-block;
   padding: var(--space-xx-small) 0;

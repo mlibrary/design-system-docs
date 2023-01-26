@@ -19,6 +19,10 @@
   list-style: none;
 }
 
+.breadcrumbs li a:first-child::first-letter  {
+  text-transform: capitalize;
+}
+
 .banner-text .breadcrumbs {
   @include media.breakpoint('sm', 'max-width') {
       display: none;
@@ -33,31 +37,18 @@
     }
 }
 
-.breadcrumbs li:first-child::first-letter  {
-  text-transform: capitalize;
-}
-
-.breadcrumbs li:nth-child(2):before{
-
-  @include media.breakpoint('sm', 'max-width') {
-      display: none;
-    }
-  }
-  
 .breadcrumbs li:first-child a {
-  padding-left: 0;
+  padding-left: 0 !important;
 }
 
 .breadcrumbs a {
   display: inline;
-  padding: var(--space-medium) var(--space-small);
+  padding: 0 var(--space-x-small) !important;
 }
 
 .breadcrumbs li {
-  font-size: 0;
-}
-
-.breadcrumbs a {
+  display: inline-flex;
+  align-items: center;
   font-size: 1rem;
 }
 
@@ -72,11 +63,21 @@
 }
 
 .breadcrumbs li:not(:first-child):before {
-  content: '\2215';
+  font-family: "Material Icons";
+  content: '\e5cc' !important;
+  color: var(--color-teal-400);
+  padding-left: .25rem;
   font-size: 1rem;
 }
 
-.breadcrumbs li:not(:first-child):before {
-  content: '\203A' !important;
-  font-size: 1rem;
-}
+@include media.breakpoint('sm', 'max-width')  {
+  .breadcrumbs li:not(li:nth-last-child(2)) {
+      display: none;
+   }
+ 
+  .breadcrumbs li:nth-last-child(2):before {
+    font-family: "Material Icons";
+    content: '\e5cb' !important;
+    font-size: 1rem;
+  }
+ }
