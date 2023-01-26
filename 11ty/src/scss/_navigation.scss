@@ -117,12 +117,14 @@ button[aria-expanded]::after {
 font-family: "Material Icons";
 font-size: 2.5rem;
 content: "\e5d2";
+color: var(--color-neutral-400);
 }
 
 button[aria-expanded="true"]::after {
 font-family: "Material Icons";
 font-size: 2.5rem;
 content: "\e5cd";
+color: var(--color-neutral-400);
 }
 
 
