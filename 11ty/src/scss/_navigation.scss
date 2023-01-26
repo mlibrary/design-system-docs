@@ -21,7 +21,7 @@
   flex-flow: row wrap;
   
   @include media.breakpoint('sm', 'max-width') {
-    margin-bottom: 1rem;
+    display: none;
    }
   
   li {
@@ -57,6 +57,75 @@
    padding:0;
   }
 }
+
+// 1.2 Mobile Nav
+
+.website-header-mobile {
+  @include media.breakpoint('sm', 'max-width') {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.mobile-nav {
+  @include media.breakpoint('sm', 'min-width') {
+  display: none;
+ }
+
+ .submenu-container {
+  border-top: 1px solid var(--color-neutral-100);
+  margin-top: 20px;
+  position: absolute;
+  right: calc(-1rem);
+  width: 50vw;
+  background: white;
+  box-shadow: rgb(0 0 0 / 10%) 0px 4px 8px 0px;
+  z-index: 101;
+ }
+}
+
+.mobile-nav ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+
+   li {
+    border-bottom: 1px solid rgb(229, 233, 237);
+    padding: 1rem;
+   }
+   
+   a {
+    text-decoration: none;
+   }
+
+   a:hover{
+    text-decoration: underline;
+   }
+}
+
+[hidden] {
+  display: none;
+}
+
+button.nav {
+  background: #fff;
+  border: none;
+}
+
+button[aria-expanded]::after {
+font-family: "Material Icons";
+font-size: 2.5rem;
+content: "\e5d2";
+}
+
+button[aria-expanded="true"]::after {
+font-family: "Material Icons";
+font-size: 2.5rem;
+content: "\e5cd";
+}
+
+
 
 
 // *************************** //
