@@ -5,7 +5,8 @@ services:
     image: mariadb
     volumes:
       - database:/var/lib/mysql
-      - ./drupal/starter_drupal.sql:/docker-entrypoint-initdb.d/starter_drupal.sql
+      #- ./drupal/db/minimal_starter_drupal.sql:/docker-entrypoint-initdb.d/minimal_starter_drupal.sql
+      - ./drupal/db/starter_drupal.sql:/docker-entrypoint-initdb.d/starter_drupal.sql
     environment:
       - MARIADB_ROOT_PASSWORD=password
       - MARIADB_USER=user
@@ -13,6 +14,7 @@ services:
       - MARIADB_DATABASE=drupal
 
   drupal:
+    #image: ghcr.io/mlibrary/design-system-cms:556aab182ac70b36e316d33a3c47d9ef35c32836
     build: drupal/.
     depends_on:
       - database
@@ -25,22 +27,26 @@ services:
       - MARIADB_DATABASE=drupal
       - DATABASE_HOST=database
     volumes:
-      - ./drupal/config:/drupal-config #can copy this folder into the init container
+      - ./drupal/config:/config-sync #can copy this folder into the init container
         #above is drush config:export --destination /drupal-config 
         #import command would be `drush config:import --source /drupal-config`
+
       - ./drupal/sites:/var/www/html/sites
+      - ./drupal/composer.json:/opt/drual/composer.json
+      - ./drupal/composer.lock:/opt/drual/composer.lock
+      - ./drupal/modules:/var/www/html/modules
       - ./drupal/themes:/var/www/html/themes
     restart: always
 
-  web: 
-    build: 11ty/.
-    ports: 
-    - "8888:8080"
-    volumes:
-      - ./11ty/.:/app
-    command: npm run start
-    env_file:
-      - ./11ty/.env
+  #web: 
+    #build: 11ty/.
+    #ports: 
+    #- "8888:8080"
+    #volumes:
+      #- ./11ty/.:/app
+    #command: npm run start
+    #env_file:
+      #- ./11ty/.env
 
 volumes:
   database:
