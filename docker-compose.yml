@@ -34,15 +34,15 @@ services:
       - ./drupal/themes:/var/www/html/themes
     restart: always
 
-  #web: 
-    #build: 11ty/.
-    #ports: 
-    #- "8888:8080"
-    #volumes:
-      #- ./11ty/.:/app
-    #command: npm run start
-    #env_file:
-      #- ./11ty/.env
+  web: 
+    build: 11ty/.
+    ports: 
+    - "8888:8080"
+    volumes:
+      - ./11ty/.:/app
+    command: npm run start
+    env_file:
+      - ./11ty/.env
 
 volumes:
   database:
