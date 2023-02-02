@@ -1,7 +1,7 @@
-drupal/sites/default/files/js/
-drupal/sites/default/files/css/
-drupal/sites/default/files/php/
-drupal/sites/default/files/styles/
+#Drupal ignore
+drupal/files
+drupal/.env
+*.sql
 
 # Dependency directories
 11ty/node_modules/

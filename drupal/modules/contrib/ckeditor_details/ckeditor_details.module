@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * @file
+ * Hook implementations for the CKeditor Details Accordion module.
+ */
+
+/**
+ * Implements hook_page_attachments().
+ */
+function ckeditor_details_page_attachments(array &$page) {
+  // Add the shim to support details in older IE and pre-Chromium Edge browsers.
+  $page['#attached']['library'][] = 'core/drupal.collapse';
+}
