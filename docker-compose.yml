@@ -5,8 +5,7 @@ services:
     image: mariadb
     volumes:
       - database:/var/lib/mysql
-      #- ./drupal/db/minimal_starter_drupal.sql:/docker-entrypoint-initdb.d/minimal_starter_drupal.sql
-      - ./drupal/db/starter_drupal.sql:/docker-entrypoint-initdb.d/starter_drupal.sql
+      - ./drupal/db/synced_from_production.sql:/docker-entrypoint-initdb.d/synced_from_production.sql
     environment:
       - MARIADB_ROOT_PASSWORD=password
       - MARIADB_USER=user
@@ -14,26 +13,23 @@ services:
       - MARIADB_DATABASE=drupal
 
   drupal:
-    #image: ghcr.io/mlibrary/design-system-cms:556aab182ac70b36e316d33a3c47d9ef35c32836
     build: drupal/.
     depends_on:
       - database
     ports:
       - 3333:80
     environment:
-      - HASH_SALT=hash_salt
+      - HASH_SALT=d7zJayZ5bRx7LdhAkuau
       - MARIADB_USER=user
       - MARIADB_PASSWORD=password
       - MARIADB_DATABASE=drupal
       - DATABASE_HOST=database
     volumes:
-      - ./drupal/config:/config-sync #can copy this folder into the init container
-        #above is drush config:export --destination /drupal-config 
-        #import command would be `drush config:import --source /drupal-config`
-
-      - ./drupal/sites:/var/www/html/sites
-      - ./drupal/composer.json:/opt/drual/composer.json
-      - ./drupal/composer.lock:/opt/drual/composer.lock
+      - ./drupal/files:/var/www/html/sites/default/files
+      - ./drupal/settings.php:/var/www/html/sites/default/settings.php
+      - ./drupal/composer.json:/opt/drupal/composer.json
+      - ./drupal/composer.lock:/opt/drupal/composer.lock
+      - ./drupal/config:/config-sync
       - ./drupal/modules:/var/www/html/modules
       - ./drupal/themes:/var/www/html/themes
     restart: always
