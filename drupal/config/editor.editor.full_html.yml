@@ -28,6 +28,7 @@ settings:
           name: 'Block Formatting'
           items:
             - Format
+            - Styles
         -
           name: Linking
           items:
@@ -42,13 +43,8 @@ settings:
           name: Media
           items:
             - Blockquote
-            - DrupalImage
             - Table
             - HorizontalRule
-        -
-          name: 'Block Formatting'
-          items:
-            - Styles
         -
           name: Tools
           items:
@@ -88,7 +84,7 @@ settings:
         xhtml: xhtml
         xml: xml
 image_upload:
-  status: true
+  status: false
   scheme: public
   directory: inline-images
   max_size: ''

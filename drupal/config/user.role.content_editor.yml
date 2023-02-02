@@ -3,13 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - node.type.article
+    - filter.format.full_html
     - node.type.page
     - taxonomy.vocabulary.tags
   module:
     - comment
     - contextual
     - file
+    - filter
     - node
     - path
     - system
@@ -30,19 +31,18 @@ permissions:
   - 'access toolbar'
   - 'access tour'
   - 'administer url aliases'
-  - 'create article content'
   - 'create page content'
   - 'create terms in tags'
   - 'create url aliases'
-  - 'delete article revisions'
-  - 'delete own article content'
   - 'delete own page content'
   - 'delete page revisions'
-  - 'edit own article content'
+  - 'edit any page content'
   - 'edit own comments'
   - 'edit own page content'
   - 'edit terms in tags'
   - 'revert all revisions'
+  - 'revert page revisions'
+  - 'use text format full_html'
   - 'view all revisions'
   - 'view own unpublished content'
   - 'view the administration theme'
