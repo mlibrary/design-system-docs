@@ -27,7 +27,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: drupal/.
-        file: Dockerfile.prod
+        file: drupal/Dockerfile.prod
         push: true
         tags: | 
            ghcr.io/mlibrary/${{ env.IMAGE_NAME }}:latest
