@@ -9,7 +9,7 @@ cms_pod=$(kubectl get pod --context $PRODUCTION_CLUSTER_CONTEXT \
   -n $PRODUCTION_NAMESPACE -l app=$PRODUCTION_DRUPAL_APP -o name)
 
 if [[ ! ${db_pod} =~ ^pod ]]; then
-  echo "❌ ERROR: Couldn't fetch pod name. Check 'PRODUCTION_CLUSTER_CONTEXT' in .env"
+  echo "❌ ERROR: Couldn't fetch pod name. Check PRODUCTION envars in .env"
   exit 1
 fi
 
