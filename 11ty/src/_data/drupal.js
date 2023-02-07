@@ -176,7 +176,9 @@ module.exports = async function () {
     let childMenuItems = menuDataIndex.filter((link) => {
       return (menuData[link].parent == parentLink );
     })
-    childMenuItems.sort((a, b) => { return menuData[a].weight - menuData[b].weight });
+    childMenuItems.sort((a, b) => { 
+      return menuData[a].title.localeCompare(menuData[b].title) || (menuData[a].weight - menuData[b].weight)  
+    });
     childMenuItems.forEach((link) => {
       let pageItem = pageData[link];
       retval[pageItem.tags].push(pageItem);
