@@ -3,18 +3,16 @@ name: Production workflow
 
 # When workflow is triggered
 on:
-  #push:
-    #branches:
-      #- main
+  push:
+    branches:
+      - main
+    paths: 
+      - "11ty/**"
   # schedule:
     # - cron: '0 11 * * MON-FRI'
   #repository_dispatch:
     #types: [ publish_production ]
   workflow_dispatch:
-    inputs:
-      tag:
-        description: tag; default is what's on main
-        required: false
 
 jobs:
   build:
@@ -22,30 +20,12 @@ jobs:
     environment: production
     env:
       DRUPAL_AUTH: ${{ secrets.DRUPAL_AUTH }}
-      DRUPAL_URL: 'https://design-system-cms.kubernetes.lib.umich.edu'
+      DRUPAL_URL: ${{ vars.DRUPAL_URL }}
     steps:
     - name: Checkout code
       uses: actions/checkout@v1
       with:
         fetch-depth: 0
-    - name: Check that the tag exists
-      if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.tag != '' }}
-      id: tag_check
-      run: |
-        if git rev-parse 'refs/tags/${{ github.event.inputs.tag }}' &> /dev/null; then
-          echo '::set-output name=tag::${{ github.event.inputs.tag }}'
-        elif git rev-parse '${{ github.event.inputs.tag }}' &> /dev/null; then
-          echo "::set-output name=tag::`git rev-parse '${{ github.event.inputs.tag }}'`"
-        else
-          echo "Couldn't figure out tag from input: ${{ github.event.inputs.tag }}"
-          echo "Aborting deployment."
-          false
-        fi
-    - name: Checkout correct repository
-      if: ${{ github.event_name == 'workflow_dispatch'  && github.event.inputs.tag != '' }}
-      uses: actions/checkout@v2
-      with:
-        ref: ${{ github.event.inputs.tag }}
     - name: Use Node.js 18.x
       uses: actions/setup-node@v1
       with:
@@ -69,7 +49,7 @@ jobs:
       run: npx netlify-cli deploy --dir=public --prod
       env:
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        NETLIFY_SITE_ID: ${{ vars.NETLIFY_SITE_ID }}
       ## Notify Slack if build fails
       ##      - name: Report Status
       ##        if: always()
