@@ -177,7 +177,7 @@ module.exports = async function () {
       return (menuData[link].parent == parentLink );
     })
     childMenuItems.sort((a, b) => { 
-      return menuData[a].title.localeCompare(menuData[b].title) || (menuData[a].weight - menuData[b].weight)  
+      return (menuData[a].weight - menuData[b].weight) || menuData[a].title.localeCompare(menuData[b].title)
     });
     childMenuItems.forEach((link) => {
       let pageItem = pageData[link];
