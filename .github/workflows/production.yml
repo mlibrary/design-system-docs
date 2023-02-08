@@ -56,7 +56,7 @@ jobs:
       with:
         payload: |
           {
-            "run_id": ${{ GITHUB_RUN_ID }},
+            "run_id": ${{ github.run_id }},
             "message": "Production build and deploy failed"
           }
       env:
