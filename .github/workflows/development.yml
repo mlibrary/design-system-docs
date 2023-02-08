@@ -1,0 +1,82 @@
+name: Development workflow
+
+# When workflow is triggered
+on:
+  #repository_dispatch:
+    #types: [ publish_development ]
+  workflow_dispatch:
+    inputs:
+      cms: 
+        description: cms
+        required: true
+        type: choice
+        default: production
+        options:
+          - production
+          - workshop
+      tag:
+        description: tag; default is what's on main
+        required: false
+
+
+jobs:
+  build-development:
+    runs-on: ubuntu-latest
+    environment: development
+    steps:
+    - name: set drupal url
+      id: cms_check
+      run: |
+        if [ "${{ github.event.inputs.cms }}" == "production" ]; then
+          echo 'DRUPAL_URL=${{ vars.DRUPAL_URL }}' >> $GITHUB_ENV
+        else 
+          echo 'DRUPAL_URL=${{ vars.WORKSHOP_DRUPAL_URL }}' >> $GITHUB_ENV
+        fi
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+    - name: Check that the tag exists in repo
+      if: ${{ github.event_name == 'workflow_dispatch'  && github.event.inputs.tag != '' }}
+      id: tag_check
+      run: |
+        if git rev-parse 'refs/tags/${{ github.event.inputs.tag }}' &> /dev/null; then
+          echo 'tag=${{ github.event.inputs.tag }}' >> $GITHUB_ENV
+        elif git rev-parse '${{ github.event.inputs.tag }}' &> /dev/null; then
+          echo "tag=`git rev-parse '${{ github.event.inputs.tag }}'`" >> $GITHUB_ENV
+        else
+          echo "Couldn't figure out tag from input: ${{ github.event.inputs.tag }}"
+          echo "Aborting deployment."
+          false
+        fi
+    - name: Checkout correct repository
+      if: ${{ github.event_name == 'workflow_dispatch'  && github.event.inputs.tag != '' }}
+      uses: actions/checkout@v3
+      with:
+        ref: ${{ env.tag }}
+    - name: Use Node.js 18.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 18.x
+    - run: npm install
+      working-directory: ./11ty
+    - run: npm run build
+      working-directory: ./11ty
+      env: 
+        DRUPAL_URL: ${{ env.DRUPAL_URL }}
+        DRUPAL_AUTH: ${{ secrets.DRUPAL_AUTH }}
+    - name: Deploy to netlify
+      working-directory: ./11ty
+      run: npx netlify-cli deploy --dir=public --prod
+      env:
+        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        NETLIFY_SITE_ID: ${{ vars.NETLIFY_SITE_ID }}
+      ## Notify Slack if build fails
+      ##      - name: Report Status
+      ##        if: always()
+      ##        uses: ravsamhq/notify-slack-action@v1
+      ##        with:
+      ##          status: ${{ job.status }}
+      ##          notify_when: 'failure'
+      ##        env:
+      ##          SLACK_WEBHOOK_URL: ${{ secrets.ACTION_MONITORING_SLACK }}

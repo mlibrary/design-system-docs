@@ -15,7 +15,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build-production:
     runs-on: ubuntu-latest
     environment: production
     env:
@@ -23,7 +23,7 @@ jobs:
       DRUPAL_URL: ${{ vars.DRUPAL_URL }}
     steps:
     - name: Checkout code
-      uses: actions/checkout@v1
+      uses: actions/checkout@v3
       with:
         fetch-depth: 0
     - name: Use Node.js 18.x
