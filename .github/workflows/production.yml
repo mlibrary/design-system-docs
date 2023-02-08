@@ -50,12 +50,14 @@ jobs:
       env:
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         NETLIFY_SITE_ID: ${{ vars.NETLIFY_SITE_ID }}
-      ## Notify Slack if build fails
-      ##      - name: Report Status
-      ##        if: always()
-      ##        uses: ravsamhq/notify-slack-action@v1
-      ##        with:
-      ##          status: ${{ job.status }}
-      ##          notify_when: 'failure'
-      ##        env:
-      ##          SLACK_WEBHOOK_URL: ${{ secrets.ACTION_MONITORING_SLACK }}
+    - name: Send custom JSON data to Slack workflow
+      if: ${{ failure() }}
+      uses: slackapi/slack-github-action@v1.23.0
+      with:
+        payload: |
+          {
+            "run_id": ${{ $GITHUB_RUN_ID }},
+            "message": "Production build and deploy failed"
+          }
+      env:
+        SLACK_WEBHOOK_URL: ${{ vars.SLACK_BUILD_FAIL_URL }}
