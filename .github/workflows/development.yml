@@ -77,7 +77,7 @@ jobs:
       with:
         payload: |
           {
-            "run_id": ${{ github.run_id }},
+            "url": "https://github.com/mlibrary/design-system-docs/actions/runs/${{ github.run_id }}",
             "message": "Development build and deploy failed"
           }
       env:
