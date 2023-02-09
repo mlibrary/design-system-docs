@@ -2,7 +2,7 @@ name: Development workflow
 
 # When workflow is triggered
 on:
-  repository_dispatch
+  repository_dispatch:
   workflow_dispatch:
     inputs:
       cms: 
