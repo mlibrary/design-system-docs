@@ -2,8 +2,7 @@ name: Development workflow
 
 # When workflow is triggered
 on:
-  #repository_dispatch:
-    #types: [ publish_development ]
+  repository_dispatch
   workflow_dispatch:
     inputs:
       cms: 
