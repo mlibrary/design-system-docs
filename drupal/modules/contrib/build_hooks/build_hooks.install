@@ -1,0 +1,201 @@
+<?php
+
+/**
+ * @file
+ * Contains install and update hooks.
+ */
+
+use Drupal\build_hooks\DeploymentListBuilder;
+use Drupal\build_hooks\DeploymentStorageHandler;
+use Drupal\build_hooks\DeploymentViewsData;
+use Drupal\build_hooks\Entity\Deployment;
+use Drupal\Core\Entity\ContentEntityType;
+use Drupal\Core\Entity\EntityAccessControlHandler;
+use Drupal\Core\Entity\EntityViewBuilder;
+use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\Core\Field\FieldStorageDefinitionInterface;
+use Drupal\Core\Language\LanguageInterface;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
+
+/**
+ * Enables dynamic_entity_reference.
+ */
+function build_hooks_update_8201(&$sandbox) {
+  \Drupal::service('module_installer')->install(['dynamic_entity_reference']);
+}
+
+/**
+ * Install the Deployment entity-type definition.
+ */
+function build_hooks_update_8202(&$sandbox) {
+  $entity_definition_update_manager = \Drupal::entityDefinitionUpdateManager();
+  if (!$entity_definition_update_manager->getEntityType('build_hooks_deployment')) {
+    $entity_type = new ContentEntityType([
+      'id' => 'build_hooks_deployment',
+      'class' => Deployment::class,
+      'admin_permission' => 'trigger deployments',
+      'label' => new TranslatableMarkup('Deployment'),
+      'label_collection' => new TranslatableMarkup('Deployments'),
+      'label_singular' => new TranslatableMarkup('deployment'),
+      'label_plural' => new TranslatableMarkup('deployments'),
+      'bundle_label' => new TranslatableMarkup('Frontend Environment'),
+      'handlers' => [
+        'storage' => DeploymentStorageHandler::class,
+        'view_builder' => EntityViewBuilder::class,
+        'list_builder' => DeploymentListBuilder::class,
+        'access' => EntityAccessControlHandler::class,
+        'views_data' => DeploymentViewsData::class,
+      ],
+      'base_table' => 'build_hooks_deployment',
+      'revision_table' => 'build_hooks_deployment_revision',
+      'entity_keys' => [
+        'id' => 'did',
+        'label' => 'label',
+        'revision' => 'revision_id',
+        'langcode' => 'langcode',
+        'uuid' => 'uuid',
+        'bundle' => 'environment',
+      ],
+      'revision_metadata_keys' => [
+        'revision_user' => 'revision_user',
+        'revision_created' => 'revision_created',
+        'revision_log_message' => 'revision_log_message',
+      ],
+      'bundle_entity_type' => 'frontend_environment',
+      'field_ui_base_route' => 'entity.frontend_environment.edit_form',
+      'links' => [
+        'canonical' => '/admin/build_hooks/deployments/manage/{build_hooks_deployment}',
+      ],
+      'constraints' => [
+        'BuildHooksEnvironment' => [],
+      ],
+    ]);
+
+    $field_storage_definitions['did'] = BaseFieldDefinition::create('integer')
+      ->setLabel(new TranslatableMarkup('ID'))
+      ->setReadOnly(TRUE)
+      ->setSetting('unsigned', TRUE);
+
+    $field_storage_definitions['uuid'] = BaseFieldDefinition::create('uuid')
+      ->setLabel(new TranslatableMarkup('UUID'))
+      ->setReadOnly(TRUE);
+
+    $field_storage_definitions['revision_id'] = BaseFieldDefinition::create('integer')
+      ->setLabel(new TranslatableMarkup('Revision ID'))
+      ->setReadOnly(TRUE)
+      ->setSetting('unsigned', TRUE);
+    $field_storage_definitions['environment'] = BaseFieldDefinition::create('entity_reference')
+      ->setLabel('Frontend Environment')
+      ->setSetting('target_type', 'frontend_environment')
+      ->setRequired(TRUE)
+      ->setReadOnly(TRUE);
+    $field_storage_definitions['langcode'] = BaseFieldDefinition::create('language')
+      ->setLabel(new TranslatableMarkup('Language'))
+      ->setRevisionable(TRUE)
+      ->setDefaultValue(LanguageInterface::LANGCODE_NOT_SPECIFIED);
+
+    $field_storage_definitions['revision_default'] = BaseFieldDefinition::create('boolean')
+      ->setLabel(new TranslatableMarkup('Default revision'))
+      ->setStorageRequired(TRUE)
+      ->setInternal(TRUE)
+      ->setRevisionable(TRUE);
+
+    $field_storage_definitions['label'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('Label'))
+      ->setRequired(TRUE)
+      ->setTranslatable(TRUE)
+      ->setRevisionable(TRUE)
+      ->setSetting('max_length', 255)
+      ->setDisplayOptions('view', [
+        'label' => 'hidden',
+        'type' => 'string',
+        'weight' => -5,
+      ])
+      ->setDisplayConfigurable('view', TRUE)
+      ->setDisplayConfigurable('form', TRUE);
+
+    $field_storage_definitions['status'] = BaseFieldDefinition::create('boolean')
+      ->setLabel(new TranslatableMarkup('Deployed'))
+      ->setRevisionable(TRUE)
+      ->setDefaultValue(TRUE);
+
+    $field_storage_definitions['revision_created'] = BaseFieldDefinition::create('created')
+      ->setLabel(t('Revision create time'))
+      ->setDescription(t('The time that the current revision was created.'))
+      ->setRevisionable(TRUE);
+
+    $field_storage_definitions['revision_user'] = BaseFieldDefinition::create('entity_reference')
+      ->setLabel(t('Revision user'))
+      ->setDescription(t('The user ID of the author of the current revision.'))
+      ->setSetting('target_type', 'user')
+      ->setRevisionable(TRUE);
+
+    $field_storage_definitions['created'] = BaseFieldDefinition::create('created')
+      ->setLabel(t('Created'))
+      ->setDescription(t('The time the deployment was created.'))
+      ->setRevisionable(TRUE)
+      ->setDisplayConfigurable('view', TRUE)
+      ->setDisplayConfigurable('form', TRUE);
+
+    $field_storage_definitions['deployed'] = BaseFieldDefinition::create('timestamp')
+      ->setLabel(t('Created'))
+      ->setDescription(t('The time the deployment was deployed.'))
+      ->setRevisionable(TRUE)
+      ->setDisplayConfigurable('view', TRUE)
+      ->setDisplayConfigurable('form', TRUE);
+
+    $field_storage_definitions['changed'] = BaseFieldDefinition::create('changed')
+      ->setLabel(t('Changed'))
+      ->setDescription(t('The time that the deployment was last edited.'))
+      ->setRevisionable(TRUE)
+      ->setDisplayConfigurable('view', TRUE)
+      ->setDisplayConfigurable('form', TRUE);
+
+    $field_storage_definitions['revision_log_message'] = BaseFieldDefinition::create('string_long')
+      ->setLabel(t('Revision log message'))
+      ->setDescription(t('Briefly describe the changes you have made.'))
+      ->setRevisionable(TRUE)
+      ->setDefaultValue('')
+      ->setDisplayOptions('form', [
+        'type' => 'string_textarea',
+        'weight' => 25,
+        'settings' => [
+          'rows' => 4,
+        ],
+      ]);
+
+    $field_storage_definitions['contents'] = BaseFieldDefinition::create('dynamic_entity_reference')
+      ->setLabel((string) new TranslatableMarkup('Deployment contents'))
+      ->setDescription((string) new TranslatableMarkup('Content entities updated since the last deployment.'))
+      ->setRequired(FALSE)
+      ->setCardinality(FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED)
+      ->setDisplayOptions('view', [
+        'label' => 'above',
+        'type' => 'dynamic_entity_reference_label',
+        'weight' => 20,
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE)
+      ->setSettings([
+        'exclude_entity_types' => TRUE,
+        'entity_type_ids' => ['build_hooks_deployment'],
+      ]);
+
+    $field_storage_definitions['deleted'] = BaseFieldDefinition::create('string')
+      ->setLabel((string) new TranslatableMarkup('Deleted items'))
+      ->setDescription((string) new TranslatableMarkup('Content entities deleted since the last deployment.'))
+      ->setRequired(FALSE)
+      ->setCardinality(FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED)
+      ->setDisplayOptions('view', [
+        'label' => 'above',
+        'type' => 'string',
+        'weight' => 20,
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
+
+    $entity_definition_update_manager->installFieldableEntityType($entity_type, $field_storage_definitions);
+
+    return t('The "Deployment" entity type has been installed.');
+  }
+}

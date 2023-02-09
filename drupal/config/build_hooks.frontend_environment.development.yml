@@ -1,0 +1,19 @@
+uuid: 53a2ec17-2afd-4612-a6cc-8d2037b8dab0
+langcode: en
+status: true
+dependencies:
+  module:
+    - build_hooks_github
+id: development
+label: Development
+provider: null
+plugin: github
+deployment_strategy: manual
+url: 'https://design-system-development.netlify.app/'
+weight: 0
+settings:
+  id: github
+  label: null
+  provider: build_hooks_github
+  branch: main
+  build_hook_url: 'https://api.github.com/repos/mlibrary/design-system-docs/actions/workflows/47808757/dispatches'

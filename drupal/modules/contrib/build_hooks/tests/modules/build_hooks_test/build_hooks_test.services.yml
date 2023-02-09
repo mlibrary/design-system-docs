@@ -1,0 +1,5 @@
+services:
+  build_hooks_test.event_subscriber:
+    class: Drupal\build_hooks_test\EventSubscriber
+    tags:
+      - { name: event_subscriber }

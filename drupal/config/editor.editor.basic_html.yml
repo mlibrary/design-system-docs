@@ -41,39 +41,7 @@ settings:
           name: Tools
           items:
             - Source
-  plugins:
-    language:
-      language_list: un
-    stylescombo:
-      styles: ''
-    codesnippet:
-      highlight_style: arta
-      highlight_languages:
-        apache: apache
-        bash: bash
-        cs: cs
-        cpp: cpp
-        coffeescript: coffeescript
-        css: css
-        diff: diff
-        html: html
-        http: http
-        ini: ini
-        java: java
-        javascript: javascript
-        json: json
-        makefile: makefile
-        markdown: markdown
-        nginx: nginx
-        objectivec: objectivec
-        perl: perl
-        php: php
-        python: python
-        ruby: ruby
-        sql: sql
-        vbscript: vbscript
-        xhtml: xhtml
-        xml: xml
+  plugins: {  }
 image_upload:
   status: false
   scheme: public

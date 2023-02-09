@@ -1,0 +1,5 @@
+entity.frontend_environment.add_form:
+  route_name: build_hooks.frontend_environment_plugin_types
+  title: 'Add Frontend environment'
+  appears_on:
+    - entity.frontend_environment.collection

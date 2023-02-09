@@ -1,0 +1,10 @@
+
+build_hooks_netlify.build_hooks_netlify_ci_config_form:
+  path: '/admin/config/build_hooks_netlify/buildhooksNetlifyconfig'
+  defaults:
+    _form: '\Drupal\build_hooks_netlify\Form\BuildHooksNetlifyConfigForm'
+    _title: 'Build hooks Netlify settings'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE

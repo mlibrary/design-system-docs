@@ -1,0 +1,9 @@
+build_hooks_bitbucket.settings_form:
+  path: '/admin/config/system/build-hooks-bitbucket'
+  defaults:
+    _title: 'build_hooks_bitbucket settings'
+    _form: 'Drupal\build_hooks_bitbucket\Form\SettingsForm'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE

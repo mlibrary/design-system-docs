@@ -1,0 +1,15 @@
+{
+  "next_page_token" : null,
+  "items" : [ {
+    "pipeline_id" : "fb566867-9ebf-467d-b3f7-a175220cf4c7",
+    "canceled_by" : "fa203651-b4c9-43c2-87ad-ecbfda065672",
+    "id" : "44f815b1-fded-47f3-af47-173f8b47ee28",
+    "name" : "test",
+    "project_slug" : "gh/foo/bar",
+    "status" : "canceled",
+    "started_by" : "fb566867-9ebf-467d-b3f7-a175220cf4c7",
+    "pipeline_number" : 53,
+    "created_at" : "2020-09-24T23:09:23Z",
+    "stopped_at" : "2020-09-24T23:09:32Z"
+  } ]
+}

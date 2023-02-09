@@ -1,0 +1,6 @@
+frontend_environment.settings.build_hooks_test:
+  type: build_hooks.frontend_environment.plugin_settings
+  mapping:
+    whiz:
+      type: string
+      label: 'Whiz!'

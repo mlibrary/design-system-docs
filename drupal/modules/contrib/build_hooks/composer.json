@@ -1,0 +1,15 @@
+{
+    "name": "drupal/build_hooks",
+    "description": "Triggers a build hook on service providers when content is updated",
+    "type": "drupal-module",
+    "require": {
+        "drupal/dynamic_entity_reference": "~1.0|~2.0"
+    },
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "larowlan",
+            "email": "larowlan@395439.no-reply.drupal.org"
+        }
+    ]
+}

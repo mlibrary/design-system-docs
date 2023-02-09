@@ -51,38 +51,8 @@ settings:
             - ShowBlocks
             - Source
   plugins:
-    language:
-      language_list: un
     stylescombo:
       styles: "p.umich-lib-callout|Callout\r\np.umich-lib-print|Print\r\np.umich-lib-alert|Alert\r\npre.code|Code Block"
-    codesnippet:
-      highlight_style: arta
-      highlight_languages:
-        apache: apache
-        bash: bash
-        cs: cs
-        cpp: cpp
-        coffeescript: coffeescript
-        css: css
-        diff: diff
-        html: html
-        http: http
-        ini: ini
-        java: java
-        javascript: javascript
-        json: json
-        makefile: makefile
-        markdown: markdown
-        nginx: nginx
-        objectivec: objectivec
-        perl: perl
-        php: php
-        python: python
-        ruby: ruby
-        sql: sql
-        vbscript: vbscript
-        xhtml: xhtml
-        xml: xml
 image_upload:
   status: false
   scheme: public

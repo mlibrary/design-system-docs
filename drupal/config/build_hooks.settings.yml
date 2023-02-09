@@ -1,0 +1,5 @@
+_core:
+  default_config_hash: pQfMcohzpPRQ1JKyQR19D59Aym79Mc12L2hyKJPwsbo
+logging:
+  entity_types:
+    - node

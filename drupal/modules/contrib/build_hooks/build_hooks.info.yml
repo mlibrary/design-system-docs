@@ -1,0 +1,20 @@
+name: 'Build Hooks'
+type: module
+description: 'Triggers a build hook on any service provider that supports build hooks.'
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: 'Build hooks'
+
+dependencies:
+  - drupal:views
+  - dynamic_entity_reference:dynamic_entity_reference
+
+# Information added by Drupal.org packaging script on 2021-05-20
+# version: '3.1.4'
+# project: 'build_hooks'
+# datestamp: 1621488841
+
+# Information added by Drupal.org packaging script on 2021-09-20
+version: '3.3.0'
+project: 'build_hooks'
+datestamp: 1632175884

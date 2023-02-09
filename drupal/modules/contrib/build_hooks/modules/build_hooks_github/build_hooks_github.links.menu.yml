@@ -1,0 +1,5 @@
+build_hooks_github.build_hooks_github_config_form:
+  title: 'Build Hooks Github settings'
+  route_name: build_hooks_github.build_hooks_github_ci_config_form
+  description: 'Set specific settings for Github environments and deployments.'
+  parent: build_hooks.admin_config_build_hooks

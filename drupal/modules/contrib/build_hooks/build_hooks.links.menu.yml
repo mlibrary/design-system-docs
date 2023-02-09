@@ -1,0 +1,20 @@
+build_hooks.admin_config_build_hooks:
+  title: 'Build hooks'
+  route_name: build_hooks.admin_config_build_hooks
+  parent: system.admin_config
+  description: 'Configure frontend environments and deployment settings.'
+  weight: 99
+
+entity.frontend_environment.collection:
+  title: 'Frontend environments'
+  route_name: entity.frontend_environment.collection
+  description: 'Manage list of frontend environments for deployment.'
+  parent: build_hooks.admin_config_build_hooks
+  weight: -10
+
+build_hooks.hook_form:
+  title: 'Build Hooks settings'
+  route_name: build_hooks.hook_form
+  description: 'General settings for the build hook module, such as which type of entities should be logged.'
+  parent: build_hooks.admin_config_build_hooks
+  weight: -5

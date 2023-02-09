@@ -1,0 +1,19 @@
+uuid: cb2ccdd3-6b2b-4b58-ba0a-f20a7d5dc2a3
+langcode: en
+status: true
+dependencies:
+  module:
+    - build_hooks_github
+id: production
+label: Production
+provider: null
+plugin: github
+deployment_strategy: manual
+url: 'https://design-system.lib.umich.edu'
+weight: 0
+settings:
+  id: github
+  label: null
+  provider: build_hooks_github
+  branch: main
+  build_hook_url: 'https://api.github.com/repos/mlibrary/design-system-docs/actions/workflows/38478011/dispatches'

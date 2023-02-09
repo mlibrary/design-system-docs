@@ -1,0 +1,10 @@
+services:
+  build_hooks.trigger:
+    class: Drupal\build_hooks\Trigger
+    arguments: ['@config.factory', '@http_client', '@current_user', '@string_translation', '@messenger', '@logger.factory', '@build_hooks.deploylogger', '@entity_type.manager', '@cache_tags.invalidator', '@event_dispatcher']
+  build_hooks.deploylogger:
+    class: Drupal\build_hooks\DeployLogger
+    arguments: ['@config.factory', '@entity_type.manager', '@datetime.time']
+  plugin.manager.frontend_environment:
+    class: Drupal\build_hooks\Plugin\FrontendEnvironmentManager
+    parent: default_plugin_manager

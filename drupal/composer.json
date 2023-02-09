@@ -16,6 +16,7 @@
     ],
     "require": {
         "composer/installers": "^1.9",
+        "drupal/build_hooks": "^3.3",
         "drupal/ckeditor_details": "^2.0",
         "drupal/codesnippet": "^1.7",
         "drupal/core-composer-scaffold": "^9.5",
