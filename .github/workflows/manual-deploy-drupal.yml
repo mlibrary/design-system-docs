@@ -1,4 +1,4 @@
-name: Manual Deploy
+name: Manual deploy drupal
 
 on:
   workflow_dispatch:
@@ -18,7 +18,7 @@ on:
 
 jobs:
   deploy-unstable:
-    environment: ${{ github.event.inputs.kube_environment}
+    environment: ${{ github.event.inputs.kube_environment }}
     name: Deploy ${{ github.event.inputs.tag }} to ${{ github.event.inputs.kube_environment }}
     runs-on: ubuntu-latest
     steps:
@@ -63,7 +63,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         context: drupal/.
-        file: Dockerfile.prod
+        file: drupal/Dockerfile.prod
         push: true
         tags: ghcr.io/mlibrary/${{ vars.IMAGE_NAME }}:${{ env.tag }}
     - name: Generate app token
