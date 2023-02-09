@@ -1,0 +1,99 @@
+name: Manual Deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      kube_environment:
+        description: "kubernetes environment"
+        required: true
+        type: choice
+        default: "cms-workshop"
+        options:
+          - "cms-workshop"
+          - "cms-production"
+      tag:
+        description: tag
+        required: true
+
+
+jobs:
+  deploy-unstable:
+    environment: ${{ github.event.inputs.kube_environment}
+    name: Deploy ${{ github.event.inputs.tag }} to ${{ github.event.inputs.kube_environment }}
+    runs-on: ubuntu-latest
+    steps:
+    - name: Clone latest repository
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+    - name: Check that the tag exists in repo
+      id: tag_check
+      run: |
+        if git rev-parse 'refs/tags/${{ github.event.inputs.tag }}' &> /dev/null; then
+          echo 'tag=${{ github.event.inputs.tag }}' >> $GITHUB_ENV
+        elif git rev-parse '${{ github.event.inputs.tag }}' &> /dev/null; then
+          echo "tag=`git rev-parse '${{ github.event.inputs.tag }}'`" >> $GITHUB_ENV
+        else
+          echo "Couldn't figure out tag from input: ${{ github.event.inputs.tag }}"
+          echo "Aborting deployment."
+          false
+        fi
+    - name: Log into Github Container Registry
+      uses: docker/login-action@v2
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+    - name: Check that the tag exists in container registry
+      id: image_check
+      run: |
+        if docker manifest inspect ghcr.io/mlibrary/${{ vars.IMAGE_NAME }}:${{ env.tag }} > /dev/null; then
+          echo 'image_exists=true' >> $GITHUB_OUTPUT
+          echo "image exists!"
+        else
+          echo "image doesn't exist; Starting to Build and push image"
+        fi
+    - name: Checkout Correct repository
+      if: ${{ steps.image_check.outputs.image_exists != 'true' }}
+      uses: actions/checkout@v3
+      with:
+        ref: ${{ env.tag }}
+    - name: Build and Push
+      if: ${{ steps.image_check.outputs.image_exists != 'true' }}
+      uses: docker/build-push-action@v2
+      with:
+        context: drupal/.
+        file: Dockerfile.prod
+        push: true
+        tags: ghcr.io/mlibrary/${{ vars.IMAGE_NAME }}:${{ env.tag }}
+    - name: Generate app token
+      id: generate_token
+      uses: tibdex/github-app-token@v1
+      with:
+        app_id: ${{ vars.CONFIG_REPO_RW_APP_ID }}
+        installation_id: ${{ vars.CONFIG_REPO_RW_INSTALL_ID }}
+        private_key: ${{ secrets.CONFIG_REPO_RW_KEY }}
+    - name: Set message
+      id: set_message
+      run: |
+        echo "TITLE=Update ${{ vars.TANKA_ENVIRONMENT }} to ${{ env.tag }}" >> $GITHUB_OUTPUT 
+        echo "DESCRIPTION=Originating repository is ${{ github.repository }}\nRun ID is $GITHUB_RUN_ID\nUser is ${{ github.actor }}" >> $GITHUB_OUTPUT
+    - name: Set PAYLOAD
+      run: |
+        data=$(echo '[
+          { 
+            "environment": "${{ vars.TANKA_ENVIRONMENT }}", 
+            "key": "web", 
+            "image": "ghcr.io/mlibrary/${{ vars.IMAGE_NAME }}:${{ env.tag }}" 
+          }
+        ]' | python -c 'import json, sys;var=json.dumps(json.load(sys.stdin));print(json.dumps(var))' )
+        echo "PAYLOAD={\"title\": \"${{ steps.set_message.outputs.TITLE }}\",\"description\": \"${{ steps.set_message.outputs.DESCRIPTION }}\", \"data\": $data }" >> $GITHUB_ENV
+    - name: echo payload
+      run: echo $PAYLOAD
+    - name: Send the message
+      uses: peter-evans/repository-dispatch@v2
+      with:
+        event-type: update-image
+        token: ${{ steps.generate_token.outputs.token }}
+        repository: ${{ vars.CONFIG_REPO_URL }}
+        client-payload: ${{ env.PAYLOAD }}
