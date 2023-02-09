@@ -1,6 +1,0 @@
-trigger deployments:
-  title: 'Trigger deployments to endpoints.'
-  restrict access: true
-manage frontend environments:
-  title: 'Create and manage frontend environments.'
-  restrict access: true

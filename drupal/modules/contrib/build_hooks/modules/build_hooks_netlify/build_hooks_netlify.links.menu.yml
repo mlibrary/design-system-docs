@@ -1,5 +1,0 @@
-build_hooks_netlify.build_hooks_netlify_config_form:
-  title: 'Build Hooks Netlify settings'
-  route_name: build_hooks_netlify.build_hooks_netlify_ci_config_form
-  description: 'Set specific settings for Netlify frontend environments and deployments.'
-  parent: build_hooks.admin_config_build_hooks

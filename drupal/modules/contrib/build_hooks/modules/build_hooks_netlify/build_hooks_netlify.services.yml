@@ -1,4 +1,0 @@
-services:
-  build_hooks_netlify.netlify_manager:
-    class: Drupal\build_hooks_netlify\NetlifyManager
-    arguments: ['@config.factory', '@http_client', '@date.formatter']

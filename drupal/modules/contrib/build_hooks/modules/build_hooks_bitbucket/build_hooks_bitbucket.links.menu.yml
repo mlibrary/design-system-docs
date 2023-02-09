@@ -1,5 +1,0 @@
-build_hooks_bitbucket.build_hooks_bitbucket_config_form:
-  title: 'Build Hooks Bitbucket settings'
-  route_name: build_hooks_bitbucket.settings_form
-  description: 'Set specific settings for Bitbucket based deployments.'
-  parent: build_hooks.admin_config_build_hooks

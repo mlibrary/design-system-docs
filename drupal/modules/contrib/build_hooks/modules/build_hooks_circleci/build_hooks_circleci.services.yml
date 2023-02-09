@@ -1,4 +1,0 @@
-services:
-  build_hooks_circleci.circleci_manager:
-    class: Drupal\build_hooks_circleci\CircleCiManager
-    arguments: ['@config.factory', '@http_client', '@date.formatter']

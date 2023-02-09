@@ -1,5 +1,0 @@
-build_hooks_circleci.build_hooks_circle_ci_config_form:
-  title: 'Build Hooks CircleCI settings'
-  route_name: build_hooks_circleci.build_hooks_circle_ci_config_form
-  description: 'Set specific settings for Circle CI frontend environments and deployments.'
-  parent: build_hooks.admin_config_build_hooks
