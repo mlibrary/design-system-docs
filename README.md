@@ -1,29 +1,28 @@
+# Design System Docs
+
+This is the 11ty Front-end codebase for https://design-system.lib.umich.edu.
+
+The drupal cms repository is here:
+https://github.com/mlibrary/design-system-cms
+
 ## Development Quick Start
 
-Build Docker the docker image for web
-```
-docker-compose build web
-```
+1. Run the initialization script. (You are encouraged to read what's in it.
+   There's nothing magical.)
 
-Copy the `.env-example` to `.env`
+  ```
+  ./init.sh
+  ```
 
-Update `.env` to have real values. 
+2. Edit `.env` with real values. Ask a Design System developer.
 
-**Important:** The DRUPAL_AUTH is currently required to fetch some of the Drupal JSON. (October 2022). Enter the correct password for `$password`.
-
-Install 11ty and dependencies
-
-```
-docker-compose run --rm web npm install
-```
-
-Start development server and watch Sass (.scss) files (in parallel).
+3. Start development server and watch Sass (.scss) files (in parallel).
 
 ```
 docker-compose run --rm web npm start
 ```
 
-View in browser
+4. View in browser
 
 ```
 http://localhost:8888
@@ -31,27 +30,32 @@ http://localhost:8888
 
 ## Dev Scripts
 
-- `npm start` to start the eleventy server (serves the `/public` folder) and watch the Sass `/scss` folder
+- `npm start` to start the eleventy server (serves the `/public` folder) and
+  watch the Sass `/scss` folder
 - `npm build` to create a production build. Outputs into `/public`.
 
 ### Building and watching files
 
-`npm-run-all` is a CLI tool to run multiple npm-scripts in parallel or sequential. This is used in the dev scripts to watch Sass files and hot reload 11ty files in parallel.
+`npm-run-all` is a CLI tool to run multiple npm-scripts in parallel or
+sequential. This is used in the dev scripts to watch Sass files and hot reload
+11ty files in parallel.
 
 ---
 
 ## Developing the Site
 
-This is some very basic information. Please read the official [11ty documentation](https://www.11ty.dev/docs/) for an in-depth guide to building with 11ty.
+This is some very basic information. Please read the official [11ty
+documentation](https://www.11ty.dev/docs/) for an in-depth guide to building
+with 11ty.
 
 ### Edit site metadata
-
 
 ```
 src/_data/meta.json
 ```
 
-This data can be used in the markdown and Nunjucks files. The following properties are supported:
+This data can be used in the markdown and Nunjucks files. The following
+properties are supported:
 
 <table>
     <thead>
@@ -97,6 +101,7 @@ Page layouts are located the the `layouts` folder.
 ```
 src/_includes/layouts
 ```
+
 There is a `base.njk` file for the HTML boilerplate.
 Additional layouts build off of that boilerplate.
 
@@ -119,11 +124,13 @@ src/_includes/partials
 ### Index.md and 404.md
 
 Static page content is created with markdown (.md).
-Use YAML front matter to add data to your content. Locally assigned front matter values override things further up the chain.
+Use YAML front matter to add data to your content. Locally assigned front matter
+values override things further up the chain.
 
 ### Drupal content
 
-Pages are generated from the Drupal content coming from the Drupal JSON:API using the [11ty pagination feature](https://www.11ty.dev/docs/pagination/).
+Pages are generated from the Drupal content coming from the Drupal JSON:API
+using the [11ty pagination feature](https://www.11ty.dev/docs/pagination/).
 
 ```
 src/_data/drupal.js
@@ -131,15 +138,19 @@ src/_data/drupal.js
 
 #### Pagination files to create landing page and page
 
-There are two Nunjuck files- one to generate a page (`page-generator.njk`) and one to generate landing pages (`landing_page-generator.njk`).
+There are two Nunjuck files- one to generate a page (`page-generator.njk`) and
+one to generate landing pages (`landing_page-generator.njk`).
 
 ## Styles
 
-Edit the styles in the `src/scss` folder. 11ty is watching that folder and building the Sass files into `src/css`. 11ty then passes through the CSS to the `public` folder.
+Edit the styles in the `src/scss` folder. 11ty is watching that folder and
+building the Sass files into `src/css`. 11ty then passes through the CSS to the
+`public` folder.
 
 ## Images
 
-Add images to the `src/img` folder. 11ty is watching that folder and passing through the files to the `public` folder.
+Add images to the `src/img` folder. 11ty is watching that folder and passing
+through the files to the `public` folder.
 
 ## 11ty Features
 
@@ -148,7 +159,9 @@ Add images to the `src/img` folder. 11ty is watching that folder and passing thr
 This site uses the [11ty Navigation Plugin](https://www.11ty.dev/docs/plugins/navigation/).
 This plugin supports infinite-depth hierarchical navigation and breadcrumbs.
 
-Add the `eleventyNavigation` object to your front matter data (or in a data directory file). Assign a unique string to the key property inside of `eleventyNavigation`.
+Add the `eleventyNavigation` object to your front matter data (or in a data
+directory file). Assign a unique string to the key property inside of
+`eleventyNavigation`.
 
 ```
 eleventyNavigation:
@@ -159,7 +172,9 @@ eleventyNavigation:
 
 Collections allow you to group data in certain ways using `tags`.
 
-_Important distinction_: tags have a singular purpose in Eleventy... to construct collections of content. Not to be confused with tag labels used in blogs.
+_Important distinction_: tags have a singular purpose in Eleventy... to
+construct collections of content. Not to be confused with tag labels used in
+blogs.
 
 ---
 
