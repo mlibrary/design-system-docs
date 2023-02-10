@@ -1,11 +1,11 @@
-FROM node:18.7
+FROM node:18
 ARG UNAME=app
 ARG UID=1000
 ARG GID=1000
 
 LABEL maintainer="mrio@umich.edu"
 
-RUN npm install -g npm@8.18.0
+RUN npm install -g npm@latest
 RUN apt-get update -yqq && apt-get install -yqq --no-install-recommends \
   vim-tiny
 
