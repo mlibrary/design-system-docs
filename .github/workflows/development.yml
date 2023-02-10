@@ -58,14 +58,11 @@ jobs:
       with:
         node-version: 18.x
     - run: npm install
-      working-directory: ./11ty
     - run: npm run build
-      working-directory: ./11ty
       env: 
         DRUPAL_URL: ${{ env.DRUPAL_URL }}
         DRUPAL_AUTH: ${{ secrets.DRUPAL_AUTH }}
     - name: Deploy to netlify
-      working-directory: ./11ty
       run: npx netlify-cli deploy --dir=public --prod
       env:
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
