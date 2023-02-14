@@ -19,7 +19,7 @@ https://github.com/mlibrary/design-system-cms
 3. Start development server and watch Sass (.scss) files (in parallel).
 
 ```
-docker-compose run --rm web npm start
+docker-compose up
 ```
 
 4. View in browser
