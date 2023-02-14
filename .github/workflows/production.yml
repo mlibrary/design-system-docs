@@ -6,12 +6,9 @@ on:
   push:
     branches:
       - main
-    paths: 
-      - "11ty/**"
   # schedule:
     # - cron: '0 11 * * MON-FRI'
-  #repository_dispatch:
-    #types: [ publish_production ]
+  repository_dispatch:
   workflow_dispatch:
 
 jobs:
@@ -31,7 +28,6 @@ jobs:
       with:
         node-version: 18.x
     - run: npm install
-      working-directory: ./11ty
     #- name: Caching 11ty
       #id: eleventy-cache-build
       #uses: actions/cache@v2
@@ -43,9 +39,7 @@ jobs:
         #restore-keys: |
           #${{ runner.os }}-eleventy-build-
     - run: npm run build
-      working-directory: ./11ty
     - name: Deploy to netlify
-      working-directory: ./11ty
       run: npx netlify-cli deploy --dir=public --prod
       env:
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}

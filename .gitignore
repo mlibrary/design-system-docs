@@ -1,18 +1,13 @@
-#Drupal ignore
-drupal/files
-drupal/.env
-*.sql
-
 # Dependency directories
-11ty/node_modules/
+node_modules/
 
 # 11ty
-11ty/public/
-11ty/src/css
+public/
+src/css
 
 # Misc
-11ty/.cache
-11ty/.env
-11ty/.DS_Store
+.cache
+.env
+.DS_Store
 .DS_Store
 .cache
