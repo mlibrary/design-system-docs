@@ -1,0 +1,70 @@
+@use 'media';
+
+:root {
+  --pagefind-ui-scale: 1.0;
+  --pagefind-ui-border-width: 1px;
+  --pagefind-ui-border: rgb(229,233,237);
+  --pagefind-ui-text: var(--color-neutral-400);
+  --pagefind-ui-font: var(--font-base-family);
+  --pagefind-ui-primary: #034ad8;
+  --pagefind-ui-background: #ffffff;
+  --pagefind-ui-tag: #eeeeee;
+  --pagefind-ui-border-radius: 8px;
+  --pagefind-ui-image-border-radius: 8px;
+  --pagefind-ui-image-box-ratio: 3 / 2;
+}
+
+#search {
+  padding-bottom: calc(1rem - 3px);
+  margin-left: auto;  
+
+  @include media.breakpoint('xl', 'max-width') {
+    flex-basis: 100%;
+
+    .pagefind-ui__drawer {
+      width: 100%;
+      max-height: 70dvh;
+    }
+  }
+}
+
+.pagefind-ui__drawer {
+  --pagefind-ui-scale: 1;
+
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 16px 0px;
+  border-radius: 2px;
+  border: 1px solid rgb(229, 233, 237);
+  position: absolute;
+  margin-top: 0.5rem;
+  right: 0;
+  width: 45vw;
+  max-height: 60dvh;
+  overflow: auto;
+  background: #fff;
+  z-index: 101;
+
+  .pagefind-ui__button {
+    display: block;
+    width: 90%;
+    margin: 0 auto 1rem;
+  }
+}
+
+.pagefind-ui__result-inner {
+  padding: 0 1rem;
+}
+
+// overriding component styles
+.pagefind-ui__message {
+  padding: calc(10px * var(--pagefind-ui-scale)) calc(20px * var(--pagefind-ui-scale)) !important;
+  height: auto !important;
+}
+
+.pagefind-ui__form {
+  --pagefind-ui-scale: 0.8;
+}
+
+// set up component styles
+.pagefind-ui__search-clear {
+  all: unset;
+}
