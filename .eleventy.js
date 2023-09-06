@@ -3,6 +3,7 @@ const path = require('path');
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const updatePermalinks = require('./lib/update-permalinks');
 const updateMarkup = require('./lib/update-markup');
+const { execSync } = require('child_process')
 
 module.exports = function(eleventyConfig) {
 
@@ -28,6 +29,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/css");
   eleventyConfig.addPassthroughCopy("./src/img");
   eleventyConfig.addPassthroughCopy("./src/js");
+
+  eleventyConfig.on('eleventy.after', () => {
+    execSync(`npx pagefind --source public --glob \"**/*.html\"`, { encoding: 'utf-8' })
+  })
 
   return {
     passthroughFileCopy: true,
