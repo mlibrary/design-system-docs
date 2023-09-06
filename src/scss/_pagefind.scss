@@ -68,3 +68,7 @@
 .pagefind-ui__search-clear {
   all: unset;
 }
+
+button.pagefind-ui__suppressed {
+  display: none;
+}
