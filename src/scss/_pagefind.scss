@@ -3,13 +3,13 @@
 :root {
   --pagefind-ui-scale: 1.0;
   --pagefind-ui-border-width: 1px;
-  --pagefind-ui-border: rgb(229,233,237);
+  --pagefind-ui-border: var(--color-neutral-300);
   --pagefind-ui-text: var(--color-neutral-400);
   --pagefind-ui-font: var(--font-base-family);
   --pagefind-ui-primary: #034ad8;
   --pagefind-ui-background: #ffffff;
   --pagefind-ui-tag: #eeeeee;
-  --pagefind-ui-border-radius: 8px;
+  --pagefind-ui-border-radius: 0;
   --pagefind-ui-image-border-radius: 8px;
   --pagefind-ui-image-box-ratio: 3 / 2;
 }
@@ -47,6 +47,7 @@
     display: block;
     width: 90%;
     margin: 0 auto 1rem;
+    color: var(--color-teal-400);
   }
 }
 
@@ -60,8 +61,24 @@
   height: auto !important;
 }
 
+input.pagefind-ui__search-input::placeholder {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 1.0);
+}
+
 .pagefind-ui__form {
-  --pagefind-ui-scale: 0.8;
+  --pagefind-ui-scale: 0.65;
+  color: black;
+}
+
+button.pagefind-ui__search-clear.svelte-1d60ae3{
+  font-size: 1rem;
+}
+
+.pagefind-ui__form.svelte-1d60ae3:before {
+  width: 1rem;
+  height: 1rem;
+  top: calc(20px * var(--pagefind-ui-scale));
 }
 
 // set up component styles
