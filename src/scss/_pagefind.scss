@@ -61,9 +61,11 @@
   height: auto !important;
 }
 
-input.pagefind-ui__search-input::placeholder {
+input.pagefind-ui__search-input.svelte-1d60ae3::placeholder {
   font-size: 1rem;
-  color: rgba(0, 0, 0, 1.0);
+  font-weight: 600;
+  color: var(--color-neutral-300);
+  opacity: 1;
 }
 
 .pagefind-ui__form {
