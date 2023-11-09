@@ -49,10 +49,20 @@
     margin: 0 auto 1rem;
     color: var(--color-teal-400);
   }
+
+  .pagefind-ui__button:hover {
+    color: var(--color-teal-500);
+    border: solid 2px var(--color-teal-500);
+  }
 }
 
 .pagefind-ui__result-inner {
   padding: 0 1rem;
+
+  mark {
+    background-color: var(--color-maize-300);
+    font-weight: var(--semibold);
+  }
 }
 
 // overriding component styles
@@ -90,4 +100,11 @@ button.pagefind-ui__search-clear.svelte-1d60ae3{
 
 button.pagefind-ui__suppressed {
   display: none;
+}
+
+// Set result title link to teal and add underline
+
+a.pagefind-ui__result-link.svelte-j9e30  {
+  color: var(--color-teal-400) !important; 
+  text-decoration: underline !important;
 }
