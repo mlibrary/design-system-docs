@@ -110,6 +110,7 @@
    
    a {
     text-decoration: none;
+    color: var(--color-neutral-400);
    }
 
    a:hover{
@@ -132,6 +133,7 @@
   display: flex;
   align-items: center;
   gap: .25rem;
+  color: var(--color-neutral-400);
  }
 }
 

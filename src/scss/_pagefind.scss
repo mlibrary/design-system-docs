@@ -71,9 +71,15 @@
   height: auto !important;
 }
 
-input.pagefind-ui__search-input.svelte-1d60ae3::placeholder {
+input[type="text"].pagefind-ui__search-input {
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 400;
+}
+
+
+input[type="text"].pagefind-ui__search-input::placeholder {
+  font-size: 1rem;
+  font-weight: 400;
   color: var(--color-neutral-300);
   opacity: 1;
 }
@@ -83,14 +89,14 @@ input.pagefind-ui__search-input.svelte-1d60ae3::placeholder {
   color: black;
 }
 
-button.pagefind-ui__search-clear.svelte-1d60ae3{
-  font-size: 1rem;
+button.pagefind-ui__search-clear {
+  font-size: 1rem !important;
 }
 
-.pagefind-ui__form.svelte-1d60ae3:before {
-  width: 1rem;
-  height: 1rem;
-  top: calc(20px * var(--pagefind-ui-scale));
+.pagefind-ui__form::before {
+  width: 1rem !important;
+  height: 1rem !important;
+  top: calc(20px * var(--pagefind-ui-scale)) !important;
 }
 
 // set up component styles
@@ -104,7 +110,7 @@ button.pagefind-ui__suppressed {
 
 // Set result title link to teal and add underline
 
-a.pagefind-ui__result-link.svelte-j9e30  {
+a.pagefind-ui__result-link {
   color: var(--color-teal-400) !important; 
   text-decoration: underline !important;
 }
