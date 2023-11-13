@@ -1,0 +1,116 @@
+@use 'media';
+
+:root {
+  --pagefind-ui-scale: 1.0;
+  --pagefind-ui-border-width: 1px;
+  --pagefind-ui-border: var(--color-neutral-300);
+  --pagefind-ui-text: var(--color-neutral-400);
+  --pagefind-ui-font: var(--font-base-family);
+  --pagefind-ui-primary: #034ad8;
+  --pagefind-ui-background: #ffffff;
+  --pagefind-ui-tag: #eeeeee;
+  --pagefind-ui-border-radius: 0;
+  --pagefind-ui-image-border-radius: 8px;
+  --pagefind-ui-image-box-ratio: 3 / 2;
+}
+
+#search {
+  padding-bottom: calc(1rem - 3px);
+  margin-left: auto;  
+
+  @include media.breakpoint('xl', 'max-width') {
+    flex-basis: 100%;
+
+    .pagefind-ui__drawer {
+      width: 100%;
+      max-height: 70dvh;
+    }
+  }
+}
+
+.pagefind-ui__drawer {
+  --pagefind-ui-scale: 1;
+
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 16px 0px;
+  border-radius: 2px;
+  border: 1px solid rgb(229, 233, 237);
+  position: absolute;
+  margin-top: 0.5rem;
+  right: 0;
+  width: 45vw;
+  max-height: 60dvh;
+  overflow: auto;
+  background: #fff;
+  z-index: 101;
+
+  .pagefind-ui__button {
+    display: block;
+    width: 90%;
+    margin: 0 auto 1rem;
+    color: var(--color-teal-400);
+  }
+
+  .pagefind-ui__button:hover {
+    color: var(--color-teal-500);
+    border: solid 2px var(--color-teal-500);
+  }
+}
+
+.pagefind-ui__result-inner {
+  padding: 0 1rem;
+
+  mark {
+    background-color: var(--color-maize-300);
+    font-weight: var(--semibold);
+  }
+}
+
+// overriding component styles
+.pagefind-ui__message {
+  padding: calc(10px * var(--pagefind-ui-scale)) calc(20px * var(--pagefind-ui-scale)) !important;
+  height: auto !important;
+}
+
+input[type="text"].pagefind-ui__search-input {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+
+input[type="text"].pagefind-ui__search-input::placeholder {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-neutral-300);
+  opacity: 1;
+}
+
+.pagefind-ui__form {
+  --pagefind-ui-scale: 0.65;
+  color: black;
+}
+
+button.pagefind-ui__search-clear {
+  font-size: 1rem !important;
+}
+
+.pagefind-ui__form::before {
+  width: 1rem !important;
+  height: 1rem !important;
+  top: calc(20px * var(--pagefind-ui-scale)) !important;
+}
+
+// set up component styles
+.pagefind-ui__search-clear {
+  all: unset;
+}
+
+button.pagefind-ui__suppressed {
+  display: none;
+}
+
+// Set result title link to teal and add underline
+
+a.pagefind-ui__result-link {
+  color: var(--color-teal-400) !important; 
+  text-decoration: underline !important;
+}

@@ -5,12 +5,18 @@
 //
 // ## Table of Contents
 //   1. Primary navigation
-//   2. Side navigation
+//     1.2 Primary and Utility Mobile Nav
+//   2. Utility navigation
+//   3. Side navigation
 // --------------------------------------------------
 
 // ****************************** //
 // *** 1. Primary navigation *** //
 // **************************** //
+
+.primary-nav {
+  margin-top: .75rem;
+}
 
 .primary-nav ul {
   list-style: none;
@@ -20,7 +26,8 @@
   display: flex;
   flex-flow: row wrap;
   
-  @include media.breakpoint('sm', 'max-width') {
+  // Set on md, but maybe sm?
+  @include media.breakpoint('md', 'max-width') {
     display: none;
    }
   
@@ -58,10 +65,16 @@
   }
 }
 
-// 1.2 Mobile Nav
+.primary-nav  ul li {
+  @include media.breakpoint('lg', 'max-width') {
+    margin-bottom: 1rem;
+   }
+}
+
+// 1.2 Mobile Nav (Primary and Utility)
 
 .website-header-mobile {
-  @include media.breakpoint('sm', 'max-width') {
+  @include media.breakpoint('md', 'max-width') {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -69,7 +82,7 @@
 }
 
 .mobile-nav {
-  @include media.breakpoint('sm', 'min-width') {
+  @include media.breakpoint('md', 'min-width') {
   display: none;
  }
 
@@ -85,7 +98,7 @@
  }
 }
 
-.mobile-nav ul {
+.mobile-nav .primary-container ul {
     list-style: none;
     margin: 0;
     padding-left: 0;
@@ -97,11 +110,31 @@
    
    a {
     text-decoration: none;
+    color: var(--color-neutral-400);
    }
 
    a:hover{
     text-decoration: underline;
    }
+}
+
+.mobile-nav .utility-container ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  background-color: var(--color-blue-100);
+
+ li {
+  padding: 1rem;
+ }
+ 
+ a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: .25rem;
+  color: var(--color-neutral-400);
+ }
 }
 
 [hidden] {
@@ -114,24 +147,81 @@ button.nav {
 }
 
 button[aria-expanded]::after {
-font-family: "Material Icons";
-font-size: 2.5rem;
-content: "\e5d2";
-color: var(--color-neutral-400);
+  font-family: "Material Symbols Outlined";
+  font-size: 2.5rem;
+  content: "\e5d2";
+  color: var(--color-neutral-400);
 }
 
 button[aria-expanded="true"]::after {
-font-family: "Material Icons";
-font-size: 2.5rem;
-content: "\e5cd";
-color: var(--color-neutral-400);
+  font-family: "Material Symbols Outlined";
+  font-size: 2.5rem;
+  content: "\e5cd";
+  color: var(--color-neutral-400);
 }
 
 
+// ****************************** //
+// *** 2. Utility navigation *** //
+// **************************** //
+
+.utility-nav {
+  @include media.breakpoint('lg', 'max-width') {
+    margin-top: 1rem;
+   }
+  // Set on md, but maybe sm?
+  @include media.breakpoint('md', 'max-width') {
+    display: none;
+   }
+  
+}
+
+.utility-nav ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-flow: row wrap;
+
+  li {
+    display: inline;
+  }
+
+  li:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  li a {
+    font-size: 0.875rem;
+    text-decoration: none;
+    color: var(--color-neutral-300);
+    text-transform: uppercase;
+    font-weight: var(--bold);
+    letter-spacing: 1.25px;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 
+  'wght' 300,
+   'opsz' 20
+  ;
+}
+
+.material-symbols-outlined:hover {
+  font-variation-settings: 
+  'wght' 500,
+   'FILL' 1
+  ;
+}
 
 
 // *************************** //
-// *** 2. Side navigation *** //
+// *** 3. Side navigation *** //
 // ************************* //
 
 .page-aside {

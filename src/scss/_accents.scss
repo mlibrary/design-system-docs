@@ -1,0 +1,35 @@
+@use 'media';
+// --------------------------------------------------
+//
+// # Accents
+//   1. Boxes
+//   2. Dots
+// --------------------------------------------------
+
+
+// ************************** //
+// *** 1. Accent Boxes *** //
+// ************************ //
+
+  #blue-box-svg {
+    width: 85px;
+    height: 85px;
+    position: absolute;
+    right: 1.95rem;
+    top: -2.5rem;
+    transform: rotate(30deg);
+    transition: transform 2s;
+  
+    @include media.breakpoint('sm', 'max-width') {
+      width: 65px;
+      height: 65px;
+      top: -2rem;
+     }
+  }
+  
+  @include media.breakpoint('md', 'min-width') {
+    #blue-box-svg:hover {
+      transform: rotate(45deg);
+      }
+    }
+  

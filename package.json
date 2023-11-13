@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "@11ty/eleventy-fetch": "^3.0.0",
-    "jsdom": "^22.1.0"
+    "jsdom": "^22.1.0",
+    "pagefind": "^1.0.3"
   }
 }

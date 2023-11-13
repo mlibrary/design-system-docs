@@ -120,6 +120,18 @@ blockquote {
   padding: 1rem 0;
 }
 
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
 // 2.5 Accessibility
 
 .opens-new-window::after {
