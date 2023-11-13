@@ -31,7 +31,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/js");
 
   eleventyConfig.on('eleventy.after', () => {
-    execSync(`npx pagefind --source public --glob \"**/*.html\"`, { encoding: 'utf-8' })
+    execSync(`npx pagefind --site public --glob \"**/*.html\"`, { encoding: 'utf-8' })
   })
 
   return {
