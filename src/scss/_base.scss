@@ -71,6 +71,11 @@ summary {
 // 2.2 Code block
 
 pre.code {
+  width: auto;
+  overflow-x: initial;
+}
+
+code[class^='language-'] {
   position: relative;
   background-color: var(--color-blue-100);
   color: var(--color-blue-400);
@@ -80,9 +85,11 @@ pre.code {
   word-wrap: break-word; 
   width: 100ch;
   font-size:14px;
+  display: block;
+  overflow-x: auto;
 }
 
-code {
+code:not([class^='language-']) {
   background-color: var(--color-blue-100);
   color: var(--color-blue-400);
   padding: .25rem;
