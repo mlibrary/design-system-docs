@@ -68,33 +68,12 @@ summary {
 }
 
 
-// 2.2 Code block
+// 2.2 Code block (pre)
 
 pre.code {
   width: auto;
   overflow-x: initial;
-}
-
-code[class^='language-'] {
-  position: relative;
-  background-color: var(--color-blue-100);
-  color: var(--color-blue-400);
-  padding: 2rem;
-  font-family: Consolas,Monaco,Courier New,Courier,monospace;
-  border-radius: var(--radius-default);
-  word-wrap: break-word; 
-  width: 100ch;
-  font-size:14px;
-  display: block;
-  overflow-x: auto;
-}
-
-code:not([class^='language-']) {
-  background-color: var(--color-blue-100);
-  color: var(--color-blue-400);
-  padding: .25rem;
-  font-family: Consolas,Monaco,Courier New,Courier,monospace;
-  border-radius: var(--radius-default);
+  margin-top: 1.5rem;
 }
 
 // 2.3 Blockquote
