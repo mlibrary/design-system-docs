@@ -1,0 +1,90 @@
+@use 'media';
+
+// --------------------------------------------------
+//
+// # Code
+//   Styles for code blocks. 
+// 
+// --------------------------------------------------
+
+
+code[class^='language-'] {
+  position: relative;
+  color: var(--color-blue-400);
+  padding: 2.5rem 2rem 1.5rem;
+  font-family: Consolas,Monaco,Courier New,Courier,monospace;
+  border-radius: var(--radius-default);
+  word-wrap: break-word; 
+  max-width: 80ch;
+  font-size: .9rem;
+  display: block;
+
+    --background-color: var(--color-blue-100);
+    --shadow-color: rgba(29, 116, 145, 0.55);
+    --shadow-size: 1em;
+    --transparent: rgba(255, 255, 255, 0);
+    overflow-x: scroll;
+    background: linear-gradient(
+        to right,
+        var(--background-color),
+        var(--background-color),
+        var(--transparent) calc(var(--shadow-size) * 3)
+      ),
+      radial-gradient(
+        farthest-side at 0 50%,
+        var(--shadow-color),
+        var(--transparent)
+      ),
+      linear-gradient(
+        to left,
+        var(--background-color),
+        var(--background-color),
+        var(--transparent) calc(var(--shadow-size) * 3)
+      ),
+      radial-gradient(
+          farthest-side at 100% 50%,
+          var(--shadow-color),
+          var(--transparent)
+        )
+        100%;
+    background-color: var(--background-color);
+    background-repeat: no-repeat;
+    background-attachment: local, scroll, local, scroll;
+    background-size: 100% 100%, var(--shadow-size) 100%, 100% 100%,
+      var(--shadow-size) 100%;
+
+  }
+
+code:not([class^='language-']) {
+  background-color: var(--color-blue-100);
+  color: var(--color-blue-400);
+  padding: .25rem;
+  font-family: Consolas,Monaco,Courier New,Courier,monospace;
+  border-radius: var(--radius-default);
+}
+
+/* Tags for Code Language */
+
+code.language-css::before {
+  position: absolute;
+  font-size: .75rem;
+  content: "CSS";
+  top: 0;
+  left: 0;
+  background-color: var(--color-teal-400);
+  color: #fff;
+  padding: .25rem .5rem;
+  font-weight: var(--semibold);
+}
+
+code.language-html::before {
+  font-size: .75rem;
+  position: absolute;
+  content: "HTML";
+  top: 0;
+  left: 0;
+  background-color: var(--color-teal-400);
+  color: #fff;
+  padding: .25rem .5rem;
+  font-weight: var(--semibold);
+}
