@@ -121,7 +121,8 @@
 
 .umich-lib-callout,
 .umich-lib-print, 
-.umich-lib-alert {
+.umich-lib-alert, 
+.umich-lib-block-text  {
   margin: 1rem 0;
   padding: 1rem;
   border: solid 1px #E5E9ED;
@@ -157,4 +158,10 @@
     float:left;
     height: 80px;
     }
+}
+
+.umich-lib-block-text {
+  border-left: solid 4px transparent;
+  border: solid 1px transparent;
+  margin-left: 2rem;
 }
