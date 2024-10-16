@@ -5,7 +5,7 @@ This is the 11ty Front-end codebase for https://design-system.lib.umich.edu.
 The drupal cms repository is here:
 https://github.com/mlibrary/design-system-cms
 
-## Development Quick Start
+## Doc Site Development Quick Start
 
 1. Run the initialization script. (You are encouraged to read what's in it.
    There's nothing magical.)
@@ -14,9 +14,9 @@ https://github.com/mlibrary/design-system-cms
   ./init.sh
   ```
 
-2. Edit `.env` with real values. Ask a Design System developer.
+2. Edit `.env` with real values. Ask a Design System developer for help.
 
-3. Start development server and watch Sass (.scss) files (in parallel).
+3. Run npm install, start development server, and watch changes in `.scss` and `.js` files.
 
 ```
 docker-compose up
@@ -30,15 +30,15 @@ http://localhost:8888
 
 ## Dev Scripts
 
-- `npm start` to start the eleventy server (serves the `/public` folder) and
-  watch the Sass `/scss` folder
+- `npm start` to start the eleventy server (serves the `/public` folder) and watch the `/scss` folder. 
+`.scss` files compile and output to `/public/css`.
 - `npm build` to create a production build. Outputs into `/public`.
 
 ### Building and watching files
 
-`npm-run-all` is a CLI tool to run multiple npm-scripts in parallel or
-sequential. This is used in the dev scripts to watch Sass files and hot reload
-11ty files in parallel.
+`eleventy-sass` is used as a dev dependency to watch and compile the `.scss` files and output to the `/public/css` directory.
+
+Eleventy Dev Server watches the `/js` and `/scss` folders and triggers a build when files in those folders are changed.
 
 ---
 
@@ -143,8 +143,7 @@ one to generate landing pages (`landing_page-generator.njk`).
 
 ## Styles
 
-Edit the styles in the `src/scss` folder. 11ty is watching that folder and
-building the Sass files into `src/css`. 11ty then passes through the CSS to the
+Edit the styles in the `src/scss` folder. 11ty is watching that folder. 11ty then passes through the compressed CSS to the
 `public` folder.
 
 ## Images
