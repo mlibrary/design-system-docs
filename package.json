@@ -1,36 +1,32 @@
 {
   "name": "design-system-docs-11ty",
-  "version": "1.0.0",
-  "description": "Starter template for creating an 11ty (eleventy) project with the U-M Library Design System",
+  "version": "1.1.0",
+  "description": "Design System Doc Site",
   "main": "index.html",
   "scripts": {
-    "watch:sass": "sass --no-source-map --watch src/scss:src/css",
-    "build:sass": "sass --no-source-map src/scss:public/css",
-    "watch:eleventy": "npx eleventy --serve",
-    "build:eleventy": "npx eleventy",
-    "start": "npm-run-all build:sass --parallel watch:eleventy watch:sass ",
-    "build": "npm-run-all build:*"
+   "start": "npx eleventy --serve",
+   "build": "npx eleventy"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mlibrary/design-system-11ty-starter.git"
+    "url": "git+https://github.com/mlibrary/design-system-docs.git"
   },
   "keywords": [],
   "author": "UM Library Design System",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mlibrary/design-system-11ty-starter/issues"
+    "url": "https://github.com/mlibrary/design-system-docs/issues"
   },
-  "homepage": "https://github.com/mlibrary/design-system-11ty-starter#readme",
+  "homepage": "https://github.com/mlibrary/design-system-docs#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.2",
-    "@11ty/eleventy-navigation": "^0.3.5",
-    "npm-run-all": "^4.1.5",
-    "sass": "^1.62.4"
+    "@11ty/eleventy-navigation": "^0.3.5"
   },
   "dependencies": {
-    "@11ty/eleventy-fetch": "^3.0.0",
-    "jsdom": "^22.1.0",
-    "pagefind": "^1.0.3"
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-fetch": "^4.0.1",
+    "eleventy-sass": "^2.2.4",
+    "jsdom": "^25.0.1",
+    "pagefind": "^1.1.1",
+    "sass": "^1.77.6"
   }
 }

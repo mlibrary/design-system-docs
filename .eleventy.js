@@ -1,14 +1,26 @@
 const { JSDOM } = require('jsdom');
 const path = require('path');
 const pluginNavigation = require("@11ty/eleventy-navigation");
+const eleventySass = require("eleventy-sass");
 const updatePermalinks = require('./lib/update-permalinks');
 const updateMarkup = require('./lib/update-markup');
-const { execSync } = require('child_process')
+const { execSync } = require('child_process');
 
 module.exports = function(eleventyConfig) {
 
   // Add the plugins used
   eleventyConfig.addPlugin(pluginNavigation);
+  eleventyConfig.addPlugin(eleventySass, {
+    compileOptions: {
+      permalink: function(contents, inputPath) {
+        return (data) => data.page.filePathStem.replace(/^\/scss\//, "/css/") + ".css";
+      }
+    },
+    sass: {
+      style: "compressed",
+      sourceMap: false
+    },
+  });
 
   // eleventyConfig.addPlugin(updateMarkup);
 
@@ -26,7 +38,6 @@ module.exports = function(eleventyConfig) {
 
   // The Pass Through feature tells Eleventy to copy things to our output folder
   // Eleventy passes through our compiled CSS to the public directory. 
-  eleventyConfig.addPassthroughCopy("./src/css");
   eleventyConfig.addPassthroughCopy("./src/img");
   eleventyConfig.addPassthroughCopy("./src/js");
 
