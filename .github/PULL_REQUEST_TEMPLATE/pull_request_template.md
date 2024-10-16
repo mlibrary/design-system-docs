@@ -64,7 +64,7 @@ http://localhost:8888
   - [ ] Tested with VoiceOver in Safari or NVDA in Windows
   - [ ] Used ARC toolkit to check for issues
 
-  ## Screenshots
+## Screenshots
 
 <!-- If this PR makes visible interface changes, an image of the finished interface can help reviewers
 and casual observers understand the context of the changes.
