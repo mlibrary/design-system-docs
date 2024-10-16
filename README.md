@@ -8,7 +8,7 @@ https://github.com/mlibrary/design-system-cms
 ## Doc Site Development Quick Start
 
 1. Run the initialization script. (You are encouraged to read what's in it.
-   There's nothing magical.)
+   There's nothing magical.) This will build the Docker image and install node modules.
 
   ```
   ./init.sh
@@ -16,7 +16,7 @@ https://github.com/mlibrary/design-system-cms
 
 2. Edit `.env` with real values. Ask a Design System developer for help.
 
-3. Run npm install, start development server, and watch changes in `.scss` and `.js` files.
+3. Starts the development server and watch changes in `.scss` and `.js` files.
 
 ```
 docker-compose up
