@@ -26,7 +26,7 @@
     "@11ty/eleventy-fetch": "^4.0.1",
     "eleventy-sass": "^2.2.4",
     "jsdom": "^25.0.1",
-    "pagefind": "^1.1.1",
-    "sass": "^1.77.6"
+    "pagefind": "^1.2.0",
+    "sass": "^1.80.7"
   }
 }
