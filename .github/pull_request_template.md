@@ -39,7 +39,7 @@ http://localhost:8888
 ## Reviewer Notes
 
 <!--
-    Is there anything you would like reviewers to give additional scrutiny?
+    Is there anything you would like reviewers to give special attention to?
 --->
 
 ## Code Review Verification Steps
