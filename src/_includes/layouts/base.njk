@@ -24,7 +24,8 @@
     <meta property="og:image" content="{{ '/img/social-card.png' | url }}"/>
     <meta property="og:url" content="{{ meta.url }}"/>
     <meta
-    property="og:locale" content="en_US"> <!-- Twitter Card -->
+    property="og:locale" content="en_US"> 
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image"/>
     <meta property="twitter:url" content="{{ meta.url }}">
     <meta property="twitter:title" content="{{ title }}">
@@ -32,6 +33,14 @@
     <meta property="twitter:image" content="{{ '/img/social-card.png' | url }}">
     <meta property="twitter:image:alt" content="">
     <link rel="icon" href="{{ '/img/favicon.ico' | url }}"/>
+    <!-- Fallback general icon -->
+    <link rel="apple-touch-icon" href="{{ '/img/icons/apple-touch-icon.png' | url }}">
+    <!-- 180x180 for iPhone with Retina display (iOS 7+) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/img/icons/apple-touch-icon-180x180.png' | url }}">
+    <!-- 167x167 for iPad Pro -->
+    <link rel="apple-touch-icon" sizes="167x167" href="{{ '/img/icons/apple-touch-icon-167x167.png' | url }}">
+    <!-- 152x152 for iPad with Retina display -->
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ '/img/icons/apple-touch-icon-152x152.png' | url }}">
     <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/css/style.css' | url }}"/>
     <link href="https://cdn.jsdelivr.net/npm/@umich-lib/web@1.3.0/umich-lib.css" rel="stylesheet"/>

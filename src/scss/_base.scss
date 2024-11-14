@@ -10,6 +10,7 @@
 //     2.3 Blockquotes <blockquote>
 //     2.4 Images
 //     2.5 Accessibility
+//     2.6 DS web components
 // --------------------------------------------------
 
 // ********************** //
@@ -127,4 +128,32 @@ blockquote {
     font-size: 1.25rem;
     padding-left: .25rem;
     vertical-align: sub;
+}
+
+// 2.6 DS Web Components
+
+m-universal-header {
+  display: block;
+  transition: max-height 0.25s ease-out;
+  max-height: 600px;
+}
+
+m-universal-header:not(.hydrated) {
+  height: 3.59rem;
+  max-height: 3.59rem;
+}
+
+m-website-header {
+  display: block;
+  transition: max-height 0.25s ease-out;
+  max-height: 600px;
+}
+
+m-website-header:not(.hydrated) {
+  height: 4rem;
+  max-height: 4rem;
+}
+
+m-website-header:not(.hydrated) > * {
+  display: none;
 }
