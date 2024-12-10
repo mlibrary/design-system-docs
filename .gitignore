@@ -11,3 +11,6 @@ src/css
 .DS_Store
 .DS_Store
 .cache
+.vscode-server
+.ssh
+

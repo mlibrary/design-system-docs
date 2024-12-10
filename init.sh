@@ -6,7 +6,7 @@ else
 fi
 
 echo "🚢 Build docker images"
-docker-compose build
+docker compose build
 
 echo "📦 Installing node modules"
-docker-compose run --rm web npm install
+docker compose run --rm web npm install
