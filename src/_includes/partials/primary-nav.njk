@@ -1,9 +1,9 @@
 <nav aria-label="Primary" class="primary-nav viewport-container flex flex-wrap align-items-center">
   <ul>
-    {% for entry in collections.landingPage %}
+    {% for entry in collections.landingPage | eleventyNavigation('home') %}
       <li>
         <a {% if page.url == entry.url %} aria-current="page" class="active" {% endif %} href="{{ entry.url }}">
-          {{ entry.data.title }}
+          {{ entry.title }}
         </a>
       </li>
     {% endfor %}

@@ -7,7 +7,6 @@ const updateMarkup = require('./lib/update-markup');
 const { execSync } = require('child_process');
 
 module.exports = function(eleventyConfig) {
-
   // Add the plugins used
   eleventyConfig.addPlugin(pluginNavigation);
   eleventyConfig.addPlugin(eleventySass, {
@@ -22,14 +21,16 @@ module.exports = function(eleventyConfig) {
     },
   });
 
-  // eleventyConfig.addPlugin(updateMarkup);
-
-  eleventyConfig.addPlugin(updatePermalinks, {
+  /* eleventyConfig.addPlugin(updatePermalinks, {
     src: path.resolve('./src/_data/drupal.js')
   });
-
+  */
   eleventyConfig.addPlugin(updateMarkup);
 
+  // Universal Shortcodes (Liquid, Nunjucks, 11ty.js)
+  eleventyConfig.addPairedShortcode("callout", function(content, variant) {
+    return `<p class="umich-lib-callout ${variant}">${content}</p>`;
+  });
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
   // The addWatchTarget config method allows you to manually add a file for Eleventy to watch.

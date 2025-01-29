@@ -12,7 +12,7 @@ layout: base.njk
         </div>
       </div>
     </div>
-    {% set childPages = collections.all | eleventyNavigation(eleventyNavigation.key) %}
+    {% set childPages = collections.all| eleventyNavigation(eleventyNavigation.key) %}
     <div class="card-container">
  <svg
         class="ovals"
@@ -33,7 +33,7 @@ layout: base.njk
                     {{ entry.title }}
                   </h2>
                   <p>
-                    {{ entry.summary }}
+                    {{ entry.summary}}
                   </p>
                 </section>
               </a>

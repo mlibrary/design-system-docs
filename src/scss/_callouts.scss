@@ -116,25 +116,26 @@
 }
 
 // ********************************** //
-// *** 2. Umich content callouts *** //
+// *** 2. Umich Content callouts *** //
 // ******************************** //
 
 .umich-lib-callout,
 .umich-lib-print, 
 .umich-lib-alert, 
-.umich-lib-block-text  {
+.umich-lib-block-text,
+blockquote  {
   margin: 1rem 0;
   padding: 1rem;
   border: solid 1px #E5E9ED;
   border-radius: 4px;
 }
 
-.umich-lib-callout {
+.umich-lib-callout.info {
   padding: 1rem 1rem 1rem 1.5rem;
   border-left: solid 4px var(--color-teal-400);
 }
 
-.umich-lib-print {
+.umich-lib-callout.print {
   border-left: solid 4px var(--color-green-400);
   &::before {
     font-family: "Material Icons";
@@ -147,7 +148,7 @@
     }
 }
 
-.umich-lib-alert {
+.umich-lib-callout.alert {
   border-left: solid 4px var(--color-pink-400);
   &::before {
     font-family: "Material Icons";
@@ -160,10 +161,17 @@
     }
 }
 
-.umich-lib-block-text {
+blockquote,
+.umich-lib-callout.block-text, 
+.umich-lib-callout.block {
   border-left: solid 4px transparent;
   border: solid 1px transparent;
   margin-left: 2rem;
   padding-top: 0;
   padding-bottom: 0;
+}
+
+blockquote {
+  font-weight: normal;
+  color: var(--color-neutral-400);
 }
