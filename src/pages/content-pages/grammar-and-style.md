@@ -19,9 +19,9 @@ Broadly speaking we follow the Associated Press (AP) Stylebook, but we make exce
 
 While we make reference when relevant to [the university's official brand and style resources](http://brand.umich.edu/), we also frequently consult with these guides:
 
-* [Conscious Style Guide](https://consciousstyleguide.com/)  
-* [Diversity Style Guide](https://www.diversitystyleguide.com/)  
-* [Radical Copy Editor](https://radicalcopyeditor.com/about/)  
+* [Conscious Style Guide](https://consciousstyleguide.com/)
+* [Diversity Style Guide](https://www.diversitystyleguide.com/)
+* [Radical Copy Editor](https://radicalcopyeditor.com/about/)
 * [Disability Language Style Guide](https://ncdj.org/style-guide/)
 
 For related reference, see our [word list](/content/word-list/).
@@ -63,8 +63,8 @@ See [guidance for lists](/content/grammar-and-style/#lists).
 Follow the [university’s capitalization guidelines](https://brand.umich.edu/editorial-resources/capitalization/), which covers things like department names, titles, academic units, buildings and place names, and seasons. In general, avoid unnecessary capitalization.
 
 * Don't capitalize everyday standalone words, such as library, associate librarian, university, professor, or administration unless they are part of a proper noun.
-* Don't capitalize titles unless they appear before a name. So, Patty Wong, president of the American Library Association, but President Patty Wong.  
-* Don't capitalize cardinal directions (north, east, south, and west) unless they are part of a geographic term. So, walk north on State St., but travel to West Michigan.  
+* Don't capitalize titles unless they appear before a name. So, Patty Wong, president of the American Library Association, but President Patty Wong.
+* Don't capitalize cardinal directions (north, east, south, and west) unless they are part of a geographic term. So, walk north on State St., but travel to West Michigan.
 * Don't use all caps for emphasis.
 
 Follow official branding or preferred use for organizations and people (for example, fulcrum, PsycINFO, JSTOR, WorldCat, bell hooks).
@@ -111,7 +111,7 @@ See how to [make an en-dash](https://thenextweb.com/news/em-dash-en-dash-windows
 
 ### Em-dash (—)
 
-The em-dash is about the width of the letter “m.” It can function similarly to parentheses by providing an additional thought within a sentence. Set off an em dash with a space on either side. 
+The em-dash is about the width of the letter “m.” It can function similarly to parentheses by providing an additional thought within a sentence. Set off an em dash with a space on either side.
 
 For example, "There are many items — books, journals, and films — you can find in the library catalog."
 
@@ -141,7 +141,7 @@ Use group or department email addresses whenever possible as opposed to individu
 
 ## Headlines and page titles
 
-Use sentence case almost everywhere. 
+Use sentence case almost everywhere.
 
 On our main library website, page titles (H1 headers) are an exception because they replicate navigation labels (such as Dissertation Formatting) and subheads use sentence case.
 
@@ -157,7 +157,7 @@ If you’re working in other languages, such as Arabic or Hebrew, these principl
 
 ## Link text, hyperlinks
 
-Your link text should be [descriptive and meaningful](content/writing-for-people/#make-link-text-descriptive-and-meaningful) clearly indicate the destination of the link, use sentence case (unless it contains a proper noun), and be understandable out of context. 
+Your link text should be [descriptive and meaningful](../writing-for-people/#make-link-text-descriptive-and-meaningful) clearly indicate the destination of the link, use sentence case (unless it contains a proper noun), and be understandable out of context.
 
 For example, "The library has many [social sciences databases](http://www.lib.umich.edu/browse/Databases/Social%20Sciences) that can help with projects, in subjects ranging from education to urban planning."
 
@@ -173,13 +173,13 @@ Be consistent. Use a [parallel structure](https://ewriteonline.com/how-and-why-t
 
 ### Bulleted lists
 
-For a list of items in no particular order, use bullets.  
+For a list of items in no particular order, use bullets.
 
 To prepare for our meeting, we ask that you:
 
 * Review the agenda
 * Confirm who will be in attendance
-* Complete the tasks assigned to you  
+* Complete the tasks assigned to you
 * Prepare your talking points
 
 ### Numbered lists
@@ -188,9 +188,9 @@ Use a numbered list to present items in chronological order.
 
 To submit a staff newsletter item, you must:
 
-1. Write a draft  
-2. Choose a manager to review  
-3. Change the status to "needs review"  
+1. Write a draft
+2. Choose a manager to review
+3. Change the status to "needs review"
 4. Monitor the status
 
 ## Names
@@ -207,8 +207,8 @@ Don't use the person's first name again unless it's needed to differentiate betw
 
 Use numerals instead of spelling out numbers.
 
-* The mathematician is mentioned in chapter 2  
-* Our research finds 7 out of 10 students prefer …  
+* The mathematician is mentioned in chapter 2
+* Our research finds 7 out of 10 students prefer …
 * The survey starts on page 67
 
 See [what usability experts say about using numerals online](http://www.nngroup.com/articles/web-writing-show-numbers-as-numerals/).
@@ -219,9 +219,9 @@ Online, use the percent symbol, %.
 
 Screen readers recognize the symbol.
 
-* The professor said 75% was a passing grade.  
-* 89% of people voted for the library cat mascot  
-* 5% of undergraduates refused free pizza slices 
+* The professor said 75% was a passing grade.
+* 89% of people voted for the library cat mascot
+* 5% of undergraduates refused free pizza slices
 
 Avoid fractions when listing a percentage. Instead, you can use decimals.
 
