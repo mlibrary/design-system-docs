@@ -24,10 +24,9 @@ module.exports = function(eleventyConfig) {
     },
   });
 
-  /* eleventyConfig.addPlugin(updatePermalinks, {
+  eleventyConfig.addPlugin(updatePermalinks, {
     src: path.resolve('./src/_data/drupal.js')
   });
-  */
   eleventyConfig.addPlugin(updateMarkup);
 
   // Universal Shortcodes (Liquid, Nunjucks, 11ty.js)
@@ -41,7 +40,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/js");
 
   // The Pass Through feature tells Eleventy to copy things to our output folder
-  // Eleventy passes through our compiled CSS to the public directory. 
+  // Eleventy passes through our compiled CSS to the public directory.
   eleventyConfig.addPassthroughCopy("./src/img");
   eleventyConfig.addPassthroughCopy("./src/js");
 
