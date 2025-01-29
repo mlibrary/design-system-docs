@@ -6,6 +6,9 @@ const updatePermalinks = require('./lib/update-permalinks');
 const updateMarkup = require('./lib/update-markup');
 const { execSync } = require('child_process');
 
+const markdownit = require('markdown-it');
+const md = markdownit({ html: true, linkify: true });
+
 module.exports = function(eleventyConfig) {
   // Add the plugins used
   eleventyConfig.addPlugin(pluginNavigation);
@@ -29,7 +32,7 @@ module.exports = function(eleventyConfig) {
 
   // Universal Shortcodes (Liquid, Nunjucks, 11ty.js)
   eleventyConfig.addPairedShortcode("callout", function(content, variant) {
-    return `<p class="umich-lib-callout ${variant}">${content}</p>`;
+    return `<p class="umich-lib-callout ${variant}">${md.renderInline(content)}</p>`;
   });
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
