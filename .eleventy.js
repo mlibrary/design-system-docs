@@ -11,14 +11,15 @@ const md = markdownit({ html: true, linkify: true });
 
 module.exports = function(eleventyConfig) {
 
- // Returns an array collectionfrom the reusableDesign tag, sorted alpahabetically
+ // Custom collections
+ // Returns an array collection from the reusableDesign tag, sorted alphabetically
   eleventyConfig.addCollection("reusableDesignAtoZ", function (collectionApi) {
     return collectionApi.getFilteredByTag("reusableDesign").sort((a, b) => {
       return a.data.title.localeCompare(b.data.title, undefined, { sensitivity: "base" });
     });
   });
   
-  // Add the plugins used
+  // All plugins used
   eleventyConfig.addPlugin(pluginNavigation);
   eleventyConfig.addPlugin(eleventySass, {
     compileOptions: {
@@ -31,13 +32,10 @@ module.exports = function(eleventyConfig) {
       sourceMap: false
     },
   });
-
-  eleventyConfig.addPlugin(updatePermalinks, {
-    src: path.resolve('./src/_data/drupal.js')
-  });
+  eleventyConfig.addPlugin(updatePermalinks);
   eleventyConfig.addPlugin(updateMarkup);
 
-  // Universal Shortcodes (Liquid, Nunjucks, 11ty.js)
+  // Paired shortcode for the callout component- variant types are info, print, alert
   eleventyConfig.addPairedShortcode("callout", function(content, variant) {
     return `<p class="umich-lib-callout ${variant}">${md.renderInline(content)}</p>`;
   });
