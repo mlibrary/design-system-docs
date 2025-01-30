@@ -6,22 +6,21 @@ layout: base.njk
   {% include "partials/breadcrumbs.njk" %}
   <div class="flex-layout container">
     <aside class="page-aside">
-      {% set sideNavPages = collections.pages | eleventyNavigation(eleventyNavigation.parent) %}
-      <nav aria-label="Site navigation" class="side-nav">
-        <ul>
-          {%- for entry in sideNavPages %}
-            <li {% if entry.url == page.url %} class="active-side-nav-page" {% endif %}>
-              <a href="{{ entry.url }}">{{ entry.title }}</a>
-            </li>
-          {%- endfor %}
-        </ul>
-      </nav>
+    <nav aria-label="Site navigation" class="side-nav">
+      <ul>
+        {%- for entry in collections.reusableDesignAtoZ %}
+          <li {% if entry.url == page.url %} class="active-side-nav-page" {% endif %}>
+            <a href="{{ entry.url }}">{{ entry.data.title }}</a>
+          </li> 
+        {%- endfor %}
+      </ul>
+    </nav>
     </aside>
     <div class="main-content" data-pagefind-body>
       <div class="prose">
         {{ content | safe }}
       </div>
-    {% include "partials/page-pagination.njk" %}
+    {% include "partials/rd-page-pagination.njk" %}
     </div>
   </div>
   <div class="back-to-top">

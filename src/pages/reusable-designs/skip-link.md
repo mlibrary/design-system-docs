@@ -1,6 +1,6 @@
 ---
-layout: page.njk
-tags: pages
+layout: page-reusable-design.njk
+tags: reusableDesign
 permalink: "{{eleventyNavigation.parent | slugify}}/{{page.fileSlug}}/"
 
 title: Skip Link
@@ -8,7 +8,6 @@ eleventyNavigation:
   key: Skip Link
   summary: Visually hidden links that allow quick navigation to main content via keyboard focus.
   parent: Reusable Designs
-  order: 0
 ---
 
 # {{ title }}

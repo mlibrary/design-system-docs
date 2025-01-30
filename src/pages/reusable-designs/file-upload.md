@@ -1,6 +1,6 @@
 ---
-layout: page.njk
-tags: pages
+layout: page-reusable-design.njk
+tags: reusableDesign
 permalink: "{{eleventyNavigation.parent | slugify}}/{{page.fileSlug}}/"
 
 title: File Upload
@@ -8,7 +8,6 @@ eleventyNavigation:
   key: File Upload
   summary: An input control for uploading one or more files.
   parent: Reusable Designs
-  order: 0
 ---
 
 # {{ title }}

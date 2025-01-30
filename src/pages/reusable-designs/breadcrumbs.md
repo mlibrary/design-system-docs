@@ -1,6 +1,6 @@
 ---
-layout: page.njk
-tags: pages
+layout: page-reusable-design.njk
+tags: reusableDesign
 permalink: "{{eleventyNavigation.parent | slugify}}/{{page.fileSlug}}/"
 
 title: Breadcrumbs
@@ -8,7 +8,6 @@ eleventyNavigation:
   key: Breadcrumbs
   summary: An important navigational element for deep sites with clear hierarchy to show users where they are.
   parent: Reusable Designs
-  order: 0
 ---
 
 # {{ title }}

@@ -1,6 +1,6 @@
 ---
-layout: page.njk
-tags: pages
+layout: page-reusable-design.njk
+tags: reusableDesign
 permalink: "{{eleventyNavigation.parent | slugify}}/{{page.fileSlug}}/"
 
 title: Banners
@@ -8,7 +8,6 @@ eleventyNavigation:
   key: Banners
   summary: Grab the user’s attention and display important information across the full-width of a site.
   parent: Reusable Designs
-  order: 0
 ---
 
 # {{ title }}

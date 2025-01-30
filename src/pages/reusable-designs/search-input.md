@@ -1,6 +1,6 @@
 ---
-layout: page.njk
-tags: pages
+layout: page-reusable-design.njk
+tags: reusableDesign
 permalink: "{{eleventyNavigation.parent | slugify}}/{{page.fileSlug}}/"
 
 title: Search Input
@@ -8,7 +8,6 @@ eleventyNavigation:
   key: Search Input
   summary: Allow users to search content of a site through a form submit.
   parent: Reusable Designs
-  order: 0
 ---
 
 # {{ title }}

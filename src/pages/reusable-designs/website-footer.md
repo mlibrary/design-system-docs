@@ -1,6 +1,6 @@
 ---
-layout: page.njk
-tags: pages
+layout: page-reusable-design.njk
+tags: reusableDesign
 permalink: "{{eleventyNavigation.parent | slugify}}/{{page.fileSlug}}/"
 
 title: Website Footer
@@ -8,7 +8,6 @@ eleventyNavigation:
   key: Website Footer
   summary: Display contact information and helpful links at the bottom of a website.
   parent: Reusable Designs
-  order: 0
 ---
 
 # {{ title }}

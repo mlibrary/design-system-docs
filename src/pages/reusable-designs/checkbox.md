@@ -1,6 +1,6 @@
 ---
-layout: page.njk
-tags: pages
+layout: page-reusable-design.njk
+tags: reusableDesign
 permalink: "{{eleventyNavigation.parent | slugify}}/{{page.fileSlug}}/"
 
 title: Checkbox
@@ -8,7 +8,6 @@ eleventyNavigation:
   key: Checkbox
   summary: An input control for choosing multiple options from a list or toggle between two options.
   parent: Reusable Designs
-  order: 0
 ---
 
 # {{ title }}

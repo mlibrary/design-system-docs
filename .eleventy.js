@@ -10,6 +10,14 @@ const markdownit = require('markdown-it');
 const md = markdownit({ html: true, linkify: true });
 
 module.exports = function(eleventyConfig) {
+
+ // Returns an array collectionfrom the reusableDesign tag, sorted alpahabetically
+  eleventyConfig.addCollection("reusableDesignAtoZ", function (collectionApi) {
+    return collectionApi.getFilteredByTag("reusableDesign").sort((a, b) => {
+      return a.data.title.localeCompare(b.data.title, undefined, { sensitivity: "base" });
+    });
+  });
+  
   // Add the plugins used
   eleventyConfig.addPlugin(pluginNavigation);
   eleventyConfig.addPlugin(eleventySass, {

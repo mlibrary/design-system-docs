@@ -1,6 +1,6 @@
 ---
-layout: page.njk
-tags: pages
+layout: page-reusable-design.njk
+tags: reusableDesign
 permalink: "{{eleventyNavigation.parent | slugify}}/{{page.fileSlug}}/"
 
 title: Universal Header
@@ -8,7 +8,6 @@ eleventyNavigation:
   key: Universal Header
   summary: Shows users they’re on a U-M Library website and provides a path to other sites.
   parent: Reusable Designs
-  order: 0
 ---
 
 # {{ title }}

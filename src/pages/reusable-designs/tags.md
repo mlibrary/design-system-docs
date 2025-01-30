@@ -1,6 +1,6 @@
 ---
-layout: page.njk
-tags: pages
+layout: page-reusable-design.njk
+tags: reusableDesign
 permalink: "{{eleventyNavigation.parent | slugify}}/{{page.fileSlug}}/"
 
 title: Tags
@@ -8,7 +8,6 @@ eleventyNavigation:
   key: Tags
   summary: Allow navigation or filtering by selecting keyword-based categories.
   parent: Reusable Designs
-  order: 0
 ---
 
 # {{ title }}

@@ -1,6 +1,6 @@
 ---
-layout: page.njk
-tags: pages
+layout: page-reusable-design.njk
+tags: reusableDesign
 permalink: "{{eleventyNavigation.parent | slugify}}/{{page.fileSlug}}/"
 
 title: Input Fields
@@ -8,7 +8,6 @@ eleventyNavigation:
   key: Input Fields
   summary: Input controls for interactive fields (text, numerical, date, time, phone number) commonly used in forms.
   parent: Reusable Designs
-  order: 0
 ---
 
 # {{ title }}

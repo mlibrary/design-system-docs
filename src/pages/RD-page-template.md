@@ -1,14 +1,13 @@
 ---
-layout: page.njk
-tags: pages
+layout: page-reusable-design.njk
+tags: reusableDesign
 permalink: "{{eleventyNavigation.parent | slugify}}/{{page.fileSlug}}/"
 
 title: ADD TITLE
 eleventyNavigation:
   key: ADD TITLE
   summary: ADD SUMMARY
-  parent: CHOOSE PARENT (Getting Started, About, Foundations, Visual Elements, Content)
-  order: ADD ORDER (1, 2, 3, 4, 5, etc...)
+  parent: Reusable Designs
 ---
 
 # {{ title }}

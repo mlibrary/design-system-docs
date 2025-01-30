@@ -1,6 +1,6 @@
 ---
-layout: page.njk
-tags: pages
+layout: page-reusable-design.njk
+tags: reusableDesign
 permalink: "{{eleventyNavigation.parent | slugify}}/{{page.fileSlug}}/"
 
 title: Select
@@ -8,7 +8,6 @@ eleventyNavigation:
   key: Select
   summary: An input control for longer lists of options or form submissions.
   parent: Reusable Designs
-  order: 0
 ---
 
 # {{ title }}

@@ -1,6 +1,6 @@
 ---
-layout: page.njk
-tags: pages
+layout: page-reusable-design.njk
+tags: reusableDesign
 permalink: "{{eleventyNavigation.parent | slugify}}/{{page.fileSlug}}/"
 
 title: Badges
@@ -8,7 +8,6 @@ eleventyNavigation:
   key: Badges
   summary: Visually display static information about a specific item or within a table.
   parent: Reusable Designs
-  order: 0
 ---
 
 # {{ title }}

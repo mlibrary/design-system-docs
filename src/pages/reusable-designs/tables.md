@@ -1,6 +1,6 @@
 ---
-layout: page.njk
-tags: pages
+layout: page-reusable-design.njk
+tags: reusableDesign
 permalink: "{{eleventyNavigation.parent | slugify}}/{{page.fileSlug}}/"
 
 title: Tables
@@ -8,7 +8,6 @@ eleventyNavigation:
   key: Tables
   summary: Display matrix style relationships or collections of data using rows and columns.
   parent: Reusable Designs
-  order: 0
 ---
 
 # {{ title }}

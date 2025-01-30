@@ -1,6 +1,6 @@
 ---
-layout: page.njk
-tags: pages
+layout: page-reusable-design.njk
+tags: reusableDesign
 permalink: "{{eleventyNavigation.parent | slugify}}/{{page.fileSlug}}/"
 
 title: Buttons
@@ -8,7 +8,6 @@ eleventyNavigation:
   key: Buttons
   summary: Communicate actions users can take using a click, tap, or keypress.
   parent: Reusable Designs
-  order: 0
 ---
 
 # {{ title }}

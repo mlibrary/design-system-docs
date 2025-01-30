@@ -1,6 +1,6 @@
 ---
-layout: page.njk
-tags: pages
+layout: page-reusable-design.njk
+tags: reusableDesign
 permalink: "{{eleventyNavigation.parent | slugify}}/{{page.fileSlug}}/"
 
 title: Chat
@@ -8,7 +8,6 @@ eleventyNavigation:
   key: Chat
   summary: Provide persistent access to Ask a Librarian chat throughout a site.
   parent: Reusable Designs
-  order: 0
 ---
 
 # {{ title }}

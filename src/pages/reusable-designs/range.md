@@ -1,6 +1,6 @@
 ---
-layout: page.njk
-tags: pages
+layout: page-reusable-design.njk
+tags: reusableDesign
 permalink: "{{eleventyNavigation.parent | slugify}}/{{page.fileSlug}}/"
 
 title: Range
@@ -8,7 +8,6 @@ eleventyNavigation:
   key: Range
   summary: An input control for selecting a numeric value from a given range using a slider.
   parent: Reusable Designs
-  order: 0
 ---
 
 # {{ title }}

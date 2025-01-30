@@ -1,6 +1,6 @@
 ---
-layout: page.njk
-tags: pages
+layout: page-reusable-design.njk
+tags: reusableDesign
 permalink: "{{eleventyNavigation.parent | slugify}}/{{page.fileSlug}}/"
 
 title: Radio Button
@@ -8,7 +8,6 @@ eleventyNavigation:
   key: Radio Button
   summary: An input control for short lists of options that display directly on the page and allow a single choice.
   parent: Reusable Designs
-  order: 0
 ---
 
 # {{ title }}

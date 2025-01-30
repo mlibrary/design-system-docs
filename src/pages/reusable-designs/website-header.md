@@ -1,6 +1,6 @@
 ---
-layout: page.njk
-tags: pages
+layout: page-reusable-design.njk
+tags: reusableDesign
 permalink: "{{eleventyNavigation.parent | slugify}}/{{page.fileSlug}}/"
 
 title: Website Header
@@ -8,7 +8,6 @@ eleventyNavigation:
   key: Website Header
   summary: Display contact information and helpful links at the bottom of a website.
   parent: Reusable Designs
-  order: 0
 ---
 
 # {{ title }}
@@ -41,4 +40,4 @@ Use of the website header requires use of the [skip link](/reusable-designs/skip
 
 ## Code Example
 
-[https://codepen.io/team/umlibrary-designsystem/pen/yLpgMve](https://codepen.io/team/umlibrary-designsystem/pen/yLpgMve)
+https://codepen.io/team/umlibrary-designsystem/pen/yLpgMve

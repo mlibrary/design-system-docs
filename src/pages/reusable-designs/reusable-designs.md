@@ -1,6 +1,6 @@
 ---
-tags: landingPage
 layout: landing-page.njk
+tags: landingPage
 permalink: "{{page.fileSlug}}/"
 
 title: Reusable Designs
