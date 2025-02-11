@@ -38,13 +38,13 @@ Be sure to use the colors in accessible combinations that meet WCAG 2.1 AA acces
 * Small and regular text must have a contrast ratio of 4.5:1.
 * Large text, as well as graphics and interface controls, must have a contrast ratio of 3:1.
 
-You can use the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) and reference [WCAG 2.1 Understanding Success Criterion 1.4.3: Contrast (Minimum)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html) to make decisions and ensure the color combinations meet accessibility standards. If you are designing in Figma, you can use the [Color contrast plugin](https://www.figma.com/community/plugin/937465522075454889/Color-contrast) to check your work.
+You can use the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) and reference [WCAG 2.2 Understanding Success Criterion 1.4.3: Contrast (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) to make decisions and ensure the color combinations meet accessibility standards. If you are designing in Figma, you can use the [Color contrast plugin](https://www.figma.com/community/plugin/937465522075454889/Color-contrast) to check your work.
 
 In some situations — like with slide deck templates — it can be helpful to provide a variety of contrasting color options for background and text. This supports accessibility (especially considering eye strain and vision impairments), as well as use in a variety of contexts.
 
 ## Full color table
 
-Use [design tokens](/about/web-components-and-design/tokens/) or hex color codes.
+Use [design tokens](/about/web-components-and-design-tokens/#design-tokens) or hex color codes.
 
 ```html
 <docs-color-block></docs-color-block>

@@ -23,7 +23,7 @@ In other words, the resources and services we provide are resources and services
 
 By representing ourselves as "one library," we can build trust and recognition, help people understand the breadth and depth of our offerings, and make connections between services and resources that might otherwise get lost.
 
-\<Writing about the library\> provides additional guidance around our identity, including the names and styles to use when referring to the library.
+[Writing about the library](/content/writing-about-the-library/) provides additional guidance around our identity, including the names and styles to use when referring to the library.
 
 ## Focus on our audience
 
@@ -44,4 +44,4 @@ Audience focused:
 
 Do not focus attention on our organizational units and structures, or anything that requires a lot of contextual information about the library.
 
-Consult our \<voice and tone guidelines\> to see the characteristics of our clear, welcoming, and helpful voice.
+Consult our [voice and tone guidelines](/content/voice-and-tone/) to see the characteristics of our clear, welcoming, and helpful voice.

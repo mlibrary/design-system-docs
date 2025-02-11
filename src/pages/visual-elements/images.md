@@ -20,7 +20,7 @@ Avoid using photographs or images of the backs of people’s heads, outdated tec
 Choose images that show the library as a place that welcomes diversity, equity, and inclusion.
 
 {% callout "info" %}
-If critical information is included with the image, repeat that information in the caption or body text.
+If critical information is included with the image, be sure to repeat that information in the caption or body text.
 {% endcallout %}
 
 ## Finding images

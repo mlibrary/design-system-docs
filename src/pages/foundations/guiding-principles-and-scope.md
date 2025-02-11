@@ -18,9 +18,11 @@ Three guiding principles underpin our design decisions and guide us when we need
 ## Guiding principles
 
 **Backed by research**  
+
 Understanding user needs is central. Our design, development, and content efforts must be based on what real people need — what they need to do, what they need to know, and what challenges they may need to overcome. Decisions will be informed by research, best practices, and standards.
 
 **Supportive**  
+
 We recognize there are different solutions to fit different needs. We are committed to making usable, accessible, and flexible designs with clear guidelines. We try really hard to ensure using the Design System is not overwhelming or overcomplicated.
 
 **Continuous**  

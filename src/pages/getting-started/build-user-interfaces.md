@@ -34,12 +34,11 @@ In addition, we encourage everyone to follow the guidelines provided for visual 
 
 ### Use web components and design tokens
 
-In order to use web components and design tokens, you’ll need to link to our stylesheet and two script tags to the \<head\>.
+In order to use web components and design tokens, you’ll need to link to our stylesheet and two script tags to the `<head>`.
 
 ```html
 <link href="https://cdn.jsdelivr.net/npm/@umich-lib/web@latest/umich-lib.css" rel="stylesheet"/>
 <script type="module" src="https://cdn.jsdelivr.net/npm/@umich-lib/web@latest/dist/umich-lib/umich-lib.esm.js"></script>
-
 ```
 
 Our overview of [web components and design tokens](/about/web-components-and-design-tokens/) will help you get up to speed if these concepts are new to you.

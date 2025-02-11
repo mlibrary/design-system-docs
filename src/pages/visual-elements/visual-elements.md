@@ -6,7 +6,7 @@ permalink: "{{page.fileSlug}}/"
 title: Visual Elements
 eleventyNavigation:
   key: Visual Elements
-  summary:  Look and feel essentials. Color, typography, the logo, image guidance, icons, and more.
+  summary: "Look and feel essentials: color, typography, the logo, image guidance, icons, and more."
   parent: home
   order: 3
 ---
