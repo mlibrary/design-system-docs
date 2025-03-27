@@ -49,7 +49,7 @@ The **input field width** should be just slightly wider than the expected input.
 
 Effective **labels** help users understand what to enter into a text field. Keep labels short and clear — aim for 1–5 words — written in sentence case. Do not include colons at the end of labels.
 
-Be sure to include \<**input validation**\> as appropriate.
+Be sure to include **input validation** as appropriate.
 
 ### Relevant WCAG guidelines
 

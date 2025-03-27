@@ -42,7 +42,7 @@ You can also optionally use this space to call out open source solutions used to
 
 * [2.1 Keyboard](https://www.w3.org/WAI/WCAG22/Understanding/keyboard-accessible.html)  
 * [2.4.3 Focus Order](https://www.w3.org/WAI/WCAG22/Understanding/focus-order)  
-* [2.4.4 Link Purpose (In Context)](https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context) (In Context)  
+* [2.4.4 Link Purpose (In Context)](https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context)
 * [2.4.6 Headings and Labels](https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels)  
 * [2.4.7 Focus Visible](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible)
 

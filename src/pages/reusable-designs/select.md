@@ -37,7 +37,7 @@ Avoid overwhelming people with too many choices in the **list of options**. They
 
 For **option labels**, use clear and concise language written in sentence case.
 
-Be sure to include input validation as appropriate.
+Be sure to include **input validation** as appropriate.
 
 ### Relevant WCAG guidelines
 

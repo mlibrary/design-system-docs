@@ -17,6 +17,12 @@ This is where you'll find a rundown of the latest Design System additions and de
 
 Please contact the [Design System team](/about/our-team/) if there are any questions!
 
+## March 2025
+
+* Added [File Upload](/reusable-designs/file-upload/), [Range](/reusable-designs/range/), and [Search Input](/reusable-designs/search-input/) as Reusable Designs.
+* We've said goodbye and thank you to a member of the team (Thank you, Suvi!)
+* We've updated our site tech stack and documentation for contribution.
+
 ## October 2024
 
 * Added [Badges](/reusable-designs/badges/) and [Tags](/reusable-designs/tags/) as Reusable Designs  

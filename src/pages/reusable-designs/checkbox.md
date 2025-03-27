@@ -22,7 +22,7 @@ A single checkbox is appropriate for allowing users to acknowledge acceptance of
 
 ### Other input options
 
-For **a single selection** from a list of options, use [radio buttons](/reusable-designs/radio-button/) or dropdown.
+For **a single selection** from a list of options, use [radio buttons](/reusable-designs/radio-button/) or a dropdown.
 
 ## Checkbox states
 
@@ -41,7 +41,7 @@ For the **option labels**, use positive and active wording. For example: “Send
 
 Checkboxes should be **unselected** by default and function independent of each other — selecting one should not change the status of others in the list. The only exception is if a parent checkbox is used to make a bulk selection of child checkboxes.
 
-Be sure to include input validation as appropriate.
+Be sure to include **input validation** as appropriate.
 
 ### Relevant WCAG guidelines
 

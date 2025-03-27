@@ -43,8 +43,8 @@ Buttons must include **hover and focus states** that are unique from the resting
 **Button labels** should:
 
 * Be clear and indicate what will happen when a user selects the button.
-  * For sets of buttons, use specific labels like “Save” and “Discard” instead of “OK” or “Cancel”.  
-* Use active verbs, such as **Add**, **Delete**, or **Save**.  
+  * For sets of buttons, use specific labels like Save and Discard instead of OK or Cancel.  
+* Use active verbs, such as Add, Delete, or Save.  
 * Use sentence case (Set preferences, not Set Preferences).  
 * Be 3 words or less if possible and avoid wrapping. For best legibility, a label should remain on a single line.
 
