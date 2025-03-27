@@ -4,24 +4,36 @@ This is the 11ty Front-end codebase for https://design-system.lib.umich.edu.
 
 ## Doc Site Development Quick Start
 
-1. Run the initialization script. (You are encouraged to read what's in it.
-   There's nothing magical.) This will build the Docker image and install node modules.
-
-  ```
-  ./init.sh
-  ```
-
-2. Starts the development server and watch changes in `.scss` and `.js` files.
+1. Install packages
 
 ```
-docker-compose up
+npm install
 ```
 
-4. View in browser
+2. Start the development server
 
 ```
-http://localhost:8888
+npm start
 ```
+
+or if you need a different port:
+
+```
+npx eleventy --port 6789 --serve
+```
+
+3. View in browser
+
+```
+http://localhost:8080
+```
+
+or if you changed the port in step 2
+
+```
+http://localhost:6789
+```
+
 
 ## Dev Scripts
 
