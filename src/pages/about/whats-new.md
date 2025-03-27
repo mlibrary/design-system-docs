@@ -47,9 +47,9 @@ Please contact the [Design System team](/about/our-team/) if there are any quest
 
 After a lot of writing, editing, designing, and building — the new documentation site is live!
 
-This is the 3rd major redesign of our documentation site since we started the Design System in 2017. Our older sites were built around our design language and components. We collaborated with the Library Communications and Marketing department, expanded our scope, and built out a much more robust site rooted in an updated set of [foundations](/foundations/) .
+This is the 3rd major redesign of our documentation site since we started the Design System in 2017. Our older sites were built around our design language and components. We collaborated with the library's [Communication and Marketing department](https://lib.umich.edu/about-us/our-divisions-and-departments/deans-office/communication-and-marketing), expanded our scope, and built out a much more robust site rooted in an updated set of [foundations](/foundations/).
 
-## New features of this site
+### New features of this site
 
 * Site sections with landing pages: Getting Started, Foundations, Visual Elements, Content, Reusable Designs, and About  
 * Look and feel essentials in [Visual Elements](/visual-elements/)  with connections to our Figma Design Library  

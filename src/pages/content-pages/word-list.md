@@ -53,7 +53,7 @@ Google is a registered trademark, so, if you are actually referring to the speci
 
 Avoid this Latin abbreviation in web writing and with other formal communication. Spell out "that is" or "in other words."
 
-See also [e.g.](https://design-system.lib.umich.edu/content/word-list/#eg)
+See also [e.g.](/content/word-list/#eg)
 
 ## Interlibrary loan
 
@@ -118,7 +118,7 @@ Use these spellings:
 
 ## Pick up, pickup
 
-When used as a noun or adjective, use **pickup**: *S*hapiro Library is a contactless pickup location.
+When used as a noun or adjective, use **pickup**: Shapiro Library is a pickup location.
 
 When used as a verb, use **pick up**: *You can go to* Shapiro to pick up your books.
 

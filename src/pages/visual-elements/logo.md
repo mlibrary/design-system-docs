@@ -27,7 +27,7 @@ Never redesign, animate, modify, or distort any university logo. This includes a
 
 ## Online
 
-On library websites, use the horizontal signature on a **white background**.  We offer a dark [website header](/resuable-designs/website-header/) option, which uses an inverted horizontal signature, but it's not otherwise available for download.
+On library websites, use the horizontal signature on a **white background**.  We offer a dark [website header](/reusable-designs/website-header/) option, which uses an inverted horizontal signature, but it's not otherwise available for download.
 
 For other digital products, use the block M version whenever possible. The block M logo should never appear less than 36px tall.
 

@@ -120,14 +120,16 @@
 // ******************************** //
 
 .umich-lib-callout,
-.umich-lib-print, 
-.umich-lib-alert, 
-.umich-lib-block-text,
-blockquote  {
+blockquote {
   margin: 1rem 0;
   padding: 1rem;
   border: solid 1px #E5E9ED;
   border-radius: 4px;
+}
+
+.umich-lib-callout > p,
+blockquote > p:first-of-type {
+  margin: 0;
 }
 
 .umich-lib-callout.info {
@@ -160,18 +162,25 @@ blockquote  {
     height: 80px;
     }
 }
-
-blockquote,
-.umich-lib-callout.block-text, 
 .umich-lib-callout.block {
-  border-left: solid 4px transparent;
-  border: solid 1px transparent;
+  border-left: solid 4px var(--color-neutral-300);
+  color: var(--color-neutral-300);
+  border-radius: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 0;
   margin-left: 2rem;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: .25rem 1rem;
 }
 
 blockquote {
+  border-top: solid 1px transparent;
+  border-right: solid 1px transparent;
+  border-bottom: solid 1px transparent;
+  margin-left: 2rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-left: solid 4px transparent;
   font-weight: normal;
   color: var(--color-neutral-400);
 }

@@ -34,11 +34,15 @@ If you’re part of a group that refers to itself with an acronym, don’t assum
 
 Spell out an entity's full name on first reference.
 
-> **The Janice Bluestein Longone Culinary Archive** offers a unique history of food and drink in the United States, from production to consumption.
+{% callout "block" %}
+ **The Janice Bluestein Longone Culinary Archive** offers a unique history of food and drink in the United States, from production to consumption.
+ {% endcallout %}
 
 On subsequent references, you can use a generic term.
 
-> The **archive** also includes materials that shed light on domestic and commercial life.
+{% callout "block" %}
+The **archive** also includes materials that shed light on domestic and commercial life.
+{% endcallout %}
 
 Read about findings showing that [acronyms are mentally taxing](https://www.psychologicalscience.org/observer/alienating-the-audience-how-abbreviations-hamper-scientific-communication).
 
@@ -50,7 +54,7 @@ In most cases, we recommend you change the ampersand to the word “and.” It i
 
 ## Bold and italics
 
-Use bold to emphasize keywords and help readers scan your content. If you find yourself wanting to use a lot of bold, consider the structure of the page whether additional headings are needed. See more on [writing for readability](/content/writing-about-people/#write-for-readability).
+Use bold to emphasize keywords and help readers scan your content. If you find yourself wanting to use a lot of bold, consider the structure of the page and whether additional headings are needed. See more on [writing for readability](/content/writing-about-people/#write-for-readability).
 
 Italics are best reserved for specific purposes, such as bylines on news items or last updated dates.
 

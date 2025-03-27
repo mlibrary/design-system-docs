@@ -35,9 +35,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(updatePermalinks);
   eleventyConfig.addPlugin(updateMarkup);
 
-  // Paired shortcode for the callout component- variant types are info, print, alert
+  // Paired shortcode for the callout component- variant types are info, print, alert, block
   eleventyConfig.addPairedShortcode("callout", function(content, variant) {
-    return `<p class="umich-lib-callout ${variant}">${md.renderInline(content)}</p>`;
+    return `<article class="umich-lib-callout ${variant}"><p><span class="visually-hidden">${variant} callout</span>${md.renderInline(content)}</p></article>`;
   });
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 

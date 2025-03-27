@@ -17,25 +17,25 @@ When you write something as part of your job at the U-M Library, you’re writin
 
 ## Overarching principles
 
-Write about people in a way that is in keeping with our [mission and values](https://lib.umich.edu/about-us/about-library/mission-and-values), and furthers our [commitment to diversity, inclusion, equity, and accessibility](https://lib.umich.edu/about-us/about-library/diversity-equity-inclusion-and-accessibility). 
+Write about people in a way that is in keeping with our [mission and values](https://lib.umich.edu/about-us/about-library/mission-and-values), and furthers our [commitment to diversity, inclusion, equity, and accessibility](https://lib.umich.edu/about-us/about-library/diversity-equity-inclusion-and-accessibility).
 
-Try to actively reduce harm with language, and recognize that the impact of our words matters more than our intention. 
+Try to actively reduce harm with language, and recognize that the impact of our words matters more than our intention.
 
 The most critical thing to practice when writing about people is humanity. We rely on three overarching principles:
 
-* There is no need to describe people’s gender, sexuality, race, ethnicity, religion, disability, mental health, age, or other aspects of their identity unless it’s relevant.   
-* Never make assumptions about any aspect of another person’s identity.   
+* There is no need to describe people’s gender, sexuality, race, ethnicity, religion, disability, mental health, age, or other aspects of their identity unless it’s relevant.
+* Never make assumptions about any aspect of another person’s identity.
 * Always consider your audience and the context of what you’re writing about.
 
 ## Non-binary language
 
-Don’t use terms that reinforce a static gender binary, such as men and women, chairman of the board, or councilman. 
+Don’t use terms that reinforce a static gender binary, such as men and women, chairman of the board, or councilman.
 
 Instead, use neutral, non-binary language:
 
 * colleagues, teammates, team  
 * people or person  
-* all, everyone   
+* all, everyone
 * you, them, their (singular)  
 * chair  
 * councilperson
@@ -50,7 +50,7 @@ When someone’s sex, gender identity, sexual orientation, marital status, or fa
 
 On forms, don't include gender as a field unless there's a reason to collect that information. If there is:
 
-* Instead of "select gender" use "Which of the following best describes you?"   
+* Instead of "select gender" use "Which of the following best describes you?"
 * Instead of using “Other” as an option, use “I identify as” with a write-in space.
 
 ## Pronouns
@@ -73,7 +73,7 @@ When referring to a person's pronoun use, don't write "preferred pronouns." Inst
 
 ## Names
 
-People change their names for all sorts of reasons. 
+People change their names for all sorts of reasons.
 
 For those who do so (whether legally or not) to align with their gender identity, using their birth or former name without permission is sometimes called “deadnaming” and can be harmful. Read more about this and more in the [Trans Journalists Associations Style Guide](https://transjournalists.org/style-guide/).
 
@@ -84,7 +84,7 @@ As with pronouns, if you’re writing about someone who previously went by a dif
 Ask individuals how they want their race, ethnicity, or religious identity to be described when it’s relevant. When writing about people in broader terms or describing groups, it can require careful thought. The best choice will likely be dependent on the context the description will sit in.
 
 {% callout "info" %}
-Capitalize Black, Brown, and White when used to describe race. This approach is recommended by the [National Association of Black Journalists' Style Guide](https://www.nabj.org/page/styleguide) and [others](https://www.diversitystyleguide.com/glossary/white-white/).
+Capitalize Black when used to describe race, but not white or brown. As a descriptor of race, white does not carry deeper meaning as Black does, while brown is broad and imprecise. This approach [aligns with decisions of the Associated Press](https://www.apstylebook.com/blog_posts/16).
 {% endcallout %}
 
 ### Don’t center whiteness or western culture
@@ -93,7 +93,7 @@ Don’t center whiteness or treat it as a default. For example, don’t use term
 
 **People of color** is an acceptable term for describing people who are not white for general purposes. When specifically discussing the impacts of racism that have an outsized impact on Black and Indigenous peoples, use **Black, Indigenous and people of color (BIPOC)** instead. And take some time to understand the [discourse behind these choices](https://www.npr.org/2020/09/29/918418825/is-it-time-to-say-r-i-p-to-p-o-c).
 
-Also remember that western culture often dominates the narrative and imposes language on other identities (like the [labels the census creates for race](https://www.vox.com/2016/8/18/12404688/census-race-history-intersectionality)). 
+Also remember that western culture often dominates the narrative and imposes language on other identities (like the [labels the census creates for race](https://www.vox.com/2016/8/18/12404688/census-race-history-intersectionality)).
 
 ### Guidance for describing specific groups
 
@@ -108,9 +108,9 @@ When describing specific groups is necessary, always err towards being as specif
 
 #### Hispanic, Latina/Latino, Chicana/Chicano
 
-* [**Hispanic**](https://www.diversitystyleguide.com/glossary/hispanic/) and [**Latina/Latino**](https://www.diversitystyleguide.com/glossary/latinalatino/) are ethnicities. People who identify with them can be any race.   
-* [**Chicana/Chicano**](https://www.diversitystyleguide.com/glossary/chicana-chicano/) is a term for people of Mexican descent specifically.   
+* [**Hispanic**](https://www.diversitystyleguide.com/glossary/hispanic/) and [**Latina/Latino**](https://www.diversitystyleguide.com/glossary/latinalatino/) are ethnicities. People who identify with them can be any race.
 * [**Latinx**](https://www.diversitystyleguide.com/glossary/latinx/) is a gender neutral term for referring to people of Latin American cultural or ethnic identity, but familiarity with it is limited outside of academia.
+* [**Chicana/Chicano**](https://www.diversitystyleguide.com/glossary/chicana-chicano/) is a term for people of Mexican descent specifically.
 * Some have begun adopting **Latin@ and Chican@** as a simultaneous presentation.
 * Preference for and commonality of terms varies among individuals and even within regions.  In all cases, use thoughtfully.
 
@@ -130,9 +130,9 @@ While the person-first language approach (for example, “people who have low vi
 
 Don't imply that people who have disabilities are heroes, special, or courageous just for going about their day. Stay away from deficit-framing (defining people by their perceived problems) and don’t use phrases like “suffers from,” “struggles with,” or “victim of” to describe them either.
 
-**Use this:** Bob uses a wheelchair.  
-**Not this:** Bob is wheel-chair bound.  
-**Or this:** Bob is confined to a wheelchair.  
+* **Use this:** Bob uses a wheelchair.  
+* **Not this:** Bob is wheel-chair bound.  
+* **Or this:** Bob is confined to a wheelchair.  
 
 You can find more guidance in resources like the [Disability Language Style Guide](https://ncdj.org/style-guide/) and the Center for Disability Rights’ [Disability Writing Guidelines](https://cdrnys.org/disability-writing-journalism-guidelines/).
 
@@ -166,15 +166,15 @@ Many words in casual use today have origins rooted in oppression and white supre
 * Dark UX or dark patterns  
 * Master and slave (often found in coding and documentation)
 
-Although we might have used some of these terms without realizing their original meaning, continuing to do so after we know better can cause further harm and continue to perpetrate stereotypes. There are always neutral alternatives. 
+Although we might have used some of these terms without realizing their original meaning, continuing to do so after we know better can cause further harm and continue to perpetrate stereotypes. There are always neutral alternatives.
 
 To learn about these terms and their history, we recommend the following resources:
 
 * [Tropes and Dog Whistles](https://docs.google.com/document/d/1hSAD_Qk2J3WNlKVl7qP2jvmk1FRwsEGqIIXAauEExnY/edit#heading=h.xhz5fx1s2whi), a list of over 100 words used to defend and center the dominant narrative (list managed by [Jeff Witt](https://lib.umich.edu/users/wittjef), the library’s organizational development lead)  
-* [List of Ethnic Slurs](https://en.wikipedia.org/wiki/List_of_ethnic_slurs) to avoid and their origin, in Wikipedia 
+* [List of Ethnic Slurs](https://en.wikipedia.org/wiki/List_of_ethnic_slurs) to avoid and their origin, in Wikipedia
 
 ## Recovering from harm
 
 Human beings are complex and each individual comes to your writing with a unique perspective and experience.
 
-If you write something and an individual or group shares that it harmed or offended them, please contact [LibraryComm@umich.edu](mailto:LibraryComm@umich.edu) before responding. They will provide support, advice, and resources to aid in communication recovery. 
+If you write something and an individual or group shares that it harmed or offended them, please contact [LibraryComm@umich.edu](mailto:LibraryComm@umich.edu) before responding. They will provide support, advice, and resources to aid in communication recovery.

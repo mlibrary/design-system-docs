@@ -21,23 +21,23 @@ Web components are evolving web platform technologies. They allow us to create c
 
 We use the term “web component” for both the platform and the custom element we’ve created. The platform and browser support for web components is still actively evolving so our team thoughtfully chooses what should and shouldn’t be a web component.
 
-The [Universal Header](/resuable-designs/universal-header/) and [Chat](/resuable-designs/chat/) are two of our reusable designs available as web components, for example.
+The [Universal Header](/reusable-designs/universal-header/) and [Chat](/reusable-designs/chat/) are two of our reusable designs available as web components, for example.
 
 ## Design tokens
 
 Design tokens are stored values for the visual elements that make up our design system such as colors, fonts, and spacing. Instead of assigning a hard coded value to a reusable design, we use design tokens for our themed values. These help us ensure our designs are consistent and can change as needs arise.
 
-**For example:** Design token `--color-teal-400` outputs to `#1d7491`
+Design token `--color-teal-400` outputs to `#1d7491`
 
 ```css
 a {  
-color: var(--color-teal-400);  
+  color: var(--color-teal-400);  
 }
 ```
 
 ## Ready to get started?
 
-Add the link to our stylesheet and two script tags to the `<head>` of whatever you're working on. You’ll then be able to use the web components and design tokens provided throughout the Design System.
+Add the link to our stylesheet and script tags to the `<head>` of whatever you're working on. You’ll then be able to use the web components and design tokens provided throughout the Design System.
 
 ```html
 <link href="https://cdn.jsdelivr.net/npm/@umich-lib/web@latest/umich-lib.css" rel="stylesheet"/>

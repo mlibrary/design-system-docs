@@ -80,9 +80,9 @@ Use accessible and inclusive plain language to communicate to people who use the
 
 In general, [active voice](https://www.grammarly.com/blog/active-vs-passive-voice/) is more clear and concise.
 
-**Use this:** Jorge studies endangered languages.  
-**Or this:** Jorge studied the endangered language for 30 years.  
-**Not this:** The endangered language was studied by Jorge for 30 years.
+* **Use this:** Jorge studies endangered languages.  
+* **Or this:** Jorge studied the endangered language for 30 years.  
+* **Not this:** The endangered language was studied by Jorge for 30 years.
 
 ## Front-load content
 

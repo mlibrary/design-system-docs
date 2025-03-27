@@ -27,7 +27,7 @@ The following agreed upon names and styles are appropriate for referring to the 
 
 Use **library** when it’s clear from context and branding that you mean U-M Library specifically, or one of its specific locations. On the library’s website, this is appropriate in most cases. We discourage [unnecessary capitalization](/content/grammar-and-style/#capitalization) which includes library when referring to it informally.
 
-**Do not use**: U-M Libraries, UM Library, or MLibrary 
+**Do not use**: U-M Libraries, UM Library, or MLibrary
 
 Our legal name is the University Library of the University of Michigan. That's a mouthful, but it may be required for legal documents. Please avoid using the shortened University Library in public communications.
 
@@ -66,7 +66,9 @@ See our list of [other libraries and collections](https://lib.umich.edu/location
 
 When providing attribution to the library for items in our collection, photographs, sponsorship, and other external engagement, cite the "University of Michigan Library."
 
-> Image courtesy of the University of Michigan Library.
+{% callout "block" %}
+Image courtesy of the University of Michigan Library.
+{% endcallout %}
 
 For sponsorship of exhibits, events, and awards, credit U-M Library rather than the name of an individual division, department, or unit.
 
