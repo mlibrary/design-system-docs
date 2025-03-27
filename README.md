@@ -2,9 +2,6 @@
 
 This is the 11ty Front-end codebase for https://design-system.lib.umich.edu.
 
-The drupal cms repository is here:
-https://github.com/mlibrary/design-system-cms
-
 ## Doc Site Development Quick Start
 
 1. Run the initialization script. (You are encouraged to read what's in it.
@@ -14,9 +11,7 @@ https://github.com/mlibrary/design-system-cms
   ./init.sh
   ```
 
-2. Edit `.env` with real values. Ask a Design System developer for help.
-
-3. Starts the development server and watch changes in `.scss` and `.js` files.
+2. Starts the development server and watch changes in `.scss` and `.js` files.
 
 ```
 docker-compose up
@@ -127,20 +122,6 @@ Static page content is created with markdown (.md).
 Use YAML front matter to add data to your content. Locally assigned front matter
 values override things further up the chain.
 
-### Drupal content
-
-Pages are generated from the Drupal content coming from the Drupal JSON:API
-using the [11ty pagination feature](https://www.11ty.dev/docs/pagination/).
-
-```
-src/_data/drupal.js
-```
-
-#### Pagination files to create landing page and page
-
-There are two Nunjuck files- one to generate a page (`page-generator.njk`) and
-one to generate landing pages (`landing_page-generator.njk`).
-
 ## Styles
 
 Edit the styles in the `src/scss` folder. 11ty is watching that folder. 11ty then passes through the compressed CSS to the
@@ -180,8 +161,3 @@ blogs.
 ## Resources
 
 Please visit the official [11ty](https://www.11ty.dev/docs/) docs.
-
-These were helpful for data configuration:
-
-- [Generate 11ty pages from external data](https://egghead.io/lessons/11ty-generate-eleventy-11ty-pages-from-external-data)
-- [Using 11ty JavaScript Data files to mix Markdown and CMS content...](https://bryanlrobinson.com/blog/using-11ty-javascript-data-files-to-mix-markdown-and-cms-content-into-one-collection/)
