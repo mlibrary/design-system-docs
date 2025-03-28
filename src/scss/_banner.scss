@@ -64,6 +64,13 @@
 .banner-text.landing {
   width: 60%;
 
+  p {
+    max-width: 80ch;
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
   @include media.breakpoint('sm', 'max-width') {
     width: 100%;
   }

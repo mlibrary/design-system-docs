@@ -6,9 +6,20 @@ const updatePermalinks = require('./lib/update-permalinks');
 const updateMarkup = require('./lib/update-markup');
 const { execSync } = require('child_process');
 
+const markdownit = require('markdown-it');
+const md = markdownit({ html: true, linkify: true });
+
 module.exports = function(eleventyConfig) {
 
-  // Add the plugins used
+ // Custom collections
+ // Returns an array collection from the reusableDesign tag, sorted alphabetically
+  eleventyConfig.addCollection("reusableDesignAtoZ", function (collectionApi) {
+    return collectionApi.getFilteredByTag("reusableDesign").sort((a, b) => {
+      return a.data.title.localeCompare(b.data.title, undefined, { sensitivity: "base" });
+    });
+  });
+  
+  // All plugins used
   eleventyConfig.addPlugin(pluginNavigation);
   eleventyConfig.addPlugin(eleventySass, {
     compileOptions: {
@@ -21,15 +32,13 @@ module.exports = function(eleventyConfig) {
       sourceMap: false
     },
   });
-
-  // eleventyConfig.addPlugin(updateMarkup);
-
-  eleventyConfig.addPlugin(updatePermalinks, {
-    src: path.resolve('./src/_data/drupal.js')
-  });
-
+  eleventyConfig.addPlugin(updatePermalinks);
   eleventyConfig.addPlugin(updateMarkup);
 
+  // Paired shortcode for the callout component- variant types are info, print, alert, block
+  eleventyConfig.addPairedShortcode("callout", function(content, variant) {
+    return `<article class="umich-lib-callout ${variant}"><p><span class="visually-hidden">${variant} callout</span>${md.renderInline(content)}</p></article>`;
+  });
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
   // The addWatchTarget config method allows you to manually add a file for Eleventy to watch.
@@ -37,7 +46,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/js");
 
   // The Pass Through feature tells Eleventy to copy things to our output folder
-  // Eleventy passes through our compiled CSS to the public directory. 
+  // Eleventy passes through our compiled CSS to the public directory.
   eleventyConfig.addPassthroughCopy("./src/img");
   eleventyConfig.addPassthroughCopy("./src/js");
 

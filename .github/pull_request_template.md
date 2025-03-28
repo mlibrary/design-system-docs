@@ -17,22 +17,22 @@
 <!--
     Add any steps or code to run in this section to help others run your code:
 --->
-1. Run the initialization script and add .env values if needed
-
-  ```
-  ./init.sh
-  ```
-
-2. Start the dev server
+1. Install packages
 
 ```
-docker-compose up
+npm install
+```
+
+2. Start the development server
+
+```
+npm start
 ```
 
 3. View in browser
 
 ```
-http://localhost:8888
+http://localhost:8080
 ```
 
 

@@ -1,36 +1,43 @@
 # Design System Docs
 
-This is the 11ty Front-end codebase for https://design-system.lib.umich.edu.
-
-The drupal cms repository is here:
-https://github.com/mlibrary/design-system-cms
+This is the 11ty codebase for https://design-system.lib.umich.edu.
 
 ## Doc Site Development Quick Start
 
-1. Run the initialization script. (You are encouraged to read what's in it.
-   There's nothing magical.) This will build the Docker image and install node modules.
-
-  ```
-  ./init.sh
-  ```
-
-2. Edit `.env` with real values. Ask a Design System developer for help.
-
-3. Starts the development server and watch changes in `.scss` and `.js` files.
+1. Install packages
 
 ```
-docker-compose up
+npm install
 ```
 
-4. View in browser
+2. Start the development server
 
 ```
-http://localhost:8888
+npm start
 ```
+
+or if you need a different port:
+
+```
+npx eleventy --port 6789 --serve
+```
+
+3. View in browser
+
+```
+http://localhost:8080
+```
+
+or if you changed the port in step 2
+
+```
+http://localhost:6789
+```
+
 
 ## Dev Scripts
 
-- `npm start` to start the eleventy server (serves the `/public` folder) and watch the `/scss` folder. 
+- `npm start` to start the eleventy server (serves the `/public` folder) and watch the `/scss` folder.
 `.scss` files compile and output to `/public/css`.
 - `npm build` to create a production build. Outputs into `/public`.
 
@@ -44,74 +51,14 @@ Eleventy Dev Server watches the `/js` and `/scss` folders and triggers a build w
 
 ## Developing the Site
 
-This is some very basic information. Please read the official [11ty
-documentation](https://www.11ty.dev/docs/) for an in-depth guide to building
-with 11ty.
+Design System contributors should read the internal documentation for Development for the Doc site.
+Please read the official [11ty documentation](https://www.11ty.dev/docs/) for an in-depth guide to building with 11ty.
 
-### Edit site metadata
-
-```
-src/_data/meta.json
-```
-
-This data can be used in the markdown and Nunjucks files. The following
-properties are supported:
-
-<table>
-    <thead>
-        <tr>
-            <th>Key</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><code>siteName</code></td>
-            <td>The full name of the website.</td>
-        </tr>
-        <tr>
-            <td><code>productName</code></td>
-            <td>Shortened name to describe the Design System.</td>
-        </tr>
-        <tr>
-            <td><code>url</code></td>
-            <td>Site url</td>
-        </tr>
-        <tr>
-            <td><code>siteDescription</code></td>
-            <td>Description of the site used for SEO.</td>
-        </tr>
-         <tr>
-            <td><code>language</code></td>
-            <td>Language set in the <code>html</code> for the site.</td>
-        </tr>
-         <tr>
-            <td><code>author</code></td>
-            <td>Creator of the site. An object with author's <code>name</code>, <code>url</code>, and <code>email</code>.</td>
-        </tr>
-    </tbody>
-</table>
-
-### Layouts
+### Layouts & Partials
 
 Layouts use the Nunjucks templating language.
 
 Page layouts are located the the `layouts` folder.
-
-```
-src/_includes/layouts
-```
-
-There is a `base.njk` file for the HTML boilerplate.
-Additional layouts build off of that boilerplate.
-
-```
-/layouts
-  base.njk
-  home.njk
-  landing-page.njk
-  page.njk
-```
 
 Partials use the Nunjucks `{% include %}` and are located in the `partials` folder.
 
@@ -121,30 +68,18 @@ src/_includes/partials
 
 ## Create pages/ page content
 
-### Index.md and 404.md
+Design System contributors should read the internal documentation for Authoring in 11ty.
 
 Static page content is created with markdown (.md).
+
+### Front matter
+
 Use YAML front matter to add data to your content. Locally assigned front matter
 values override things further up the chain.
 
-### Drupal content
-
-Pages are generated from the Drupal content coming from the Drupal JSON:API
-using the [11ty pagination feature](https://www.11ty.dev/docs/pagination/).
-
-```
-src/_data/drupal.js
-```
-
-#### Pagination files to create landing page and page
-
-There are two Nunjuck files- one to generate a page (`page-generator.njk`) and
-one to generate landing pages (`landing_page-generator.njk`).
-
 ## Styles
 
-Edit the styles in the `src/scss` folder. 11ty is watching that folder. 11ty then passes through the compressed CSS to the
-`public` folder.
+Edit the styles in the `src/scss` folder. 11ty is watching that folder. 11ty then passes through the compiled CSS to the `public` folder.
 
 ## Images
 
@@ -169,19 +104,8 @@ eleventyNavigation:
 
 #### **Collections**
 
-Collections allow you to group data in certain ways using `tags`.
+Collections allow you to group data in certain ways using `tags`. We use collections and custom collections.
 
 _Important distinction_: tags have a singular purpose in Eleventy... to
 construct collections of content. Not to be confused with tag labels used in
 blogs.
-
----
-
-## Resources
-
-Please visit the official [11ty](https://www.11ty.dev/docs/) docs.
-
-These were helpful for data configuration:
-
-- [Generate 11ty pages from external data](https://egghead.io/lessons/11ty-generate-eleventy-11ty-pages-from-external-data)
-- [Using 11ty JavaScript Data files to mix Markdown and CMS content...](https://bryanlrobinson.com/blog/using-11ty-javascript-data-files-to-mix-markdown-and-cms-content-into-one-collection/)

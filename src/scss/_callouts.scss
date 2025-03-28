@@ -116,13 +116,11 @@
 }
 
 // ********************************** //
-// *** 2. Umich content callouts *** //
+// *** 2. Umich Content callouts *** //
 // ******************************** //
 
 .umich-lib-callout,
-.umich-lib-print, 
-.umich-lib-alert, 
-.umich-lib-block-text  {
+blockquote {
   margin: 1rem 0;
   padding: 1rem;
   border: solid 1px #E5E9ED;
@@ -130,11 +128,21 @@
 }
 
 .umich-lib-callout {
+  display: flex;
+  align-items: center;
+}
+
+.umich-lib-callout > p,
+blockquote > p:first-of-type {
+  margin: 0;
+}
+
+.umich-lib-callout.info {
   padding: 1rem 1rem 1rem 1.5rem;
   border-left: solid 4px var(--color-teal-400);
 }
 
-.umich-lib-print {
+.umich-lib-callout.print {
   border-left: solid 4px var(--color-green-400);
   &::before {
     font-family: "Material Icons";
@@ -143,11 +151,10 @@
     font-size: 1.5rem;
     padding-right: 1rem;
     float:left;
-    height: 80px;
     }
 }
 
-.umich-lib-alert {
+.umich-lib-callout.alert {
   border-left: solid 4px var(--color-pink-400);
   &::before {
     font-family: "Material Icons";
@@ -156,14 +163,27 @@
     font-size: 1.5rem;
     padding-right: 1rem;
     float:left;
-    height: 80px;
     }
 }
+.umich-lib-callout.block {
+  border-left: solid 4px var(--color-neutral-300);
+  color: var(--color-neutral-300);
+  border-radius: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 0;
+  margin-left: 2rem;
+  padding: .25rem 1rem;
+}
 
-.umich-lib-block-text {
-  border-left: solid 4px transparent;
-  border: solid 1px transparent;
+blockquote {
+  border-top: solid 1px transparent;
+  border-right: solid 1px transparent;
+  border-bottom: solid 1px transparent;
   margin-left: 2rem;
   padding-top: 0;
   padding-bottom: 0;
+  border-left: solid 4px transparent;
+  font-weight: normal;
+  color: var(--color-neutral-400);
 }

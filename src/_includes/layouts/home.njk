@@ -25,11 +25,11 @@ layout: base.njk
     
     <div class="viewport-container">
         <div class="cards">
-          {% for page in collections.landingPage %}
+          {% for page in collections.landingPage | eleventyNavigation('home') %}
             <a href="{{ page.url }}">
               <section class="card">
-                <h2>{{ page.data.title }}</h2>
-                <p>{{ page.data.summary }}
+                <h2>{{ page.title }}</h2>
+                <p>{{ page.summary }}
                 </p>
               </section>
             </a>
