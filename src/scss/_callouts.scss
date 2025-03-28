@@ -127,6 +127,11 @@ blockquote {
   border-radius: 4px;
 }
 
+.umich-lib-callout {
+  display: flex;
+  align-items: center;
+}
+
 .umich-lib-callout > p,
 blockquote > p:first-of-type {
   margin: 0;
@@ -146,7 +151,6 @@ blockquote > p:first-of-type {
     font-size: 1.5rem;
     padding-right: 1rem;
     float:left;
-    height: 80px;
     }
 }
 
@@ -159,7 +163,6 @@ blockquote > p:first-of-type {
     font-size: 1.5rem;
     padding-right: 1rem;
     float:left;
-    height: 80px;
     }
 }
 .umich-lib-callout.block {
