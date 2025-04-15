@@ -17,7 +17,7 @@ Whenever possible, use rich, sharp, colorful images from our collections, and ph
 
 Avoid using photographs or images of the backs of people’s heads, outdated technology, empty spaces, and clip or stock art.
 
-Choose images that show the library as a place that welcomes diversity, equity, and inclusion.
+Choose images that show the library as a place that welcomes everyone.
 
 {% callout "info" %}
 If critical information is included with the image, be sure to repeat that information in the caption or body text.
