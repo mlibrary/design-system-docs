@@ -17,7 +17,7 @@ When you write something as part of your job at the U-M Library, you’re writin
 
 ## Overarching principles
 
-Write about people in a way that is in keeping with our [mission and values](https://lib.umich.edu/about-us/about-library/mission-and-values), and furthers our [commitment to diversity, inclusion, equity, and accessibility](https://lib.umich.edu/about-us/about-library/diversity-equity-inclusion-and-accessibility).
+Write about people in a way that is in keeping with our [mission and values](https://lib.umich.edu/about-us/about-library/mission-and-values), and furthers our [commitment to diversity](https://lib.umich.edu/about-us/about-library/our-commitment-diversity) and [accessibility](https://lib.umich.edu/about-us/about-library/accessibility).
 
 Try to actively reduce harm with language, and recognize that the impact of our words matters more than our intention.
 
