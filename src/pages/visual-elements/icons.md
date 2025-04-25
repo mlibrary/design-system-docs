@@ -13,55 +13,72 @@ eleventyNavigation:
 
 # {{ title }}
 
-Use icons for decorative purposes or to present important visual information for the viewer. Choose icons that are familiar and easy to recognize.
+Use icons for decorative purposes or to present important visual information for the viewer. You want to choose icons that are familiar and easy to recognize.
 
-The U-M Library Design System uses outlined and rounded icons from Material Icons in Google Fonts.
+## Choosing icons
 
-* [Material icons outlined](https://fonts.google.com/icons?icon.style=Outlined&icon.set=Material+Icons)  
-* [Material icons rounded](https://fonts.google.com/icons?icon.style=Rounded&icon.set=Material+Icons)
+While U-M Library web products use different icon packages, the U-M Library Design System recommends using [Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols&icon.style=Rounded).
 
-If you aren’t sure which icon to use, can’t find an appropriate one, or have any questions about using them, please [contact our team](/about/get-in-touch/).
+{% callout "info" %}
+While Material Symbols and Material Icons look quite similar, they are different. When selecting icons from the Google Fonts website, make sure the dropdown labeled “Style” is set to “Material Symbols (new)” and "Rounded".  
+{% endcallout %}
 
-## Using icons
+For design work, you can use the [Material Symbols plugin](https://www.figma.com/community/plugin/1088610476491668236/material-symbols) in Figma or download the SVG files from the [Google Fonts site](https://fonts.google.com/icons?icon.set=Material+Symbols&icon.style=Rounded).
 
-We typically set the icon size equal to our base font size (16px). However, icons may be 16 to 24px in size depending on the product.
+If you aren’t sure which icon to use, can’t find an appropriate one, or have any questions about using them, please [contact the Design System team](/about/our-team/).
 
-Icons that present meaningful information must have a descriptive name available to users of assistive technology. Reach out if you need help.
+### Style settings
 
-### For designers
+We use the following default style settings for Material Symbols:
 
-Material icons are available in the [U-M Library Design System Figma file](https://www.figma.com/community/file/1198259470207039738) as a plugin.
+* Fill: No fill  
+* Weight: 400  
+* Grade: 0  
+* Optical size: 24  
+* Style: Material Symbols (new), Rounded
 
-### For developers
+If your product is using Font Awesome instead of Material Symbols, we recommend using the following settings to most closely match:
 
-Use the icons as an inline SVG or icon fonts with markup and CSS. Which one you choose needs to be informed by whether the icon is decorative or meaningful.
+* Icon Pack: Classic  
+* Style: Regular  
+* Icon Type: Round
 
-#### Inline SVG
+We typically set the icon size to 16px in designs and code, but you may use anywhere from 16 to 24px depending on the product.
 
-Download the desired SVG from [Google Fonts](https://fonts.google.com/icons?icon.style=Outlined&icon.set=Material+Icons) and add it to your markup. Can be used for both decorative and meaningful icons.
+## For developers
 
-For accessibility:
+There are a few different ways we use icons in development: as an inline SVG or via Google Fonts using either static or variable icon fonts.
 
-* If the icon is decorative, add the following inside the SVG tag: `role=img focusable=false aria-hidden=true`
-* If the icon is meaningful, add the `role=img` to the SVG and then nest a title tag.
+Which one you choose needs to be informed by whether the icon is decorative or meaningful. Icons that present meaningful information **must** have a descriptive name available to users of assistive technology.
 
-For more information on using a descriptive title tag, see Deque’s [guidance for creating accessible SVGs](https://www.deque.com/blog/creating-accessible-svgs/).
+We provide an overview of each option below. See the codepen examples at the bottom of the page for details about markup and ensuring accessibility. Please reach out if you need help.
 
-#### Using Icon Fonts via Google Fonts
+### Inline SVG
 
-Can **only be used for decorative icons**.
+SVGs can be used for **both decorative and meaningful icons**. For extra information on accessibility, see Deque’s [guidance for creating accessible SVGs](https://www.deque.com/blog/creating-accessible-svgs/).
 
-1. Add Icon Fonts to the head of the HTML file.
-2. Add the icon in your markup. Be sure to use `aria-hidden="true"` as it tells screen readers to ignore the icon. Otherwise, it will announce the content and often it’s not meaningful.`<span aria-hidden=”true” class="material-icons">face</span>`
+To use: download the desired SVG from [Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols&icon.style=Rounded) and add it to your markup.
 
-Adding  `aria-hidden="true"` to the `<span>` tells screen readers to ignore the icon. Otherwise it will announce the content and often it’s not meaningful.
+### Google Fonts icon fonts
 
-See the [code example below](#icon-code-example) for the exact markup to use to add the icons using Google fonts.
+Icon fonts can **only be used for decorative icons**. Whether using static or variant fonts, be sure to include `aria-hidden="true"` in your markup. This ensures screen readers don’t announce content that is often not meaningful.
 
-#### Styling the icons
+{% callout "info" %}
+**Important**: For performance, we recommend only adding the icons/symbols you are using in your application!  
+{% endcallout %}
 
-The `.material-design` class assigns the styling to the icons. The base size is 24px and you can override it with `font-size: 1rem`.
+The easiest way to add Material Symbols is with **static fonts**. If you're animating icons via CSS, or want finer control over icon features, use the Google Symbols **variable font**.
 
-## Icon code example
+For both, you’ll need to link the relevant stylesheet in the `<head>` of your document and then add the icon in your markup.
+
+#### **Styling icon fonts**
+
+Use the `material-symbols-rounded` class for styling icons. The base size is 24px and you can override it with `font-size: 1rem`.
+
+Use CSS font-variation settings to control variable font characteristics.
+
+The [code example below](#code-example) has more details.
+
+### Code example
 
 https://codepen.io/team/umlibrary-designsystem/pen/KKZoddB
