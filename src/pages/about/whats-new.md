@@ -21,6 +21,7 @@ Please contact the [Design System team](/about/our-team/) if there are any quest
 
 - New [Icon](/visual-elements/icons) guidelines for using Material Symbols.
 - Completed and shared the [2025 Design System Doc Site Accessibility Evaluation](https://docs.google.com/document/d/1pZmSr1ILdI99ehR9i3p6gLngnbbZjx5TO8gx1I2Up1Y/edit?usp=sharing) and shared more detailed information on [Accessibility and Inclusive Design](/foundations/accessibility-and-inclusive-design/).
+- Updated [Google Slide theme templates](https://drive.google.com/drive/folders/1uIDCY-OIyd2cET3PkpZVOco32wGKsM91) to improve accessibility and PDF creation by making decorative accents part of the background image in the theme.
 
 ## March 2025
 
