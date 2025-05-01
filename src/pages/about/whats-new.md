@@ -17,37 +17,42 @@ This is where you'll find a rundown of the latest Design System additions and de
 
 Please contact the [Design System team](/about/our-team/) if there are any questions!
 
+## May 2025
+
+- New [Icon](/visual-elements/icons) guidelines for using Material Symbols.
+- Completed and shared the [2025 Design System Doc Site Accessibility Evaluation](https://docs.google.com/document/d/1pZmSr1ILdI99ehR9i3p6gLngnbbZjx5TO8gx1I2Up1Y/edit?usp=sharing) and shared more detailed information on [Accessibility and Inclusive Design](/foundations/accessibility-and-inclusive-design/).
+
 ## March 2025
 
-* Added [File Upload](/reusable-designs/file-upload/), [Range](/reusable-designs/range/), and [Search Input](/reusable-designs/search-input/) as Reusable Designs.
-* We've said goodbye and thank you to a member of the team (Thank you, Suvi!)
-* We've updated our site tech stack and documentation for contribution.
+- Added [File Upload](/reusable-designs/file-upload/), [Range](/reusable-designs/range/), and [Search Input](/reusable-designs/search-input/) as Reusable Designs.
+- We've said goodbye and thank you to a member of the team (Thank you, Suvi!)
+- We've updated our site tech stack and documentation for contribution.
 
 ## October 2024
 
-* Added [Badges](/reusable-designs/badges/) and [Tags](/reusable-designs/tags/) as Reusable Designs  
-* Added a new team member to [Our Team](/about/our-team/)! (Welcome, Josh!)  
-* New script tag for our [Web Components](/about/web-components-and-design-tokens/).
+- Added [Badges](/reusable-designs/badges/) and [Tags](/reusable-designs/tags/) as Reusable Designs  
+- Added a new team member to [Our Team](/about/our-team/)! (Welcome, Josh!)  
+- New script tag for our [Web Components](/about/web-components-and-design-tokens/).
 
 ## May 2024
 
-* Added [Banners](/reusable-designs/banners/) as a Reusable Design
+- Added [Banners](/reusable-designs/banners/) as a Reusable Design
 
 ## November 2023
 
-* Implemented improvements to the website header and navigation  
-  * Site search  
-  * New utility navigation with links for commonly used resources: color table, Google templates, Figma Toolkit and CodePen.
-* Shared 3 updated Google Slide templates with improved contrast for viewing in different environments
+- Implemented improvements to the website header and navigation  
+  - Site search  
+  - New utility navigation with links for commonly used resources: color table, Google templates, Figma Toolkit and CodePen.
+- Shared 3 updated Google Slide templates with improved contrast for viewing in different environments
 
 ## October 2023
 
-* Added new Reusable Designs for inputs: [Checkbox](/reusable-designs/checkbox/) , [Input fields](/reusable-designs/input-fields/) , [Radio button](/reusable-designs/radio-button/)  and [elect](/reusable-designs/select/)
+- Added new Reusable Designs for inputs: [Checkbox](/reusable-designs/checkbox/) , [Input fields](/reusable-designs/input-fields/) , [Radio button](/reusable-designs/radio-button/)  and [elect](/reusable-designs/select/)
 
 ## March 2023
 
-* Updated [Google Site Guidelines](https://docs.google.com/document/d/1MBPKPOfeZCP8FCtiHO8ns1CftqzMEhUIVb-MABbDdBg/edit?usp=sharing)  
-* Created a Google Site template using the U-M Library Design System
+- Updated [Google Site Guidelines](https://docs.google.com/document/d/1MBPKPOfeZCP8FCtiHO8ns1CftqzMEhUIVb-MABbDdBg/edit?usp=sharing)  
+- Created a Google Site template using the U-M Library Design System
 
 ## February 2023
 
@@ -57,8 +62,8 @@ This is the 3rd major redesign of our documentation site since we started the De
 
 ### New features of this site
 
-* Site sections with landing pages: Getting Started, Foundations, Visual Elements, Content, Reusable Designs, and About  
-* Look and feel essentials in [Visual Elements](/visual-elements/)  with connections to our Figma Design Library  
-* CodePen code samples embedded on [Reusable Designs](/reusable-designs/) pages  
-* Paths guiding different audiences using the Design System through the site in [Getting Started](/getting-started/)  
-* Extensive [Content](/content/) guidance to support writing for the library across contexts
+- Site sections with landing pages: Getting Started, Foundations, Visual Elements, Content, Reusable Designs, and About  
+- Look and feel essentials in [Visual Elements](/visual-elements/)  with connections to our Figma Design Library  
+- CodePen code samples embedded on [Reusable Designs](/reusable-designs/) pages  
+- Paths guiding different audiences using the Design System through the site in [Getting Started](/getting-started/)  
+- Extensive [Content](/content/) guidance to support writing for the library across contexts

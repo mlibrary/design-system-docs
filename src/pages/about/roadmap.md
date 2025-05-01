@@ -13,26 +13,20 @@ eleventyNavigation:
 
 # {{ title }}
 
-Last updated January 22, 2025.
-
-## Recent work
-
-* Refreshed visual design for Figma toolkits
-* Added a site search and utility nav to the documentation site
-* New Reusable Designs published
-* New Google Slide templates and guidelines
-
-See more at [What's new](/about/whats-new/)
+Last updated May 1, 2025.
 
 ## What we are working on
 
-* Reusable Designs for tabs, callout, tags, and badges
-* Motion guidelines for Visual Elements
-* Releasing the refactored web components for testing
-* Updating our umich-lib CSS package
+- Reusable Designs for tabs, callout, links, and disclosure
+- Motion guidelines for Visual Elements
+- Releasing the refactored web components for testing
+- Updating our umich-lib CSS package
 
-## Future plans
+## Recent work
 
-* New Reusable Designs to share (Figma, Web Components, and CodePen)  
-* Patterns for UI design and development
-* Accessibility Toolkit (Figma)
+- Refreshed visual design for Figma toolkits
+- Added a site search and utility nav to the documentation site
+- New Reusable Designs published
+- New Google Slide templates and guidelines
+
+See more at [What's new](/about/whats-new/)

@@ -17,7 +17,14 @@ Accessibility is a shared responsibility. We want our products to be accessible 
 
 We aim to be compliant with [WCAG 2.2 (Level A and AA)](https://www.w3.org/TR/WCAG22/) and follow the [four principles of accessibility](https://www.w3.org/TR/UNDERSTANDING-WCAG20/intro.html#introduction-fourprincs-head).
 
-The Design System site itself is evaluted regularly and the [most recent report is available for review](https://docs.google.com/document/d/1Uif72Lqi39U3XfpZuF1-ecBFIWVjymI14IXJJCPMzlA/edit?usp=sharing). Changes related to accessibility are tracked in [What's New](/about/whats-new/).
+The Design System site itself is evaluted regularly using enterprise scanning software and automated and manual testing. Sitewide scanning with axe Monitor is performed weekly.
+
+The two most recent accessibility evaluations are:
+
+- [2025 Design System Doc Site Accessibility Evaluation](https://docs.google.com/document/d/1pZmSr1ILdI99ehR9i3p6gLngnbbZjx5TO8gx1I2Up1Y/edit?usp=sharing)
+- [2023 Design System Doc Site Baseline Evaluation](https://docs.google.com/document/d/1Uif72Lqi39U3XfpZuF1-ecBFIWVjymI14IXJJCPMzlA/edit?usp=sharing)
+
+You must be logged into a umich account to view the documents. Please contact the [Design System team](/about/our-team/) for any issues, questions, or if you would like a copy of the report(s).
 
 ## Start with standards
 
@@ -57,7 +64,7 @@ In addition to our design and development practices, we test our [visual element
 
 These include native and third-party tools like:
 
-* Accessibility testing software/evaluation tools: ARC Toolkit, axe testing library, WAVE, Accessibility Insights
-* Screen readers (VoiceOver, NVDA, and JAWS)
+- Accessibility testing software/evaluation tools: ARC Toolkit, axe testing library, WAVE, Accessibility Insights
+- Screen readers (VoiceOver, NVDA, and JAWS)
 
 We recognize that no manual or automated tests can catch all barriers that people with disabilities may encounter with our content, products, and services. We actively include people with disabilities and those who use assistive technology in product design, testing, and development work to drive human centered improvements.
