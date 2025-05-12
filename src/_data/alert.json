@@ -1,12 +1,10 @@
 {
   "info": {
   "active": false,
-  "icon":  "info",
   "message": "The site is currently in development."
   },
   "warning": {
     "active": false,
-    "icon": "warning",
     "message": "The site is currently in development."
     }
 }

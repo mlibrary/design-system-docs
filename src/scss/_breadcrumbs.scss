@@ -63,7 +63,7 @@
 }
 
 .breadcrumbs li:not(:first-child):before {
-  font-family: "Material Icons";
+  font-family: "Material Symbols Rounded";
   content: '\e5cc' !important;
   color: var(--color-teal-400);
   padding-left: .25rem;
@@ -76,7 +76,7 @@
    }
  
   .breadcrumbs li:nth-last-child(2):before {
-    font-family: "Material Icons";
+    font-family: "Material Symbols Rounded";
     content: '\e5cb' !important;
     font-size: 1rem;
   }

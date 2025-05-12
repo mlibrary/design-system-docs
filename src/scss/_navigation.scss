@@ -147,14 +147,14 @@ button.nav {
 }
 
 button[aria-expanded]::after {
-  font-family: "Material Symbols Outlined";
+  font-family: "Material Symbols Rounded";
   font-size: 2.5rem;
   content: "\e5d2";
   color: var(--color-neutral-400);
 }
 
 button[aria-expanded="true"]::after {
-  font-family: "Material Symbols Outlined";
+  font-family: "Material Symbols Rounded";
   font-size: 2.5rem;
   content: "\e5cd";
   color: var(--color-neutral-400);
@@ -216,14 +216,14 @@ button[aria-expanded="true"]::after {
   transform: rotate(-30deg);
 }
 
-.material-symbols-outlined {
+.material-symbols-rounded {
   font-variation-settings: 
   'wght' 300,
    'opsz' 20
   ;
 }
 
-.material-symbols-outlined:hover {
+.material-symbols-rounded:hover {
   font-variation-settings: 
   'wght' 500,
    'FILL' 1

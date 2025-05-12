@@ -48,8 +48,7 @@
     <script nomodule src="https://cdn.jsdelivr.net/npm/@umich-lib/components@1.1.0/dist/umich-lib/umich-lib.js"></script>
     <script src="{{ '/js/menu.js' | url }}" defer></script>
     <script src="{{ '/js/main.js' | url }}" defer></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_back,arrow_forward,arrow_upward,chevron_right,close,code,email,folder,info,interests,menu,open_in_new,palette,print,thumb_up,warning&display=block" />
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -75,10 +74,10 @@
      </div>
       {% include "partials/primary-nav.njk" %}
     </div>
-    <main class="layout" id="main">
+    <main class="layout" id="main" tabindex="-1">
       {{ content | safe }}
     </main>
-    <footer class="footer" id="footer">
+    <footer class="footer" id="footer" tabindex="-1">
       {% include "partials/box-accent.njk" %}
       <div class="viewport-container">
         <div class="footer__content">

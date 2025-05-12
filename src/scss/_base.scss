@@ -122,12 +122,21 @@ blockquote {
 // 2.5 Accessibility
 
 .opens-new-window::after {
-    font-family: "Material Icons";
+    font-family: "Material Symbols Rounded";
     content: '\e89e';
     color: var(--color-teal-400);
     font-size: 1.25rem;
     padding-left: .25rem;
     vertical-align: sub;
+}
+
+
+/* Use focus-visible for keyboard users with the skip links */
+#main:focus, #footer:focus {
+  box-shadow: none;
+}
+#main:focus-visible, #footer:focus-visible {
+  box-shadow: 0 0 0 2px var(--color-maize-400), 0 0 0 3px var(--color-neutral-400);
 }
 
 // 2.6 DS Web Components

@@ -23,7 +23,7 @@ We’re responsible for making sure contributions to the system are of a high qu
 * [Roger Espinosa](https://www.lib.umich.edu/users/roger), Application Programmer/Analyst Lead
 * [Ben Howell](https://www.lib.umich.edu/users/bnhowell), User Experience and Accessibility Specialist  
 * [Monique Rio](https://lib.umich.edu/users/mrio), Application Programmer/Analyst Sr
-* [Josh Salazer](https://www.lib.umich.edu/users/josalaza), Front End Developer  
+* [Josh Salazar](https://www.lib.umich.edu/users/josalaza), Front End Developer  
 * [Erin Sullivan](https://www.lib.umich.edu/users/esulliv), Sr. Front-end Developer
 
 Previous members:
