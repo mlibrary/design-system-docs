@@ -5,7 +5,7 @@
 //
 // ## Table of Contents
 //   1. Callout
-//      1.1 base (quick resources)
+//      1.1 base 
 //   2. Umich content callouts
 //      2.1 Callout (info)
 //      2.2 Print
@@ -145,7 +145,7 @@ blockquote > p:first-of-type {
 .umich-lib-callout.print {
   border-left: solid 4px var(--color-green-400);
   &::before {
-    font-family: "Material Icons";
+    font-family: "Material Symbols Rounded";
     content: '\e8ad';
     color: var(--color-green-400);
     font-size: 1.5rem;
@@ -157,7 +157,7 @@ blockquote > p:first-of-type {
 .umich-lib-callout.alert {
   border-left: solid 4px var(--color-pink-400);
   &::before {
-    font-family: "Material Icons";
+    font-family: "Material Symbols Rounded";
     color: var(--color-pink-400);
     content: '\e002';
     font-size: 1.5rem;

@@ -27,7 +27,7 @@
 }
 
 .back-to-top-link::before {
-  font-family: 'Material Icons';
+  font-family: 'Material Symbols Rounded';
   content: '\e5d8';
   padding-right: .25rem;
   vertical-align: bottom;
@@ -72,7 +72,7 @@
 }
 
 .previous-page::before {
-    font-family: "Material Icons";
+    font-family: "Material Symbols Rounded";
     content: '\e5c4';
     color: var(--color-teal-400);
     font-size: 1rem;
@@ -82,7 +82,7 @@
 }
 
 .next-page::after {
-    font-family: "Material Icons";
+    font-family: "Material Symbols Rounded";
     content: '\e5c8';
     color: var(--color-teal-400);
     font-size: 1rem;

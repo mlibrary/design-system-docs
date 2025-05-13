@@ -1,7 +1,7 @@
 {% if alert.info.active == true %}
   <section class="alert--info">
     <div class="alert__container viewport-container">
-      <span class='material-icons' aria-hidden='true'>{{ alert.info.icon }}</span>
+      <span class='material-symbols-rounded' aria-hidden='true'>{{ icons.info }}</span>
       <span class="visually-hidden">Alert</span>
       <p>{{ alert.info.message }}</p>
     </div>
@@ -9,7 +9,7 @@
 {% elif alert.warning.active == true %}
   <section class="alert--warning">
     <div class="alert__container viewport-container">
-      <span class='material-icons' aria-hidden='true'>{{ alert.warning.icon }}</span>
+      <span class='material-symbols-rounded' aria-hidden='true'>{{ icons.warning }}</span>
       <span class="visually-hidden">Warning Alert</span>
       <p>{{ alert.warning.message }}</p>
     </div>
