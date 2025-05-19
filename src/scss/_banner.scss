@@ -13,67 +13,48 @@
 // *** 1. Banners - Hero *** //
 // ************************ //
 
-.banner {
-  background-color: var(--color-teal-100);
+/* New hero banner May 2025 */
+.ds-banner-grid {
+  display: grid;
+  width: 100%;
+  grid-template-areas:
+    "banner";
+ }
+
+.ds-banner-text {
+  grid-area: banner;
+  z-index: 1;
+  color: var(--color-neutral-400);
+  width: 40vw;
+  padding-left: 1rem;
+  place-self: center start;
+  margin-left: 2rem;
+  z-index: 1; /* Text appears above the SVG */
+  text-wrap: pretty;
+  }
+
+.ds-banner-text > h1 {
+  font-weight: 400;
+  font-size: 3rem;
+  width: 15ch;
+  margin-bottom: 0;
+  padding-top: .75rem;
+  backdrop-filter: blur(1px);
 }
 
-.banner-container {
-  display: flex;
-} 
-
-.banner-text, .banner-image {
-  width: calc(50% - .5rem);
+.ds-banner-text > p {
+  width: 35ch;
+  font-size: 1.25rem;
+  backdrop-filter: blur(1.5px);
 }
 
-.banner-image {
-  background-image: linear-gradient(45deg,
-  rgba(16, 102, 132, 0.25),
-  rgba(8,83,156, 0.25)), url("/img/library.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
+#ds-banner-svg {
+  grid-area: banner;
 
-  @include media.breakpoint('sm', 'max-width') {
-    display: none;
-  }
-}
-
-.banner-text {
-  padding: 2rem 0;
-
-  .breadcrumbs {
-    padding: 0 0 1.5rem;
-  }
-
-  h1 {
-   max-width: 12ch;
-  }
-  p {
-    max-width: 50ch;
-    font-size: 1.125rem;
-  }
-
-  @include media.breakpoint('sm', 'max-width') {
+/*
+@include media.breakpoint('sm', 'max-width') {
     width: 100%;
-  }
-}
-
-.banner-text.landing h1 {
-  max-width: 20ch;
-}
-
-.banner-text.landing {
-  width: 60%;
-
-  p {
-    max-width: 80ch;
-    font-size: 1rem;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  @include media.breakpoint('sm', 'max-width') {
-    width: 100%;
-  }
+  }*/
 }
 
 // ******************************************** //

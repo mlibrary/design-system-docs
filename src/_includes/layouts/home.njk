@@ -4,14 +4,7 @@ layout: base.njk
 
 <div class="flex-layout">
   <div class="main-content">
-    <div class="banner">
-      <div class="viewport-container banner-container">
-        <div class="banner-text">
-          {{ content | safe }}
-        </div>
-        <div class="banner-image"></div>
-      </div>
-    </div>
+         {% include "partials/hero-banner.njk" %}
     <div class="card-container">
       <svg
         class="ovals"
