@@ -85,12 +85,16 @@ We prefer **U-M credentials** to **U-M login** in cases where you need to sign i
 
 ## Mcard, MCommunity
 
-Capitalization of the "c" in U-M proper names varies.
+The "C" in these U-M proper names is capitalized. This was not the case for MCard before 2025. 
 
-* The **Mcard** is your official University of Michigan identification card.
+* The **MCard** is your official University of Michigan identification card.
 * **MCommunity** is a public and enterprise directory of all people and groups at U-M.
 
-However, when describing [our identity as a library](/content/writing-about-the-library/), do not use MLibrary.
+## MLibrary
+
+Do not use. 
+
+See [our identity](/content/writing-about-the-library/) for agreed upon names and styles for referring to the library.
 
 ## Online and technology terms, general
 
