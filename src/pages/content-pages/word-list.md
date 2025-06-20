@@ -83,7 +83,7 @@ Neither form is hyphenated.
 
 We prefer **U-M credentials** to **U-M login** in cases where you need to sign in with your U-M information: *You'll be prompted to log in with your U-M credentials.*
 
-## Mcard, MCommunity
+## MCard, MCommunity
 
 The "C" in these U-M proper names is capitalized. This was not the case for MCard before 2025. 
 
