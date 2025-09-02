@@ -22,7 +22,7 @@ Use buttons to let users:
 * Progress to another step (for example: in a multi-page survey)  
 * Submit a form
 
-Buttons generally should not be used for standard navigation to another page in the same website. Instead, [use links](/content/grammar-and-style/#link-text-hyperlinks) if the action will take a user to a new page.
+Buttons generally should not be used for standard navigation to another page in the same website. Instead, [use links](/reusable-designs/link/) if the action will take a user to a new page.
 
 ## Our button types
 
