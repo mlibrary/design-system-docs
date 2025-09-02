@@ -169,6 +169,8 @@ Avoid vague labels and “click here” or “read more."
 
 Be cautious with one-word links, which can be difficult to select on phones and tablets.
 
+We also have a [link reusable design](/reusable-designs/link/) that provides additional guidelines, including how links should open.
+
 ## Lists
 
 Lists are good for breaking up long text and calling attention to key points you want readers to remember.
