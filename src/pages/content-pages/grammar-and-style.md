@@ -161,13 +161,15 @@ If you’re working in other languages, such as Arabic or Hebrew, these principl
 
 ## Link text, hyperlinks
 
-Your link text should be [descriptive and meaningful](../writing-for-people/#make-link-text-descriptive-and-meaningful) clearly indicate the destination of the link, use sentence case (unless it contains a proper noun), and be understandable out of context.
+Your link text should be [descriptive and meaningful](../writing-for-people/#make-link-text-descriptive-and-meaningful), clearly indicate the destination of the link, use sentence case (unless it contains a proper noun), and be understandable out of context.
 
 For example, "The library has many [social sciences databases](http://www.lib.umich.edu/browse/Databases/Social%20Sciences) that can help with projects, in subjects ranging from education to urban planning."
 
 Avoid vague labels and “click here” or “read more."
 
 Be cautious with one-word links, which can be difficult to select on phones and tablets.
+
+We also have a [link reusable design](/reusable-designs/link/) that provides additional guidelines, including how links should open.
 
 ## Lists
 

@@ -55,9 +55,11 @@ All body text is 16px or 1rem, regular weight.
 
 ## Links
 
-Links within body text are teal-400 and underlined by default.
+Links within body text are `teal-400` and underlined by default.
 
-In some cases, links can be neutral-400 and have the underline removed, except on hover. This style is often used when many links are presented together, such as with list items where repeated underlines impede readability. [Contact the Design System team](/about/get-in-touch/) with questions about when to use this style.
+In some cases, links can be `neutral-400` and have the underline removed, except on hover. This style is often used when many links are presented together, such as with list items where repeated underlines impede readability. [Contact the Design System team](/about/get-in-touch/) with questions about when to use this style.
+
+We also offer a [Link reusable design](/reusable-designs/link).
 
 ## Lists
 
