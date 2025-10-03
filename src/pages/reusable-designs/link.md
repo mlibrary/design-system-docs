@@ -32,10 +32,6 @@ On hover, a text-decoration of 2px thickness appears for the underline. The focu
 
 In addition, we offer a visited link color in Matthaei Violet (`#575294`). This is from U-M’s [secondary color palette](https://brand.umich.edu/design-resources/colors/), but is not included in our color tokens.
 
-### Alternate default link style
-
-In some cases, links can be `neutral-400` and have the underline removed, except on hover. This style is often used when many links are presented together, such as with list items where repeated underlines impede readability. [Contact the Design System team](https://design-system.lib.umich.edu/about/get-in-touch/) with questions about when to use this style.
-
 ## Guidelines for links
 
 Your link text should be descriptive, meaningful and clearly indicate the destination of the link. See [link text with our grammar and style](/content/grammar-and-style/#link-text-hyperlinks) guidance for details.  
