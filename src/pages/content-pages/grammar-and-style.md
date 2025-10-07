@@ -54,9 +54,9 @@ In most cases, we recommend you change the ampersand to the word “and.” It i
 
 ## Bold and italics
 
-Use bold to emphasize keywords and help readers scan your content. If you find yourself wanting to use a lot of bold, consider the structure of the page and whether additional headings are needed. See more on [writing for readability](/content/writing-about-people/#write-for-readability).
+Use bold to emphasize keywords and help readers scan your content. If you find yourself wanting to use a lot of bold, consider the structure of the page and whether additional headings are needed. See more on [writing for readability](/content/writing-for-people/#write-for-readability).
 
-Italics are best reserved for specific purposes, such as bylines on news items or last updated dates.
+Italics should be used sparingly and are best reserved for specific purposes, such as bylines on news items or last updated dates. Avoid using italics for long blocks of text.
 
 ## Bullet points
 
