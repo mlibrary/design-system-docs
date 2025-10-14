@@ -7,7 +7,7 @@ title: Motion
 eleventyNavigation:
   key: Motion
   summary: Guidelines for using micro-interactions and animations.
-  parent: Visual Elements, Content
+  parent: Visual Elements
   order: 5
 ---
 
