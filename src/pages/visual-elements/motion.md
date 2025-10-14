@@ -17,7 +17,7 @@ Motion — micro-interactions and animations — can bring design elements to li
 
 There are important factors to consider in your implementation of any motion in a user interface. Movement can cause dizziness and nausea for users with vestibular disorders and distract users with attention-deficit/hyperactivity disorder, causing them to lose track of their focus. You have to use motion thoughtfully and strategically and it must not harm or distract users. 
 
-{% callout "info" %}Anyone who wants to add motion should directly contact the [Design System team](/about/our-team/) for help.{% endcallout %}
+{% callout "info" %} Anyone who wants to add motion should directly contact the [Design System team](/about/our-team/) for help. {% endcallout %}
 
 ## Types of motion
 
@@ -39,7 +39,7 @@ Motion is fun to think about, but you should have a reason for using it. Express
 
 Consider what action by the user will trigger the motion. Options are generally scroll, click or check, or hover. Motion can also use autoplay and have no trigger. 
 
-{% callout "info" %}Keep in mind that if an **animation** autoplays and is 5 seconds or longer, it **must** have a play/pause mechanism.{% endcallout %}
+{% callout "info" %} Keep in mind that if an **animation** autoplays and is 5 seconds or longer, it **must** have a play/pause mechanism. {% endcallout %}
 
 ### Duration
 
@@ -52,6 +52,7 @@ Motion brings life to your interface and it has a vibe. Will your motion be calm
 ### Effect
 
 Finally, what’s the motion going to do? Motion effects can include scale, opacity, movement, elevation, and more.   
+
 Be sure to avoid flashes and bounces (they can be disorienting and trigger epileptic seizures), as well as parallax scrolling effects.
 
 For animation specifically, the effect should be within a specific, contained area of the page (such as a hero banner image or within a modal) and any important, contextual information contained in the animation presented in text as well.
@@ -66,7 +67,6 @@ CSS is ideal for simple animations and is optimized for performance.
 
 * [Keyframes](https://www.w3schools.com/css/css3_animations.asp) allows defining sequences of animation steps. It’s suitable for repeated animations like spinning or bouncing.  
 * [Transitions](https://www.w3schools.com/css/css3_transitions.asp) is useful for animating changes between an element’s state (such as hover effects) or an element’s properties (such as width or position).
-
 
 ### JavaScript
 
@@ -88,7 +88,6 @@ SVG animations are vector-based and can be ideal for manipulating vector points 
 
 No tools provide accessibility natively. We are responsible for the accessibility of our motion design.
 
-
 ### Providing controls
 
 Where appropriate, we provide controls that allow users to start, stop, and adjust the speed of animations. This can be crucial to users who may be sensitive to motion or need more time processing moving content.
@@ -98,11 +97,11 @@ Where appropriate, we provide controls that allow users to start, stop, and adju
 The prefers-reduced-motion CSS media feature detects if a user has enabled a setting on their device to minimize the amount of non-essential motion.
 
 We provide the following in our DS CSS file:  
-\`\`\`css  
+```css  
 @media (prefers-reduced-motion: reduce) {  
-  \*,  
-  \*::before,  
-  \*::after {  
+  *,  
+  *::before,  
+  *::after {  
     animation-duration: 0.01ms \!important;  
     animation-iteration-count: 1 \!important;  
     transition-duration: 0.01ms \!important;  
@@ -113,7 +112,7 @@ We provide the following in our DS CSS file:
     scroll-behavior: initial;  
   }  
 }  
-\`\`\`
+```
 
 ### Relevant WCAG guidelines
 
