@@ -8,7 +8,7 @@ eleventyNavigation:
   key: Typography
   summary: Guidelines for font families and sizes, line height, and line length.
   parent: Visual Elements
-  order: 5
+  order: 6
 ---
 
 # {{ title }}
