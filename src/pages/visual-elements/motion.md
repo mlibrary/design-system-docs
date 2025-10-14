@@ -29,7 +29,7 @@ A **micro-interaction** is a subtle, functional motion or feedback triggered by 
 
 The use of motion should be intentional, informational, and delightful. Our visual language is whimsical and classic, so using motion can help express that personality.
 
-Adding motion to an interface requires thinking through a number of considerations and should be limited to less than a third of any individual page overall. Any meaningful graphic elements must follow color contrast guidelines
+Adding motion to an interface requires thinking through a number of considerations and should be limited to less than a third of any individual page overall. Any meaningful graphic elements must follow color contrast guidelines.
 
 ### Purpose
 
