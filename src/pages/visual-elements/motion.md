@@ -103,10 +103,10 @@ We provide the following in our DS CSS file:
   *,  
   *::before,  
   *::after {  
-    animation-duration: 0.01ms \!important;  
-    animation-iteration-count: 1 \!important;  
-    transition-duration: 0.01ms \!important;  
-    scroll-behavior: auto \!important;  
+    animation-duration: 0.01ms !important;  
+    animation-iteration-count: 1 !important;  
+    transition-duration: 0.01ms !important;  
+    scroll-behavior: auto !important;  
   }
 
   html {  
