@@ -17,6 +17,16 @@ This is where you'll find a rundown of the latest Design System additions and de
 
 Please contact the [Design System team](/about/our-team/) if there are any questions!
 
+## October 2025
+
+- New [Link](/reusable-designs/link/) Reusable Design.
+- New [Motion](/visual-elements/motion/) guidelines for micro-interactions and animations.
+- New U-M branded [PowerPoint template](https://drive.google.com/drive/folders/1Uz8Oki6S4CFbW9c1ISiXXvuRQHnIApYa)
+- New [Templates and Themes](/visual-elements/template-theme/) page for our U-M branded materials in Google and PowerPoint.
+- Updates to our guidelines for using [bold and italics](/content/grammar-and-style/#bold-and-italics) in [Grammar and Style](/content/grammar-and-style/).
+- Testing out a new social card image.
+- Updates to the design and layouts for our [Google Slides Theme Templates](https://drive.google.com/drive/folders/1uIDCY-OIyd2cET3PkpZVOco32wGKsM91)
+
 ## May 2025
 
 - New [Icon](/visual-elements/icons) guidelines for using Material Symbols.

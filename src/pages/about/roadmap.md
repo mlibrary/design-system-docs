@@ -13,20 +13,16 @@ eleventyNavigation:
 
 # {{ title }}
 
-Last updated May 1, 2025.
+Last updated Nov 4, 2025.
 
 ## What we are working on
 
-- Reusable Designs for tabs, callout, links, and disclosure
-- Motion guidelines for Visual Elements
-- Releasing the refactored web components for testing
+- Reusable Design for pagination
+- Google Sheets guidelines
+- Exploring dark themes
+- Plans for an update to the design and structure of this site
+- Assessing user research results
+- Testing the refactored web components
 - Updating our umich-lib CSS package
 
-## Recent work
-
-- Refreshed visual design for Figma toolkits
-- Added a site search and utility nav to the documentation site
-- New Reusable Designs published
-- New Google Slide templates and guidelines
-
-See more at [What's new](/about/whats-new/)
+See our recent releases at [What's new](/about/whats-new/)
