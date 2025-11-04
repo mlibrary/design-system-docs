@@ -18,7 +18,7 @@ module.exports = function(eleventyConfig) {
       return a.data.title.localeCompare(b.data.title, undefined, { sensitivity: "base" });
     });
   });
-  
+
   // All plugins used
   eleventyConfig.addPlugin(pluginNavigation);
   eleventyConfig.addPlugin(eleventySass, {
@@ -49,6 +49,10 @@ module.exports = function(eleventyConfig) {
   // Eleventy passes through our compiled CSS to the public directory.
   eleventyConfig.addPassthroughCopy("./src/img");
   eleventyConfig.addPassthroughCopy("./src/js");
+  
+  //Robots
+  eleventyConfig.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
+  
 
   eleventyConfig.on('eleventy.after', () => {
     execSync(`npx pagefind --site public --glob \"**/*.html\"`, { encoding: 'utf-8' })
