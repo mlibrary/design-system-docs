@@ -175,7 +175,7 @@ We also have a [link reusable design](/reusable-designs/link/) that provides add
 
 Lists are good for breaking up long text and calling attention to key points you want readers to remember.
 
-Be consistent. Use a [parallel structure](https://ewriteonline.com/how-and-why-to-make-your-lists-parallel-and-what-does-parallel-mean/) throughout to make your list clearer to read.
+Be consistent. Use a [parallel structure](https://owl.purdue.edu/owl/subject_specific_writing/professional_technical_writing/parallel_structure.html) throughout to make your list clearer to read.
 
 ### Bulleted lists
 
