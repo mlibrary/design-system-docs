@@ -17,7 +17,13 @@ Our logo is the main symbol that identifies the University of Michigan Library. 
 
 The library uses two symbols for its visual identity: the block M version, and the horizontal signature version. We have general guidelines for their use, along with specifics and downloads for online and print. Downloads are provided as Google Drive files visible to anyone at U-M.
 
- <img src="https://assets.codepen.io/t-1120/MLibrary_block_M.png?format=auto" alt="Square block M Library logo with a maize block M and Library presented in white text below the M on a dark blue background"><img src="https://assets.codepen.io/t-1120/MLibrary_signature.png?format=auto" alt="Signature horizontal M Library logo with a maize block M and Library presented in blue text">
+## Block M version
+
+ <img src="/img/MLibrary_block_M.png" alt="Square block M Library logo with a maize block M and Library presented in white text below the M on a dark blue background">
+
+ ## Horizontal signature version
+ 
+<img src="/img/MLibrary_signature.png" alt="Signature horizontal M Library logo with a maize block M and Library presented in blue text">
 
 ## General guidelines
 

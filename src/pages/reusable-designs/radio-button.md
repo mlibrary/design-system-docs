@@ -22,7 +22,7 @@ Radio buttons may also be appropriate for choices such as opting in or out of so
 
 ### Other input options
 
-To allow **multi-select from a list of options**, use [checkboxes](reusable-designs/checkbox/).
+To allow **multi-select from a list of options**, use [checkboxes](/reusable-designs/checkbox/).
 
 For **longer lists of options**, use a dropdown or [select](/reusable-designs/select/). The best choice will depend on context and whether you want to apply custom styles or not.
 

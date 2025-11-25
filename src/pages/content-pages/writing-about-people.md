@@ -42,7 +42,7 @@ Instead, use neutral, non-binary language:
 
 ## Gender and sexuality
 
-When someone’s sex, gender identity, sexual orientation, marital status, or family relationships is relevant, check your assumptions and avoid defaulting to [heteronormativity and cisnormativity](https://www.lgbtqprimaryhub.com/heteronormativity-cisnormativity).
+When someone’s sex, gender identity, sexual orientation, marital status, or family relationships is relevant, check your assumptions and avoid defaulting to [heteronormativity](https://www.diversitystyleguide.com/glossary/heteronormative-heternormativity/) and [cisnormativity](https://translanguageprimer.com/cisnormativity/).
 
 * See [pronouns](/content/writing-about-people/#pronouns) for specific guidance.  
 * Use **spouse** or **partner** instead of husband and wife.  
