@@ -20,7 +20,7 @@ Use this header as a starting point for any website within the domain of lib.umi
 
 Some products (such as the primary library website) may require more customization. In this case, it might be better to create a local component instead of using the reusable design.
 
-[Contact us](about/get-in-touch/) with any questions about creating and editing website headers.
+[Contact us](/about/get-in-touch/) with any questions about creating and editing website headers.
 
 ## Guidelines for website header
 

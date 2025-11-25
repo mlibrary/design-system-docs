@@ -142,13 +142,17 @@ blockquote {
 
 m-universal-header {
   display: block;
-  transition: max-height 0.25s ease-out;
-  max-height: 600px;
+  min-height: 37px;
 }
 
 m-universal-header:not(.hydrated) {
-  height: 3.59rem;
-  max-height: 3.59rem;
+  background: var(--color-blue-100);
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+m-universal-header.hydrated {
+  opacity: 1;
 }
 
 m-website-header {

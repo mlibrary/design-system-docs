@@ -163,7 +163,7 @@ If you’re working in other languages, such as Arabic or Hebrew, these principl
 
 Your link text should be [descriptive and meaningful](../writing-for-people/#make-link-text-descriptive-and-meaningful), clearly indicate the destination of the link, use sentence case (unless it contains a proper noun), and be understandable out of context.
 
-For example, "The library has many [social sciences databases](http://www.lib.umich.edu/browse/Databases/Social%20Sciences) that can help with projects, in subjects ranging from education to urban planning."
+For example, "The library has many [social sciences databases](https://search.lib.umich.edu/databases?filter.academic_discipline=Social+Sciences&sort=title_asc) that can help with projects, in subjects ranging from education to urban planning."
 
 Avoid vague labels and “click here” or “read more."
 

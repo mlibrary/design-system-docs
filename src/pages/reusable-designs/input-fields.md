@@ -16,7 +16,7 @@ Inputs are interactive fields that accept responses from users, commonly as part
 
 These inputs are essentially the same in appearance, but the HTML syntax and formatting requirements are each slightly different.  
 
-Beyond fields, we have reusable designs for the following additional input controls: [checkbox](/reusable-designs/checkbox/), [file upload](/reusable-designs/file-upload/), [radio button](/reusable-designs/radio-button/), [range](/reusable-designs/range/), [select](/reusable-designs/select/), and [search](/reusable-designs/search/).
+Beyond fields, we have reusable designs for the following additional input controls: [checkbox](/reusable-designs/checkbox/), [file upload](/reusable-designs/file-upload/), [radio button](/reusable-designs/radio-button/), [range](/reusable-designs/range/), [select](/reusable-designs/select/), and [search](/reusable-designs/search-input/).
 
 ## Field types and uses
 

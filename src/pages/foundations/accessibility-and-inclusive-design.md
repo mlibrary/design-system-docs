@@ -17,7 +17,7 @@ Accessibility is a shared responsibility. We want our products to be accessible 
 
 We aim to be compliant with [WCAG 2.2 (Level A and AA)](https://www.w3.org/TR/WCAG22/) and follow the [four principles of accessibility](https://www.w3.org/TR/UNDERSTANDING-WCAG20/intro.html#introduction-fourprincs-head).
 
-The Design System site itself is evaluted regularly using enterprise scanning software and automated and manual testing. Sitewide scanning with axe Monitor is performed weekly.
+The Design System site itself is evaluated regularly using enterprise scanning software and automated and manual testing. Sitewide scanning with axe Monitor is performed weekly.
 
 The two most recent accessibility evaluations are:
 
