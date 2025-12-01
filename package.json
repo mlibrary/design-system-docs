@@ -4,8 +4,8 @@
   "description": "Design System Doc Site",
   "main": "index.html",
   "scripts": {
-   "start": "npx eleventy --serve",
-   "build": "npx eleventy"
+    "start": "npx eleventy --serve",
+    "build": "npx eleventy"
   },
   "repository": {
     "type": "git",
@@ -23,10 +23,9 @@
   },
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-fetch": "^4.0.1",
     "eleventy-sass": "^2.2.4",
-    "jsdom": "^26.1.0",
+    "jsdom": "^27.2.0",
     "pagefind": "^1.4.0",
-    "sass": "^1.93.3"
+    "sass": "^1.94.2"
   }
 }
