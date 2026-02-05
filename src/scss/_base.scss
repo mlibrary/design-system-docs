@@ -135,6 +135,17 @@ blockquote {
 }
 
 /* Use focus-visible for keyboard users with the skip links */
+*:focus:not(:focus-visible) {
+  outline: none;
+  box-shadow: none;
+}
+
+*:focus-visible {
+  outline: 0;
+  box-shadow: 0 0 0 2px var(--color-maize-400), 0 0 0 3px var(--color-neutral-400);
+  border-radius: 2px !important;
+}
+
 #main:focus, #footer:focus {
   box-shadow: none;
 }
