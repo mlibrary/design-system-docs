@@ -19,13 +19,13 @@
   },
   "homepage": "https://github.com/mlibrary/design-system-docs#readme",
   "devDependencies": {
-    "@11ty/eleventy-navigation": "^1.0.4"
+    "@11ty/eleventy-navigation": "^1.0.5"
   },
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
     "eleventy-sass": "^2.2.4",
-    "jsdom": "^27.2.0",
+    "jsdom": "^28.0.0",
     "pagefind": "^1.4.0",
-    "sass": "^1.94.2"
+    "sass": "^1.97.3"
   }
 }
