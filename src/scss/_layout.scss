@@ -51,7 +51,6 @@
   flex-wrap: wrap;
   justify-content: start;
   align-items: stretch;
-  gap: 2rem;
 
   @include media.breakpoint('sm', 'max-width') {
     gap: 1rem;
