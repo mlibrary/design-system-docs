@@ -16,8 +16,8 @@
 // ***********************//
 
 .container {
-  margin-top: 2.5rem;
-  margin-bottom: 3rem;
+  margin-top: 0;
+  margin-bottom: 0;
 
   @include media.breakpoint('xs', 'max-width') {
     margin: 1.5rem 0;
@@ -49,9 +49,9 @@
 .flex-layout {
   display: flex;
   flex-wrap: wrap;
-  gap: 3rem;
   justify-content: start;
   align-items: stretch;
+  gap: 2rem;
 
   @include media.breakpoint('sm', 'max-width') {
     gap: 1rem;
@@ -60,7 +60,7 @@
 
 .flex-layout > :first-child {
   flex-grow: 1;
-  flex-basis: 12rem;
+  flex-basis: 16rem;
 }
 
 .flex-layout > :last-child {

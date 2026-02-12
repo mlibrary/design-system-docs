@@ -8,18 +8,12 @@
 
 .back-to-top {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   margin-bottom: 2rem;
 
   @include media.breakpoint('sm', 'max-width') {
     display: none;
   }
-
-  /*
-  .hidden {
-    display: none;
-  }
-  */
 }
 
 .back-to-top-link {
@@ -39,8 +33,7 @@
     "previous next";
   align-items: center;
   justify-content: space-between;
-  padding-top: 1.5rem;
-  max-width: 65ch;
+  padding: 1.5rem 0;
   border-top: solid 1px var(--color-neutral-100);
   margin-top: 3rem;
 

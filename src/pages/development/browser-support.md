@@ -7,7 +7,7 @@ title: Browser Support
 eleventyNavigation:
   key: Browser Support
   summary: The browsers we test in and what testing includes. 
-  parent: Foundations
+  parent: Development
   order: 4
 ---
 

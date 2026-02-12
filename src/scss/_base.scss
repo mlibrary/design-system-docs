@@ -16,9 +16,12 @@
 // ********************** //
 // *** 1. TYPOGRAPHY *** //
 // ******************** //
-h1 {
+.prose h1 {
+  font-family: var(--font-base-family);
+  font-size: 2.5rem;
   font-weight: 400;
   padding-bottom: 1rem;
+  margin-top: 2rem;
 }
 
 .prose h2 {
@@ -34,16 +37,12 @@ h1 {
   margin-bottom: 1rem;
 }
 
-.headers {
-  border-bottom: solid 2px var(--color-neutral-100);
-}
-
 .heading-anchor {
   margin-left: .25rem;
 }
 
-.prose {
-  max-width: 60ch;
+.prose, .prose > img, .prose >p, .prose>ul {
+  max-width: 80ch !important;
 }
 
 // *************************** //
@@ -52,26 +51,48 @@ h1 {
 
 
 // 2.1 Details
-
 details {
-  border: solid 1px var(--color-neutral-100);
-  width: 620px;
-  p {
-    font-size: 1rem;
-    margin: 1rem;
-  }
-} 
-
-summary {
-  border-left: solid 4px var(--color-teal-400);
-  padding: 1rem;
-  list-style: none;
-  cursor: pointer;
-  font-weight: var(--bold);
-  color: var(--color-neutral-400);
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
+details > summary::after {
+  font-family: "Material Symbols Rounded";
+  font-size: 24px;
+  content: "\e313";
+  color: var(--color-teal-400);
+}
+
+details[open] > summary::after {
+  font-family: "Material Symbols Rounded";
+  content: "\e316";
+  color: var(--color-teal-400);
+}
+
+details > summary::marker {
+  display: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary {
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 2px solid transparent;
+  padding: 0.25em 0.5em;
+  list-style: none;
+  cursor: pointer;
+}
+
+details[open] > summary:first-of-type {
+  font-weight: var(--semibold);
+  color: var(--color-teal-400);
+  border-left: 2px solid var(--color-teal-400);
+  padding: 0.25em 0.5em;
+}
 
 // 2.2 Code block (pre)
 

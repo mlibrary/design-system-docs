@@ -2,40 +2,64 @@
 layout: base.njk
 ---
 
-<div class="flex-layout">
+<div class="flex-layout viewport-container">
+  <aside class="page-aside">
+    {% include "partials/side-nav.njk" %}
+  </aside>
   <div class="main-content">
     <div class="banner">
-      <div class="viewport-container banner-container">
-        <div class="banner-text-home">
+      <div class="banner-container">
+        <div class="banner-text">
           {{ content | safe }}
         </div>
-        <div class="banner-image-home"></div>
+        <div class="banner-image"></div>
       </div>
     </div>
     <div class="card-container">
-      <svg
-        class="ovals"
-        role="presentation"
-        aria-hidden="true"
-        focusable="false"
-        width="180"
-        height="49"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"><circle r="3" transform="scale(1 -1) rotate(-72 69.211 -101.325)" fill="#FFB899"/><circle r="3" transform="scale(-1 1) rotate(36 -68.543 -189.014)" fill="#FFB899"/><circle r="3" transform="scale(-1 1) rotate(-36 -45.646 162.427)" fill="#FFB899"/><circle r="3" transform="scale(1 -1) rotate(72 44.98 55.844)" fill="#FFB899"/><circle r="3" transform="matrix(1 0 0 -1 64.19 4.19)" fill="#FFB899"/><circle r="3" transform="scale(1 -1) rotate(-72 19.211 -32.507)" fill="#FFB899"/><circle r="3" transform="scale(-1 1) rotate(36 -18.544 -35.13)" fill="#FFB899"/><circle r="3" transform="scale(-1 1) rotate(-36 4.353 8.544)" fill="#FFB899"/><circle r="3" transform="scale(1 -1) rotate(72 88.743 87.136)" fill="#FFB899"/><circle r="3" transform="matrix(1 0 0 -1 124.19 24.19)" fill="#FFB899"/><circle r="3" transform="scale(1 -1) rotate(-72 35.447 -83.798)" fill="#FFB899"/><circle r="3" transform="scale(-1 1) rotate(36 -79.32 -117.46)" fill="#FFB899"/><circle r="3" transform="scale(-1 1) rotate(-36 5.13 110.874)" fill="#FFB899"/><circle r="3" transform="scale(1 -1) rotate(72 38.743 18.316)" fill="#FFB899"/><circle r="3" transform="matrix(1 0 0 -1 24.19 24.19)" fill="#FFB899"/><circle r="3" transform="scale(1 -1) rotate(-72 -14.552 -14.979)" fill="#FFB899"/><circle r="3" transform="scale(-1 1) rotate(36 -140.097 -199.79)" fill="#FFB899"/><circle r="3" transform="scale(1 -1) rotate(-72 51.401 -135.294)" fill="#FFB899"/><circle r="3" transform="scale(1 -1) rotate(72 99.025 100.694)" fill="#FFB899"/><circle r="3" transform="scale(-1 1) rotate(36 -89.175 -250.362)" fill="#FFB899"/><circle r="3" transform="scale(-1 1) rotate(-36 5.907 213.204)" fill="#FFB899"/><circle r="3" transform="scale(1 -1) rotate(72 82.507 49.608)" fill="#FFB899"/><circle r="3" transform="matrix(1 0 0 -1 84.19 44.19)" fill="#FFB899"/><circle r="3" transform="scale(1 -1) rotate(-72 1.684 -66.27)" fill="#FFB899"/><circle r="3" transform="scale(-1 1) rotate(36 -90.097 -45.907)" fill="#FFB899"/><circle r="3" transform="scale(-1 1) rotate(-36 55.907 59.32)" fill="#FFB899"/><circle r="3" transform="scale(1 -1) rotate(72 32.507 -19.211)" fill="#FFB899"/></svg>
-    
-    <div class="viewport-container">
         <div class="cards">
-          {% for page in collections.landingPage | eleventyNavigation('home') %}
-            <a href="{{ page.url }}">
               <section class="card">
-                <h2>{{ page.title }}</h2>
-                <p>{{ page.summary }}
-                </p>
+                <h2>Follow U-M Library Branding</h2>
+                <p>Pick from established visual elements along with guidance for images and more.</p>
+                <ul class="card-links">
+                  <li><a href="">Library logos</a></li>
+                   <li><a href="">Templates and themes</a></li>
+                <ul>
               </section>
-            </a>
-          {% endfor %}
+              <section class="card">
+                <h2>Write for the Library</h2>
+                <p>Find support for creating content and writing effectively on behalf of the library.</p>
+                 <ul class="card-links">
+                  <li><a href="">Word list</a></li>
+                  <li><a href="">Writing about the library</a></li>
+                <ul>
+              </section>
+              <section class="card">
+                <h2>Design User Interfaces</h2>
+                <p>Use our assets and associated guidance to get started.</p>
+                 <ul class="card-links">
+                  <li><a href="">Colors</a></li>
+                  <li><a href="">Figma toolkit</a></li>
+                  <li><a href="">Icons</a></li>
+                <ul>
+              </section>
+              <section class="card">
+                <h2>Develop User Interfaces</h2>
+                <p>Use specifications, copy and paste HTML and CSS, or web components and design tokens.</p>
+                 <ul class="card-links">
+                  <li><a href="">Design tokens</a></li>
+                  <li><a href="">UI templates</a></li>
+                  <li><a href="">CodePen</a></li>
+                <ul>
+              </section>
         </div>
       </div>
-    </div>
+    <section class="our-team">
+      <div class="our-team-prose">
+      <h2>About our team</h2>
+      <p>The Design System team provides support for designers, developers, project managers, or anyone who is using the system. We’re responsible for making sure contributions to the system are of a high quality and meet our needs to build U-M Library websites.</p>
+      <a>Learn more about the Design System Team</a>
+      </div>
+      <img src="/img/mushie.webp" alt="" width="200px">
+    </section>
   </div>
 </div>

@@ -15,7 +15,6 @@
 }
 
 #search {
-  padding-bottom: calc(1rem - 3px);
   margin-left: auto;  
 
   @include media.breakpoint('xl', 'max-width') {

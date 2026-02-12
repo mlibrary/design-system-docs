@@ -1,0 +1,36 @@
+<nav aria-label="Primary" class="site-side-nav">
+  <ul class="top-level-nav">
+    {% for parent in collections.landingPage | eleventyNavigation('home') %}
+      <li>
+        <details {% if parent.url == page.url or eleventyNavigation.parent == parent.key %}open{% endif %}>
+          <summary>{{ parent.title }}</summary>
+          
+          <ul class="child-level-nav">    
+            {# Use custom collection for Reusable Designs, regular navigation for others #}
+            {% if parent.key == "Reusable Designs" %}
+              {# Use A-Z sorted collection #}
+              {%- for child in collections.reusableDesignAtoZ %}
+                <li>
+                  <a href="{{ child.url }}" {% if page.url == child.url %}aria-current="page"{% endif %}>
+                    {{ child.data.title }}
+                  </a>
+                </li>
+              {%- endfor %}
+            {% else %}
+              {# Use regular navigation for other sections #}
+              {% set childPages = collections.pages | eleventyNavigation(parent.key) %}
+              {%- for child in childPages %}
+                <li>
+                  <a href="{{ child.url }}" {% if page.url == child.url %}aria-current="page"{% endif %}>
+                    {{ child.title }}
+                  </a>
+                </li>
+              {%- endfor %}
+            {% endif %}
+          </ul>
+        </details>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
+{% include "partials/utility-nav.njk" %}

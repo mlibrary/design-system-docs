@@ -3,18 +3,10 @@ layout: base.njk
 ---
 
 <div class="viewport-container">
-  {% include "partials/breadcrumbs.njk" %}
   <div class="flex-layout container">
+    
     <aside class="page-aside">
-    <nav aria-label="Site navigation" class="side-nav">
-      <ul>
-        {%- for entry in collections.reusableDesignAtoZ %}
-          <li {% if entry.url == page.url %} class="active-side-nav-page" {% endif %}>
-            <a href="{{ entry.url }}">{{ entry.data.title }}</a>
-          </li> 
-        {%- endfor %}
-      </ul>
-    </nav>
+        {% include "partials/side-nav.njk" %}
     </aside>
     <div class="main-content" data-pagefind-body>
       <div class="prose">

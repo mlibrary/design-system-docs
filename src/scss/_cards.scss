@@ -3,58 +3,42 @@
 // --------------------------------------------------
 //
 // # Cards
-//   Card components for home and landing pages
-//
+//   1. Card for home page
+//.  2. Cards for landing pages
 // --------------------------------------------------
 
-:root {
-  --shadow-color: 195deg 67% 34%;
-  --shadow-elevation-medium:
-    0px 0.7px 0.8px hsl(var(--shadow-color) / 0.48),
-    0px 2.3px 2.5px -0.9px hsl(var(--shadow-color) / 0.45),
-    0px 6.2px 6.6px -1.9px hsl(var(--shadow-color) / 0.42),
-    0px 15.6px 16.7px -2.8px hsl(var(--shadow-color) / 0.39);
-}
-
-.ovals {
-  position: absolute;
-  top: 3rem;
-  left: -1rem;
-  z-index: -1;
-}
-
 .card-container {
-  position: relative;
-  padding: 4rem 0 4rem;
+  margin: 3rem;
 }
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 500px));
+  grid-template-columns: 1fr; /* 1 column on mobile */
   justify-content: center;
   gap: 1rem 2rem;
 
-  a {
-    text-decoration: none;
-    transition: box-shadow ease-in .2s;
-    display: inherit;
-    border-radius: 0;
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, minmax(250px, 500px)); /* 2 columns on desktop */
+  }
   }
 
-  a:hover {
-    box-shadow: var(--shadow-elevation-medium); 
-
-    @include media.breakpoint('sm', 'max-width') {
-      box-shadow: none;
-   }
+  .card-container--landing .cards  {
+     border: solid 1px transparent;
+    a {
+      text-decoration: none;
+    }
+    
+    .card:hover {
+     background-color: var(--color-orange-100);
+     border: solid 1px var(--color-orange-400);
+    }
   }
-}
 
 .card {
   background-color: var(--color-blue-100);
   padding: 1rem 1.5rem; 
   border-radius: 0;
-  border: solid 1px var(--color-neutral-100);
+  border: none;
 
   h2 {
     font-weight: 600;
@@ -66,5 +50,30 @@
 
   p {
     margin-top: .5rem;
+  }
+}
+
+.card-links {
+  display: flex;
+  gap: 1rem;
+  padding-left: 0;
+}
+
+.card-links li {
+  list-style: none;
+}
+
+.our-team {
+  margin: 3rem;
+  display: grid;
+  grid-template-columns: 2.25fr 1fr;
+  gap: 1rem;
+
+  img {
+    width: 200px;
+  }
+
+  a {
+    font-weight: var(--semibold);
   }
 }

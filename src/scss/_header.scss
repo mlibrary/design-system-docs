@@ -1,0 +1,114 @@
+.website-header {
+  background-color: #fff;
+  color: var(--color-neutral-400);
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.website-header__inner-container,
+.website-header__logo-container {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  line-height: 1.25;
+}
+.website-header__inner-container {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 0 1rem;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+
+@media (min-width: 52rem) {
+  .website-header__inner-container {
+    padding: 0 2.5rem;
+  }
+}
+.website-header__logo-container {
+  flex-grow: 1;
+}
+.website-header__lib-link svg {
+  margin-top: 0.25rem;
+  max-width: 100%;
+}
+.website-header__website-name {
+  color: var(--color-neutral-300);
+  font-size: var(--text-medium);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+a.website-header__website-home-link:not(:hover) {
+  text-decoration: none;
+}
+
+.website-header {
+  border-bottom: solid 2px var(--color-neutral-100);
+}
+
+
+/* Toggle */
+
+.toggle-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .toggle-label {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .toggle-switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
+
+    .toggle-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--toggle-bg);
+      transition: 0.3s;
+      border-radius: 34px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: var(--toggle-fg);
+      transition: 0.3s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: var(--toggle-active-bg);
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+      background-color: var(--toggle-active-fg);
+    }
+
+    input:focus-visible + .slider {
+      outline: 2px solid var(--toggle-active-bg);
+      outline-offset: 2px;
+    }
