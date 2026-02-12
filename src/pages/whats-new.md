@@ -7,8 +7,6 @@ title: What's New
 eleventyNavigation:
   key: What's New
   summary: A rundown of the latest Design System additions and developments.  
-  parent: About
-  order: 3
 ---
 
 # {{ title }}

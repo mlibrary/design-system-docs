@@ -7,7 +7,7 @@ title: Brand
 eleventyNavigation:
   key: Brand
   summary: We are one library and our priority is to empower and support the people who use our services. 
-  parent: Foundations
+  parent: Content
   order: 1
 ---
 

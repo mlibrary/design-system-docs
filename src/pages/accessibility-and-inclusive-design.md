@@ -7,8 +7,6 @@ title: Accessibility and Inclusive Design
 eleventyNavigation:
   key: Accessibility and Inclusive Design
   summary: The overarching strategies we practice to make our products accessible and welcoming for all.
-  parent: Foundations
-  order: 2
 ---
 
 # {{ title }}
