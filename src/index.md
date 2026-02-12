@@ -6,5 +6,4 @@ eleventyNavigation:
   key: home
 ---
 
-# {{ meta.siteName}}
 {{ meta.siteDescription }}

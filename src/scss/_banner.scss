@@ -18,23 +18,21 @@
 }
 
 .banner-container {
-  margin: 3rem;
+  margin: 2rem 3rem;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
+  align-items: end;
 } 
 
 .banner-text {
-
   h1 {
     font-family: var(--font-base-family);
     font-size: 3rem;
   }
 }
 
-.banner-image-home {
-  background-image: url("/img/");
-  background-size: cover;
-  background-repeat: no-repeat;
+.banner-image {
+ 
 
   @include media.breakpoint('sm', 'max-width') {
     display: none;
