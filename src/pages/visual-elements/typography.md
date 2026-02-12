@@ -24,7 +24,7 @@ Our default (base) font-size is 16px. The rest of our typography scale is based 
 
 Font weight is the thickness of text. We use four different weights to differentiate headings from body text and emphasize body text.
 
-We use the following [design tokens](/about/web-components-and-design-tokens/#design-tokens) to specify font-weight:
+We use the following [design tokens](/development/web-components-and-design-tokens/#design-tokens) to specify font-weight:
 
 * Regular: `--regular: 400;`  
 * Semibold: `--semibold: 600;`  
@@ -57,7 +57,7 @@ All body text is 16px or 1rem, regular weight.
 
 Links within body text are `teal-400` and underlined by default.
 
-In some cases, links can be `neutral-400` and have the underline removed, except on hover. This style is often used when many links are presented together, such as with list items where repeated underlines impede readability. [Contact the Design System team](/about/get-in-touch/) with questions about when to use this style.
+In some cases, links can be `neutral-400` and have the underline removed, except on hover. This style is often used when many links are presented together, such as with list items where repeated underlines impede readability. [Contact the Design System team](/our-team/#get-in-touch) with questions about when to use this style.
 
 We also offer a [Link reusable design](/reusable-designs/link).
 

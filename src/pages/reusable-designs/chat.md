@@ -20,7 +20,7 @@ It is used on the [main library website](https://lib.umich.edu), [Library Search
 
 Chat can be added to any site in the U-M Library web presence that’s supported by Ask a Librarian staff and is recommended if the site has a “Contact” page.
 
-In consideration of their staffing capacity, please [contact the Design System team](/about/get-in-touch/) before adding using this reusable design and we will coordinate with our Ask a Librarian colleagues about your use case.
+In consideration of their staffing capacity, please [contact the Design System team](/our-team/#get-in-touch) before adding using this reusable design and we will coordinate with our Ask a Librarian colleagues about your use case.
 
 ## Features of chat
 

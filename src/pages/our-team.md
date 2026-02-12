@@ -1,7 +1,7 @@
 ---
 layout: page.njk
 tags: pages
-permalink: "{{eleventyNavigation.parent | slugify}}/{{page.fileSlug}}/"
+permalink: "{{page.fileSlug}}/"
 
 title: Our Team
 eleventyNavigation:
@@ -32,7 +32,7 @@ Previous members:
 * Ellen Schlegelmilch  
 * Minshan Tang, UI Design Intern
 
-The team works in close collaboration with the library's [Communication and Marketing department](https://lib.umich.edu/about-us/our-divisions-and-departments/deans-office/communication-and-marketing) to create and maintain our [content](/content/) guidelines, as well as ensure alignment with [style and branding](/getting-started/follow-u-m-library-style-and-branding/).
+The team works in close collaboration with the library's [Communication and Marketing department](https://lib.umich.edu/about-us/our-divisions-and-departments/deans-office/communication-and-marketing) to create and maintain our [content](/content/) guidelines, as well as ensure alignment with [branding](/content/brand).
 
 ## Get in touch
 

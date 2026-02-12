@@ -1,12 +1,13 @@
 ---
 layout: page.njk
 tags: pages
-permalink: "{{eleventyNavigation.parent | slugify}}/{{page.fileSlug}}/"
+permalink: "{{page.fileSlug}}/"
 
 title: Accessibility and Inclusive Design
 eleventyNavigation:
   key: Accessibility and Inclusive Design
   summary: The overarching strategies we practice to make our products accessible and welcoming for all.
+  parent: home
 ---
 
 # {{ title }}
@@ -22,7 +23,7 @@ The two most recent accessibility evaluations are:
 - [2025 Design System Doc Site Accessibility Evaluation](https://docs.google.com/document/d/1pZmSr1ILdI99ehR9i3p6gLngnbbZjx5TO8gx1I2Up1Y/edit?usp=sharing)
 - [2023 Design System Doc Site Baseline Evaluation](https://docs.google.com/document/d/1Uif72Lqi39U3XfpZuF1-ecBFIWVjymI14IXJJCPMzlA/edit?usp=sharing)
 
-You must be logged into a umich account to view the documents. Please contact the [Design System team](/about/our-team/) for any issues, questions, or if you would like a copy of the report(s).
+You must be logged into a umich account to view the documents. Please contact the [Design System team](/our-team/) for any issues, questions, or if you would like a copy of the report(s).
 
 ## Start with standards
 

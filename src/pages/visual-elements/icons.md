@@ -25,7 +25,7 @@ While Material Symbols and Material Icons look quite similar, they are different
 
 For design work, you can use the [Material Symbols plugin](https://www.figma.com/community/plugin/1088610476491668236/material-symbols) in Figma or download the SVG files from the [Google Fonts site](https://fonts.google.com/icons?icon.set=Material+Symbols&icon.style=Rounded).
 
-If you aren’t sure which icon to use, can’t find an appropriate one, or have any questions about using them, please [contact the Design System team](/about/our-team/).
+If you aren’t sure which icon to use, can’t find an appropriate one, or have any questions about using them, please [contact the Design System team](/our-team/).
 
 ### Style settings
 

@@ -32,4 +32,4 @@ Within the Google Slide and PowerPoint template folders, you’ll find a README 
 
 ## Other suggestions?
 
-If there are other products that you think would benefit from themes, templates, or design guidance, please [contact the Design System Team](/about/get-in-touch/).
+If there are other products that you think would benefit from themes, templates, or design guidance, please [contact the Design System Team](/get-in-touch/).
