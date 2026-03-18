@@ -17,10 +17,13 @@
   justify-content: center;
   gap: 1rem 2rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1000px) {
     grid-template-columns: repeat(2, minmax(250px, 500px)); /* 2 columns on desktop */
   }
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr;
   }
+}
 
   .card-container--landing .cards  {
      border: solid 1px transparent;
@@ -61,6 +64,17 @@
 
 .card-links li {
   list-style: none;
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+
+    span:not([aria-hidden]) {
+      text-decoration: underline; 
+    }
+  }
 }
 
 .our-team {

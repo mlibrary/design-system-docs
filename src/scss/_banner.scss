@@ -15,10 +15,6 @@
 
 .banner {
   background-color: #ffffff; 
-  background-image:
-    repeating-linear-gradient(0deg, var(--color-teal-100) 0px, var(--color-teal-100) 2px, transparent 2px, transparent 45px),
-    repeating-linear-gradient(-90deg, var(--color-teal-100) 0px, var(--color-teal-100) 2px, transparent 2px, transparent 45px);
-  background-size: 45px 45px;
 }
 
 .banner-container {

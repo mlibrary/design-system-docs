@@ -7,7 +7,7 @@ title: Web Components and Design Tokens
 eleventyNavigation:
   key: Web Components and Design Tokens
   summary: An introduction to the evolving web platform technologies we use.
-  parent: Development
+  parent: Develop
   order: 2
 ---
 

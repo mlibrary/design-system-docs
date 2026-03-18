@@ -1,0 +1,37 @@
+// --------------------------------------------------
+//
+// # icons
+//   The styling for all doc site icons
+//
+// --------------------------------------------------
+
+.utility-icon {
+  transition: transform 2s;
+}
+
+.utility-icon:hover {
+  transform: rotate(-30deg);
+}
+
+.card-links {
+  .material-symbols-rounded {
+    border-radius: 50%;
+    padding: .25rem;
+    font-size: 1.25rem;
+
+    &.develop {
+      background: var(--color-orange-100);
+      color: var(--color-orange-500);
+    }
+
+    &.visual-elements {
+      background: var(--color-pink-100);
+      color: var(--color-pink-500);
+    }
+
+    &.content {
+      background: var(--color-indigo-100);
+      color: var(--color-indigo-500);
+    }
+  }
+}

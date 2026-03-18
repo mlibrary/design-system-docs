@@ -42,9 +42,14 @@
   margin: 0 auto;
 }
 
-.main-content-pages {
+.main-content {
   padding-left: 3rem;
 }
+
+.main-content.home {
+  padding-left: 0;
+}
+
 
 // **************** //
 // *** 3. FLEX *** //

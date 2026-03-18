@@ -6,16 +6,16 @@ layout: base.njk
   <aside class="page-aside">
     {% include "partials/side-nav.njk" %}
   </aside>
-  <div class="main-content">
+  <div class="main-content home">
     <div class="banner">
       <div class="banner-container">
         <div class="banner-text">
           <h1>U-M Library <br> Design System </h1>
           {{ content | safe }}
         </div>
-        <div class="banner-image">
+        <!--<div class="banner-image">
           <img src="/img/tools-desktop.png">
-        </div>
+        </div>-->
       </div>
     </div>
     <div class="card-container">
@@ -24,35 +24,43 @@ layout: base.njk
                 <h2>Follow U-M Library Branding</h2>
                 <p>Pick from established visual elements along with guidance for images and more.</p>
                 <ul class="card-links">
-                  <li><a href="">Library logos</a></li>
-                   <li><a href="">Templates and themes</a></li>
-                <ul>
+                  <li><a href="/visual-elements/logo/"><span class="material-symbols-rounded visual-elements" aria-hidden="true">design_services</span>
+                   <span>Library logos</span></a>
+                  </li>
+                   <li>
+                    <a href="/visual-elements/template-theme/"> <span class="material-symbols-rounded visual-elements" aria-hidden="true">folder</span>
+                    <span>Templates and themes</span></a>
+                  </li>
+                </ul>
               </section>
               <section class="card">
                 <h2>Write for the Library</h2>
                 <p>Find support for creating content and writing effectively on behalf of the library.</p>
-                 <ul class="card-links">
-                  <li><a href="">Voice and tone</a></li>
-                  <li><a href="">Writing about the library</a></li>
-                <ul>
+                 <ul class="card-links visual-elements">
+                  <li><a href="/content/voice-and-tone/"><span class="material-symbols-rounded content" aria-hidden="true">ink_pen</span><span>Voice and tone</span></a></li>
+                  <li><a href="/content/writing-about-the-library/"><span class="material-symbols-rounded content" aria-hidden="true">ink_pen</span><span>Writing about the library</span></a></li>
+                </ul>
               </section>
               <section class="card">
                 <h2>Design User Interfaces</h2>
                 <p>Use our assets and associated guidance to get started.</p>
                  <ul class="card-links">
-                  <li><a href="">Colors</a></li>
-                  <li><a href="">Figma toolkit</a></li>
-                  <li><a href="">Icons</a></li>
-                <ul>
+                  <li><a href="/visual-elements/color/">
+                    <span class="material-symbols-rounded visual-elements" aria-hidden="true">palette</span><span>Color</span></a></li>
+                  <li><a href="https://www.figma.com/@mlibrary">
+                    <span class="material-symbols-rounded visual-elements" aria-hidden="true">design_services</span><span>Figma toolkit</span></a></li>
+                  <li><a href="/visual-elements/icons/"><span class="material-symbols-rounded visual-elements" aria-hidden="true">design_services</span><span>Icons</span></a></li>
+                </ul>
               </section>
               <section class="card">
                 <h2>Develop User Interfaces</h2>
                 <p>Use specifications, copy and paste HTML and CSS, or web components and design tokens.</p>
                  <ul class="card-links">
-                  <li><a href="">Tokens</a></li>
-                  <li><a href="">UI templates</a></li>
-                  <li><a href="">CodePen</a></li>
-                <ul>
+                  <li><a href="/develop/web-components-and-design-tokens/">
+                    <span class="material-symbols-rounded develop" aria-hidden="true">code</span><span>Tokens</span></a></li>
+                  <li><a href="/develop/build-user-interfaces/"><span class="material-symbols-rounded develop" aria-hidden="true">code</span><span>UI templates</span></a></li>
+                  <li><a href="https://codepen.io/team/umlibrary-designsystem"><span class="material-symbols-rounded develop" aria-hidden="true">code</span><span>CodePen</span></a></li>
+                </ul>
               </section>
         </div>
       </div>
@@ -60,7 +68,7 @@ layout: base.njk
       <div class="our-team-prose">
       <h2>About our team</h2>
       <p>The Design System team provides support for designers, developers, project managers, or anyone who is using the system. We’re responsible for making sure contributions to the system are of a high quality and meet our needs to build U-M Library websites.</p>
-      <a>Learn more about the Design System Team</a>
+      <a href="/our-team/">Learn more about the Design System Team</a>
       </div>
       <img src="/img/mushie.webp" alt="" width="200px">
     </section>

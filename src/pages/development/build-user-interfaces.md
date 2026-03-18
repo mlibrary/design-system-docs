@@ -7,7 +7,7 @@ title: Build User Interfaces
 eleventyNavigation:
   key: Build User Interfaces
   summary: Use specifications, copy and paste HTML and CSS, or web components and design tokens.
-  parent: Development
+  parent: Develop
   order: 1
 ---
 

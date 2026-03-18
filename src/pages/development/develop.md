@@ -5,7 +5,7 @@ permalink: "{{page.fileSlug}}/"
 
 title: Development
 eleventyNavigation:
-  key: Development
+  key: Develop
   summary: Resources for building user interfaces.
   parent: home
   order: 7
