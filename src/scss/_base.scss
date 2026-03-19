@@ -12,10 +12,62 @@
 //     2.5 Accessibility
 //     2.6 DS web components
 // --------------------------------------------------
+body,
+html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+body {
+  color: var(--text-primary);
+  font-family: var(--font-base-family);
+  line-height: var(--line-height-default);
+  accent-color: var(--color-teal-400);
+  font-size: 16px;
+  background-color: var(--bg-primary);
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
 
 // ********************** //
 // *** 1. TYPOGRAPHY *** //
 // ******************** //
+
+h1 {
+    font-size: var(--page-heading-size);
+    font-family: var(--font-second-family);
+    line-height: var(--line-height-page-heading);
+}
+
+h2 {
+    font-size: var(--text-medium);
+    font-weight: var(--bold);
+}
+
+h3 {
+    font-size: var(--text-small);
+    font-weight: var(--bold);
+}
+
+.subtle-heading {
+    color: var(--color-neutral-300);
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: var(--bold);
+    font-family: var(--font-base-family);
+}
+
 .prose h1 {
   font-family: var(--font-base-family);
   font-size: 2.5rem;
@@ -43,6 +95,10 @@
 
 .prose, .prose > img, .prose >p, .prose>ul {
   max-width: 80ch !important;
+}
+
+pre {
+    overflow-x: auto;
 }
 
 // *************************** //
@@ -82,7 +138,7 @@ summary {
   justify-content: space-between;
   align-items: center;
   border-left: 2px solid transparent;
-  padding: 0.25em 0.5em;
+  padding: 0.75em 0.5em;
   list-style: none;
   cursor: pointer;
 }
@@ -91,7 +147,11 @@ details[open] > summary:first-of-type {
   font-weight: var(--semibold);
   color: var(--color-teal-400);
   border-left: 2px solid var(--color-teal-400);
-  padding: 0.25em 0.5em;
+  padding: 0.75em 0.5em;
+}
+
+summary:hover {
+  background-color: var(--color-maize-100);
 }
 
 // 2.2 Code block (pre)
@@ -153,6 +213,15 @@ blockquote {
     font-size: 1.25rem;
     padding-left: .25rem;
     vertical-align: sub;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
 }
 
 /* Use focus-visible for keyboard users with the skip links */

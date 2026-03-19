@@ -8,15 +8,13 @@ layout: base.njk
   </aside>
   <div class="main-content home">
     <div class="banner">
-      <div class="banner-container">
+       {% include "partials/banner-images.njk" %}
+      
         <div class="banner-text">
           <h1>U-M Library <br> Design System </h1>
           {{ content | safe }}
         </div>
-        <!--<div class="banner-image">
-          <img src="/img/tools-desktop.png">
-        </div>-->
-      </div>
+      
     </div>
     <div class="card-container">
         <div class="cards">

@@ -1,0 +1,65 @@
+:root {
+  color-scheme: light;
+  /* Brand */
+  --brand-primary: var(--color-blue-400);
+  --brand-secondary: var(--color-maize-400);
+
+  /* Backgrounds */
+  --bg-primary: #fff;
+  --bg-overlay: #fff;
+  --bg-inputs: #fff;
+  --bg-banner: var(--color-indigo-100);
+  --bg-header: #fff;;
+  --bg-footer: var(--brand-primary);
+
+  /* Text */
+  --text-primary: var(--color-neutral-400);
+  --text-secondary: var(--color-neutral-300);
+  --link: var(--color-teal-400);
+  --link-hover: var(--color-teal-500);
+  --link-visited: #575294;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+  color-scheme: dark;
+  --bg-primary: var(--color-neutral-400);
+  --bg-inputs: var(--color-neutral-350);
+  --bg-overlay: var(--color-neutral-300);
+  --bg-banner: var(--color-neutral-400);
+  --bg-header: var(--color-blue-500);
+  --bg-footer: var(--color-blue-500);
+  --text-primary: var(--color-blue-100);
+  --text-secondary: var(--color-neutral-100);
+  --link: var(--color-teal-200);
+  --link-hover: var(--color-teal-100);
+  --link-visited: #b8b3ff;
+  --icon-arrow-down: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path fill="%23ffffff" d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/></svg>');
+  }
+}
+
+/* Dark mode */
+[data-theme="dark"] {
+  color-scheme: dark;
+   --bg-primary: var(--color-neutral-400);
+  --bg-inputs: var(--color-neutral-350);
+  --bg-overlay: var(--color-neutral-300);
+  --text-primary: var(--color-blue-100);
+  --text-secondary: var(--color-neutral-100);
+  --link: var(--color-teal-200);
+  --link-hover: var(--color-teal-100);
+  --link-visited: #b8b3ff;
+  --icon-arrow-down: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path fill="%23ffffff" d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/></svg>');
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --bg-primary: #fff;
+  --bg-overlay: #fff;
+  --bg-inputs: #fff;
+  --text-primary: var(--color-neutral-400);
+  --text-secondary: var(--color-neutral-300);
+  --link: var(--color-teal-400);
+  --link-hover: var(--color-teal-500);
+  --link-visited: #575294;
+}
