@@ -18,10 +18,6 @@
 .container {
   margin-top: 0;
   margin-bottom: 0;
-
-  @include media.breakpoint('xs', 'max-width') {
-    margin: 1.5rem 0;
-  }
 }
 
 .viewport-container {
@@ -44,6 +40,10 @@
 
 .main-content {
   padding-left: 3rem;
+
+@include media.breakpoint('md', 'max-width') {
+   padding-left: 0;
+  }
 }
 
 .main-content.home {
