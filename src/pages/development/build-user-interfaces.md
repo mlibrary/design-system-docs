@@ -15,30 +15,47 @@ eleventyNavigation:
 
 The Design System is flexible so you can use as much or as little as you need to for the interface you’re creating. It is compatible with any framework or no framework at all.
 
-The primary uses when building an interface are:
+There are three levels of adoption:
 
-* Applying colors, fonts, spacing, and other [visual elements](/visual-elements/).  
-* Adding ready-to-use [reusable designs](/reusable-designs/) to your interfaces
+- **Design tokens only** — copy/paste CSS custom properties
+- **Compiled CSS** — design tokens plus opinionated base styles
+- **CSS + Web Components** — full component library via CDN or npm
 
-## Options for use
+{% callout "alert" %}
+We are in the process of releasing a new npm package for the Design System CSS and web components.
+{% endcallout %}
 
-Choose the most appropriate option for what you’re working on to use our visual elements and reusable designs.
+## Design Tokens
 
-Options include:
+View the [design tokens on CodePen](https://codepen.io/team/umlibrary-designsystem/pen/BaEpMGO) and copy/paste into your project.
 
-* Using available specifications (such as hex colors or spacing) in your code without design tokens  
-* Copying and pasting the HTML and CSS available for all of our [reusable designs](/reusable-designs/)
-* Using [web components and design tokens](/development/web-components-and-design-tokens/) when they’re available
+## Compiled CSS
 
-In addition, we encourage everyone to follow the guidelines provided for visual elements and reusable designs to inform your own implementation.
+Includes design tokens and opinionated base styles. Use this if you want consistent foundational styles without the web components.
 
-### Use web components and design tokens
+<a href="https://cdn.jsdelivr.net/npm/@umich-lib/web@latest/umich-lib.css" download>
+  Download CSS (v1.1.1)
+</a>
 
-In order to use web components and design tokens, you’ll need to link to our stylesheet and two script tags to the `<head>`.
+## Web Components
+
+Includes the compiled CSS plus the web components. There are a few ways to get started.
+
+## Install with CDN via jsDelivr
 
 ```html
 <link href="https://cdn.jsdelivr.net/npm/@umich-lib/web@latest/umich-lib.css" rel="stylesheet"/>
 <script type="module" src="https://cdn.jsdelivr.net/npm/@umich-lib/web@latest/dist/umich-lib/umich-lib.esm.js"></script>
 ```
 
-Our overview of [web components and design tokens](/development/web-components-and-design-tokens/) will help you get up to speed if these concepts are new to you.
+## npm
+
+```
+npm i @umich-lib/web
+```
+
+### Download
+
+<a href="https://cdn.jsdelivr.net/npm/@umich-lib/web@latest/umich-lib.css" download>Download umich-lib.css </a>
+
+<a href="https://cdn.jsdelivr.net/npm/@umich-lib/web@latest/dist/umich-lib/umich-lib.esm.js" download>Download web components umich-lib.esm.js</a>

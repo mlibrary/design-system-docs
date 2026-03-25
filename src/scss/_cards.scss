@@ -26,9 +26,12 @@
 }
 
   .card-container--landing .cards  {
-     border: solid 1px transparent;
     a {
       text-decoration: none;
+    }
+    
+    .card {
+      border: solid 1px transparent;
     }
     
     .card:hover {
@@ -58,6 +61,7 @@
 
 .card-links {
   display: flex;
+  flex-flow: row wrap;
   gap: 1rem;
   padding-left: 0;
 }

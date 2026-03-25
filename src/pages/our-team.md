@@ -44,7 +44,8 @@ Email <library-design-system-team@umich.edu> and we’ll respond as soon as poss
 
 Members of U-M Library IT Slack can use our #design-system channel for quick questions.
 
-## Guiding principles and scope
+## Guiding principles
+
 Three guiding principles underpin our design decisions and guide us when we need to make hard choices. We also have a clear scope for what is included in the Design System.
 
 **Backed by research**  
@@ -71,4 +72,3 @@ When deciding whether to add something new to the Design System, we consider thr
 **Is it unique?** Has value and doesn’t replicate something that already exists in the Design System. If it’s intended to replace an existing contribution, then there is evidence to show that it’s better (usability, accessibility, design, etc…).
 
 **Is it ready?** Has been reviewed and approved by the Design System team and tested for accessibility, best practices, and browser support
-
