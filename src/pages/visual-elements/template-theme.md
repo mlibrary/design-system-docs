@@ -6,7 +6,7 @@ permalink: "{{eleventyNavigation.parent | slugify}}/{{page.fileSlug}}/"
 title: Templates and Themes
 eleventyNavigation:
   key: Templates and Themes
-  summary: Templates and ready-made themes with guidelines for creating accessible, U-M Library branded materials in the Google Workspace and PowerPoint.
+  summary: Templates and ready-made themes with guidelines for creating accessible, U-M Library branded materials.
   parent: Visual Elements
   order: 6
 ---

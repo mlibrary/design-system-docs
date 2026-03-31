@@ -17,7 +17,7 @@
 #search {
   margin-left: auto;  
 
-  @include media.breakpoint('sm', 'max-width') {
+  @include media.breakpoint('md', 'max-width') {
     flex-basis: 100%;
 
     .pagefind-ui__drawer {

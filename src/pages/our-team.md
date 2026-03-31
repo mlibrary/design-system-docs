@@ -16,7 +16,7 @@ The **Design System team** provides support for designers, developers, project m
 We’re responsible for making sure contributions to the system are of a high quality and meet our needs to build U-M Library websites.
 
 * [Emma Brown](https://www.lib.umich.edu/users/emkbrown), User Interface/User Experience Designer  
-* [Bridget Burke](https://www.lib.umich.edu/users/burkebri), Sr. Front-end Developer & Accessibility Specialist, Lead  
+* [Bridget Burke](https://www.lib.umich.edu/users/burkebri), Sr. Front-end Developer & Accessibility Specialist, Design System Lead  
 * [Heidi Burkhardt](https://lib.umich.edu/users/heidisb), Web Project Manager and Content Strategist  
 * [Roger Espinosa](https://www.lib.umich.edu/users/roger), Application Programmer/Analyst Lead
 * [Ben Howell](https://www.lib.umich.edu/users/bnhowell), User Experience and Accessibility Specialist  
