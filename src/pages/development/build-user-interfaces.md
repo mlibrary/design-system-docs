@@ -23,7 +23,7 @@ There are four levels of adoption:
 - **CSS + Web Components**: full component library via CDN or npm
 
 {% callout "alert" %}
-We are in the process of releasing a new npm package for the Design System CSS and web components.
+We are in the process of releasing new package(s) for the Design System CSS and web components. Please reach out to the [Design System team](/our-team/#get-in-touch) if you are building a new Library user interface or making updates to an existing interface.
 {% endcallout %}
 
 ## Design Tokens
@@ -61,6 +61,6 @@ npm i @umich-lib/web
 
 ### Download
 
-[Download umich-lib.css](https://cdn.jsdelivr.net/npm/@umich-lib/web@latest/umich-lib.css)
+[View complied umich-lib.css](https://cdn.jsdelivr.net/npm/@umich-lib/web@latest/umich-lib.css)
 
-[Download web components umich-lib.esm.js](https://cdn.jsdelivr.net/npm/@umich-lib/web@latest/dist/umich-lib/umich-lib.esm.js)
+[View complied web components umich-lib.esm.js](https://cdn.jsdelivr.net/npm/@umich-lib/web@latest/dist/umich-lib/umich-lib.esm.js)

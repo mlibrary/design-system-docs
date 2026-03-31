@@ -9,6 +9,14 @@
 
 .card-container {
   margin: 3rem 0 3rem 3rem;
+
+  @include media.breakpoint('md', 'max-width') {
+  margin: 2rem 0;
+  }
+
+  @include media.breakpoint('sm', 'max-width') {
+  margin: 1rem 0;
+  }
 }
 
 .cards {
@@ -91,9 +99,17 @@
 
   img {
     width: 200px;
+      @include media.breakpoint('sm', 'max-width') {
+   display: none;
+    }
   }
 
   a {
     font-weight: var(--semibold);
+  }
+
+  @include media.breakpoint('sm', 'max-width') {
+    display: flex;
+    margin: 1rem 0 2.5rem;
   }
 }
