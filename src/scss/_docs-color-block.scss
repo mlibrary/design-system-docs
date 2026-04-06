@@ -10,8 +10,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: var(--space-medium);
-  // margin-top: var(--space-xx-large);
   width: calc(min(1280px, 80vw) - 12rem);
+  max-width: 80ch;
 }
 
 .color-palette ol {

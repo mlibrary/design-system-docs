@@ -29,12 +29,4 @@ The types of testing we complete vary depending on what we’re working on, but 
 While reusable designs may not look exactly the same in every browser, functionality should be consistent.
 {% endcallout %}
 
-{% callout "print" %}
-While reusable designs may not look exactly the same in every browser, functionality should be consistent.
-{% endcallout %}
-
-{% callout "alert" %}
-This is an example of a warning alert callout.
-{% endcallout %}
-
 If you have an issue or find a bug, please contact us at <library-design-system-team@umich.edu>.

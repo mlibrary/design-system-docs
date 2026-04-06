@@ -10,10 +10,13 @@
     --color-maize-300: #ffda50;
     --color-maize-400: #ffcb05;
     --color-maize-500: #eaba02;
+    --color-neutral-50: #e5e9ed;
     --color-neutral-100: #e5e9ed;
     --color-neutral-200: #8a96a1;
     --color-neutral-300: #637381;
+    --color-neutral-350: #384655;
     --color-neutral-400: #212b36;
+    --color-neutral-450: #1a232c; 
     --color-neutral-500: #06080a;
     --color-teal-100: #e9f2f5;
     --color-teal-200: #a7cddb;
@@ -78,23 +81,13 @@
     --radius-default: 4px;
     --line-length: 60ch;
 
-  /* Brand */
-  --brand-primary: var(--color-blue-400);
-  --brand-secondary: var(--color-maize-400);
+   --viewport-margin: var(--space-medium);
+  --page-heading-size: var(--space-xx-large);
+}
 
-  /* Backgrounds */
-  --bg-primary: #fff;
-  --bg-overlay: #fff;
-  --bg-inputs: #fff;
-  --bg-banner: var(--color-indigo-100);
-  --bg-header: #fff;;
-  --bg-footer: var(--brand-primary);
-  --bg-sub-footer: var(--color-blue-500);
-
-  /* Text and Links */
-  --text-primary: var(--color-neutral-400);
-  --text-secondary: var(--color-neutral-300);
-  --link: var(--color-teal-400);
-  --link-hover: var(--color-teal-500);
-  --link-visited: #575294;
+@media (min-width: 720px) {
+  :root {
+    --viewport-margin: var(--space-xx-large);
+    --page-heading-size: var(--space-xxx-large);
+  }
 }

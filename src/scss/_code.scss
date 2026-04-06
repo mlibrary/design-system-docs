@@ -10,7 +10,7 @@
 
 code[class^='language-'] {
   position: relative;
-  color: var(--color-blue-400);
+  color: var(--text-code-block);
   padding: 2.5rem 2rem 1.5rem;
   font-family: Consolas,Monaco,Courier New,Courier,monospace;
   border-radius: var(--radius-default);
@@ -19,7 +19,7 @@ code[class^='language-'] {
   font-size: .9rem;
   display: block;
 
-    --background-color: var(--color-blue-100);
+    --background-color: var(--bg-code-block);
     --shadow-color: rgba(29, 116, 145, 0.55);
     --shadow-size: 1em;
     --transparent: rgba(255, 255, 255, 0);

@@ -1,39 +1,79 @@
 :root {
   color-scheme: light;
-  /* Brand */
+    /* Brand */
   --brand-primary: var(--color-blue-400);
   --brand-secondary: var(--color-maize-400);
+  --logo-mark: var(--color-maize-400);
+  --logo-wordmark: var(--color-blue-400);
 
   /* Backgrounds */
   --bg-primary: #fff;
-  --bg-overlay: #fff;
+  --bg-secondary: var(--color-neutral-50);
+  --bg-tertiary: var(--color-neutral-100);
+  --bg-modal:  #fff;
+  --bg-overlay: rgba(255, 255, 255, 0.4);
   --bg-inputs: #fff;
   --bg-banner: var(--color-indigo-100);
-  --bg-header: #fff;;
+  --bg-header: #fff;
   --bg-footer: var(--brand-primary);
+  --bg-sub-footer: var(--color-blue-500);
+  --bg-card: var(--color-blue-100);
+  --bg-code-block: var(--color-blue-100);
 
-  /* Text */
+  /* Text and Links */
   --text-primary: var(--color-neutral-400);
   --text-secondary: var(--color-neutral-300);
+  --text-header: var(--color-neutral-300);
+  --text-code-block: var(--color-blue-400);
+  --badge: var(--color-neutral-300);
   --link: var(--color-teal-400);
   --link-hover: var(--color-teal-500);
   --link-visited: #575294;
+  
+  /* Accents */
+  --border-color: var(--color-neutral-100);
+  --active-page-nav: var(--color-teal-100);
+  --banner-svg-grid: var(--color-teal-100);
+  --hover-accent: var(--color-maize-100);
+  --toggle-svg: var(--color-neutral-400);
+
+  /* Inputs */
+  --pagefind-ui-text: var(--color-neutral-350);
+  --pagefind-ui-background: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
   color-scheme: dark;
-  --bg-primary: var(--color-neutral-400);
-  --bg-inputs: var(--color-neutral-350);
-  --bg-overlay: var(--color-neutral-300);
+  --logo-wordmark: #ffffff;
+  --logo-mark: var(--color-maize-400);
+  --bg-primary: var(--color-neutral-450);
+  --bg-secondary: var(--color-neutral-400);
+  --bg-tertiary: var(--color-neutral-350);
+  --bg-modal:  var(--color-neutral-400);
+  --bg-inputs: var(--color-neutral-400);
+  --bg-overlay: rgba(26, 35, 44, 0.4);
   --bg-banner: var(--color-neutral-400);
   --bg-header: var(--color-blue-500);
   --bg-footer: var(--color-blue-500);
+  --bg-card: var(--color-neutral-400);
+  --bg-code-block: var(--color-neutral-400);
+  --bg-sub-footer: var(--color-neutral-500);
   --text-primary: var(--color-blue-100);
-  --text-secondary: var(--color-neutral-100);
+  --text-secondary: var(--color-blue-200);
+  --text-header: var(--color-neutral-100);
+  --text-code-block: var(--color-blue-200);
+  --badge: var(--color-blue-200);
   --link: var(--color-teal-200);
   --link-hover: var(--color-teal-100);
   --link-visited: #b8b3ff;
+  --border-color: var(--color-neutral-300);
+  --active-page-nav: var(--color-neutral-350);
+  --banner-svg-grid: var(--color-neutral-350);
+  --hover-accent: var(--color-neutral-350);
+  --toggle-svg: var(--color-blue-100);
+  --pagefind-ui-text: var(--color-blue-100);
+  --pagefind-ui-background: var(--color-neutral-400);
   --icon-arrow-down: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path fill="%23ffffff" d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/></svg>');
   }
 }
@@ -41,25 +81,77 @@
 /* Dark mode */
 [data-theme="dark"] {
   color-scheme: dark;
-   --bg-primary: var(--color-neutral-400);
-  --bg-inputs: var(--color-neutral-350);
-  --bg-overlay: var(--color-neutral-300);
+  --logo-mark: var(--color-maize-400);
+  --logo-wordmark: #fff;
+  --bg-primary: var(--color-neutral-450);
+  --bg-secondary: var(--color-neutral-400);
+  --bg-tertiary: var(--color-neutral-350);
+  --bg-modal:  var(--color-neutral-400);
+  --bg-banner: var(--color-neutral-400);  
+  --bg-header: var(--color-blue-500);    
+  --bg-footer: var(--color-blue-500); 
+  --bg-sub-footer: var(--color-neutral-500);
+  --bg-card: var(--color-neutral-400);
+  --bg-code-block: var(--color-neutral-400);
+  --bg-inputs: var(--color-neutral-400);
+  --bg-overlay: rgba(26, 35, 44, 0.4);
   --text-primary: var(--color-blue-100);
-  --text-secondary: var(--color-neutral-100);
+  --text-secondary: var(--color-blue-200);
+  --text-header: var(--color-neutral-100);
+  --text-code-block: var(--color-blue-200);
+  --badge: var(--color-blue-200);
   --link: var(--color-teal-200);
   --link-hover: var(--color-teal-100);
   --link-visited: #b8b3ff;
+  --border-color: var(--color-neutral-300);
+  --active-page-nav: var(--color-neutral-350);
+  --banner-svg-grid: var(--color-neutral-350);
+  --hover-accent: var(--color-neutral-350);
+  --toggle-svg: var(--color-blue-100);
+  --pagefind-ui-text: var(--color-blue-100);
+  --pagefind-ui-background: var(--color-neutral-400);
   --icon-arrow-down: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path fill="%23ffffff" d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/></svg>');
 }
 
 [data-theme="light"] {
   color-scheme: light;
+  --brand-primary: var(--color-blue-400);
+  --brand-secondary: var(--color-maize-400);
+  --logo-mark: var(--color-maize-400);
+  --logo-wordmark: var(--color-blue-400);
+
+  /* Backgrounds */
   --bg-primary: #fff;
-  --bg-overlay: #fff;
+  --bg-secondary: var(--color-neutral-50);
+  --bg-tertiary: var(--color-neutral-100);
+  --bg-modal:  #fff;
+  --bg-overlay: rgba(255, 255, 255, 0.4);
   --bg-inputs: #fff;
+  --bg-banner: var(--color-indigo-100);
+  --bg-header: #fff;;
+  --bg-footer: var(--brand-primary);
+  --bg-sub-footer: var(--color-blue-500);
+  --bg-card: var(--color-blue-100);
+  --bg-code-block: var(--color-blue-100);
+
+  /* Text and Links */
   --text-primary: var(--color-neutral-400);
   --text-secondary: var(--color-neutral-300);
+  --text-header: var(--color-neutral-300);
+  --text-code-block: var(--color-blue-400);
+  --badge: var(--color-neutral-300);
   --link: var(--color-teal-400);
   --link-hover: var(--color-teal-500);
   --link-visited: #575294;
+
+   /* Accents */
+  --border-color: var(--color-neutral-100);
+  --active-page-nav: var(--color-teal-100);
+  --banner-svg-grid: var(--color-teal-100);
+  --hover-accent: var(--color-maize-100);
+  --toggle-svg: var(--color-neutral-400);
+
+   /* Inputs */
+  --pagefind-ui-text: var(--color-neutral-350);
+  --pagefind-ui-background: #ffffff;
 }

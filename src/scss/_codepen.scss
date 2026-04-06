@@ -9,6 +9,7 @@
 
 .cp_embed_wrapper {
   width: calc(min(1280px, 80vw) - 12rem);
+  max-width: 100ch;
 
   @include media.breakpoint('md', 'max-width') {
     width: 100%;
