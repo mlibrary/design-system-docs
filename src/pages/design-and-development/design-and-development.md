@@ -3,9 +3,9 @@ tags: landingPage
 layout: landing-page.njk
 permalink: "{{page.fileSlug}}/"
 
-title: Development
+title: Design and Development
 eleventyNavigation:
-  key: Develop
+  key: Design and Development
   summary: Resources for building user interfaces.
   parent: home
   order: 7

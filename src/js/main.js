@@ -1,10 +1,16 @@
-// Add aria-label to Search
-let searchBtn = document.querySelector(".pagefind-ui__search-input");
-searchBtn.setAttribute("aria-label", "Search documentation");
-searchBtn.setAttribute("placeholder", "Search documentation");
 
-// Adding link for headings
 document.addEventListener('DOMContentLoaded', () => {
+  // Show JS-only elements
+  document.querySelectorAll('.js-only').forEach(el => {
+    el.style.display = '';
+  });
+
+  // Add aria-label to Search
+  let searchBtn = document.querySelector(".pagefind-ui__search-input");
+  searchBtn.setAttribute("aria-label", "Search documentation");
+  searchBtn.setAttribute("placeholder", "Search documentation");
+
+  // Adding link for headings
   document.querySelectorAll('h2[id], h3[id], h4[id], h5[id], h6[id]').forEach(heading => {
     const link = document.createElement('a');
     link.href = `#${heading.id}`;

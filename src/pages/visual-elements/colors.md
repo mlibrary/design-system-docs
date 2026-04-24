@@ -3,9 +3,9 @@ layout: page.njk
 tags: pages
 permalink: "{{eleventyNavigation.parent | slugify}}/{{page.fileSlug}}/"
 
-title: Color
+title: Colors
 eleventyNavigation:
-  key: Color
+  key: Colors
   summary: An overview of our color palettes, accessibility guidelines, and examples of our colors in action.
   parent: Visual Elements
   order: 1

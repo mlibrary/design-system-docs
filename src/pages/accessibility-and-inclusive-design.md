@@ -44,7 +44,7 @@ We also follow plain language practices recognizing many people using the librar
 
 ## Be thoughtful about color and images
 
-Our [color palette](/visual-elements/color/) provides a set of options to support consistency and create accessible combinations.
+Our [color palette](/visual-elements/colors/) provides a set of options to support consistency and create accessible combinations.
 
 ## Design for keyboard navigation
 

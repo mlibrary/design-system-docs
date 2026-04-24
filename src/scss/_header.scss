@@ -9,6 +9,7 @@
 .website-header__inner-container {
   display: flex;
   align-items: flex-end;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 0.5rem 1rem;
   line-height: 1.25;
@@ -41,6 +42,11 @@
   font-size: var(--text-medium);
   letter-spacing: 0.5px;
   text-transform: uppercase;
+}
+
+.search-theme-container {
+  display: flex;
+  gap: 0 1rem;
 }
 
 /* Theme Select */

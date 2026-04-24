@@ -267,7 +267,7 @@ kbd {
   border-radius: 2px !important;
 }
 
-#main:focus, #footer:focus {
+#main-content:focus, #footer:focus {
   box-shadow: none;
 }
 #main:focus-visible, #footer:focus-visible {
@@ -304,4 +304,8 @@ m-website-header:not(.hydrated) {
 
 m-website-header:not(.hydrated) > * {
   display: none;
+}
+
+.js-only { 
+  display: none; 
 }

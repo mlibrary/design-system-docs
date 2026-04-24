@@ -15,7 +15,17 @@ eleventyNavigation:
 
 When writing about the library, assume that your audience knows nothing about our organizational structure.
 
-To help make it clear the information is coming from the U-M Library, be sure to use shared [visual elements](/visual-elements/) and follow the library’s [voice and tone guidelines](/content/voice-and-tone/).
+To help make it clear the information is coming from the U-M Library, be sure to use shared visual-elements and follow the library’s [voice and tone guidelines](/content/voice-and-tone/).
+
+Our goal is to make sure the library's content is easily recognizable and portrays the library as a trusted source where people can access clear and necessary information.
+
+## One library
+
+We are **one** library.
+
+In other words, the resources and services we provide are resources and services provided by **the U-M Library**. Any references to individual units and departments are secondary.
+
+By representing ourselves as one library, we can build trust and recognition, help people understand the breadth and depth of our offerings, and make connections between services and resources that might otherwise get lost.
 
 ## Our identity
 
@@ -49,14 +59,16 @@ The U-M Library is made up of multiple library locations and collections. Use th
 * Clark Library
 * Computer and Video Game Archive (CVGA)  
 * Fine Arts Library  
-* Hatcher Library  
+* Hatcher Library*  
 * Museums Library  
 * Music Library  
 * MLibrary@NCRC  
 * Papyrology Collection  
-* Shapiro Library
+* Shapiro Library*
 * Special Collections Research Center (SCRC)  
 * Taubman Health Sciences Library (THSL)
+
+\* The full names for these buildings are Hatcher Graduate Library and Shapiro Undergraduate Library, but we intentionally shorten them in most communications to make it clear both buildings are open to students of all levels.
 
 ### Independent libraries and collections
 
