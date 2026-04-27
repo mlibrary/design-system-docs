@@ -54,7 +54,7 @@ In our designs, anything that can be seen by hovering with a mouse is also acces
 
 ## Test with assistive technology
 
-In addition to our design and development practices, we test our [visual elements](/visual-elements/) and [reusable designs](/reusable-designs/) for accessibility with automated and manual techniques.
+In addition to our design and development practices, we test our visual elemetns and reusable designs for accessibility with automated and manual techniques.
 
 These include native and third-party tools like:
 

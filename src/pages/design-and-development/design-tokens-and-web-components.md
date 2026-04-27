@@ -83,4 +83,4 @@ Not every reusable design is a good candidate for a web component. Our team is d
 
 ## Ready to get started?
 
-Visit the [Build User Interfaces](/develop/build-user-interfaces/) page for CDN, npm, and download options.
+Visit the [Build User Interfaces](/design-and-development/build-user-interfaces/) page for CDN, npm, and download options.
