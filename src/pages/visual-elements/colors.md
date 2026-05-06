@@ -29,7 +29,7 @@ See our [full color table](#full-color-table) and [contact the Design System tea
 
 Use white text when the text is on a dark background. For example, teal-400 and pink-400 buttons must use white text. View our [Figma Guidelines](https://www.figma.com/@mlibrary) for more examples.
 
-Learn more about how to use these colors as design tokens when [building a user interface](/development/build-user-interfaces/)
+Learn more about how to use these colors as design tokens when [building a user interface](/development/build-user-interfaces/).
 
 ## Accessibility
 
