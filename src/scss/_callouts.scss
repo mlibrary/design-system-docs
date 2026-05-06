@@ -121,8 +121,8 @@
 
 .umich-lib-callout,
 blockquote {
-  color: var(--color-neutral-400);
-  background-color: #fff;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
   margin: 1.5rem 0;
   padding: 1rem;
   border: solid 1px #E5E9ED;
@@ -132,6 +132,10 @@ blockquote {
 .umich-lib-callout {
   display: flex;
   align-items: center;
+}
+
+.umich-lib-callout p {
+ color: var(--color-neutral-400);
 }
 
 .umich-lib-callout a {
@@ -203,5 +207,5 @@ blockquote {
   padding-bottom: 0;
   border-left: solid 4px transparent;
   font-weight: normal;
-  color: var(--color-neutral-400);
+  color: var(--text-primary);
 }
