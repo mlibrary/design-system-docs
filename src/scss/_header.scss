@@ -1,3 +1,5 @@
+@use 'media';
+
 .website-header {
   background-color: var(--bg-header);
   color: var(--color-neutral-400);
@@ -17,6 +19,11 @@
   max-width: 1280px;
   padding: 0 1rem;
   width: 100%;
+
+  @include media.breakpoint('md', 'max-width') {
+    align-items: center;
+    justify-content: flex-start;
+  }
 }
 
 .website-header__inner-container a {
@@ -25,6 +32,11 @@
   align-items: center;
   text-decoration: none;
   gap: .5rem 1rem;
+
+  @include media.breakpoint('sm', 'max-width') {
+    flex: 1;
+    gap: .25rem 0;
+  }
 }
 
 .website-header__inner-container a:hover {
@@ -41,85 +53,153 @@
   color: var(--text-header);
   font-size: var(--text-medium);
   letter-spacing: 0.5px;
+
+  @include media.breakpoint('sm', 'max-width') {
+    flex-basis: 100%;
+  }
   text-transform: uppercase;
+}
+
+.website-header__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
 }
 
 .search-theme-container {
   display: flex;
+  align-items: center;
   gap: 0 1rem;
-}
+  margin-left: auto;
+  min-width: 0;
 
-/* Theme Select */
-
-.theme-select-container {
-  display: flex;
-  flex-flow: column nowrap;
-
-  label {
-  font-size: .875rem;
+  @include media.breakpoint('md', 'max-width') {
+    flex-basis: 100%;
+    margin-left: 0;
   }
 }
 
-.select-wrap {
-  position: relative;
-  display: inline-block;
+/* Theme Toggle */
+
+.theme-toggle-container {
+  display: flex;
+  align-items: center;
 }
 
-.select-wrap select {
-  font-size: 1rem;
-  padding: .6rem;
-  border-radius: 0; 
-  border: 1px solid var(--color-neutral-300);
-  background-color: var(--bg-inputs);
-  color: var(--text-primary);
+.theme-toggle {
+  background: none;
+  border: none;
+  padding: 0;
   cursor: pointer;
-  appearance: none;
-  min-width: 100px;
-  transition: border-color 0.15s;
+  border-radius: 999px;
+  line-height: 0; // prevents extra space under inline button
+
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 999px;
+  }
 }
 
-.select-wrap select:hover  { border-color: var(--border-hover); }
-.select-wrap select:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
+.theme-toggle__track {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 72px;
+  height: 40px;
+  border-radius: 999px;
+  background-color: var(--color-maize-400);
+  border: 2px solid var(--color-neutral-300);
+  padding: 0 8px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  box-sizing: border-box;
+
+  @include media.reduced-motion {
+    transition: none;
+  }
 }
 
-/* Custom chevron */
-.select-wrap svg {
+[data-theme="dark"] .theme-toggle__track {
+  background-color: var(--color-blue-300);
+  border-color: var(--color-neutral-300);
+}
+
+.theme-toggle__knob {
   position: absolute;
-  right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--color-maize-100);
+  border: 1.5px solid var(--color-neutral-300);
+  left: 3px;
   top: 50%;
   transform: translateY(-50%);
-  pointer-events: none;
-  width: 14px;
-  height: 14px;
+  transition: transform 0.2s ease;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+
+  @include media.reduced-motion {
+    transition: none;
+  }
 }
 
-.select-wrap::after {
-  content: '';
-  position: absolute;
-  right: 32px; // sits between text and chevron
-  top: 50%;
-  transform: translateY(-50%);
-  width: 16px;
-  height: 16px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  pointer-events: none;
+.theme-toggle[aria-checked="true"] .theme-toggle__knob,
+[data-theme="dark"] .theme-toggle__knob {
+  transform: translateY(-50%) translateX(32px);
+  background-color: var(--color-blue-100);
 }
 
-.select-wrap[data-theme-value="system"]::after {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="%23637381"><path d="M160-240q-33 0-56.5-23.5T80-320v-440q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v440q0 33-23.5 56.5T800-240H680l28 28q6 6 9 13.5t3 15.5v23q0 17-11.5 28.5T680-120H280q-17 0-28.5-11.5T240-160v-23q0-8 3-15.5t9-13.5l28-28H160Zm0-80h640v-440H160v440Zm0 0v-440 440Z"/></svg>');
-}
-.select-wrap[data-theme-value="light"]::after {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="%23637381"><path d="M451.5-771.5Q440-783 440-800v-80q0-17 11.5-28.5T480-920q17 0 28.5 11.5T520-880v80q0 17-11.5 28.5T480-760q-17 0-28.5-11.5ZM678-678q-11-11-11-27.5t11-28.5l56-57q12-12 28.5-12t28.5 12q11 11 11 28t-11 28l-57 57q-11 11-28 11t-28-11Zm122 238q-17 0-28.5-11.5T760-480q0-17 11.5-28.5T800-520h80q17 0 28.5 11.5T920-480q0 17-11.5 28.5T880-440h-80ZM451.5-51.5Q440-63 440-80v-80q0-17 11.5-28.5T480-200q17 0 28.5 11.5T520-160v80q0 17-11.5 28.5T480-40q-17 0-28.5-11.5ZM226-678l-57-56q-12-12-12-29t12-28q11-11 28-11t28 11l57 57q11 11 11 28t-11 28q-12 11-28 11t-28-11Zm508 509-56-57q-11-12-11-28.5t11-27.5q11-11 27.5-11t28.5 11l57 56q12 11 11.5 28T791-169q-12 12-29 12t-28-12ZM80-440q-17 0-28.5-11.5T40-480q0-17 11.5-28.5T80-520h80q17 0 28.5 11.5T200-480q0 17-11.5 28.5T160-440H80Zm89 271q-11-11-11-28t11-28l57-57q11-11 27.5-11t28.5 11q12 12 12 28.5T282-225l-56 56q-12 12-29 12t-28-12Zm141-141q-70-70-70-170t70-170q70-70 170-70t170 70q70 70 70 170t-70 170q-70 70-170 70t-170-70Zm283-57q47-47 47-113t-47-113q-47-47-113-47t-113 47q-47 47-47 113t47 113q47 47 113 47t113-47ZM480-480Z"/></svg>');
-}
-.select-wrap[data-theme-value="dark"]::after {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"><path d="M480-120q-151 0-255.5-104.5T120-480q0-138 90-239.5T440-838q13-2 23 3.5t16 14.5q6 9 6.5 21t-7.5 23q-17 26-25.5 55t-8.5 61q0 90 63 153t153 63q31 0 61.5-9t54.5-25q11-7 22.5-6.5T819-479q10 5 15.5 15t3.5 24q-14 138-117.5 229T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"/></svg>');
+.theme-toggle__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+  svg {
+    width: 22px;
+    height: 22px;
+  }
 }
 
-.select-wrap select {
-  padding-left: 12px;  
-  padding-right: 52px; 
+// Knob icon colors
+.theme-toggle__icon--light { color: var(--color-neutral-300); }
+.theme-toggle__icon--dark  { color: var(--color-blue-400); display: none; }
+
+.theme-toggle[aria-checked="true"] {
+  .theme-toggle__icon--light { display: none; }
+  .theme-toggle__icon--dark { display: flex; }
+}
+
+// data-theme mirrors aria-checked but is set before first paint (prevents flash)
+[data-theme="dark"] .theme-toggle__icon--light { display: none; }
+[data-theme="dark"] .theme-toggle__icon--dark { display: flex; }
+
+.theme-toggle__track-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+
+  svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+// Sun on track — visible in dark mode (knob is on right)
+.theme-toggle__track-icon--light {
+  color: var(--color-blue-200);
+}
+
+// Moon on track — visible in light mode (knob is on left)
+.theme-toggle__track-icon--dark {
+  color: var(--color-neutral-300);
 }

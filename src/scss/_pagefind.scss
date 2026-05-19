@@ -13,11 +13,10 @@
 }
 
 #search {
-  margin-left: auto;  
+  flex: 1;
+  min-width: 0;
 
   @include media.breakpoint('md', 'max-width') {
-    flex-basis: 100%;
-
     .pagefind-ui__drawer {
       width: 100%;
       max-height: 70dvh;

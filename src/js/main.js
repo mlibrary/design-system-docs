@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
   // Show JS-only elements
   document.querySelectorAll('.js-only').forEach(el => {
@@ -20,40 +19,34 @@ document.addEventListener('DOMContentLoaded', () => {
     heading.appendChild(link);
   });
 
-  // Theme select
-  const themeSelect = document.getElementById('theme-select');
+  // Theme toggle
+  const themeToggle = document.getElementById('theme-toggle');
 
-  if (themeSelect) {
-    const selectWrap = themeSelect.closest('.select-wrap'); // ← no extra id needed
+  const themeAnnouncement = document.getElementById('theme-toggle-announcement');
 
-    function applyTheme(value) {
-      if (value === 'system') {
-        document.documentElement.removeAttribute('data-theme');
-        localStorage.removeItem('theme');
-      } else {
-        document.documentElement.setAttribute('data-theme', value);
-        localStorage.setItem('theme', value);
+  if (themeToggle) {
+    function applyTheme(isDark, announce = false) {
+      document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      themeToggle.setAttribute('aria-checked', String(isDark));
+      if (announce && themeAnnouncement) {
+        themeAnnouncement.textContent = isDark ? 'Dark mode on' : 'Dark mode off';
       }
     }
 
-    function updateSelectIcon(value) {
-      if (selectWrap) selectWrap.setAttribute('data-theme-value', value);
-    }
-
+    // Set initial state: saved preference, or fall back to browser preference
     const saved = localStorage.getItem('theme');
-    themeSelect.value = (saved === 'dark' || saved === 'light') ? saved : 'system';
-    updateSelectIcon(themeSelect.value);
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    applyTheme(saved === 'dark' || (saved === null && prefersDark));
 
-    themeSelect.addEventListener('change', () => {
-      applyTheme(themeSelect.value);
-      updateSelectIcon(themeSelect.value);
+    // Keep toggle in sync if OS preference changes and no saved preference
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+      if (!localStorage.getItem('theme')) applyTheme(e.matches, true);
     });
 
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-      if (!localStorage.getItem('theme')) {
-        themeSelect.value = 'system';
-        updateSelectIcon('system');
-      }
+    themeToggle.addEventListener('click', () => {
+      const isDark = themeToggle.getAttribute('aria-checked') === 'true';
+      applyTheme(!isDark, true);
     });
   }
 });
