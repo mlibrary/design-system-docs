@@ -125,7 +125,7 @@ blockquote {
   background-color: var(--bg-primary);
   margin: 1.5rem 0;
   padding: 1rem;
-  border: solid 1px #E5E9ED;
+  border: solid 1px var(--border-color);
   border-radius: 4px;
 }
 
@@ -135,7 +135,7 @@ blockquote {
 }
 
 .umich-lib-callout p {
- color: var(--color-neutral-400);
+ color: var(--text-primary);
 }
 
 .umich-lib-callout a {
@@ -150,12 +150,12 @@ blockquote > p:first-of-type {
 
 .umich-lib-callout.info {
   padding: 1rem 1rem 1rem 1.5rem;
-  border-left: solid 4px var(--color-teal-400);
-  background-color: var(--color-teal-100);
+  border-left: solid 4px var(--callout-info-accent);
+  background-color: var(--bg-callout-info);
   &::before {
     font-family: "Material Symbols Rounded";
     content: '\e88e';
-    color: var(--color-teal-400);
+    color: var(--callout-info-accent);
     font-size: 1.5rem;
     padding-right: 1rem;
     float:left;
@@ -163,12 +163,12 @@ blockquote > p:first-of-type {
 }
 
 .umich-lib-callout.print {
-  border-left: solid 4px var(--color-green-400);
-  background-color: var(--color-green-100);
+  border-left: solid 4px var(--callout-print-accent);
+  background-color: var(--bg-callout-print);
   &::before {
     font-family: "Material Symbols Rounded";
     content: '\e8ad';
-    color: var(--color-green-400);
+    color: var(--callout-print-accent);
     font-size: 1.5rem;
     padding-right: 1rem;
     float:left;
@@ -176,11 +176,11 @@ blockquote > p:first-of-type {
 }
 
 .umich-lib-callout.alert {
-  border-left: solid 4px var(--color-orange-400);
-  background-color: var(--color-maize-100);
+  border-left: solid 4px var(--callout-alert-accent);
+  background-color: var(--bg-callout-alert);
   &::before {
     font-family: "Material Symbols Rounded";
-    color: var(--color-pink-400);
+    color: var(--callout-alert-accent);
     content: '\e002';
     font-size: 1.5rem;
     padding-right: 1rem;

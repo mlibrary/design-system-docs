@@ -19,6 +19,9 @@
   --bg-sub-footer: var(--color-blue-500);
   --bg-card: var(--color-blue-100);
   --bg-code-block: var(--color-blue-100);
+  --bg-callout-info: var(--color-teal-100);
+  --bg-callout-print: var(--color-green-100);
+  --bg-callout-alert: var(--color-maize-100);
 
   /* Text and Links */
   --text-primary: var(--color-neutral-400);
@@ -36,6 +39,9 @@
   --banner-svg-grid: var(--color-teal-100);
   --hover-accent: var(--color-teal-100);
   --toggle-svg: var(--color-neutral-400);
+  --callout-info-accent: var(--color-teal-400);
+  --callout-print-accent: var(--color-green-400);
+  --callout-alert-accent: var(--color-orange-400);
 
   /* Inputs */
   --pagefind-ui-text: var(--color-neutral-350);
@@ -58,6 +64,9 @@
   --bg-footer: var(--color-blue-500);
   --bg-card: var(--color-neutral-400);
   --bg-code-block: var(--color-neutral-400);
+  --bg-callout-info: var(--color-neutral-400);
+  --bg-callout-print: var(--color-neutral-400);
+  --bg-callout-alert: var(--color-neutral-400);
   --bg-sub-footer: var(--color-neutral-500);
   --text-primary: var(--color-blue-100);
   --text-secondary: var(--color-blue-200);
@@ -67,10 +76,13 @@
   --link: var(--color-teal-200);
   --link-hover: var(--color-teal-100);
   --link-visited: #b8b3ff;
-  --border-color: var(--color-neutral-300);
+  --border-color: var(--color-neutral-350);
   --active-page-nav: var(--color-neutral-350);
   --banner-svg-grid: var(--color-neutral-350);
   --hover-accent: var(--color-neutral-350);
+  --callout-info-accent: var(--color-teal-200);
+  --callout-print-accent: var(--color-green-200);
+  --callout-alert-accent: var(--color-orange-200);
   --toggle-svg: var(--color-blue-100);
   --pagefind-ui-text: var(--color-blue-100);
   --pagefind-ui-background: var(--color-neutral-400);
@@ -95,6 +107,9 @@
   --bg-code-block: var(--color-neutral-400);
   --bg-inputs: var(--color-neutral-400);
   --bg-overlay: rgba(26, 35, 44, 0.4);
+  --bg-callout-info: var(--color-neutral-400);
+  --bg-callout-print: var(--color-neutral-400);
+  --bg-callout-alert: var(--color-neutral-400);
   --text-primary: var(--color-blue-100);
   --text-secondary: var(--color-blue-200);
   --text-header: var(--color-neutral-100);
@@ -103,10 +118,13 @@
   --link: var(--color-teal-200);
   --link-hover: var(--color-teal-100);
   --link-visited: #b8b3ff;
-  --border-color: var(--color-neutral-300);
+  --border-color: var(--color-neutral-350);
   --active-page-nav: var(--color-neutral-350);
   --banner-svg-grid: var(--color-neutral-350);
   --hover-accent: var(--color-neutral-350);
+  --callout-info-accent: var(--color-teal-200);
+  --callout-print-accent: var(--color-green-200);
+  --callout-alert-accent: var(--color-orange-200);
   --toggle-svg: var(--color-blue-100);
   --pagefind-ui-text: var(--color-blue-100);
   --pagefind-ui-background: var(--color-neutral-400);
@@ -128,11 +146,14 @@
   --bg-overlay: rgba(255, 255, 255, 0.4);
   --bg-inputs: #fff;
   --bg-banner: var(--color-indigo-100);
-  --bg-header: #fff;;
+  --bg-header: #fff;
   --bg-footer: var(--brand-primary);
   --bg-sub-footer: var(--color-blue-500);
   --bg-card: var(--color-blue-100);
   --bg-code-block: var(--color-blue-100);
+  --bg-callout-info: var(--color-teal-100);
+  --bg-callout-print: var(--color-green-100);
+  --bg-callout-alert: var(--color-maize-100);
 
   /* Text and Links */
   --text-primary: var(--color-neutral-400);
@@ -150,6 +171,9 @@
   --banner-svg-grid: var(--color-teal-100);
   --hover-accent: var(--color-teal-100);
   --toggle-svg: var(--color-neutral-400);
+  --callout-info-accent: var(--color-teal-400);
+  --callout-print-accent: var(--color-green-400);
+  --callout-alert-accent: var(--color-orange-400);
 
    /* Inputs */
   --pagefind-ui-text: var(--color-neutral-350);

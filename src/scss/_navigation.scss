@@ -16,9 +16,9 @@
 .page-aside {
   border-right: solid 1px var(--border-color);
 
-   @include media.breakpoint('md', 'max-width') {
+  @include media.breakpoint('md', 'max-width') {
     display: none;
-    
+
     &.show {
       display: block;
       border: solid 1px var(--border-color);
@@ -29,36 +29,40 @@
 .site-side-nav ul {
   padding-left: 0;
   margin-top: 0;
- }
+}
 
- .top-level-nav li {
-   list-style: none;
-   border-bottom: solid 1px var(--border-color);
-   padding: 0;
- }
+.top-level-nav li {
+  list-style: none;
+  border-bottom: solid 1px var(--border-color);
+  padding: 0;
+}
 
-  .child-level-nav li {
-   list-style: none;
-   border: none;
-   padding: 0;
+.child-level-nav {
+  padding-bottom: .25rem;
+}
 
-   a {
+.child-level-nav li {
+  list-style: none;
+  border: none;
+  padding: 0;
+
+  a {
     color: var(--text-primary);
     text-decoration: none;
     display: block;
     padding: .5rem 0 .5rem 1rem;
-   }
+  }
 
-   a:hover {
+  a:hover {
     text-decoration: underline;
     background-color: var(--hover-accent);
-   }
-   
-   a[aria-current="page"] {
+  }
+
+  a[aria-current="page"] {
     text-decoration: underline;
     background-color: var(--active-page-nav);
-   }
- }
+  }
+}
 
 // 1.2 Header Toggle for Mobile Nav
 
@@ -69,8 +73,8 @@
   cursor: pointer;
 
   @include media.breakpoint('md', 'max-width') {
-   display: block;
- } 
+    display: block;
+  }
 }
 
 button[aria-expanded]::after {
@@ -92,7 +96,7 @@ button[aria-expanded="true"]::after {
 // **************************** //
 
 .utility-nav {
-    margin-top: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .utility-nav ul {
@@ -123,6 +127,7 @@ button[aria-expanded="true"]::after {
     align-items: flex-start;
     gap: 0.25rem;
   }
+
   li a:hover {
     text-decoration: underline;
   }
