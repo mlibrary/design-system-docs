@@ -39,13 +39,15 @@ Bold can also be used to add emphasis in body text. See [using bold for style](h
 
 When formatting headings, use the following sizes and weights:
 
-* H1, Muli 32px, 2rem, Bold  
-* Alternate H1, Crimson 56px, 3.5rem, Regular  
-* H2, Muli 28px, 1.75rem Bold  
-* H3, Muli 24px, 1.5rem, Regular  
-* H4, Muli 20px, 1.25rem, Regular  
-* H5, Muli 18px, 1.125rem, may use Regular, Bold, or Bold underlined depending on context, but should be consistent across the product  
-* H6, Muli 16px, 1rem, Semibold
+| Heading | Font family | Size | Weight |
+| --- | --- | --- | --- |
+| H1 | Muli | 32px / 2rem | Bold |
+| H1 (alternate) | Crimson | 56px / 3.5rem | Regular |
+| H2 | Muli | 28px / 1.75rem | Bold |
+| H3 | Muli | 24px / 1.5rem | Regular |
+| H4 | Muli | 20px / 1.25rem | Regular |
+| H5 | Muli | 18px / 1.125rem | Regular, Bold, or Bold underlined depending on context |
+| H6 | Muli | 16px / 1rem | Semibold |
 
 [Code examples below](#typography-code-examples) demonstrate how each of these and other typography elements display.  
 

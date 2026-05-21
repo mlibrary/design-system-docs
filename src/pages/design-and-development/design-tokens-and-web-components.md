@@ -33,9 +33,9 @@ a {
 
 We use two layers of design tokens for flexibility.
 
-**Primitive tokens** are raw values. This is every color, size, and weight available in the system. They describe *what a value is*. `--color-teal-400` is a primitive token: it's always `#1d7491`, no matter where or how it's used.
+**Primitive tokens** are raw values. This is every color, size, and weight available in the system. They describe what a value is. `--color-teal-400` is a primitive token: it's always `#1d7491`, no matter where or how it's used.
 
-**Semantic tokens** reference a primitive token and describe *how a value is used*. For example, `--link` will reference `--color-teal-400` in light theme and a different primitive in dark theme. Resuable designs reference semantic tokens rather than primitives, so the same code works correctly across themes without any changes.
+**Semantic tokens** reference a primitive token and describe how a value is used. For example, `--link` will reference `--color-teal-400` in light theme and a different primitive (`--color-teal-200`) in dark theme. Resuable designs reference semantic tokens rather than primitives, so the same code works correctly across themes without any changes.
 
 ```css
 /* Primitive token — the raw value */

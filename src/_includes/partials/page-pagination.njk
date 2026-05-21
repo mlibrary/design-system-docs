@@ -1,4 +1,14 @@
 
+{% if eleventyNavigation.parent == 'home' %}
+
+<nav class="page-pagination" aria-label="pagination">
+  <div class="pagination-text previous-page">
+    <a href="/">Home<span class="visually-hidden">previous page</span></a>
+  </div>
+</nav>
+
+{% else %}
+
 {% set parentNav = collections.all | eleventyNavigation(eleventyNavigation.parent) %}
 {% set nextItem = null %}
 {% set prevItem = null %}
@@ -21,3 +31,5 @@
     </div>
   {% endif %}
 </nav>
+
+{% endif %}

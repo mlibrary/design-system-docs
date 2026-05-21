@@ -18,7 +18,7 @@ They contain a short description and can also feature an icon on the left side o
 
 ## When to use banners
 
-We have two types of banner: informational and warning
+We have two types of banners: informational and warning.
 
 Teal **informational** banners are used to communicate non-urgent information, such as action items for users or information about changes to services. These banners have a lower urgency, but provide important details warranting its use.
 

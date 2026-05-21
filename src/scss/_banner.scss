@@ -70,7 +70,7 @@
   }
 
   @include media.breakpoint('xs', 'max-width') {
-   padding: 0;
+   padding: 0 0 0 2rem;
    }
 }
 

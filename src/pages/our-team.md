@@ -7,6 +7,7 @@ title: Our Team
 eleventyNavigation:
   key: Our Team
   summary: Members of the team who make things happen. 
+  parent: home
 ---
 
 # {{ title }}

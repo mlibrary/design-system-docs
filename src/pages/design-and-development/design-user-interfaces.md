@@ -21,8 +21,10 @@ Reusable designs are the heart of the Design System and aim to provide the build
 
 ## Design Toolkits
 
-Our team uses [Figma](https://www.figma.com/)  in our design work.
+### Figma
 
-[Best practices for scaled design in Figma](https://docs.google.com/document/d/16SJAFx2EepnSY6xLau8ZEBw6b1Ez1flkim0jP2VXBIs/edit?usp=sharing) is a good place to start if you are new to designing in Figma or would like some guidance and insight into how members of the Design System Team use the tools.
+Our team uses Figma for collaborative UI design work. Our [Figma UI Toolkit](https://www.figma.com/@mlibrary) contains the styles and components that make up our visual elements and reusable designs. These assets will help you create designs and prototypes.
 
-The [Figma UI Toolkit](https://www.figma.com/@mlibrary) contains the styles and components that make up our visual elements and reusable designs. These assets will help you create designs and prototypes.
+### Canva
+
+We provide the [color table](https://canva.link/ur7kf3l9hzpwo9l) in Canva as well as a [guide and templates](https://canva.link/sitnv842ka1sabk) for files sized at a 16:9 ratio, which are used across the library for digital signage and slide presentations. Anyone can view these files and make copies in their personal Canva accounts to use the colors and typography guidelines.

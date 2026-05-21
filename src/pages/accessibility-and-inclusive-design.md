@@ -22,7 +22,7 @@ The two most recent accessibility evaluations of this site were in 2025 and 2023
 
 ## Start with standards
 
-​​We love HTML, CSS, and JavaScript. We prioritize using these foundational web technologies so the Design System can be used by developers working with any framework or no framework at all
+​​We love HTML, CSS, and JavaScript. We prioritize using these foundational web technologies so the Design System can be used by developers working with any framework or no framework at all.
 
 We extend HTML by using features from the Accessible Rich Internet Applications (WAI-ARIA or ARIA) specification to build in functionality that is not available in native HTML. This is done in a purposeful manner and with guidance from the [W3C’s ARIA design patterns library](https://www.w3.org/TR/wai-aria-practices/examples/) to make our products more accessible.
 
