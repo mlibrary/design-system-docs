@@ -28,7 +28,7 @@ Please contact the [Design System team](/our-team/) if there are any questions!
 
 ## May 2025
 
-- New [Icon](/visual-elements/icons) guidelines for using Material Symbols.
+- New [Icon](/visual-elements/icons/) guidelines for using Material Symbols.
 - Completed and shared the [2025 Design System Doc Site Accessibility Evaluation](https://docs.google.com/document/d/1pZmSr1ILdI99ehR9i3p6gLngnbbZjx5TO8gx1I2Up1Y/edit?usp=sharing) and shared more detailed information on [Accessibility and Inclusive Design](/accessibility-and-inclusive-design/).
 - Updated [Google Slide theme templates](https://drive.google.com/drive/folders/1uIDCY-OIyd2cET3PkpZVOco32wGKsM91) to improve accessibility and PDF creation by making decorative accents part of the background image in the theme.
 
@@ -42,7 +42,7 @@ Please contact the [Design System team](/our-team/) if there are any questions!
 
 - Added [Badges](/reusable-designs/badges/) and [Tags](/reusable-designs/tags/) as Reusable Designs  
 - Added a new team member to [Our Team](/our-team/)! (Welcome, Josh!)  
-- New script tag for our [Web Components](/development/web-components-and-design-tokens/).
+- New script tag for our [Web Components](/design-and-development/design-tokens-and-web-components/).
 
 ## May 2024
 
