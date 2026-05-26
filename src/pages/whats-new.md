@@ -14,7 +14,7 @@ eleventyNavigation:
 
 This is where you'll find a rundown of the latest Design System additions and developments.
 
-Please contact the [Design System team](/our-team/) if there are any questions!
+Please contact the [Design System team](/our-team-and-approach/) if there are any questions!
 
 ## October 2025
 
@@ -41,7 +41,7 @@ Please contact the [Design System team](/our-team/) if there are any questions!
 ## October 2024
 
 - Added [Badges](/reusable-designs/badges/) and [Tags](/reusable-designs/tags/) as Reusable Designs  
-- Added a new team member to [Our Team](/our-team/)! (Welcome, Josh!)  
+- Added a new team member to [our team](/our-team-and-approach/)! (Welcome, Josh!)  
 - New script tag for our [Web Components](/design-and-development/design-tokens-and-web-components/).
 
 ## May 2024

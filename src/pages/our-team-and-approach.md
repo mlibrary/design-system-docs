@@ -3,9 +3,9 @@ layout: page.njk
 tags: pages
 permalink: "{{page.fileSlug}}/"
 
-title: Our Team
+title: Our Team and Approach
 eleventyNavigation:
-  key: Our Team
+  key: Our Team and Approach
   summary: Members of the team who make things happen. 
   parent: home
 ---

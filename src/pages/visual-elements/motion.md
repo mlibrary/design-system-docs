@@ -17,7 +17,7 @@ Motion — micro-interactions and animations — can bring design elements to li
 
 There are important factors to consider in your implementation of any motion in a user interface. Movement can cause dizziness and nausea for users with vestibular disorders and distract users with attention-deficit/hyperactivity disorder, causing them to lose track of their focus. You have to use motion thoughtfully and strategically and it must not harm or distract users.
 
-{% callout "info" %} Anyone who wants to add motion should directly contact the [Design System team](/our-team/#get-in-touch) for help. {% endcallout %}
+{% callout "info" %} Anyone who wants to add motion should directly contact the [Design System team](/our-team-and-approach/#get-in-touch) for help. {% endcallout %}
 
 ## Types of motion
 

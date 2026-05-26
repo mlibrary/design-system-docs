@@ -19,7 +19,7 @@ We also provide a neutral gray and a set of secondary colors: orange, pink, indi
 
 Across all colors, 400-level is the primary shade.
 
-See our [full color table](#full-color-table) and [contact the Design System team](/our-team/) with questions about appropriate color choices.
+See our [full color table](#full-color-table) and [contact the Design System team](/our-team-and-approach/) with questions about appropriate color choices.
 
 ## Text color
 

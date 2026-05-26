@@ -23,7 +23,7 @@ There are four levels of adoption:
 - **CSS + Web Components**: full component library via CDN or npm
 
 {% callout "alert" %}
-We are in the process of releasing new package(s) for the Design System CSS and web components. Please reach out to the [Design System team](/our-team/#get-in-touch) if you are building a new Library user interface or making updates to an existing interface.
+We are in the process of releasing new package(s) for the Design System CSS and web components. Please reach out to the [Design System team](/our-team-and-approach/#get-in-touch) if you are building a new library user interface or making updates to an existing interface.
 {% endcallout %}
 
 ## Design Tokens
@@ -38,9 +38,7 @@ Includes design tokens and opinionated base styles. Use this if you want consist
 
 ## Reusable Designs (components)
 
-The [Reusable Designs](/reusable-designs/) are pre-built HTML and CSS components — badges, buttons, tables, navigation patterns, and more. They require the compiled CSS to be loaded in your project.
-
-Browse the library, find what you need, and copy the code directly into your project.
+The [Reusable Designs](/reusable-designs/) are pre-built HTML and CSS components: badges, buttons, input fields, tables, and more. Load the compiled CSS in your project to use them. Then you can browse the list, find the component you need, and copy the code directly into your project.
 
 ## Web Components
 

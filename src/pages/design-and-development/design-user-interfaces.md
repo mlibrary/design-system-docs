@@ -27,4 +27,4 @@ Our team uses Figma for collaborative UI design work. Our [Figma UI Toolkit](htt
 
 ### Canva
 
-We provide the [color table](https://canva.link/ur7kf3l9hzpwo9l) in Canva as well as a [guide and templates](https://canva.link/sitnv842ka1sabk) for files sized at a 16:9 ratio, which are used across the library for digital signage and slide presentations. Anyone can view these files and make copies in their personal Canva accounts to use the colors and typography guidelines.
+We provide the [color table](https://canva.link/ur7kf3l9hzpwo9l) in Canva as well as a [guide and templates](https://canva.link/sitnv842ka1sabk) for files sized at a 16:9 ratio, which can be used for digital signage and promotional slides. Anyone can view these files and make copies in their personal Canva accounts to use the colors and typography guidelines.

@@ -18,7 +18,7 @@ We aim to be compliant with [WCAG 2.2 (Level A and AA)](https://www.w3.org/TR/WC
 
 The Design System site itself is evaluated regularly using enterprise scanning software and automated and manual testing.
 
-The two most recent accessibility evaluations of this site were in 2025 and 2023. Please contact the [Design System team](/our-team/) for any issues or questions about the accessibility of this site or any of our resources.
+The two most recent accessibility evaluations of this site were in 2025 and 2023. Please contact the [Design System team](/our-team-and-approach/) for any issues or questions about the accessibility of this site or any of our resources.
 
 ## Start with standards
 
