@@ -19,11 +19,11 @@ The library uses two symbols for its visual identity: the block M version, and t
 
 ## Block M version
 
- <img class="block-m" src="/img/MLibrary_block_M.png" alt="Square block M Library logo with a maize block M and Library presented in white text below the M on a dark blue background">
+ <img class="block-m" src="/img/MLibrary_block_M.png" alt="Square block M Library logo with a maize block M and Library presented in white text below the M on a dark blue background" width="216" height="230">
 
- ## Horizontal signature version
- 
-<img class="horizontal-signature" src="/img/MLibrary_signature.png" alt="Signature horizontal M Library logo with a maize block M and Library presented in blue text">
+## Horizontal signature version
+
+<img class="horizontal-signature" src="/img/MLibrary_signature.png" alt="Signature horizontal M Library logo with a maize block M and Library presented in blue text" width="504" height="72">
 
 ## General guidelines
 

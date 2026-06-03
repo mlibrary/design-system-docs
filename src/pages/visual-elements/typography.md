@@ -81,7 +81,7 @@ While there is no perfect line length, aim for an average of 50-80 characters pe
 
 You can use the design token `--line-length: 60 characters`.
 
-<img src="https://assets.codepen.io/t-1120/Line-Length-v2.png?format=auto" alt="Visualization for suggested line lengths. 0 to 50 characters is too narrow. Just right is considered between 50 and 80 characters. Too wide would be 80 to 100 characters.">
+<img src="https://assets.codepen.io/t-1120/Line-Length-v2.png?format=auto" alt="Visualization for suggested line lengths. 0 to 50 characters is too narrow. Just right is considered between 50 and 80 characters. Too wide would be 80 to 100 characters." width="767" height="360">
 
 ## Typography code examples
 

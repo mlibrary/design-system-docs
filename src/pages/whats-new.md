@@ -16,12 +16,22 @@ This is where you'll find a rundown of the latest Design System additions and de
 
 Please contact the [Design System team](/our-team-and-approach/) if there are any questions!
 
+## June 2026
+
+We have a brand new look for the site. This is the 4th redesign of our documentation site since we started the Design System in 2017. This update refreshes the visual design, layout, and navigation of the 2023 redesign.
+
+### New additions and features
+
+- Dark and light mode/theme.
+- New navigation item: Design and Development.
+- New [design toolkits](/design-and-development/design-user-interfaces/#design-toolkits).
+
 ## October 2025
 
 - New [Link](/reusable-designs/link/) Reusable Design.
 - New [Motion](/visual-elements/motion/) guidelines for micro-interactions and animations.
 - New U-M branded [PowerPoint template](https://drive.google.com/drive/folders/1Uz8Oki6S4CFbW9c1ISiXXvuRQHnIApYa)
-- New [Templates and Themes](/visual-elements/template-theme/) page for our U-M branded materials in Google and PowerPoint.
+- New [Templates and Themes](/visual-elements/document-templates-and-guidelines/) page for our U-M branded materials in Google and PowerPoint.
 - Updates to our guidelines for using [bold and italics](/content/grammar-and-style/#bold-and-italics) in [Grammar and Style](/content/grammar-and-style/).
 - Testing out a new social card image.
 - Updates to the design and layouts for our [Google Slides Theme Templates](https://drive.google.com/drive/folders/1uIDCY-OIyd2cET3PkpZVOco32wGKsM91)
@@ -73,7 +83,7 @@ This is the 3rd major redesign of our documentation site since we started the De
 ### New features of this site
 
 - Site sections with landing pages: Getting Started, Foundations, Visual Elements, Content, Reusable Designs, and About  
-- Look and feel essentials in [Visual Elements](/visual-elements/)  with connections to our Figma Design Library  
+- Look and feel essentials in [Visual Elements](/visual-elements/) with connections to our Figma Design Library  
 - CodePen code samples embedded on [Reusable Designs](/reusable-designs/) pages  
 - Paths guiding different audiences using the Design System through the site in getting started.
 - Extensive [Content](/content/) guidance to support writing for the library across contexts
