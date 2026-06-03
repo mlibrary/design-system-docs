@@ -59,6 +59,6 @@ npm i @umich-lib/web
 
 ### Download
 
-[View complied umich-lib.css](https://cdn.jsdelivr.net/npm/@umich-lib/web@latest/umich-lib.css)
+[View compiled umich-lib.css](https://cdn.jsdelivr.net/npm/@umich-lib/web@latest/umich-lib.css)
 
-[View complied web components umich-lib.esm.js](https://cdn.jsdelivr.net/npm/@umich-lib/web@latest/dist/umich-lib/umich-lib.esm.js)
+[View compiled web components umich-lib.esm.js](https://cdn.jsdelivr.net/npm/@umich-lib/web@latest/dist/umich-lib/umich-lib.esm.js)

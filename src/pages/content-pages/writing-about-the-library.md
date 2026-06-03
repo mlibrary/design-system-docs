@@ -15,7 +15,7 @@ eleventyNavigation:
 
 When writing about the library, assume that your audience knows nothing about our organizational structure.
 
-To help make it clear the information is coming from the U-M Library, be sure to use shared visual-elements and follow the library’s [voice and tone guidelines](/content/voice-and-tone/).
+To help make it clear the information is coming from the U-M Library, be sure to use shared visual elements and follow the library’s [voice and tone guidelines](/content/voice-and-tone/).
 
 Our goal is to make sure the library's content is easily recognizable and portrays the library as a trusted source where people can access clear and necessary information.
 

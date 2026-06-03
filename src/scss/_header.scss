@@ -93,13 +93,7 @@
   padding: 0;
   cursor: pointer;
   border-radius: 999px;
-  line-height: 0; // prevents extra space under inline button
-
-  &:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 3px;
-    border-radius: 999px;
-  }
+  line-height: 0;
 }
 
 .theme-toggle__track {

@@ -15,7 +15,7 @@ eleventyNavigation:
 
 If you are designing a U-M Library branded interface, we provide the assets and associated guidance to get you started.
 
-Our visual elements include [colors](/visual-elements/colors/), [typography](/visual-elements/typography/), and [icons](/visual-elements/images/), as well as support for using [images](/visual-elements/images/) and the U-M Library [logo](/visual-elements/logo/).
+Our visual elements include [colors](/visual-elements/colors/), [typography](/visual-elements/typography/), and [icons](/visual-elements/icons/), as well as support for using [images](/visual-elements/images/) and the U-M Library [logo](/visual-elements/logo/).
 
 Reusable designs are the heart of the Design System and aim to provide the building blocks for designing your interface.
 
