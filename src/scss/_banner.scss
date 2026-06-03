@@ -14,79 +14,80 @@
 // ************************ //
 
 .banner {
-  background-color: var(--color-teal-100);
+  display: grid;
+  grid-template-areas: "banner";
+  width: 100%;
+  overflow-x: clip;
+
+   @include media.breakpoint('xl', 'max-width') {
+   border-right: solid 2px var(--banner-svg-grid);
+   }
 }
 
-.banner-container {
+#banner-grid,
+#banner-images,
+.banner-text {
+  grid-area: banner; 
+}
+
+#banner-grid {
+  z-index: 1;
+}
+
+#banner-images{
+  z-index: 2;
+}
+
+.banner-text {
+  z-index: 3;
   display: flex;
-} 
-
-.banner-text-home, .banner-image-home {
-  width: calc(50% - .5rem);
-}
-
-.banner-image-home {
-  background-image: linear-gradient(45deg,
-  rgba(16, 102, 132, 0.25),
-  rgba(8,83,156, 0.25)), url("/img/library.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  @include media.breakpoint('sm', 'max-width') {
-    display: none;
-  }
-}
-
-.banner-text-home {
-  padding: 2rem 0;
-
-  .breadcrumbs {
-    padding: 0 0 1.5rem;
-  }
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
 
   h1 {
-   max-width: 12ch;
-  }
-  p {
-    max-width: 50ch;
-    font-size: 1.125rem;
-  }
+    font-family: var(--font-base-family);
+    font-size: 3rem;
+    margin-top: .75rem;
+    background: var(--bg-overlay); 
+    max-width: 12ch;
 
-  @include media.breakpoint('sm', 'max-width') {
-    width: 100%;
-  }
-}
-
-.banner-text.landing {
-  padding: 2rem 0;
-
-  .breadcrumbs {
-    padding: 0 0 1.5rem;
-  }
-
-  h1 {
-    max-width: 20ch;
+    @include media.breakpoint('sm', 'max-width') {
+    font-size: 2.5rem;
+    max-width: 100%;
+    }
   }
   
- p {
-    font-size: 1rem;
-    margin-top: 0;
-    margin-bottom: 0;
+  p {
+    font-family: var(--font-base-family);
+    font-size: 1.25rem;
+    background: var(--bg-overlay); 
+    max-width: 30ch;
+    
+    @include media.breakpoint('sm', 'max-width') {
+    max-width: 20ch;
+    }
   }
 
-
-  @include media.breakpoint('sm', 'max-width') {
-    width: 100%;
-  }
+  @include media.breakpoint('xs', 'max-width') {
+   padding: 0 0 0 2rem;
+   }
 }
 
+.banner {
+  @include media.breakpoint('lg', 'max-width') {
+    #banner-images {
+      display: none;
+    }
+  }
+}
 
 // ******************************************** //
 // *** 2. Banners for Feedback and Contact *** //
 // ****************************************** //
 
 .feedback-banner {
-  background-color: var(--color-indigo-100);
+  background-color:var(--bg-banner);
   padding: 1em 0;
   
   a {
@@ -102,5 +103,5 @@
 .feedback-icon, .contact-icon {
   border-radius: 100%;
   margin-right: .5rem;
-  color: var(--color-teal-400);
+  color: var(--link);
 }

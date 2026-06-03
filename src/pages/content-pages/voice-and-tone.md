@@ -15,9 +15,9 @@ eleventyNavigation:
 
 The University of Michigan Library voice is clear and helpful with a welcoming tone.
 
-We focus on the experiences of people who use our services and spaces — and prioritize helping people find, access, and use what they need to get their work done. 
+We focus on the experiences of people who use our services and spaces — and prioritize helping people find, access, and use what they need to get their work done.
 
-Our voice is not pompous or self-congratulatory. It doesn't focus on the library’s organizational structure or its achievements. For example, "Further your research by…" rather than "We are a world leader in…."
+Our voice is not pompous or self-congratulatory. It focuses on our audience, not the library’s organizational structure or its achievements. For example, "Further your research by…" rather than "We are a world leader in…."
 
 ## Clear
 
@@ -47,3 +47,22 @@ A welcoming tone encourages people to explore and ask questions.
 * Write conversationally. Be human (contractions are your friend), and use an [active voice](/content/writing-for-people/#use-active-voice).  
 * Consider who will read your content, why they’ll read it, and where they’ll read it.  
 * Avoid specialist terms and acronyms, unless you tell users what they mean in plain language.
+
+## Focus on our audience
+
+Our priority is to empower and support the people who use our services. When it comes to public-facing communication and interfaces, it's about them, not us.
+
+Audience focused:
+
+* Advance your research with ...
+* Get help planning your course ...
+* Find out how you can access ...
+* Connect with us to …
+
+Too “us” centric:
+
+* Our faculty includes ...
+* We are a world leader in ...
+* The University of Michigan Library has curated ...
+
+Do not focus attention on our organizational units and structures, or anything that requires a lot of contextual information about the library.

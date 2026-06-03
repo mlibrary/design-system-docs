@@ -16,23 +16,14 @@
 // ***********************//
 
 .container {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.container-image {
   margin-top: 2.5rem;
   margin-bottom: 3rem;
-
-  @include media.breakpoint('xs', 'max-width') {
-    margin: 1.5rem 0;
-  }
 }
-
-.viewport-container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1280px;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  width: 100%;
-}
-
 
 // ****************** //
 // *** 2. LAYOUT *** //
@@ -42,6 +33,19 @@
   margin: 0 auto;
 }
 
+.main-content {
+  padding-left: 3rem;
+
+@include media.breakpoint('md', 'max-width') {
+   padding-left: 0;
+  }
+}
+
+.main-content.home {
+  padding-left: 0;
+}
+
+
 // **************** //
 // *** 3. FLEX *** //
 // ***************//
@@ -49,7 +53,6 @@
 .flex-layout {
   display: flex;
   flex-wrap: wrap;
-  gap: 3rem;
   justify-content: start;
   align-items: stretch;
 
@@ -60,7 +63,7 @@
 
 .flex-layout > :first-child {
   flex-grow: 1;
-  flex-basis: 12rem;
+  flex-basis: 16rem;
 }
 
 .flex-layout > :last-child {

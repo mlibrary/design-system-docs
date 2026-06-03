@@ -4,188 +4,112 @@
 // # Navigation
 //
 // ## Table of Contents
-//   1. Primary navigation
-//     1.2 Primary and Utility Mobile Nav
+//   1. Primary navigation (Side nav)
+//     1.2 Mobile Nav
 //   2. Utility navigation
-//   3. Side navigation
 // --------------------------------------------------
 
 // ****************************** //
-// *** 1. Primary navigation *** //
+// *** 1. Primary navigation - Sitewide side nav *** //
 // **************************** //
 
-.primary-nav {
-  margin-top: .75rem;
-}
+.page-aside {
+  border-right: solid 1px var(--border-color);
 
-.primary-nav ul {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  display: flex;
-  flex-flow: row wrap;
-  
-  // Set on md, but maybe sm?
   @include media.breakpoint('md', 'max-width') {
     display: none;
-   }
-  
-  li {
-    display: inline;
-    margin-right: 1.5rem;
-    font-size: 1.175rem;
-    height: 100%;
-    padding-top: .5rem;
-  
-  @include media.breakpoint('sm', 'max-width') {
-    margin-right: 1rem;
-    padding-top: .25rem;
-   }
+
+    &.show {
+      display: block;
+      border: solid 1px var(--border-color);
+    }
   }
 }
 
-.primary-nav ul li a {
-    color: var(--color-neutral-400);
-    text-decoration: none;
-    display: inline-block;
-    border-bottom: solid 3px transparent;
-    cursor: pointer;
-    padding-bottom: calc(1rem - 3px);
-    height: 100%;
-  &:hover {
-      border-color: #1D7491;
-  }
-  &.active {
-    border-color: #1D7491;
-}
-  @include media.breakpoint('sm', 'max-width') {
-   font-size: 1rem;
-   padding:0;
-  }
-}
-
-.primary-nav  ul li {
-  @include media.breakpoint('lg', 'max-width') {
-    margin-bottom: 1rem;
-   }
-}
-
-// 1.2 Mobile Nav (Primary and Utility)
-
-.website-header-mobile {
-  @include media.breakpoint('md', 'max-width') {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-}
-
-.mobile-nav {
-  @include media.breakpoint('md', 'min-width') {
-  display: none;
- }
-
- .submenu-container {
-  border-top: 1px solid var(--color-neutral-100);
-  margin-top: 20px;
-  position: absolute;
-  right: calc(-1rem);
-  width: 50vw;
-  background: white;
-  box-shadow: rgb(0 0 0 / 10%) 0px 4px 8px 0px;
-  z-index: 101;
- }
-}
-
-.mobile-nav .primary-container ul {
-    list-style: none;
-    margin: 0;
-    padding-left: 0;
-
-   li {
-    border-bottom: 1px solid rgb(229, 233, 237);
-    padding: 1rem;
-   }
-   
-   a {
-    text-decoration: none;
-    color: var(--color-neutral-400);
-   }
-
-   a:hover{
-    text-decoration: underline;
-   }
-}
-
-.mobile-nav .utility-container ul {
-  list-style: none;
-  margin: 0;
+.site-side-nav ul {
   padding-left: 0;
-  background-color: var(--color-blue-100);
-
- li {
-  padding: 1rem;
- }
- 
- a {
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: .25rem;
-  color: var(--color-neutral-400);
- }
+  margin-top: 0;
 }
 
-[hidden] {
-  display: none;
+.top-level-nav li {
+  list-style: none;
+  border-bottom: solid 1px var(--border-color);
+  padding: 0;
 }
 
-button.nav {
-  background: #fff;
+.child-level-nav {
+  padding-bottom: .25rem;
+}
+
+.child-level-nav li {
+  list-style: none;
   border: none;
+  padding: 0;
+
+  a {
+    color: var(--text-primary);
+    text-decoration: none;
+    display: block;
+    padding: .5rem 0 .5rem 1rem;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    background-color: var(--hover-accent);
+  }
+
+  a[aria-current="page"] {
+    text-decoration: underline;
+    background-color: var(--active-page-nav);
+  }
+}
+
+// 1.2 Header Toggle for Mobile Nav
+
+.side-nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  @include media.breakpoint('md', 'max-width') {
+    display: block;
+  }
 }
 
 button[aria-expanded]::after {
   font-family: "Material Symbols Rounded";
   font-size: 2.5rem;
-  content: "\e5d2";
-  color: var(--color-neutral-400);
+  content: "\e5d2"; // menu icon
+  color: var(--text-primary);
 }
 
 button[aria-expanded="true"]::after {
   font-family: "Material Symbols Rounded";
   font-size: 2.5rem;
-  content: "\e5cd";
-  color: var(--color-neutral-400);
+  content: "\e5cd"; // close icon
+  color: var(--text-primary);
 }
-
 
 // ****************************** //
 // *** 2. Utility navigation *** //
 // **************************** //
 
 .utility-nav {
-  @include media.breakpoint('lg', 'max-width') {
-    margin-top: 1rem;
-   }
-  // Set on md, but maybe sm?
-  @include media.breakpoint('md', 'max-width') {
-    display: none;
-   }
-  
+  margin-top: 1.5rem;
 }
 
 .utility-nav ul {
   list-style: none;
   padding-left: 0;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
 
   li {
     display: inline;
+    padding: .25rem 0 .25rem .5rem;
   }
 
   li:not(:last-child) {
@@ -195,7 +119,7 @@ button[aria-expanded="true"]::after {
   li a {
     font-size: 0.875rem;
     text-decoration: none;
-    color: var(--color-neutral-300);
+    color: var(--badge);
     text-transform: uppercase;
     font-weight: var(--bold);
     letter-spacing: 1.25px;
@@ -203,76 +127,8 @@ button[aria-expanded="true"]::after {
     align-items: flex-start;
     gap: 0.25rem;
   }
+
   li a:hover {
     text-decoration: underline;
   }
 }
-
-.utility-icon {
-  transition: transform 2s;
-}
-
-.utility-icon:hover {
-  transform: rotate(-30deg);
-}
-
-.material-symbols-rounded {
-  font-variation-settings: 
-  'wght' 300,
-   'opsz' 20
-  ;
-}
-
-.material-symbols-rounded:hover {
-  font-variation-settings: 
-  'wght' 500,
-   'FILL' 1
-  ;
-}
-
-// *************************** //
-// *** 3. Side navigation *** //
-// ************************* //
-
-.page-aside {
-@include media.breakpoint('sm', 'max-width') {
-  display: none;
- } 
-}
-
-.side-nav {
-  position: sticky;
-  top: 1.5rem;
-}
-
-.side-nav ul {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 0;
- }
- 
- .side-nav li {
-   display: block;
- }
- 
- .side-nav li a {
-   color: var(--color-neutral-400);
-   text-decoration: none;
-   display: block;
-   padding: 1rem 0 1rem 1rem;
- 
-   &:hover {
-     text-decoration: underline;
-     text-decoration-thickness: 0.125rem;
-   }
- }
-
- .side-nav li:not(:last-child){
-  border-bottom: solid 1px var(--color-neutral-100);
-}
- 
- .side-nav li.active-side-nav-page a {
-   color: var(--color-teal-400);
-   font-weight: var(--bold);
-   border-left: solid 4px var(--color-teal-400);
- }

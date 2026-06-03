@@ -22,6 +22,7 @@
 //     1.1 Breakpoints
 //   2. Mixins
 //     2.1 Breakpoints
+//     2.2 Reduced Motion
 //
 // --------------------------------------------------
 
@@ -51,6 +52,15 @@ $breakpoints: (
 // *                 * //
 @mixin breakpoint($breakpoint: 'lg', $type: 'min-width') {
   @media (#{$type}: map.get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+// *                   * //
+// * 2.2 REDUCED MOTION * //
+// *                   * //
+@mixin reduced-motion {
+  @media (prefers-reduced-motion: reduce) {
     @content;
   }
 }

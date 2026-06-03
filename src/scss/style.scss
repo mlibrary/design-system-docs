@@ -1,5 +1,6 @@
 @use 'reset';
 @use 'base';
+@use 'tokens';
 @use 'site-footer';
 @use 'breadcrumbs';
 @use 'navigation';
@@ -16,3 +17,6 @@
 @use 'pagefind';
 @use 'accents';
 @use 'code';
+@use 'header';
+@use 'icons';
+@use 'theme';

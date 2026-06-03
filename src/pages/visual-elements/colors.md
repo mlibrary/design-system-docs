@@ -3,9 +3,9 @@ layout: page.njk
 tags: pages
 permalink: "{{eleventyNavigation.parent | slugify}}/{{page.fileSlug}}/"
 
-title: Color
+title: Colors
 eleventyNavigation:
-  key: Color
+  key: Colors
   summary: An overview of our color palettes, accessibility guidelines, and examples of our colors in action.
   parent: Visual Elements
   order: 1
@@ -19,7 +19,7 @@ We also provide a neutral gray and a set of secondary colors: orange, pink, indi
 
 Across all colors, 400-level is the primary shade.
 
-See our [full color table](#full-color-table) and [contact the Design System team](/about/our-team/) with questions about appropriate color choices.
+See our [full color table](#full-color-table) and [contact the Design System team](/our-team-and-approach/) with questions about appropriate color choices.
 
 ## Text color
 
@@ -29,7 +29,7 @@ See our [full color table](#full-color-table) and [contact the Design System tea
 
 Use white text when the text is on a dark background. For example, teal-400 and pink-400 buttons must use white text. View our [Figma Guidelines](https://www.figma.com/@mlibrary) for more examples.
 
-Learn more about how to use these colors as design tokens when [building a user interface](/getting-started/build-user-interfaces/)
+Learn more about how to use these colors as design tokens when [building a user interface](/design-and-development/build-user-interfaces/).
 
 ## Accessibility
 
@@ -44,7 +44,7 @@ In some situations — like with slide deck templates — it can be helpful to p
 
 ## Full color table
 
-Use [design tokens](/about/web-components-and-design-tokens/#design-tokens) or hex color codes.
+Use [design tokens](/design-and-development/design-tokens-and-web-components/#design-tokens) or hex color codes.
 
 ```html
 <docs-color-block></docs-color-block>

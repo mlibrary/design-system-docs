@@ -13,7 +13,7 @@ eleventyNavigation:
 
 # {{ title }}
 
-We often refer to our audience broadly as “students, faculty, and staff.” Within these groups are people with a wide range of experiences and needs, so we use [plain language](/content/writing-for-people/#use-plain-language) and follow [accessibility principles](/foundations/accessibility-and-inclusive-design/) to reach people who:
+We often refer to our audience broadly as “students, faculty, and staff.” Within these groups are people with a wide range of experiences and needs, so we use [plain language](/content/writing-for-people/#use-plain-language) and follow [accessibility principles](/accessibility-and-inclusive-design/) to reach people who:
 
 * Are of various ages, generations, and cultures  
 * Have a variety of cognitive, visual, or motor abilities

@@ -18,7 +18,7 @@ The Universal Header is a consistent branding element that shows users they are 
 
 Any website within the U-M Library’s web presence may add the Universal Header. A site does not have to be included in the Explore menu in order to display the header.
 
-Sites with the Universal Header can also take advantage of our web presence alerts system to easily deploy banners for outages and other communication needs. [Contact us](/about/get-in-touch/) if you’d like to be able to post alerts.
+Sites with the Universal Header can also take advantage of our web presence alerts system to easily deploy banners for outages and other communication needs. [Contact us](/our-team-and-approach/#get-in-touch) if you’d like to be able to post alerts.
 
 ## Design approach and placement
 

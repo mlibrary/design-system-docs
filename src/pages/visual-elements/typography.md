@@ -24,7 +24,7 @@ Our default (base) font-size is 16px. The rest of our typography scale is based 
 
 Font weight is the thickness of text. We use four different weights to differentiate headings from body text and emphasize body text.
 
-We use the following [design tokens](/about/web-components-and-design-tokens/#design-tokens) to specify font-weight:
+We use the following [design tokens](/design-and-development/design-tokens-and-web-components/#design-tokens) to specify font-weight:
 
 * Regular: `--regular: 400;`  
 * Semibold: `--semibold: 600;`  
@@ -39,13 +39,15 @@ Bold can also be used to add emphasis in body text. See [using bold for style](h
 
 When formatting headings, use the following sizes and weights:
 
-* H1, Muli 32px, 2rem, Bold  
-* Alternate H1, Crimson 56px, 3.5rem, Regular  
-* H2, Muli 28px, 1.75rem Bold  
-* H3, Muli 24px, 1.5rem, Regular  
-* H4, Muli 20px, 1.25rem, Regular  
-* H5, Muli 18px, 1.125rem, may use Regular, Bold, or Bold underlined depending on context, but should be consistent across the product  
-* H6, Muli 16px, 1rem, Semibold
+| Heading | Font family | Size | Weight |
+| --- | --- | --- | --- |
+| H1 | Muli | 32px / 2rem | Bold |
+| H1 (alternate) | Crimson | 56px / 3.5rem | Regular |
+| H2 | Muli | 28px / 1.75rem | Bold |
+| H3 | Muli | 24px / 1.5rem | Regular |
+| H4 | Muli | 20px / 1.25rem | Regular |
+| H5 | Muli | 18px / 1.125rem | Regular, Bold, or Bold underlined depending on context |
+| H6 | Muli | 16px / 1rem | Semibold |
 
 [Code examples below](#typography-code-examples) demonstrate how each of these and other typography elements display.  
 
@@ -57,9 +59,9 @@ All body text is 16px or 1rem, regular weight.
 
 Links within body text are `teal-400` and underlined by default.
 
-In some cases, links can be `neutral-400` and have the underline removed, except on hover. This style is often used when many links are presented together, such as with list items where repeated underlines impede readability. [Contact the Design System team](/about/get-in-touch/) with questions about when to use this style.
+In some cases, links can be `neutral-400` and have the underline removed, except on hover. This style is often used when many links are presented together, such as with list items where repeated underlines impede readability. [Contact the Design System team](/our-team-and-approach/#get-in-touch) with questions about when to use this style.
 
-We also offer a [Link reusable design](/reusable-designs/link).
+We also offer a [Link reusable design](/reusable-designs/link/).
 
 ## Lists
 
@@ -79,7 +81,7 @@ While there is no perfect line length, aim for an average of 50-80 characters pe
 
 You can use the design token `--line-length: 60 characters`.
 
-<img src="https://assets.codepen.io/t-1120/Line-Length-v2.png?format=auto" alt="Visualization for suggested line lengths. 0 to 50 characters is too narrow. Just right is considered between 50 and 80 characters. Too wide would be 80 to 100 characters.">
+<img src="https://assets.codepen.io/t-1120/Line-Length-v2.png?format=auto" alt="Visualization for suggested line lengths. 0 to 50 characters is too narrow. Just right is considered between 50 and 80 characters. Too wide would be 80 to 100 characters." width="767" height="360">
 
 ## Typography code examples
 

@@ -8,7 +8,7 @@
 // --------------------------------------------------
 
 .footer {
-  background: var(--color-blue-400);
+  background: var(--bg-footer);
   color: white;
   position: relative;
 }
@@ -84,7 +84,7 @@
 }
 
 .footer__disclaimer {
-  background: var(--color-blue-500);
+  background: var(--bg-sub-footer);
   color: var(--color-blue-200);
   padding: var(--space-medium) 0;
 }

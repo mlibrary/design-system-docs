@@ -1,0 +1,199 @@
+@use 'media';
+
+.website-header {
+  background-color: var(--bg-header);
+  color: var(--color-neutral-400);
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  border-bottom: solid 2px var(--border-color);
+}
+
+.website-header__inner-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  line-height: 1.25;
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 0 1rem;
+  width: 100%;
+
+  @include media.breakpoint('md', 'max-width') {
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+
+.website-header__inner-container a {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  text-decoration: none;
+  gap: .5rem 1rem;
+
+  @include media.breakpoint('sm', 'max-width') {
+    flex: 1;
+    gap: .25rem 0;
+  }
+}
+
+.website-header__inner-container a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 52rem) {
+  .website-header__inner-container {
+    padding: 0 2.5rem;
+  }
+}
+
+.website-header__website-name {
+  color: var(--text-header);
+  font-size: var(--text-medium);
+  letter-spacing: 0.5px;
+
+  @include media.breakpoint('sm', 'max-width') {
+    flex-basis: 100%;
+  }
+  text-transform: uppercase;
+}
+
+.website-header__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.search-theme-container {
+  display: flex;
+  align-items: center;
+  gap: 0 1rem;
+  margin-left: auto;
+  min-width: 0;
+
+  @include media.breakpoint('md', 'max-width') {
+    flex-basis: 100%;
+    margin-left: 0;
+  }
+}
+
+/* Theme Toggle */
+
+.theme-toggle-container {
+  display: flex;
+  align-items: center;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 999px;
+  line-height: 0;
+}
+
+.theme-toggle__track {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 72px;
+  height: 40px;
+  border-radius: 999px;
+  background-color: var(--color-maize-400);
+  border: 2px solid var(--color-neutral-300);
+  padding: 0 8px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  box-sizing: border-box;
+
+  @include media.reduced-motion {
+    transition: none;
+  }
+}
+
+[data-theme="dark"] .theme-toggle__track {
+  background-color: var(--color-blue-300);
+  border-color: var(--color-neutral-300);
+}
+
+.theme-toggle__knob {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--color-maize-100);
+  border: 1.5px solid var(--color-neutral-300);
+  left: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.2s ease;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+
+  @include media.reduced-motion {
+    transition: none;
+  }
+}
+
+.theme-toggle[aria-checked="true"] .theme-toggle__knob,
+[data-theme="dark"] .theme-toggle__knob {
+  transform: translateY(-50%) translateX(32px);
+  background-color: var(--color-blue-100);
+}
+
+.theme-toggle__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+  svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+// Knob icon colors
+.theme-toggle__icon--light { color: var(--color-neutral-300); }
+.theme-toggle__icon--dark  { color: var(--color-blue-400); display: none; }
+
+.theme-toggle[aria-checked="true"] {
+  .theme-toggle__icon--light { display: none; }
+  .theme-toggle__icon--dark { display: flex; }
+}
+
+// data-theme mirrors aria-checked but is set before first paint (prevents flash)
+[data-theme="dark"] .theme-toggle__icon--light { display: none; }
+[data-theme="dark"] .theme-toggle__icon--dark { display: flex; }
+
+.theme-toggle__track-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+
+  svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+// Sun on track — visible in dark mode (knob is on right)
+.theme-toggle__track-icon--light {
+  color: var(--color-blue-200);
+}
+
+// Moon on track — visible in light mode (knob is on left)
+.theme-toggle__track-icon--dark {
+  color: var(--color-neutral-300);
+}

@@ -1,14 +1,13 @@
 ---
 layout: page.njk
 tags: pages
-permalink: "{{eleventyNavigation.parent | slugify}}/{{page.fileSlug}}/"
+permalink: "{{page.fileSlug}}/"
 
 title: Accessibility and Inclusive Design
 eleventyNavigation:
   key: Accessibility and Inclusive Design
   summary: The overarching strategies we practice to make our products accessible and welcoming for all.
-  parent: Foundations
-  order: 2
+  parent: home
 ---
 
 # {{ title }}
@@ -19,16 +18,11 @@ We aim to be compliant with [WCAG 2.2 (Level A and AA)](https://www.w3.org/TR/WC
 
 The Design System site itself is evaluated regularly using enterprise scanning software and automated and manual testing.
 
-The two most recent accessibility evaluations are:
-
-- [2025 Design System Doc Site Accessibility Evaluation](https://docs.google.com/document/d/1pZmSr1ILdI99ehR9i3p6gLngnbbZjx5TO8gx1I2Up1Y/edit?usp=sharing)
-- [2023 Design System Doc Site Baseline Evaluation](https://docs.google.com/document/d/1Uif72Lqi39U3XfpZuF1-ecBFIWVjymI14IXJJCPMzlA/edit?usp=sharing)
-
-You must be logged into a umich account to view the documents. Please contact the [Design System team](/about/our-team/) for any issues, questions, or if you would like a copy of the report(s).
+The two most recent accessibility evaluations of this site were in 2025 and 2023. Please contact the [Design System team](/our-team-and-approach/) for any issues or questions about the accessibility of this site or any of our resources.
 
 ## Start with standards
 
-​​We love HTML, CSS, and JavaScript. We prioritize using these foundational web technologies so the Design System can be used by developers working with any framework or no framework at all
+​​We love HTML, CSS, and JavaScript. We prioritize using these foundational web technologies so the Design System can be used by developers working with any framework or no framework at all.
 
 We extend HTML by using features from the Accessible Rich Internet Applications (WAI-ARIA or ARIA) specification to build in functionality that is not available in native HTML. This is done in a purposeful manner and with guidance from the [W3C’s ARIA design patterns library](https://www.w3.org/TR/wai-aria-practices/examples/) to make our products more accessible.
 
@@ -50,7 +44,7 @@ We also follow plain language practices recognizing many people using the librar
 
 ## Be thoughtful about color and images
 
-Our [color palette](/visual-elements/color/) provides a set of options to support consistency and create accessible combinations.
+Our [color palette](/visual-elements/colors/) provides a set of options to support consistency and create accessible combinations.
 
 ## Design for keyboard navigation
 
@@ -60,7 +54,7 @@ In our designs, anything that can be seen by hovering with a mouse is also acces
 
 ## Test with assistive technology
 
-In addition to our design and development practices, we test our [visual elements](/visual-elements/) and [reusable designs](/reusable-designs/) for accessibility with automated and manual techniques.
+In addition to our design and development practices, we test our visual elemetns and reusable designs for accessibility with automated and manual techniques.
 
 These include native and third-party tools like:
 

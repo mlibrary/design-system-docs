@@ -3,10 +3,10 @@ layout: page.njk
 tags: pages
 permalink: "{{eleventyNavigation.parent | slugify}}/{{page.fileSlug}}/"
 
-title: Templates and Themes
+title:  Document Templates and Guidelines
 eleventyNavigation:
-  key: Templates and Themes
-  summary: Templates and ready-made themes with guidelines for creating accessible, U-M Library branded materials in the Google Workspace and PowerPoint.
+  key:  Document Templates and Guidelines
+  summary: Templates with guidelines for creating accessible, U-M Library branded materials.
   parent: Visual Elements
   order: 6
 ---
@@ -15,7 +15,7 @@ eleventyNavigation:
 
 If you’re creating content for your work at the library within the Google Workspace or PowerPoint, we have templates, ready-made themes, and guidelines that provide a starting point for creating accessible materials that follow our brand and style. 
 
-See our public Drive folder of [Themes, Templates, and Guidelines](https://drive.google.com/drive/folders/1uIDCY-OIyd2cET3PkpZVOco32wGKsM91?usp=share_link). It is organized into subfolders by product.
+See our public Drive folder of [Templates, Themes, and Guidelines](https://drive.google.com/drive/folders/1uIDCY-OIyd2cET3PkpZVOco32wGKsM91?usp=share_link). It is organized into subfolders by product.
 
 ## What we provide
 
@@ -32,4 +32,4 @@ Within the Google Slide and PowerPoint template folders, you’ll find a README 
 
 ## Other suggestions?
 
-If there are other products that you think would benefit from themes, templates, or design guidance, please [contact the Design System Team](/about/get-in-touch/).
+If there are other products that you think would benefit from themes, templates, or design guidance, please [contact the Design System Team](/our-team-and-approach/#get-in-touch).

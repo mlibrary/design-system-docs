@@ -8,7 +8,7 @@
 
 
 .skip-links {
-  background: var(--color-blue-400);
+  background: var(--bg-footer);
   padding: var(--space-small);
   margin: 0 auto;
 }
@@ -20,6 +20,7 @@
 .skip-links ul li {
   margin: var(--space-medium) 0;
   text-align: center;
+  list-style: none;
 }
 
 .skip-links a {

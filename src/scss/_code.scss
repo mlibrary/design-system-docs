@@ -10,16 +10,16 @@
 
 code[class^='language-'] {
   position: relative;
-  color: var(--color-blue-400);
+  color: var(--text-code-block);
   padding: 2.5rem 2rem 1.5rem;
   font-family: Consolas,Monaco,Courier New,Courier,monospace;
   border-radius: var(--radius-default);
   word-wrap: break-word; 
-  max-width: 80ch;
+  max-width: 100ch;
   font-size: .9rem;
   display: block;
 
-    --background-color: var(--color-blue-100);
+    --background-color: var(--bg-code-block);
     --shadow-color: rgba(29, 116, 145, 0.55);
     --shadow-size: 1em;
     --transparent: rgba(255, 255, 255, 0);
@@ -56,11 +56,12 @@ code[class^='language-'] {
   }
 
 code:not([class^='language-']) {
-  background-color: var(--color-blue-100);
-  color: var(--color-blue-400);
+  background-color: var(--bg-code-block);
+  color: var(--text-primary);
   padding: .25rem;
   font-family: Consolas,Monaco,Courier New,Courier,monospace;
   border-radius: var(--radius-default);
+  font-size: .9rem;
 }
 
 /* Tags for Code Language */
