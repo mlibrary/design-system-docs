@@ -23,7 +23,7 @@ The library uses two symbols for its visual identity: the block M version, and t
 
 ## Horizontal signature version
 
-<img class="horizontal-signature" src="/img/MLibrary_signature.png" alt="Signature horizontal M Library logo with a maize block M and Library presented in blue text" width="504" height="72">
+<img class="horizontal-signature" src="/img/MLibrary_signature-bg.png" alt="Signature horizontal M Library logo with a maize block M and Library presented in blue text" width="630" height="90">
 
 ## General guidelines
 
