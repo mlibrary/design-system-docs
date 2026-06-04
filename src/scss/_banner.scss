@@ -51,6 +51,7 @@
     margin-top: .75rem;
     background: var(--bg-overlay); 
     max-width: 12ch;
+    width: fit-content;
 
     @include media.breakpoint('sm', 'max-width') {
     font-size: 2.5rem;
@@ -62,7 +63,8 @@
     font-family: var(--font-base-family);
     font-size: 1.25rem;
     background: var(--bg-overlay); 
-    max-width: 30ch;
+    max-width: 29ch;
+    width: fit-content;
     
     @include media.breakpoint('sm', 'max-width') {
     max-width: 20ch;
