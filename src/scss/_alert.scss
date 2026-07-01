@@ -8,19 +8,24 @@
 // --------------------------------------------------
 
 .alert--info {
-  background-color: var(--color-teal-200);
-  color: var(--color-neutral-400);
+  background-color: var(--bg-banner-alert-info);
+  color: var(--banner-alert-text);
+  border-top: solid 1px var(--banner-alert-border-info);
+  border-bottom: solid 1px var(--banner-alert-border-info);
 }
 
 .alert--warning {
-  background-color: var(--color-orange-300);
-  color: var(--color-neutral-400);
+  background-color: var(--bg-banner-alert-warning);
+  color: var(--banner-alert-text);
+  border-top: solid 1px var(--banner-alert-border-warning);
+  border-bottom: solid 1px var(--banner-alert-border-warning);
 }
 
 .alert__container {
   display: flex;
   align-items: center;
-  padding: 8px 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
   .material-symbols-rounded{
     font-size: 1rem;
   }

@@ -272,6 +272,13 @@ kbd {
 
 // 2.6 DS Web Components
 
+/* Workaround for missing explicit color on .m-uh__heading inside
+   m-universal-header's shadow DOM — it inherits from host instead
+   of using a theme token. Remove once fixed upstream in @umich-lib/web. */
+[data-theme="dark"] m-universal-header {
+  color: var(--color-neutral-400);
+}
+
 m-universal-header {
   display: block;
   min-height: 37px;

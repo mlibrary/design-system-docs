@@ -23,6 +23,11 @@
   --bg-callout-print: var(--color-green-100);
   --bg-callout-alert: var(--color-maize-100);
 
+  /* Banner Alerts */
+  --bg-banner-alert-info: var(--color-teal-200);
+  --bg-banner-alert-warning: var(--color-orange-300);
+  --banner-alert-text: var(--color-neutral-400);
+
   /* Text and Links */
   --text-primary: var(--color-neutral-400);
   --text-secondary: var(--color-neutral-300);
@@ -69,6 +74,13 @@
   --bg-callout-print: var(--color-neutral-400);
   --bg-callout-alert: var(--color-neutral-400);
   --bg-sub-footer: var(--color-neutral-500);
+
+   /* Banner Alerts */
+  --bg-banner-alert-info: #052E3B;
+  --bg-banner-alert-warning: #541C03;
+  --banner-alert-text: var(--color-blue-100);
+  --banner-alert-border-warning: var(--color-orange-400);
+
   --text-primary: var(--color-blue-100);
   --text-secondary: var(--color-blue-200);
   --text-header: var(--color-neutral-100);
@@ -112,6 +124,14 @@
   --bg-callout-info: var(--color-neutral-400);
   --bg-callout-print: var(--color-neutral-400);
   --bg-callout-alert: var(--color-neutral-400);
+
+   /* Banner Alerts */
+  --bg-banner-alert-info: #052E3B;
+  --bg-banner-alert-warning: #541C03;
+  --banner-alert-text: var(--color-blue-100);
+  --banner-alert-border-info: var(--color-teal-200);
+  --banner-alert-border-warning: var(--color-orange-400);
+
   --text-primary: var(--color-blue-100);
   --text-secondary: var(--color-blue-200);
   --text-header: var(--color-neutral-100);
@@ -157,6 +177,11 @@
   --bg-callout-info: var(--color-teal-100);
   --bg-callout-print: var(--color-green-100);
   --bg-callout-alert: var(--color-maize-100);
+
+   /* Banner Alerts */
+  --bg-banner-alert-info: var(--color-teal-200);
+  --bg-banner-alert-warning: var(--color-orange-300);
+  --banner-alert-text: var(--color-neutral-400);
 
   /* Text and Links */
   --text-primary: var(--color-neutral-400);
