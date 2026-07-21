@@ -27,7 +27,7 @@
       { "hex": "#65A8BF", "token": ["--color-teal-300"], "useCase": "" },
       { "hex": "#1D7491", "token": ["--color-teal-400"], "useCase": "Link, Default button background" },
       { "hex": "#106684", "token": ["--color-teal-500"], "useCase": "Link (hover)" },
-      { "hex": "#052E3B", "token": ["--color-teal-600"], "useCase": "Info Banner background (dark mode)" }
+      { "hex": "#052E3B", "token": ["--color-teal-600"], "useCase": "Info alert banner background (dark mode)" }
     ]
   },
   {
@@ -35,7 +35,7 @@
     "colors": [
       { "hex": "#E5E9ED", "token": ["--color-neutral-100"], "useCase": "Border color" },
       { "hex": "#8A96A1", "token": ["--color-neutral-200"], "useCase": "Text (secondary)" },
-      { "hex": "#637381", "token": ["--color-neutral-300"], "useCase": "" },
+      { "hex": "#637381", "token": ["--color-neutral-300"], "useCase": "Text (badge)" },
       { "hex": "#384655", "token": ["--color-neutral-350"], "useCase": "" },
       { "hex": "#212B36", "token": ["--color-neutral-400"], "useCase": "Text (primary)" },
       { "hex": "#1A232C", "token": ["--color-neutral-450"], "useCase": "Background (dark mode)" },
