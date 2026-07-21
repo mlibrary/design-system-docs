@@ -1,0 +1,90 @@
+[
+  {
+    "family": "Blue",
+    "colors": [
+      { "hex": "#F7F8F9", "token": ["--color-blue-100"], "useCase": "Text (dark mode)" },
+      { "hex": "#B2BEC9", "token": ["--color-blue-200"], "useCase": "" },
+      { "hex": "#4C6781", "token": ["--color-blue-300"], "useCase": "" },
+      { "hex": "#00274C", "token": ["--color-blue-400"], "useCase": "U-M brand blue" },
+      { "hex": "#001324", "token": ["--color-blue-500"], "useCase": "" }
+    ]
+  },
+  {
+    "family": "Maize",
+    "colors": [
+      { "hex": "#FFF9E6", "token": ["--color-maize-100"], "useCase": "" },
+      { "hex": "#FFEA9B", "token": ["--color-maize-200"], "useCase": "" },
+      { "hex": "#FFDA50", "token": ["--color-maize-300"], "useCase": "" },
+      { "hex": "#FFCB05", "token": ["--color-maize-400"], "useCase": "U-M brand maize" },
+      { "hex": "#EABA02", "token": ["--color-maize-500"], "useCase": "" }
+    ]
+  },
+  {
+    "family": "Teal",
+    "colors": [
+      { "hex": "#E9F2F5", "token": ["--color-teal-100"], "useCase": "" },
+      { "hex": "#A7CDDB", "token": ["--color-teal-200"], "useCase": "Link (dark mode), Info alert banner background" },
+      { "hex": "#65A8BF", "token": ["--color-teal-300"], "useCase": "" },
+      { "hex": "#1D7491", "token": ["--color-teal-400"], "useCase": "Link, Default button background" },
+      { "hex": "#106684", "token": ["--color-teal-500"], "useCase": "Link (hover)" },
+      { "hex": "#052E3B", "token": ["--color-teal-600"], "useCase": "Info alert banner background (dark mode)" }
+    ]
+  },
+  {
+    "family": "Neutral",
+    "colors": [
+      { "hex": "#E5E9ED", "token": ["--color-neutral-100"], "useCase": "Border color" },
+      { "hex": "#8A96A1", "token": ["--color-neutral-200"], "useCase": "Text (secondary)" },
+      { "hex": "#637381", "token": ["--color-neutral-300"], "useCase": "Text (badge)" },
+      { "hex": "#384655", "token": ["--color-neutral-350"], "useCase": "" },
+      { "hex": "#212B36", "token": ["--color-neutral-400"], "useCase": "Text (primary)" },
+      { "hex": "#1A232C", "token": ["--color-neutral-450"], "useCase": "Background (dark mode)" },
+      { "hex": "#06080A", "token": ["--color-neutral-500"], "useCase": "" }
+    ]
+  },
+  {
+    "family": "Orange",
+    "layout": "secondary",
+    "colors": [
+      { "hex": "#FFF1EB", "token": ["--color-orange-100"] },
+      { "hex": "#FFB899", "token": ["--color-orange-200"] },
+      { "hex": "#FF8A58", "token": ["--color-orange-300"] },
+      { "hex": "#F25F1F", "token": ["--color-orange-400"] },
+      { "hex": "#C74E1A", "token": ["--color-orange-500"] },
+      { "hex": "#541C03", "token": ["--color-orange-600"] }
+    ]
+  },
+  {
+    "family": "Pink",
+    "layout": "secondary",
+    "colors": [
+      { "hex": "#FCEBEB", "token": ["--color-pink-100"] },
+      { "hex": "#F29D9D", "token": ["--color-pink-200"] },
+      { "hex": "#EC6969", "token": ["--color-pink-300"] },
+      { "hex": "#D93838", "token": ["--color-pink-400"] },
+      { "hex": "#BF3232", "token": ["--color-pink-500"] }
+    ]
+  },
+  {
+    "family": "Green",
+    "layout": "secondary",
+    "colors": [
+      { "hex": "#EAF8EE", "token": ["--color-green-100"] },
+      { "hex": "#96DBAA", "token": ["--color-green-200"] },
+      { "hex": "#57BC75", "token": ["--color-green-300"] },
+      { "hex": "#20A848", "token": ["--color-green-400"] },
+      { "hex": "#198539", "token": ["--color-green-500"] }
+    ]
+  },
+  {
+    "family": "Indigo",
+    "layout": "secondary",
+    "colors": [
+      { "hex": "#EEF1F9", "token": ["--color-indigo-100"] },
+      { "hex": "#AAB9E3", "token": ["--color-indigo-200"] },
+      { "hex": "#7C93D4", "token": ["--color-indigo-300"] },
+      { "hex": "#506FC5", "token": ["--color-indigo-400"] },
+      { "hex": "#274391", "token": ["--color-indigo-500"] }
+    ]
+  }
+]

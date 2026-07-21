@@ -1,10 +1,13 @@
 :root {
   color-scheme: light;
-    /* Brand */
+  /* Brand */
   --brand-primary: var(--color-blue-400);
   --brand-secondary: var(--color-maize-400);
   --logo-mark: var(--color-maize-400);
   --logo-wordmark: var(--color-blue-400);
+
+  /* States */
+  --color-success: var(--color-green-500);
 
   /* Backgrounds */
   --bg-primary: #fff;
@@ -75,6 +78,10 @@
   --bg-callout-alert: var(--color-neutral-400);
   --bg-sub-footer: var(--color-neutral-500);
 
+      /* States */
+  --color-success: var(--color-green-200);
+
+
    /* Banner Alerts */
   --bg-banner-alert-info: #052E3B;
   --bg-banner-alert-warning: #541C03;
@@ -125,6 +132,9 @@
   --bg-callout-print: var(--color-neutral-400);
   --bg-callout-alert: var(--color-neutral-400);
 
+   /* States */
+  --color-success: var(--color-green-200);
+
    /* Banner Alerts */
   --bg-banner-alert-info: #052E3B;
   --bg-banner-alert-warning: #541C03;
@@ -160,6 +170,9 @@
   --brand-secondary: var(--color-maize-400);
   --logo-mark: var(--color-maize-400);
   --logo-wordmark: var(--color-blue-400);
+
+   /* States */
+  --color-success: var(--color-green-500);
 
   /* Backgrounds */
   --bg-primary: #fff;

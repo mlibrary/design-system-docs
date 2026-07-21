@@ -2,6 +2,7 @@
 layout: page.njk
 tags: pages
 permalink: "{{eleventyNavigation.parent | slugify}}/{{page.fileSlug}}/"
+templateEngineOverride: njk,md
 
 title: Colors
 eleventyNavigation:
@@ -46,6 +47,5 @@ In some situations — like with slide deck templates — it can be helpful to p
 
 Use [design tokens](/design-and-development/design-tokens-and-web-components/#design-tokens) or hex color codes.
 
-```html
-<docs-color-block></docs-color-block>
-```
+{% include "partials/color-table.njk" %}
+

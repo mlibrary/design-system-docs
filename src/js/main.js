@@ -49,4 +49,26 @@ document.addEventListener('DOMContentLoaded', () => {
       applyTheme(!isDark, true);
     });
   }
+
+  // Copy hex code buttons
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.copy-btn');
+    if (!btn) return;
+
+    const value = btn.getAttribute('data-copy-value');
+    const status = document.getElementById('copy-status');
+
+    navigator.clipboard.writeText(value).then(() => {
+      btn.classList.add('copied');
+      btn.textContent = 'check';
+      if (status) status.textContent = `Copied ${value} to clipboard`;
+
+      setTimeout(() => {
+        btn.classList.remove('copied');
+        btn.textContent = 'content_copy';
+      }, 1500);
+    }).catch(() => {
+      if (status) status.textContent = `Unable to copy ${value}`;
+    });
+  });
 });
