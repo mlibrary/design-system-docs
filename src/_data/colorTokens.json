@@ -44,43 +44,47 @@
   },
   {
     "family": "Orange",
+    "layout": "secondary",
     "colors": [
-      { "hex": "#FFF1EB", "token": ["--color-orange-100"], "useCase": "" },
-      { "hex": "#FFB899", "token": ["--color-orange-200"], "useCase": "" },
-      { "hex": "#FF8A58", "token": ["--color-orange-300"], "useCase": "Warning alert banner background" },
-      { "hex": "#F25F1F", "token": ["--color-orange-400"], "useCase": "" },
-      { "hex": "#C74E1A", "token": ["--color-orange-500"], "useCase": "" },
-      { "hex": "#541C03", "token": ["--color-orange-600"], "useCase": "Alert banner background (dark mode)" }
+      { "hex": "#FFF1EB", "token": ["--color-orange-100"] },
+      { "hex": "#FFB899", "token": ["--color-orange-200"] },
+      { "hex": "#FF8A58", "token": ["--color-orange-300"] },
+      { "hex": "#F25F1F", "token": ["--color-orange-400"] },
+      { "hex": "#C74E1A", "token": ["--color-orange-500"] },
+      { "hex": "#541C03", "token": ["--color-orange-600"] }
     ]
   },
   {
     "family": "Pink",
+    "layout": "secondary",
     "colors": [
-      { "hex": "#FCEBEB", "token": ["--color-pink-100"], "useCase": "" },
-      { "hex": "#F29D9D", "token": ["--color-pink-200"], "useCase": "" },
-      { "hex": "#EC6969", "token": ["--color-pink-300"], "useCase": "" },
-      { "hex": "#D93838", "token": ["--color-pink-400"], "useCase": "" },
-      { "hex": "#BF3232", "token": ["--color-pink-500"], "useCase": "" }
+      { "hex": "#FCEBEB", "token": ["--color-pink-100"] },
+      { "hex": "#F29D9D", "token": ["--color-pink-200"] },
+      { "hex": "#EC6969", "token": ["--color-pink-300"] },
+      { "hex": "#D93838", "token": ["--color-pink-400"] },
+      { "hex": "#BF3232", "token": ["--color-pink-500"] }
     ]
   },
   {
     "family": "Green",
+    "layout": "secondary",
     "colors": [
-      { "hex": "#EAF8EE", "token": ["--color-green-100"], "useCase": "" },
-      { "hex": "#96DBAA", "token": ["--color-green-200"], "useCase": "" },
-      { "hex": "#57BC75", "token": ["--color-green-300"], "useCase": "" },
-      { "hex": "#20A848", "token": ["--color-green-400"], "useCase": "" },
-      { "hex": "#198539", "token": ["--color-green-500"], "useCase": "State (success)" }
+      { "hex": "#EAF8EE", "token": ["--color-green-100"] },
+      { "hex": "#96DBAA", "token": ["--color-green-200"] },
+      { "hex": "#57BC75", "token": ["--color-green-300"] },
+      { "hex": "#20A848", "token": ["--color-green-400"] },
+      { "hex": "#198539", "token": ["--color-green-500"] }
     ]
   },
   {
     "family": "Indigo",
+    "layout": "secondary",
     "colors": [
-      { "hex": "#EEF1F9", "token": ["--color-indigo-100"], "useCase": "" },
-      { "hex": "#AAB9E3", "token": ["--color-indigo-200"], "useCase": "" },
-      { "hex": "#7C93D4", "token": ["--color-indigo-300"], "useCase": "" },
-      { "hex": "#506FC5", "token": ["--color-indigo-400"], "useCase": "" },
-      { "hex": "#274391", "token": ["--color-indigo-500"], "useCase": "" }
+      { "hex": "#EEF1F9", "token": ["--color-indigo-100"] },
+      { "hex": "#AAB9E3", "token": ["--color-indigo-200"] },
+      { "hex": "#7C93D4", "token": ["--color-indigo-300"] },
+      { "hex": "#506FC5", "token": ["--color-indigo-400"] },
+      { "hex": "#274391", "token": ["--color-indigo-500"] }
     ]
   }
 ]

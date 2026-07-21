@@ -1,4 +1,5 @@
-{% for group in colorTokens %}
+{# Primary palettes: full-width, 4 columns #}
+{% for group in colorTokens | rejectattr("layout", "equalto", "secondary") %}
 <h3>{{ group.family }}</h3>
 <table class="color-token-table">
   <thead>
@@ -12,10 +13,13 @@
   <tbody>
     {% for c in group.colors %}
     <tr>
-      <td>
-        <span class="color-swatch" style="background-color: {{ c.hex }};" aria-hidden="true"></span>
-      </td>
-     <td><code>{{ c.hex }}</code><button class="copy-btn material-symbols-rounded" data-copy-value="{{ c.hex }}" aria-label="Copy hex code {{ c.hex }}">content_copy</button></td>
+      <td><span class="color-swatch" style="background-color: {{ c.hex }};" aria-hidden="true"></span></td>
+      <td><code>{{ c.hex }}</code><button
+        type="button"
+        class="copy-btn material-symbols-rounded"
+        data-copy-value="{{ c.hex }}"
+        aria-label="Copy hex code {{ c.hex }}"
+      >content_copy</button></td>
       <td>
         {% for t in c.token %}
         <code>{{ t }}</code>{% if not loop.last %}<br>{% endif %}
@@ -27,5 +31,41 @@
   </tbody>
 </table>
 {% endfor %}
+
+{# Secondary palettes: 2x2 grid, 3 columns, no Use Case #}
+<div class="color-token-grid">
+  {% for group in colorTokens | selectattr("layout", "equalto", "secondary") %}
+  <div class="color-token-grid-item">
+    <h3>{{ group.family }}</h3>
+    <table class="color-token-table color-token-table--compact">
+      <thead>
+        <tr>
+          <th scope="col">Swatch</th>
+          <th scope="col">Hex Code</th>
+          <th scope="col">Token</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for c in group.colors %}
+        <tr>
+          <td><span class="color-swatch" style="background-color: {{ c.hex }};" aria-hidden="true"></span></td>
+          <td><code>{{ c.hex }}</code><button
+            type="button"
+            class="copy-btn material-symbols-rounded"
+            data-copy-value="{{ c.hex }}"
+            aria-label="Copy hex code {{ c.hex }}"
+          >content_copy</button></td>
+          <td>
+            {% for t in c.token %}
+            <code>{{ t }}</code>{% if not loop.last %}<br>{% endif %}
+            {% endfor %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% endfor %}
+</div>
 
 <div class="visually-hidden" role="status" aria-live="polite" id="copy-status"></div>
