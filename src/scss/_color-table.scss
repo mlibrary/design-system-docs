@@ -87,6 +87,10 @@
   }
 }
 
+.color-token-grid-item {
+  min-width: 0; 
+}
+
 .color-token-table--compact {
   th:nth-child(1),
   td:nth-child(1) {

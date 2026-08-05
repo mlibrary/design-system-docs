@@ -316,7 +316,7 @@ m-website-header:not(.hydrated) > * {
 /* Scroll Shadow - Horizontal - Linear */
 
 .scroll-shadows--horizontal-linear {
-  --background-color: rgba(255, 255, 255, 1); /*White bg color */
+  --background-color: var(--bg-primary);
   --shadow-color: rgba(29, 116, 145, 0.55);
   --transparent: rgba(255, 255, 255, 0);
   overflow-x: auto;
@@ -332,7 +332,7 @@ m-website-header:not(.hydrated) > * {
 }
 
 .scroll-shadows--horizontal {
-  --background-color: rgba(255, 255, 255, 1); /*White bg color */
+  --background-color: var(--bg-primary);
   --shadow-color: rgba(29, 116, 145, 0.55);
   --shadow-size: 1em;
   --transparent: rgba(255, 255, 255, 0);

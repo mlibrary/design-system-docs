@@ -39,7 +39,7 @@
   {% for group in colorTokens | selectattr("layout", "equalto", "secondary") %}
   <div class="color-token-grid-item">
     <h3>{{ group.family }}</h3>
-    <div class="color-token-table-wrap" tabindex="0" role="region" aria-label="{{ group.family }} color tokens table, scroll horizontally to see more">
+    <div class="color-token-table-wrap scroll-shadows--horizontal" tabindex="0" role="region" aria-label="{{ group.family }} color tokens table, scroll horizontally to see more">
       <table class="color-token-table color-token-table--compact">
         <thead>
           <tr>
