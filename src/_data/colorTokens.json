@@ -1,18 +1,20 @@
 [
   {
     "family": "Blue",
+    "description": "Blue is great for backgrounds (like in our footer reusable design). The lighter shades are also our text color in dark mode.",
     "colors": [
-      { "hex": "#F7F8F9", "token": ["--color-blue-100"], "useCase": "Text (dark mode)" },
-      { "hex": "#B2BEC9", "token": ["--color-blue-200"], "useCase": "" },
-      { "hex": "#4C6781", "token": ["--color-blue-300"], "useCase": "" },
+      { "hex": "#F7F8F9", "token": ["--color-blue-100"], "useCase": "Text (primary - dark mode)" },
+      { "hex": "#B2BEC9", "token": ["--color-blue-200"], "useCase": "Text  (secondary - dark mode)" },
+      { "hex": "#4C6781", "token": ["--color-blue-300"], "useCase": "Border (footer)" },
       { "hex": "#00274C", "token": ["--color-blue-400"], "useCase": "U-M brand blue" },
-      { "hex": "#001324", "token": ["--color-blue-500"], "useCase": "" }
+      { "hex": "#001324", "token": ["--color-blue-500"], "useCase": "Background (primary - dark mode)" }
     ]
   },
   {
     "family": "Maize",
+    "description": "Maize is best for small accents. We otherwise limit our use of it since no combination of maize and white meets color contrast requirements! Keep this in mind when using maize.",
     "colors": [
-      { "hex": "#FFF9E6", "token": ["--color-maize-100"], "useCase": "" },
+      { "hex": "#FFF9E6", "token": ["--color-maize-100"], "useCase": "Callout background" },
       { "hex": "#FFEA9B", "token": ["--color-maize-200"], "useCase": "" },
       { "hex": "#FFDA50", "token": ["--color-maize-300"], "useCase": "" },
       { "hex": "#FFCB05", "token": ["--color-maize-400"], "useCase": "U-M brand maize" },
@@ -21,25 +23,27 @@
   },
   {
     "family": "Teal",
+    "description": "Teal is synonymous with interaction in our web presence, especially links. Be cautious about using it for other purposes.",
     "colors": [
-      { "hex": "#E9F2F5", "token": ["--color-teal-100"], "useCase": "" },
-      { "hex": "#A7CDDB", "token": ["--color-teal-200"], "useCase": "Link (dark mode), Info alert banner background" },
+      { "hex": "#E9F2F5", "token": ["--color-teal-100"], "useCase": "Info callout background, accents" },
+      { "hex": "#A7CDDB", "token": ["--color-teal-200"], "useCase": "Link (dark mode), info banner background" },
       { "hex": "#65A8BF", "token": ["--color-teal-300"], "useCase": "" },
-      { "hex": "#1D7491", "token": ["--color-teal-400"], "useCase": "Link, Default button background" },
+      { "hex": "#1D7491", "token": ["--color-teal-400"], "useCase": "Link, default button background" },
       { "hex": "#106684", "token": ["--color-teal-500"], "useCase": "Link (hover)" },
-      { "hex": "#052E3B", "token": ["--color-teal-600"], "useCase": "Info alert banner background (dark mode)" }
+      { "hex": "#052E3B", "token": ["--color-teal-600"], "useCase": "Info banner background (dark mode)" }
     ]
   },
   {
     "family": "Neutral",
+    "description": "Neutral is for text. We purposely use shades of gray instead of pure black, which can be harder on the eyes. Our lightest shade is also a go-to for subtle borders.",
     "colors": [
-      { "hex": "#E5E9ED", "token": ["--color-neutral-100"], "useCase": "Border color" },
-      { "hex": "#8A96A1", "token": ["--color-neutral-200"], "useCase": "Text (secondary)" },
-      { "hex": "#637381", "token": ["--color-neutral-300"], "useCase": "Text (badge)" },
-      { "hex": "#384655", "token": ["--color-neutral-350"], "useCase": "" },
-      { "hex": "#212B36", "token": ["--color-neutral-400"], "useCase": "Text (primary)" },
+      { "hex": "#E5E9ED", "token": ["--color-neutral-100"], "useCase": "Border color, box shadows" },
+      { "hex": "#8A96A1", "token": ["--color-neutral-200"], "useCase": "Text (secondary - dark mode)" },
+      { "hex": "#637381", "token": ["--color-neutral-300"], "useCase": "Text (secondary, such as badges)" },
+      { "hex": "#384655", "token": ["--color-neutral-350"], "useCase": "Background (tertiary - dark mode)" },
+      { "hex": "#212B36", "token": ["--color-neutral-400"], "useCase": "Text (primary), including headings" },
       { "hex": "#1A232C", "token": ["--color-neutral-450"], "useCase": "Background (dark mode)" },
-      { "hex": "#06080A", "token": ["--color-neutral-500"], "useCase": "" }
+      { "hex": "#06080A", "token": ["--color-neutral-500"], "useCase": "Background sub-footer (dark mode)" }
     ]
   },
   {

@@ -7,45 +7,25 @@ templateEngineOverride: njk,md
 title: Colors
 eleventyNavigation:
   key: Colors
-  summary: An overview of our color palettes, accessibility guidelines, and examples of our colors in action.
+  summary: An overview of our color palettes, contrast guidelines, and color tables with copyable hex codes and use cases.
   parent: Visual Elements
   order: 1
 ---
 
 # {{ title }}
 
-Blue and maize are our primary colors, and teal is frequently used for link text and other interactions.
+We have 8 color palettes — grouped into primary and secondary — with a range of at least 5 shades in each. You can use our design tokens when [building a user interface](/design-and-development/build-user-interfaces/) or copy the hex color codes anytime\!
 
-We also provide a neutral gray and a set of secondary colors: orange, pink, indigo, and green. Keep in mind that for websites, secondary colors should only be used in special cases, such as in a warning state or as an accent color.
+Across all colors, 400-level is the primary shade. We note any important considerations for using a color along with the respective table.
 
-Across all colors, 400-level is the primary shade.
+## Color contrast
 
-See our [full color table](#full-color-table) and [contact the Design System team](/our-team-and-approach/) with questions about appropriate color choices.
+Be sure to use the colors in accessible combinations that meet [WCAG 2.1 AA standards](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html). For example, you’ll need to use white text on dark backgrounds (generally 400-level or higher).
 
-## Text color
+The minimum contrast ratio for small and regular text is 4.5:1. Large text, graphics, and interface controls must be at least 3:1. We recommend using the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) to confirm your choices.
 
-**Headers** and **body text** are neutral-400.
+## Primary color tables
 
-**Links** are teal-400 and underlined.
-
-Use white text when the text is on a dark background. For example, teal-400 and pink-400 buttons must use white text. View our [Figma Guidelines](https://www.figma.com/@mlibrary) for more examples.
-
-Learn more about how to use these colors as design tokens when [building a user interface](/design-and-development/build-user-interfaces/).
-
-## Accessibility
-
-Be sure to use the colors in accessible combinations that meet WCAG 2.1 AA accessibility standards:
-
-* Small and regular text must have a contrast ratio of 4.5:1.
-* Large text, as well as graphics and interface controls, must have a contrast ratio of 3:1.
-
-You can use the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) and reference [WCAG 2.2 Understanding Success Criterion 1.4.3: Contrast (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) to make decisions and ensure the color combinations meet accessibility standards. If you are designing in Figma, you can use the [Color contrast plugin](https://www.figma.com/community/plugin/937465522075454889/Color-contrast) to check your work.
-
-In some situations — like with slide deck templates — it can be helpful to provide a variety of contrasting color options for background and text. This supports accessibility (especially considering eye strain and vision impairments), as well as use in a variety of contexts.
-
-## Full color table
-
-Use [design tokens](/design-and-development/design-tokens-and-web-components/#design-tokens) or hex color codes.
+Blue, maize, and teal, along with a neutral palette, are our primary colors. Each palette includes our common use cases for certain shades. Uses specific to dark mode (currently only on this website) are noted in parentheses.
 
 {% include "partials/color-table.njk" %}
-

@@ -60,12 +60,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     navigator.clipboard.writeText(value).then(() => {
       btn.classList.add('copied');
-      btn.textContent = 'check';
       if (status) status.textContent = `Copied ${value} to clipboard`;
 
       setTimeout(() => {
         btn.classList.remove('copied');
-        btn.textContent = 'content_copy';
       }, 1500);
     }).catch(() => {
       if (status) status.textContent = `Unable to copy ${value}`;
