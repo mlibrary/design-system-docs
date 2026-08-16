@@ -1,0 +1,8 @@
+<nav aria-label="Color table" class="color-table-nav">
+  <ul class="color-toc">
+    <li class="color-toc-label" aria-hidden="true">Jump to:</li>
+{%- for group in colorTokens -%}
+  <li><a href="#{{ group.family | slugify }}">{{ group.family }}</a></li>{% if not loop.last %}<li class="color-toc-divider" aria-hidden="true">|</li>{% endif %}
+  {%- endfor -%}
+  </ul>
+</nav>

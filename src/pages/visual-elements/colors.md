@@ -18,6 +18,8 @@ We have 8 color palettes — grouped into primary and secondary — with a range
 
 Across all colors, 400-level is the primary shade. We note any important considerations for using a color along with the respective table.
 
+{% include "partials/color-navigation.njk" %}
+
 ## Color contrast
 
 Be sure to use the colors in accessible combinations that meet [WCAG 2.1 AA standards](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html). For example, you’ll need to use white text on dark backgrounds (generally 400-level or higher).

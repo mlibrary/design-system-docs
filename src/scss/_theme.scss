@@ -1,3 +1,11 @@
+// --------------------------------------------------
+//
+// # Theme tokens for Light and Dark mode
+// 
+// --------------------------------------------------
+
+
+
 :root {
   color-scheme: light;
   /* Brand */
@@ -43,6 +51,7 @@
   
   /* Accents */
   --border-color: var(--color-neutral-100);
+  --table-head-border-color: var(--color-maize-400);
   --active-page-nav: var(--color-teal-100);
   --banner-svg-grid: var(--color-teal-100);
   --hover-accent: var(--color-teal-100);
@@ -97,6 +106,7 @@
   --link-hover: var(--color-teal-100);
   --link-visited: #b8b3ff;
   --border-color: var(--color-neutral-350);
+  --table-head-border-color: var(--color-maize-500);
   --active-page-nav: var(--color-neutral-350);
   --banner-svg-grid: var(--color-neutral-350);
   --hover-accent: var(--color-neutral-350);
@@ -151,6 +161,7 @@
   --link-hover: var(--color-teal-100);
   --link-visited: #b8b3ff;
   --border-color: var(--color-neutral-350);
+  --table-head-border-color: var(--color-maize-500);
   --active-page-nav: var(--color-neutral-350);
   --banner-svg-grid: var(--color-neutral-350);
   --hover-accent: var(--color-neutral-350);
@@ -208,6 +219,7 @@
 
    /* Accents */
   --border-color: var(--color-neutral-100);
+  --table-head-border-color: var(--color-maize-400);
   --active-page-nav: var(--color-teal-100);
   --banner-svg-grid: var(--color-teal-100);
   --hover-accent: var(--color-teal-100);
