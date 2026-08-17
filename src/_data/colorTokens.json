@@ -1,6 +1,7 @@
 [
   {
     "family": "Blue",
+    "primaryHex": "#00274C",
     "description": "Blue is great for backgrounds (like in our footer reusable design). The lighter shades are also our text color in dark mode.",
     "colors": [
       { "hex": "#F7F8F9", "token": ["--color-blue-100"], "useCase": "Text (primary - dark mode)" },
@@ -12,6 +13,7 @@
   },
   {
     "family": "Maize",
+     "primaryHex": "#FFCB05",
     "description": "Maize is best for small accents. We otherwise limit our use of it since no combination of maize and white meets color contrast requirements! Keep this in mind when using maize.",
     "colors": [
       { "hex": "#FFF9E6", "token": ["--color-maize-100"], "useCase": "Callout background" },
@@ -23,6 +25,7 @@
   },
   {
     "family": "Teal",
+    "primaryHex": "#1D7491",
     "description": "Teal is synonymous with interaction in our web presence, especially links. Be cautious about using it for other purposes.",
     "colors": [
       { "hex": "#E9F2F5", "token": ["--color-teal-100"], "useCase": "Info callout background, accents" },
@@ -35,6 +38,7 @@
   },
   {
     "family": "Neutral",
+    "primaryHex": "#212B36",
     "description": "Neutral is for text. We purposely use shades of gray instead of pure black, which can be harder on the eyes. Our lightest shade is also a go-to for subtle borders.",
     "colors": [
       { "hex": "#E5E9ED", "token": ["--color-neutral-100"], "useCase": "Border color, box shadows" },
@@ -48,6 +52,7 @@
   },
   {
     "family": "Orange",
+    "primaryHex": "#F25F1F",
     "layout": "secondary",
     "colors": [
       { "hex": "#FFF1EB", "token": ["--color-orange-100"] },
@@ -60,6 +65,7 @@
   },
   {
     "family": "Pink",
+    "primaryHex": "#D93838",
     "layout": "secondary",
     "colors": [
       { "hex": "#FCEBEB", "token": ["--color-pink-100"] },
@@ -71,6 +77,7 @@
   },
   {
     "family": "Green",
+    "primaryHex": "#20A848",
     "layout": "secondary",
     "colors": [
       { "hex": "#EAF8EE", "token": ["--color-green-100"] },
@@ -82,6 +89,7 @@
   },
   {
     "family": "Indigo",
+    "primaryHex": "#506FC5",
     "layout": "secondary",
     "colors": [
       { "hex": "#EEF1F9", "token": ["--color-indigo-100"] },

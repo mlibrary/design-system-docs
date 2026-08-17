@@ -1,0 +1,30 @@
+// --------------------------------------------------
+//
+// # Badges
+//   Default, success, warning, critical
+//
+// --------------------------------------------------
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: fit-content;
+  color: var(--color-neutral-400);
+  background-color: var(--color-neutral-100);
+  border: none;
+  border-radius: 4px;
+  padding: 4px 10px;
+}
+
+.badge--success {
+  background-color: var(--color-green-200);
+}
+
+.badge--warning {
+  background-color: var(--color-maize-200);
+}
+
+.badge--critical {
+  background-color: var(--color-pink-200);
+}
