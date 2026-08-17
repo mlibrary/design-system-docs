@@ -1,5 +1,5 @@
 <nav aria-label="Color table" class="color-table-nav">
-  <p class="badge" aria-hidden="true">Jump to</p>
+  <p class="color-toc-label" aria-hidden="true">Jump to</p>
   <ul class="color-toc-links">
 {%- for group in colorTokens -%}
 <li><a href="#{{ group.family | slugify }}"><span class="color-toc-swatch" style="background-color: {{ group.primaryHex }};" aria-hidden="true"></span>{{ group.family }}</a></li>

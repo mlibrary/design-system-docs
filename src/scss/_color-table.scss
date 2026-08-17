@@ -9,8 +9,15 @@
   margin-bottom: 2rem;
 
   .color-toc-label {
-    font-weight: 600;
-    margin: 0 0 0.5rem;
+    font-size: 0.875rem;
+    text-decoration: none;
+    color: var(--badge);
+    text-transform: uppercase;
+    font-weight: var(--bold);
+    letter-spacing: 1.25px;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.25rem;
   }
 
   .color-toc-links {
