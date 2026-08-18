@@ -39,7 +39,12 @@
       display: inline-flex;
       align-items: center;
       gap: 0.375rem;
+    }
+
+    a:hover {
+      color: var(--link-hover);
       text-decoration: underline;
+      text-decoration-thickness: 2px;
     }
   }
 

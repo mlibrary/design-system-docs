@@ -31,7 +31,7 @@ Our most detailed pagination design pattern has the following features:
 
 ### Pagination variations
 
-You may need to make a per-product decision to strip pagination down in some cases, but the __presentation should be consistent within the overall product__. This could mean providing only the previous and next control elements, or only the numbered page links. We have examples of these variations in the [CodePen below](/#code-example).
+You may need to make a per-product decision to strip pagination down in some cases, but the __presentation should be consistent within the overall product__. This could mean providing only the previous and next control elements, or only the numbered page links. We have examples of these variations in the [CodePen below](/reusable-designs/pagination/#code-example).
 
 Pagination can also look and function differently depending on the underlying technology. Tools like Drupal or Bootstrap have built-in pagination components that you can style to look as similar as possible to our design.
 
@@ -47,7 +47,7 @@ We recommend retaining our provided page and results summary — which includes 
 
 ### Control elements
 
-Make your control elements are as usable as possibly by
+Make your control elements are as usable as possibly by:
 
 * Disabling First, Previous, Next, or Last when the user is on the corresponding page.  
 * Showing a maximum of 10 pages in the pagination on a full screen and 6 on a small screen. The appropriate maximums for your site may be less than this.
