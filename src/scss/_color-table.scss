@@ -152,12 +152,14 @@
   align-items: center;
   justify-content: center;
   width: 1.75rem;
-  height: 1.5rem;
+  height: 1.75rem;
   padding: 0;
+  margin-left: .25rem;
   border: none;
   background: transparent;
   cursor: pointer;
   vertical-align: middle;
+  border-radius: 50%;
 
   &::before {
     content: '\e14d'; // content_copy codepoint
@@ -167,6 +169,14 @@
     -webkit-font-smoothing: antialiased;
     color: var(--link);
     line-height: 1;
+    position: relative;
+    z-index: 1;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--copy-btn-hover);
+    box-shadow: 0 0 0 1px var(--copy-btn-hover);
   }
 
   &:hover::before,
@@ -177,6 +187,11 @@
   &:focus-visible {
     outline: 2px solid var(--link);
     outline-offset: 2px;
+  }
+
+  &.copied {
+    background-color: var(--copied-btn-hover);
+    box-shadow: 0 0 0 1px var(--copied-btn-hover);
   }
 
   &.copied::before {
