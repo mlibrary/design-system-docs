@@ -7,6 +7,8 @@
 
 .color-table-nav {
   margin-bottom: 2rem;
+  border: solid 1px var(--border-color);
+  padding: 0 1rem 1rem 1rem;
 
   .color-toc-label {
     font-size: 0.875rem;
