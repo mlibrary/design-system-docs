@@ -32,7 +32,7 @@ td, th {
 
 th {
   text-align: left;
-  border-bottom: solid 2px var(--color-maize-400);
+  border-bottom: solid 2px var(--table-head-border-color);
   font-size: .875rem;
   font-weight: 800;
   letter-spacing: 1.25px;
@@ -41,5 +41,5 @@ th {
 }
 
 th:not([scope^='row']) {
-  border-bottom: solid var(--space-xxx-small) var(--color-maize-400);
+  border-bottom: solid var(--space-xxx-small) var(--table-head-border-color);
 }

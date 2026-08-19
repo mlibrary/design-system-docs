@@ -1,16 +1,26 @@
+// --------------------------------------------------
+//
+// # Theme tokens for Light and Dark mode
+//
+// --------------------------------------------------
+
 :root {
   color-scheme: light;
-    /* Brand */
+
+  /* Brand */
   --brand-primary: var(--color-blue-400);
   --brand-secondary: var(--color-maize-400);
   --logo-mark: var(--color-maize-400);
   --logo-wordmark: var(--color-blue-400);
 
+  /* States */
+  --color-success: var(--color-green-500);
+
   /* Backgrounds */
   --bg-primary: #fff;
   --bg-secondary: var(--color-neutral-50);
   --bg-tertiary: var(--color-neutral-100);
-  --bg-modal:  #fff;
+  --bg-modal: #fff;
   --bg-overlay: rgba(255, 255, 255, 0.4);
   --bg-inputs: #fff;
   --bg-banner: var(--color-indigo-100);
@@ -37,9 +47,10 @@
   --link: var(--color-teal-400);
   --link-hover: var(--color-teal-500);
   --link-visited: #575294;
-  
+
   /* Accents */
   --border-color: var(--color-neutral-100);
+  --table-head-border-color: var(--color-maize-400);
   --active-page-nav: var(--color-teal-100);
   --banner-svg-grid: var(--color-teal-100);
   --hover-accent: var(--color-teal-100);
@@ -48,6 +59,8 @@
   --callout-info-accent: var(--color-teal-400);
   --callout-print-accent: var(--color-green-400);
   --callout-alert-accent: var(--color-orange-400);
+  --copy-btn-hover: var(--color-teal-100);
+  --copied-btn-hover: var(--color-green-100);
 
   /* Inputs */
   --pagefind-ui-text: var(--color-neutral-350);
@@ -56,82 +69,104 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
-  color-scheme: dark;
-  --logo-wordmark: #ffffff;
-  --logo-mark: var(--color-maize-400);
-  --bg-primary: var(--color-neutral-450);
-  --bg-secondary: var(--color-neutral-400);
-  --bg-tertiary: var(--color-neutral-350);
-  --bg-modal:  var(--color-neutral-400);
-  --bg-inputs: var(--color-neutral-400);
-  --bg-overlay: rgba(26, 35, 44, 0.4);
-  --bg-banner: var(--color-neutral-400);
-  --bg-header: var(--color-blue-500);
-  --bg-footer: var(--color-blue-500);
-  --bg-card: var(--color-neutral-400);
-  --bg-code-block: var(--color-neutral-400);
-  --bg-callout-info: var(--color-neutral-400);
-  --bg-callout-print: var(--color-neutral-400);
-  --bg-callout-alert: var(--color-neutral-400);
-  --bg-sub-footer: var(--color-neutral-500);
+    color-scheme: dark;
 
-   /* Banner Alerts */
-  --bg-banner-alert-info: #052E3B;
-  --bg-banner-alert-warning: #541C03;
-  --banner-alert-text: var(--color-blue-100);
-  --banner-alert-border-warning: var(--color-orange-400);
+    /* Brand */
+    --logo-mark: var(--color-maize-400);
+    --logo-wordmark: #fff;
 
-  --text-primary: var(--color-blue-100);
-  --text-secondary: var(--color-blue-200);
-  --text-header: var(--color-neutral-100);
-  --text-code-block: var(--color-blue-200);
-  --badge: var(--color-blue-200);
-  --link: var(--color-teal-200);
-  --link-hover: var(--color-teal-100);
-  --link-visited: #b8b3ff;
-  --border-color: var(--color-neutral-350);
-  --active-page-nav: var(--color-neutral-350);
-  --banner-svg-grid: var(--color-neutral-350);
-  --hover-accent: var(--color-neutral-350);
-  --card-hover: var(--color-neutral-400);
-  --callout-info-accent: var(--color-teal-200);
-  --callout-print-accent: var(--color-green-200);
-  --callout-alert-accent: var(--color-orange-200);
-  --toggle-svg: var(--color-blue-100);
-  --pagefind-ui-text: var(--color-blue-100);
-  --pagefind-ui-background: var(--color-neutral-400);
-  --icon-arrow-down: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path fill="%23ffffff" d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/></svg>');
+    /* States */
+    --color-success: var(--color-green-200);
+
+    /* Backgrounds */
+    --bg-primary: var(--color-neutral-450);
+    --bg-secondary: var(--color-neutral-400);
+    --bg-tertiary: var(--color-neutral-350);
+    --bg-modal: var(--color-neutral-400);
+    --bg-overlay: rgba(26, 35, 44, 0.4);
+    --bg-inputs: var(--color-neutral-400);
+    --bg-banner: var(--color-neutral-400);
+    --bg-header: var(--color-blue-500);
+    --bg-footer: var(--color-blue-500);
+    --bg-sub-footer: var(--color-neutral-500);
+    --bg-card: var(--color-neutral-400);
+    --bg-code-block: var(--color-neutral-400);
+    --bg-callout-info: var(--color-neutral-400);
+    --bg-callout-print: var(--color-neutral-400);
+    --bg-callout-alert: var(--color-neutral-400);
+
+    /* Banner Alerts */
+    --bg-banner-alert-info: #052E3B;
+    --bg-banner-alert-warning: #541C03;
+    --banner-alert-text: var(--color-blue-100);
+    --banner-alert-border-warning: var(--color-orange-400);
+
+    /* Text and Links */
+    --text-primary: var(--color-blue-100);
+    --text-secondary: var(--color-blue-200);
+    --text-header: var(--color-neutral-100);
+    --text-code-block: var(--color-blue-200);
+    --badge: var(--color-blue-200);
+    --link: var(--color-teal-200);
+    --link-hover: var(--color-teal-100);
+    --link-visited: #b8b3ff;
+
+    /* Accents */
+    --border-color: var(--color-neutral-350);
+    --table-head-border-color: var(--color-maize-500);
+    --active-page-nav: var(--color-neutral-350);
+    --banner-svg-grid: var(--color-neutral-350);
+    --hover-accent: var(--color-neutral-350);
+    --card-hover: var(--color-neutral-400);
+    --toggle-svg: var(--color-blue-100);
+    --callout-info-accent: var(--color-teal-200);
+    --callout-print-accent: var(--color-green-200);
+    --callout-alert-accent: var(--color-orange-200);
+    --copy-btn-hover: transparent;
+    --copied-btn-hover: transparent;
+
+    /* Inputs */
+    --pagefind-ui-text: var(--color-blue-100);
+    --pagefind-ui-background: var(--color-neutral-400);
+    --icon-arrow-down: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path fill="%23ffffff" d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/></svg>');
   }
 }
 
-/* Dark mode */
 [data-theme="dark"] {
   color-scheme: dark;
+
+  /* Brand */
   --logo-mark: var(--color-maize-400);
   --logo-wordmark: #fff;
+
+  /* States */
+  --color-success: var(--color-green-200);
+
+  /* Backgrounds */
   --bg-primary: var(--color-neutral-450);
   --bg-secondary: var(--color-neutral-400);
   --bg-tertiary: var(--color-neutral-350);
-  --bg-modal:  var(--color-neutral-400);
-  --bg-banner: var(--color-neutral-400);  
-  --bg-header: var(--color-blue-500);    
-  --bg-footer: var(--color-blue-500); 
+  --bg-modal: var(--color-neutral-400);
+  --bg-overlay: rgba(26, 35, 44, 0.4);
+  --bg-inputs: var(--color-neutral-400);
+  --bg-banner: var(--color-neutral-400);
+  --bg-header: var(--color-blue-500);
+  --bg-footer: var(--color-blue-500);
   --bg-sub-footer: var(--color-neutral-500);
   --bg-card: var(--color-neutral-400);
   --bg-code-block: var(--color-neutral-400);
-  --bg-inputs: var(--color-neutral-400);
-  --bg-overlay: rgba(26, 35, 44, 0.4);
   --bg-callout-info: var(--color-neutral-400);
   --bg-callout-print: var(--color-neutral-400);
   --bg-callout-alert: var(--color-neutral-400);
 
-   /* Banner Alerts */
+  /* Banner Alerts */
   --bg-banner-alert-info: #052E3B;
   --bg-banner-alert-warning: #541C03;
   --banner-alert-text: var(--color-blue-100);
   --banner-alert-border-info: var(--color-teal-200);
   --banner-alert-border-warning: var(--color-orange-400);
 
+  /* Text and Links */
   --text-primary: var(--color-blue-100);
   --text-secondary: var(--color-blue-200);
   --text-header: var(--color-neutral-100);
@@ -140,15 +175,22 @@
   --link: var(--color-teal-200);
   --link-hover: var(--color-teal-100);
   --link-visited: #b8b3ff;
+
+  /* Accents */
   --border-color: var(--color-neutral-350);
+  --table-head-border-color: var(--color-maize-500);
   --active-page-nav: var(--color-neutral-350);
   --banner-svg-grid: var(--color-neutral-350);
   --hover-accent: var(--color-neutral-350);
   --card-hover: var(--color-neutral-400);
+  --toggle-svg: var(--color-blue-100);
   --callout-info-accent: var(--color-teal-200);
   --callout-print-accent: var(--color-green-200);
   --callout-alert-accent: var(--color-orange-200);
-  --toggle-svg: var(--color-blue-100);
+  --copy-btn-hover: transparent;
+  --copied-btn-hover: transparent;
+
+  /* Inputs */
   --pagefind-ui-text: var(--color-blue-100);
   --pagefind-ui-background: var(--color-neutral-400);
   --icon-arrow-down: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path fill="%23ffffff" d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/></svg>');
@@ -156,16 +198,21 @@
 
 [data-theme="light"] {
   color-scheme: light;
+
+  /* Brand */
   --brand-primary: var(--color-blue-400);
   --brand-secondary: var(--color-maize-400);
   --logo-mark: var(--color-maize-400);
   --logo-wordmark: var(--color-blue-400);
 
+  /* States */
+  --color-success: var(--color-green-500);
+
   /* Backgrounds */
   --bg-primary: #fff;
   --bg-secondary: var(--color-neutral-50);
   --bg-tertiary: var(--color-neutral-100);
-  --bg-modal:  #fff;
+  --bg-modal: #fff;
   --bg-overlay: rgba(255, 255, 255, 0.4);
   --bg-inputs: #fff;
   --bg-banner: var(--color-indigo-100);
@@ -178,7 +225,7 @@
   --bg-callout-print: var(--color-green-100);
   --bg-callout-alert: var(--color-maize-100);
 
-   /* Banner Alerts */
+  /* Banner Alerts */
   --bg-banner-alert-info: var(--color-teal-200);
   --bg-banner-alert-warning: var(--color-orange-300);
   --banner-alert-text: var(--color-neutral-400);
@@ -193,8 +240,9 @@
   --link-hover: var(--color-teal-500);
   --link-visited: #575294;
 
-   /* Accents */
+  /* Accents */
   --border-color: var(--color-neutral-100);
+  --table-head-border-color: var(--color-maize-400);
   --active-page-nav: var(--color-teal-100);
   --banner-svg-grid: var(--color-teal-100);
   --hover-accent: var(--color-teal-100);
@@ -203,8 +251,10 @@
   --callout-info-accent: var(--color-teal-400);
   --callout-print-accent: var(--color-green-400);
   --callout-alert-accent: var(--color-orange-400);
+  --copy-btn-hover: var(--color-teal-100);
+  --copied-btn-hover: var(--color-green-100);
 
-   /* Inputs */
+  /* Inputs */
   --pagefind-ui-text: var(--color-neutral-350);
   --pagefind-ui-background: #ffffff;
 }
