@@ -75,5 +75,3 @@ Large photos can slow down page load times and don’t look any better on the we
 {% callout "print" %}
 Print images look best at 300 dpi or higher; don't use an image that's less than 150 dpi.
 {% endcallout %}
-
-You can find information about changing resolution, size, and more in the guide [All About Images](https://guides.lib.umich.edu/c.php?g=282942&p=1885346).
