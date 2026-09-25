@@ -40,7 +40,7 @@ For other digital products, use the block M version whenever possible. The block
 ### Download logo files for online use
 
 * Library signature for online ([JPG](https://drive.google.com/file/d/1rKncNfO1Q3qQS_78qFxlo817XiFPMPCG/view?usp=sharing)) ([PNG](https://drive.google.com/file/d/1_FBZFKuBLwsbSQtqb12Qf42tgnnxJJVm/view?usp=sharing))  
-* Library block M logo for online ([JPG](https://drive.google.com/file/d/1F33xMz-dX_gLhFqkOqZ9hO2JOt8t1ROP/view?usp=sharing)) ([PNG](https://drive.google.com/file/d/10gA3TFWYi_aH3gKXrY6bDdzxUh6ezKdk/view?usp=sharing))
+* Library block M logo for online ([JPG](https://drive.google.com/file/d/1vc9yKSEVttrstMWV4atH3JO3c9xlrGKD/view?usp=drive_link)) ([PNG](https://drive.google.com/file/d/1m5QE8gWrYBAZpeHO7o5R9CWk4LHBtj-0/view?usp=drive_link))
 
 ## Print
 
@@ -55,8 +55,8 @@ Official print colors are the same as the University of Michigan logo:
 
 ### Download logo files for print use
 
-* Library block M logo for print ([JPG](https://drive.google.com/file/d/1qh1cpNkkkVQZxdqgOFbXsc_Of3asP-cC/view?usp=sharing)) ([TIF](https://drive.google.com/file/d/1LHNZDRuq9TS3BPBAvxd5yXFUPdMAdOXt/view?usp=sharing))
 * Library signature for print ([JPG](https://drive.google.com/file/d/1O2v35zaUI4scmlZzqrUzjoRkw7WgsVwu/view?usp=sharing)) ([TIF](https://drive.google.com/file/d/11G15ODwPWCEvZelZUmhKpu1vtGoMiXXX/view?usp=sharing))
+* Library block M logo for print ([JPG](https://drive.google.com/file/d/1tObEitnpomLvRON8Tuq6OV68G1KHMk8T/view?usp=drive_link)) ([TIF](https://drive.google.com/file/d/1kEjgfz6zHcNQmPgjyJAMCCHBXGqdkymc/view?usp=drive_link))
 
 {% callout "info" %}
 Contact librarycomm@umich.edu if you need a file type not available here or have questions about appropriate logo usage.
