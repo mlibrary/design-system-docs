@@ -30,7 +30,7 @@ You can:
 
 Within the Google Slide and PowerPoint template folders, you’ll find a README file with directions for how to use them in your file (either starting new or adding to an existing one). 
 
-Our **Qualtrics** themes are built in when creating a survey. U-M Library employees automatically see our library specific themes as options in survey "Look and feel" settings. ITS has [directions on applying a Qualtrics theme (https://teamdynamix.umich.edu/TDClient/30/Portal/KB/Article/7141/Apply-a-Qualtrics-Theme)].
+Our **Qualtrics** themes are built-in when creating a survey. U-M Library employees automatically see library specific themes as options in survey "Look and feel" settings. ITS has [directions for applying a Qualtrics theme](https://teamdynamix.umich.edu/TDClient/30/Portal/KB/Article/7141/Apply-a-Qualtrics-Theme).
 
 ## Other suggestions?
 
