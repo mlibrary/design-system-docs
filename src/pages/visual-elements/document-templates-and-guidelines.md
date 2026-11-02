@@ -13,9 +13,9 @@ eleventyNavigation:
 
 # {{ title }}
 
-If you’re creating content for your work at the library within the Google Workspace or PowerPoint, we have templates, ready-made themes, and guidelines that provide a starting point for creating accessible materials that follow our brand and style. 
+If you’re creating content for your work at the library within the Google Workspace, PowerPoint, or Qualtrics, we have templates, ready-made themes, and guidelines that provide a starting point for creating accessible materials that follow our brand and style. 
 
-See our public Drive folder of [Templates, Themes, and Guidelines](https://drive.google.com/drive/folders/1uIDCY-OIyd2cET3PkpZVOco32wGKsM91?usp=share_link). It is organized into subfolders by product.
+See our public Drive folder of [Templates, Themes, and Guidelines](https://drive.google.com/drive/folders/1uIDCY-OIyd2cET3PkpZVOco32wGKsM91?usp=share_link) for most materials. It is organized into subfolders by product. 
 
 ## What we provide
 
@@ -29,6 +29,8 @@ You can:
 * Use one of three **Google Slide** theme templates or our PowerPoint template with a range of layout options.
 
 Within the Google Slide and PowerPoint template folders, you’ll find a README file with directions for how to use them in your file (either starting new or adding to an existing one). 
+
+Our **Qualtrics** themes are built-in when creating a survey. U-M Library employees automatically see library specific themes as options in survey "Look and feel" settings. ITS has [directions for applying a Qualtrics theme](https://teamdynamix.umich.edu/TDClient/30/Portal/KB/Article/7141/Apply-a-Qualtrics-Theme).
 
 ## Other suggestions?
 
